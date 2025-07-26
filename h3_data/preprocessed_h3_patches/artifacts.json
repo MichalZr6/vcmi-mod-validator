@@ -1,0 +1,1937 @@
+{
+	"spellBook": {
+		"class": "SPECIAL",
+		"slot": [
+			"SPELLBOOK"
+		],
+		"text": {
+			"description": "{Spell Book}\n\nLeft-click on the spell book to view your spells.",
+			"event": "You trip over the Spell Book, dust it off, and stick it in your pack.",
+			"name": "Spell Book"
+		},
+		"value": 0
+	},
+	"spellScroll": {
+		"class": "SPECIAL",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Spell Scroll}\n\nThis scroll contains the [spell name] spell which is added into your spell book for as long as you carry the scroll.",
+			"event": "You find an elaborate container which houses an old vellum scroll. The runes on the container are very old, and the artistry with which it was put together is stunning. As you pull the scroll out, you feel imbued with magical power.",
+			"name": "Spell Scroll"
+		},
+		"value": 2500
+	},
+	"grail": {
+		"class": "SPECIAL",
+		"text": {
+			"description": "{The Grail}\n\nCarry the Grail to the city of your choice and the populace there will build a fantastic structure which will provide a tremendous advantage to the city's owner.",
+			"event": "You trip over the Grail, dust it off, and stick it in your pack.",
+			"name": "The Grail"
+		},
+		"value": 0
+	},
+	"catapult": {
+		"class": "SPECIAL",
+		"slot": [
+			"MACH4"
+		],
+		"text": {
+			"description": "{Catapult}\n\nUse this war machine to target your enemy's fortifications in combat.",
+			"event": "You trip over the Catapult, dust it off, and stick it in your pack.",
+			"name": "Catapult"
+		},
+		"value": 1000
+	},
+	"ballista": {
+		"class": "SPECIAL",
+		"slot": [
+			"MACH1"
+		],
+		"text": {
+			"description": "{Ballista}\n\nUse this war machine to target your enemy's troops in combat.",
+			"event": "You trip over the Ballista, dust it off, and stick it in your pack.",
+			"name": "Ballista"
+		},
+		"value": 2500
+	},
+	"ammoCart": {
+		"class": "SPECIAL",
+		"slot": [
+			"MACH2"
+		],
+		"text": {
+			"description": "{Ammo Cart}\n\nThe Ammo Cart ensures that your missile troops will never run out of ammunition in combat.",
+			"event": "You trip over the Ammo Cart, dust it off, and stick it in your pack.",
+			"name": "Ammo Cart"
+		},
+		"value": 1000
+	},
+	"firstAidTent": {
+		"class": "SPECIAL",
+		"slot": [
+			"MACH3"
+		],
+		"text": {
+			"description": "{First Aid Tent}\n\nThe First Aid Tent provides healing to your troops during each round of combat.",
+			"event": "You trip over the First Aid Tent, dust it off, and stick it in your pack.",
+			"name": "First Aid Tent"
+		},
+		"value": 750
+	},
+	"centaurAxe": {
+		"class": "TREASURE",
+		"slot": [
+			"RIGHT_HAND"
+		],
+		"text": {
+			"description": "{Centaur's Axe}\n\nThis right handed weapon increases your Attack skill by +2.",
+			"event": "You see a heavy axe embedded deeply in the ground.  After several unsuccessful attempts by your army to remove it, you tightly grip the handle of the axe and effortlessly pull it free.",
+			"name": "Centaurs Axe"
+		},
+		"value": 2000
+	},
+	"blackshardOfTheDeadKnight": {
+		"class": "MINOR",
+		"slot": [
+			"RIGHT_HAND"
+		],
+		"text": {
+			"description": "{Blackshard of the Dead Knight}\n\nThis right handed weapon increases your Attack skill by +3.",
+			"event": "The widow of a former Captain of the Guard admires your quest and gives you the enchanted Sword that her husband relied on during his tour of duty.",
+			"name": "Blackshard of the Dead Knight"
+		},
+		"value": 3000
+	},
+	"greaterGnollsFlail": {
+		"class": "MINOR",
+		"slot": [
+			"RIGHT_HAND"
+		],
+		"text": {
+			"description": "{Greater Gnoll's Flail}\n\nThis right handed weapon increases your Attack skill by +4.",
+			"event": "A clumsy Gnoll has killed himself with his own flail.  Knowing your superior skill with this weapon, you confidently remove the spectacular flail from the fallen creature.",
+			"name": "Greater Gnoll's Flail"
+		},
+		"value": 4000
+	},
+	"ogresClubOfHavoc": {
+		"class": "MAJOR",
+		"slot": [
+			"RIGHT_HAND"
+		],
+		"text": {
+			"description": "{Ogre's Club of Havoc}\n\nThis right handed weapon increases your Attack skill by +5.",
+			"event": "At a roadside tavern, a drunken Ogre challenges you to a fight.  Not wanting to hurt the creature, you subdue him instead, and take his massive club from him to prevent him from getting into any more trouble.",
+			"name": "Ogre's Club of Havoc"
+		},
+		"value": 5000
+	},
+	"swordOfHellfire": {
+		"class": "MAJOR",
+		"slot": [
+			"RIGHT_HAND"
+		],
+		"text": {
+			"description": "{Sword of Hellfire}\n\nThis right handed weapon increases your Attack skill by +6.",
+			"event": "During a sudden storm, a bolt of lightning strikes a tree, splitting it.  Inside the tree you find a mysterious sword.",
+			"name": "Sword of Hellfire"
+		},
+		"value": 6000
+	},
+	"titansGladius": {
+		"class": "RELIC",
+		"slot": [
+			"RIGHT_HAND"
+		],
+		"text": {
+			"description": "{Titan's Gladius}\n\nHeld with the right hand, this massive relic increases your Attack skill by +12, but reduces your Defense skill by -3.",
+			"event": "A Titan stops you and says, \"Pay me 5,000 gold, or I shall slay you where you stand.\"  You refuse.  The Titan grabs the sword hanging from its belt, but you duck between its legs.  He is so surprised by this maneuver that he trips... falling on his sword and killing himself instantly.",
+			"name": "Titan's Gladius"
+		},
+		"value": 10000
+	},
+	"shieldOfTheDwarvenLords": {
+		"class": "TREASURE",
+		"slot": [
+			"LEFT_HAND"
+		],
+		"text": {
+			"description": "{Shield of the Dwarven Lords}\n\nThis left handed item increases your Defense skill by +2.",
+			"event": "While searching through the rubble of a caved-in mine, you free a group of trapped Dwarves.  Grateful, the leader gives you a finely crafted shield.",
+			"name": "Shield of the Dwarven Lords"
+		},
+		"value": 2000
+	},
+	"shieldOfTheYawningDead": {
+		"class": "MINOR",
+		"slot": [
+			"LEFT_HAND"
+		],
+		"text": {
+			"description": "{Shield of the Yawning Dead}\n\nThis left handed item increases your Defense skill by +3.",
+			"event": "Your troops discover an eerie shrine dedicated to the Undead.  You bless the shrine, causing the stone shield emblem above the altar to crack.  Underneath it is a real shield, which you decide to separate from this unholy place.",
+			"name": "Shield of the Yawning Dead"
+		},
+		"value": 3000
+	},
+	"bucklerOfTheGnollKing": {
+		"class": "MINOR",
+		"slot": [
+			"LEFT_HAND"
+		],
+		"text": {
+			"description": "{Buckler of the Gnoll King}\n\nThis left handed item increases your Defense skill by +4.",
+			"event": "A stone statue of a warrior holds a silver shield.  As you remove the shield, the statue crumbles into dust.",
+			"name": "Buckler of the Gnoll King"
+		},
+		"value": 4000
+	},
+	"targOfTheRampagingOgre": {
+		"class": "MAJOR",
+		"slot": [
+			"LEFT_HAND"
+		],
+		"text": {
+			"description": "{Targ of the Rampaging Ogre}\n\nThis left handed item increases your Defense skill by +5.",
+			"event": "You come upon a bridge spanning a dry gully.  As you begin to cross, a gigantic, maddened Ogre appears from the other side and charges, forcing you to slay it.  You decide to take its shield as a trophy.",
+			"name": "Targ of the Rampaging Ogre"
+		},
+		"value": 5000
+	},
+	"shieldOfTheDamned": {
+		"class": "MAJOR",
+		"slot": [
+			"LEFT_HAND"
+		],
+		"text": {
+			"description": "{Shield of the Damned}\n\nThis left handed item increases your Defense skill by +6.",
+			"event": "Upon cresting a small hill, you come upon a ridiculous looking sight.  A Sprite is attempting to carry a Shield that is almost as big as it is.  Trying not to laugh, you ask, \"Need help?\"  The Sprite glares at you and answers, \"You think this is funny?  Fine.  You can carry it.  I much prefer flying anyway.\"",
+			"name": "Shield of the Damned"
+		},
+		"value": 6000
+	},
+	"sentinelsShield": {
+		"class": "RELIC",
+		"slot": [
+			"LEFT_HAND"
+		],
+		"text": {
+			"description": "{Sentinel's Shield}\n\nHeld with the left hand, this relic increases your Defense skill by +12, but reduces your Attack skill by -3.",
+			"event": "You find a large box that seems to be made from some unknown metal.  When you touch it, the box opens with a loud hiss, revealing a gleaming shield within.",
+			"name": "Sentinel's Shield"
+		},
+		"value": 10000
+	},
+	"helmOfTheAlabasterUnicorn": {
+		"class": "TREASURE",
+		"slot": [
+			"HEAD"
+		],
+		"text": {
+			"description": "{Helm of the Alabaster Unicorn}\n\nWorn on the head, this item increases your Knowledge skill by +1.",
+			"event": "A traveling tinker in need of supplies offers you a helm with a unicorn's horn on its top in exchange for food and water.  Curious, you accept, and later find out that the helm is magical.",
+			"name": "Helm of the Alabaster Unicorn"
+		},
+		"value": 1000
+	},
+	"skullHelmet": {
+		"class": "TREASURE",
+		"slot": [
+			"HEAD"
+		],
+		"text": {
+			"description": "{Skull Helmet}\n\nWorn on the head, this item increases your Knowledge skill by +2.",
+			"event": "A brief stop at an improbable rural inn yields an exchange of money, tales, and accidentally, luggage.  You find a magical helm in your new backpack.",
+			"name": "Skull Helmet"
+		},
+		"value": 3000
+	},
+	"helmOfChaos": {
+		"class": "MINOR",
+		"slot": [
+			"HEAD"
+		],
+		"text": {
+			"description": "{Helm of Chaos}\n\nWorn on the head, this item increases your Knowledge skill by +3.",
+			"event": "Your army is ambushed by a small tribe of wild (and none too bright) Orcs.  You fend them off easily and the survivors flee in all directions.  One of the Orcs was wearing a polished horned helm.  Figuring it will make a good souvenir, you take it.",
+			"name": "Helm of Chaos"
+		},
+		"value": 4000
+	},
+	"crownOfTheSupremeMagi": {
+		"class": "MINOR",
+		"slot": [
+			"HEAD"
+		],
+		"text": {
+			"description": "{Crown of the Supreme Magi}\n\nWorn on the head, this item increases your Knowledge skill by +4.",
+			"event": "A mad wizard who has been terrorizing the region has foolishly chosen you as his target today.  Realizing that his power comes from his crown, you take aim with your bow, knocking the crown from his head and releasing him from his crazed madness.  Grateful to be free, he lets you keep the crown.",
+			"name": "Crown of the Supreme Magi"
+		},
+		"value": 5000
+	},
+	"hellstormHelmet": {
+		"class": "MAJOR",
+		"slot": [
+			"HEAD"
+		],
+		"text": {
+			"description": "{Hellstorm Helmet}\n\nWorn on the head, this item increases your Knowledge skill by +5.",
+			"event": "Your army is ambushed by a small tribe of wild (and none too bright) Orcs.  You fend them off easily and the survivors flee in all directions.  One of the Orcs was wearing a polished horned helm.  Figuring it will make a good souvenir, you take it.",
+			"name": "Hellstorm Helmet"
+		},
+		"value": 6000
+	},
+	"thunderHelmet": {
+		"class": "RELIC",
+		"slot": [
+			"HEAD"
+		],
+		"text": {
+			"description": "{Thunder Helmet}\n\nWhen worn, this relic increases your Knowledge skill by +10, but reduces your Power skill by -2.",
+			"event": "A glint of golden light catches your eye.  Upon further investigation, you find a golden helm hidden under a bush.",
+			"name": "Thunder Helmet"
+		},
+		"value": 10000
+	},
+	"breastplateOfPetrifiedWood": {
+		"class": "TREASURE",
+		"slot": [
+			"TORSO"
+		],
+		"text": {
+			"description": "{Breastplate of Petrified Wood}\n\nWorn on the torso, this item increases your Power skill by +1.",
+			"event": "A gang of Rogues is sifting through the possessions of dead warriors.  Scaring off the scavengers, you note the Rogues had overlooked a strange breastplate.",
+			"name": "Breastplate of Petrified Wood"
+		},
+		"value": 1000
+	},
+	"ribCage": {
+		"class": "MINOR",
+		"slot": [
+			"TORSO"
+		],
+		"text": {
+			"description": "{Rib Cage}\n\nWorn on the torso, this item increases your Power skill by +2.",
+			"event": "You trip over what was the rib cage of a large creature.  Upon further examination, you discover the rib cage to be a piece of armor.",
+			"name": "Rib Cage"
+		},
+		"value": 3000
+	},
+	"scalesOfTheGreaterBasilisk": {
+		"class": "MINOR",
+		"slot": [
+			"TORSO"
+		],
+		"text": {
+			"description": "{Scales of the Greater Basilisk}\n\nWorn on the torso, this item increases your Power skill by +3.",
+			"event": "You meet an old Armorer who claims he owes you a favor.  Taking him up on it, he pieces together some Basilisk scales, forming a well-fashioned breastplate.",
+			"name": "Scales of the Greater Basilisk"
+		},
+		"value": 4000
+	},
+	"tunicOfTheCyclopsKing": {
+		"class": "MAJOR",
+		"slot": [
+			"TORSO"
+		],
+		"text": {
+			"description": "{Tunic of the Cyclops King}\n\nWorn on the torso, this item increases your Power skill by +4.",
+			"event": "You catch a Cyclops skinny dipping, and as a prank you make off with his clothes.  Later, you realize the tunic is magical.",
+			"name": "Tunic of the Cyclops King"
+		},
+		"value": 5000
+	},
+	"breastplateOfBrimstone": {
+		"class": "MAJOR",
+		"slot": [
+			"TORSO"
+		],
+		"text": {
+			"description": "{Breastplate of Brimstone}\n\nWorn on the torso, this item increases your Power skill by +5.",
+			"event": "You meet a blacksmith who is in the process of melting down old pieces of armor and weapons to reclaim the metal.  When he learns of your quest, he gives you a breastplate that he claims refused to melt, and is therefore of no value to him.",
+			"name": "Breastplate of Brimstone"
+		},
+		"value": 6000
+	},
+	"titansCuirass": {
+		"class": "RELIC",
+		"slot": [
+			"TORSO"
+		],
+		"text": {
+			"description": "{Titan's Cuirass}\n\nWhen worn, this massive relic increases your Power skill by +10, but reduces your Knowledge skill by -2.",
+			"event": "A Titan stops you and says, \"Pay me 5,000 gold, or I shall slay you where you stand.\"  You refuse.  The Titan grabs the sword hanging from its belt, but you duck between its legs.  He is so surprised by this maneuver that he trips... falling on his sword and killing himself instantly.  You relieve him of his belongings.",
+			"name": "Titan's Cuirass"
+		},
+		"value": 10000
+	},
+	"armorOfWonder": {
+		"class": "MINOR",
+		"slot": [
+			"TORSO"
+		],
+		"text": {
+			"description": "{Armor of Wonder}\n\nWorn on the torso, the Armor of Wonder increases all four primary skills by +1.",
+			"event": "A gang of Rogues is sifting through the possessions of dead warriors.  Scaring off the scavengers, you note the Rogues had overlooked a dirty, but serviceable, breastplate.",
+			"name": "Armor of Wonder"
+		},
+		"value": 4000
+	},
+	"sandalsOfTheSaint": {
+		"class": "RELIC",
+		"slot": [
+			"FEET"
+		],
+		"text": {
+			"description": "{Sandals of the Saint}\n\nWorn on the feet, the Sandals of the Saint increase all four primary skills by +2.",
+			"event": "A Nomad trader seeks protection from a tribe of Goblins.  For your assistance, he gives you a finely crafted pair of sandals made from the softest leather.  Looking closely, you see fascinating ancient carvings engraved on the leather.",
+			"name": "Sandals of the Saint"
+		},
+		"value": 8000
+	},
+	"celestialNecklaceOfBliss": {
+		"class": "RELIC",
+		"slot": [
+			"NECK"
+		],
+		"text": {
+			"description": "{Celestial Necklace of Bliss}\n\nWorn about the neck, the Celestial Necklace of Bliss increases all four primary skills by +3.",
+			"event": "After rescuing a Sorceress from a cursed tomb, she rewards your heroism with an exquisite jeweled necklace.",
+			"name": "Celestial Necklace of Bliss"
+		},
+		"value": 12000
+	},
+	"lionsShieldOfCourage": {
+		"class": "RELIC",
+		"slot": [
+			"LEFT_HAND"
+		],
+		"text": {
+			"description": "{Lion's Shield of Courage}\n\nHeld with the left hand, the Lion's Shield of Courage increases all four primary skills by +4.",
+			"event": "You've come upon a fight between a Necromancer and a Paladin.  The Necromancer blasts the Paladin with a fire bolt, bringing him to his knees.  Acting quickly, you slay the evil one before the final blow.  The grateful Paladin gives you the shield that saved him.",
+			"name": "Lion's Shield of Courage"
+		},
+		"value": 16000
+	},
+	"swordOfJudgement": {
+		"class": "RELIC",
+		"slot": [
+			"RIGHT_HAND"
+		],
+		"text": {
+			"description": "{Sword of Judgement}\n\nHeld with the right hand, the Sword of Judgement increases all four primary skills by +5.",
+			"event": "You come upon a battle where a Paladin has been mortally wounded by a group of Zombies.  He asks you to take his sword and finish what he started.  As you pick it up, it begins to hum, and then everything becomes a blur.  The Zombies lie dead, the sword dripping with blood.  You strap it to your belt.",
+			"name": "Sword of Judgement"
+		},
+		"value": 20000
+	},
+	"helmOfHeavenlyEnlightenment": {
+		"class": "RELIC",
+		"slot": [
+			"HEAD"
+		],
+		"text": {
+			"description": "{Helm of Heavenly Enlightenment}\n\nWorn on the head, the Helm of Heavenly Enlightenment increases all four primary skills by +6.",
+			"event": "You spy a gleaming object poking up out of the ground.   You send a member of your party over to investigate.  He comes back with a golden helmet in his hands.  You realize that it must be the Helm of Heavenly Enlightenment, the only helm ever rumored to be made from solid gold.",
+			"name": "Helm of Heavenly Enlightenment"
+		},
+		"value": 24000
+	},
+	"quietEyeOfTheDragon": {
+		"class": "TREASURE",
+		"slot": [
+			"LEFT_RING",
+			"RIGHT_RING"
+		],
+		"text": {
+			"description": "{Quiet Eye of the Dragon}\n\nWorn on a finger, this item increases your Attack and Defense skills by +1.",
+			"event": "While venturing into a decrepit hut you find the skeleton of a long dead witch.  Investigation of the remains reveals a ring with a Dragon's eye set into it.",
+			"name": "Quiet Eye of the Dragon"
+		},
+		"value": 2000
+	},
+	"redDragonFlameTongue": {
+		"class": "MINOR",
+		"slot": [
+			"RIGHT_HAND"
+		],
+		"text": {
+			"description": "{Red Dragon Flame Tongue}\n\nHeld with the right hand, this item increases your Attack and Defense skills by +2.",
+			"event": "As you are walking along a narrow path, a nearby bush suddenly bursts into flames.  Before your eyes the flames become the image of a beautiful woman.  She holds out a magnificent sword to you.",
+			"name": "Red Dragon Flame Tongue"
+		},
+		"value": 4000
+	},
+	"dragonScaleShield": {
+		"class": "MAJOR",
+		"slot": [
+			"LEFT_HAND"
+		],
+		"text": {
+			"description": "{Dragon Scale Shield}\n\nHeld with the left hand, this item increases your Attack and Defense skills by +3.",
+			"event": "You meet an old Armorer who claims he owes you a favor.  Taking him up on it, he pieces together some Dragon scales, forming a well-fashioned shield.",
+			"name": "Dragon Scale Shield"
+		},
+		"value": 6000
+	},
+	"dragonScaleArmor": {
+		"class": "RELIC",
+		"slot": [
+			"TORSO"
+		],
+		"text": {
+			"description": "{Dragon Scale Armor}\n\nWorn on a torso, this item increases your Attack and Defense skills by +4.",
+			"event": "You meet an old Armorer who claims he owes you a favor.  Taking him up on it, he pieces together some Dragon scales, forming a well-fashioned breastplate.",
+			"name": "Dragon Scale Armor"
+		},
+		"value": 8000
+	},
+	"dragonboneGreaves": {
+		"class": "TREASURE",
+		"slot": [
+			"FEET"
+		],
+		"text": {
+			"description": "{Dragonbone Greaves}\n\nWorn on the feet, this item increases your Knowledge and Power skills by +1.",
+			"event": "You trip over what seem to be the bones of a large Dragon.  Upon further examination, you discover the bones to be a pair of greaves.",
+			"name": "Dragonbone Greaves"
+		},
+		"value": 2000
+	},
+	"dragonWingTabard": {
+		"class": "MINOR",
+		"slot": [
+			"SHOULDERS"
+		],
+		"text": {
+			"description": "{Dragon Wing Tabard}\n\nWorn on the shoulders, this item increases your Knowledge and Power skills by +2.",
+			"event": "Ridding the countryside of the hideous Dragon who made a sport of eating noblemen's Knights, you are honored with a Dragon Wing Tabard.",
+			"name": "Dragon Wing Tabard"
+		},
+		"value": 4000
+	},
+	"necklaceOfDragonteeth": {
+		"class": "MAJOR",
+		"slot": [
+			"NECK"
+		],
+		"text": {
+			"description": "{Necklace of Dragonteeth}\n\nWorn about the neck, this item increases your Knowledge and Power skills by +3.",
+			"event": "An old shaman stands in the road before you, screaming something in a language you can't understand.  He suddenly vanishes in a cloud of smoke.  When the smoke clears, there is a long string of Dragon teeth in the spot where he was standing.",
+			"name": "Necklace of Dragonteeth"
+		},
+		"value": 6000
+	},
+	"crownOfDragontooth": {
+		"class": "RELIC",
+		"slot": [
+			"HEAD"
+		],
+		"text": {
+			"description": "{Crown of Dragontooth}\n\nWorn on the head, this item increases your Knowledge and Power skills by +4.",
+			"event": "While out scaring up game, your troops find a mysterious crown levitating about three feet off of the ground.  They hand it to you, and you notice an inscription.  It reads: \"Brains best brawn and magic beats might.  Heed my words, and you'll win every fight.\"",
+			"name": "Crown of Dragontooth"
+		},
+		"value": 8000
+	},
+	"stillEyeOfTheDragon": {
+		"class": "TREASURE",
+		"slot": [
+			"LEFT_RING",
+			"RIGHT_RING"
+		],
+		"text": {
+			"description": "{Still Eye of the Dragon}\n\nWorn on the finger, this item increases your Luck and Morale by +1.",
+			"event": "While venturing into a decrepit hut you find the skeleton of a long dead witch.  Investigation of the remains reveals a ring with a Dragon's eye set into it.",
+			"name": "Still Eye of the Dragon"
+		},
+		"value": 2000
+	},
+	"cloverOfFortune": {
+		"class": "TREASURE",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Clover of Fortune}\n\nThe Clover of Fortune increases your Luck by +1.",
+			"event": "While walking across a patch of dried vegetation, you are surprised to find a healthy, green four-leaf clover.",
+			"name": "Clover of Fortune"
+		},
+		"value": 1000
+	},
+	"cardsOfProphecy": {
+		"class": "TREASURE",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Cards of Prophecy}\n\nThe Cards of Prophecy increase your Luck by +1.",
+			"event": "You meet a traveler who offers to let you draw a card from the strange deck that he carries.  When you refuse, he draws one himself.  He has a momentary look of surprise on his face, then vanishes with a pop, dropping the cards to the floor.  You gather them, and leave.",
+			"name": "Cards of Prophecy"
+		},
+		"value": 1000
+	},
+	"ladybirdOfLuck": {
+		"class": "TREASURE",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Ladybird of Luck}\n\nThe Ladybird of Luck increases your Luck by +1.",
+			"event": "An old witch who seems to have been expecting you, hands you a small statue and departs, never having said a word.",
+			"name": "Ladybird of Luck"
+		},
+		"value": 1000
+	},
+	"badgeOfCourage": {
+		"class": "TREASURE",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Badge of Courage}\n\nThe Badge of Courage increases your Morale by +1.",
+			"event": "After saving a young boy from a vicious pack of Wolves, you return him to his father's manor.  The grateful nobleman awards you with a Badge of Courage.",
+			"name": "Badge of Courage"
+		},
+		"value": 1000
+	},
+	"crestOfValor": {
+		"class": "TREASURE",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Crest of Valor}\n\nThe Crest of Valor increases your Morale by +1.",
+			"event": "After freeing a princess of a neighboring kingdom from the evil clutches of despicable slavers, she awards you with a Crest of Valor.",
+			"name": "Crest of Valor"
+		},
+		"value": 1000
+	},
+	"glyphOfGallantry": {
+		"class": "TREASURE",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Glyph of Gallantry}\n\nThe Glyph of Gallantry increases your Morale by +1.",
+			"event": "Ridding the countryside of the hideous Minotaur who made a sport of eating noblemen's Knights, you are honored with the Glyph of Gallantry.",
+			"name": "Glyph of Gallantry"
+		},
+		"value": 1000
+	},
+	"speculum": {
+		"class": "TREASURE",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Speculum}\n\nThe Speculum increases your Scouting radius by +1.",
+			"event": "A merchant from far away lands trades you a new invention of his people for traveling supplies.  It makes distant objects appear closer, and he calls it... a Speculum.",
+			"name": "Speculum"
+		},
+		"value": 1000
+	},
+	"spyglass": {
+		"class": "TREASURE",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Spyglass}\n\nThe Spyglass increases your Scouting radius by +1.",
+			"event": "An old man claiming to be an inventor asks you to try his latest invention.  He calls it... a Spyglass.",
+			"name": "Spyglass"
+		},
+		"value": 1000
+	},
+	"amuletOfTheUndertaker": {
+		"class": "TREASURE",
+		"slot": [
+			"NECK"
+		],
+		"text": {
+			"description": "{Amulet of the Undertaker}\n\nWorn about the neck, this amulet increases your Necromancy skill by 5%.",
+			"event": "A dirty amulet lies next to a freshly dug grave. Upon investigation, you discover it to be the enchanted Amulet of the Undertaker, long thought lost by mortals.",
+			"name": "Amulet of the Undertaker"
+		},
+		"value": 2000
+	},
+	"vampiresCowl": {
+		"class": "MINOR",
+		"slot": [
+			"SHOULDERS"
+		],
+		"text": {
+			"description": "{Vampire's Cowl}\n\nWorn about the shoulders, this cowl increases your Necromancy skill by 10%.",
+			"event": "You manage to find a Vampire's resting place during the day, and are able to slay him easily.  Just for good measure, you take his cowl.",
+			"name": "Vampire's Cowl"
+		},
+		"value": 4000
+	},
+	"deadMansBoots": {
+		"class": "MAJOR",
+		"slot": [
+			"FEET"
+		],
+		"text": {
+			"description": "{Dead Man's Boots}\n\nWorn on the feet, these boots increase your Necromancy skill by 15%.",
+			"event": "Discovering a pair of beautifully beaded boots made from the finest and softest leather, you thank the anonymous donor and add the boots to your inventory.",
+			"name": "Dead Man's Boots"
+		},
+		"value": 6000
+	},
+	"garnitureOfInterference": {
+		"class": "MAJOR",
+		"slot": [
+			"NECK"
+		],
+		"text": {
+			"description": "{Garniture of Interference}\n\nWorn about the neck, this item increases your Magic Resistance by 5%.",
+			"event": "You've come upon a fight between a Necromancer and a Paladin.  The Necromancer blasts the Paladin with a fire bolt, bringing him to his knees.  Acting quickly, you slay the evil one before the final blow.  The grateful Paladin gives you the armor that saved him.",
+			"name": "Garniture of Interference"
+		},
+		"value": 2000
+	},
+	"surcoatOfCounterpoise": {
+		"class": "MAJOR",
+		"slot": [
+			"SHOULDERS"
+		],
+		"text": {
+			"description": "{Surcoat of Counterpoise}\n\nWorn about the shoulders, this item increases your Magic Resistance by 10%.",
+			"event": "You've come upon a fight between a Necromancer and a Paladin.  The Necromancer blasts the Paladin with a fire bolt, bringing him to his knees.  Acting quickly, you slay the evil one before the final blow.  The grateful Paladin gives you the cloak that saved him.",
+			"name": "Surcoat of Counterpoise"
+		},
+		"value": 4000
+	},
+	"bootsOfPolarity": {
+		"class": "RELIC",
+		"slot": [
+			"FEET"
+		],
+		"text": {
+			"description": "{Boots of Polarity}\n\nWorn on the feet, these boots increase your Magic Resistance by 15%.",
+			"event": "A Nomad trader seeks protection from a tribe of Goblins.  For your assistance, he gives you a finely crafted pair of boots made from the softest leather.  Looking closely, you see fascinating ancient carvings engraved on the leather.",
+			"name": "Boots of Polarity"
+		},
+		"value": 6000
+	},
+	"bowOfElvenCherrywood": {
+		"class": "TREASURE",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Bow of Elven Cherrywood}\n\nThis bow increases your Archery skill by 5%.",
+			"event": "A chance meeting with a famous Archer finds you in a game of knucklebones pitting his bow against your horse.  You win.",
+			"name": "Bow of Elven Cherrywood"
+		},
+		"value": 2000
+	},
+	"bowstringOfTheUnicornsMane": {
+		"class": "MINOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Bowstring of the Unicorn's Mane}\n\nThis bowstring increases your Archery skill by 10%.",
+			"event": "An ensnared Unicorn whinnies in fright.  Murmuring soothing words, you set her free.  Snorting and stamping her front hoof once, she gallops off.  Looking down you see that she dropped what appears to be a finely crafted bowstring.",
+			"name": "Bowstring of the Unicorn's Mane"
+		},
+		"value": 4000
+	},
+	"angelFeatherArrows": {
+		"class": "MAJOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Angel Feather Arrows}\n\nThese arrows increase your Archery skill by 15%.",
+			"event": "Not really wanting to know where the Angel is whose feathers were used for these arrows, you take them and quickly depart.",
+			"name": "Angel Feather Arrows"
+		},
+		"value": 6000
+	},
+	"birdOfPerception": {
+		"class": "TREASURE",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Bird of Perception}\n\nThis figurine increases your Eagle Eye skill by 5%.",
+			"event": "An old witch who seems to have been expecting you, hands you a small statue and departs, never having said a word.",
+			"name": "Bird of Perception"
+		},
+		"value": 1000
+	},
+	"stoicWatchman": {
+		"class": "TREASURE",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Stoic Watchman}\n\nThis figurine increases your Eagle Eye skill by 10%.",
+			"event": "An old witch who seems to have been expecting you, hands you a small statue and departs, never having said a word.",
+			"name": "Stoic Watchman"
+		},
+		"value": 2000
+	},
+	"emblemOfCognizance": {
+		"class": "MINOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Emblem of Cognizance}\n\nThis item increases your Eagle Eye skill by 15%.",
+			"event": "An old witch who seems to have been expecting you, hands you a small talisman and departs, never having said a word.",
+			"name": "Emblem of Cognizance"
+		},
+		"value": 3000
+	},
+	"statesmansMedal": {
+		"class": "MAJOR",
+		"slot": [
+			"NECK"
+		],
+		"text": {
+			"description": "{Statesman's Medal}\n\nWorn about the neck, the Statesman's Medal reduces the cost of surrendering.",
+			"event": "You pause to help a diplomat with a broken axle fix his problem.  In gratitude, he gives you a medal with magical properties which he says will, \"help people see things your way.\"",
+			"name": "Statesman's Medal"
+		},
+		"value": 5000
+	},
+	"diplomatsRing": {
+		"class": "MAJOR",
+		"slot": [
+			"LEFT_RING",
+			"RIGHT_RING"
+		],
+		"text": {
+			"description": "{Diplomat's Ring}\n\nWorn on the finger, the Diplomat's Ring reduces the cost of surrendering.",
+			"event": "You pause to help a diplomat with a broken axle fix his problem.  In gratitude, he gives you a ring with magical properties which he says will, \"help people see things your way.\"",
+			"name": "Diplomat's Ring"
+		},
+		"value": 5000
+	},
+	"ambassadorsSash": {
+		"class": "MAJOR",
+		"slot": [
+			"SHOULDERS"
+		],
+		"text": {
+			"description": "{Ambassador's Sash}\n\nWorn about the shoulders, the Ambassador's Sash reduces the cost of surrendering.",
+			"event": "You pause to help a diplomat with a broken axle fix his problem.  In gratitude, he gives you a sash with magical properties which he says will, \"help people see things your way.\"",
+			"name": "Ambassador's Sash"
+		},
+		"value": 5000
+	},
+	"ringOfTheWayfarer": {
+		"class": "MAJOR",
+		"slot": [
+			"LEFT_RING",
+			"RIGHT_RING"
+		],
+		"text": {
+			"description": "{Ring of the Wayfarer}\n\nWhen placed on the finger, this ring increases the combat speed of all your units by +1.",
+			"event": "Visiting a local wise man, you explain the intent of your journey.  He reaches into a sack and withdraws a strange ring which he hands to you.",
+			"name": "Ring of the Wayfarer"
+		},
+		"value": 5000
+	},
+	"equestriansGloves": {
+		"class": "MINOR",
+		"slot": [
+			"LEFT_RING",
+			"RIGHT_RING"
+		],
+		"text": {
+			"description": "{Equestrian's Gloves}\n\nWorn on the hands, these gloves increase your hero's movement rate over land.",
+			"event": "A brief stop at an improbable rural inn yields an exchange of money, tales, and accidentally, luggage.  You find a magical pair of gloves in your new backpack.",
+			"name": "Equestrian's Gloves"
+		},
+		"value": 3000
+	},
+	"necklaceOfOceanGuidance": {
+		"class": "MAJOR",
+		"slot": [
+			"NECK"
+		],
+		"text": {
+			"description": "{Necklace of Ocean Guidance}\n\nWorn about the neck, this necklace increases your hero's movement rate at sea.",
+			"event": "An old sea captain is being tortured by Ogres.  You save him, and in return he rewards you with a wondrous necklace that will guide you at sea.",
+			"name": "Necklace of Ocean Guidance"
+		},
+		"value": 10000
+	},
+	"angelWings": {
+		"class": "RELIC",
+		"slot": [
+			"SHOULDERS"
+		],
+		"text": {
+			"description": "{Angel Wings}\n\nWorn about the shoulders, these wings allow you to fly.",
+			"event": "Not really wanting to know where the Angel is who belongs to these wings, you take them and quickly depart.",
+			"name": "Angel Wings"
+		},
+		"value": 20000
+	},
+	"charmOfMana": {
+		"class": "TREASURE",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Charm of Mana}\n\nThis charm helps you recover 1 extra spell point per day.",
+			"event": "You come upon a caravan of gypsies who are feasting and fortifying their bodies with mead.  They call you forward and say, \"If you prove that you can dance the Rama-Buta, we will reward you.\"  You don't know it, but try anyway.  They laugh hysterically, but admire your bravery, giving you a strange charm.",
+			"name": "Charm of Mana"
+		},
+		"value": 500
+	},
+	"talismanOfMana": {
+		"class": "TREASURE",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Talisman of Mana}\n\nThis talisman helps you recover 2 extra spell points per day.",
+			"event": "You come upon a caravan of gypsies who are feasting and fortifying their bodies with mead.  They call you forward and say, \"If you prove that you can dance the Rama-Buta, we will reward you.\"  You don't know it, but try anyway.  They laugh hysterically, but admire your bravery, giving you a strange talisman.",
+			"name": "Talisman of Mana"
+		},
+		"value": 1000
+	},
+	"mysticOrbOfMana": {
+		"class": "TREASURE",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Mystic Orb of Mana}\n\nThis orb helps you recover 3 extra spell points per day.",
+			"event": "You come upon a caravan of gypsies who are feasting and fortifying their bodies with mead.  They call you forward and say, \"If you prove that you can dance the Rama-Buta, we will reward you.\"  You don't know it, but try anyway.  They laugh hysterically, but admire your bravery, giving you a strange orb.",
+			"name": "Mystic Orb of Mana"
+		},
+		"value": 1500
+	},
+	"collarOfConjuring": {
+		"class": "TREASURE",
+		"slot": [
+			"NECK"
+		],
+		"text": {
+			"description": "{Collar of Conjuring}\n\nWorn about the neck, this item increases the duration of all your spells by 1.",
+			"event": "Before you appears a levitating glass case with a golden choker perched upon a bed of crimson velvet.  At your touch, the lid opens and the choker floats into your awaiting hands.",
+			"name": "Collar of Conjuring"
+		},
+		"value": 500
+	},
+	"ringOfConjuring": {
+		"class": "TREASURE",
+		"slot": [
+			"LEFT_RING",
+			"RIGHT_RING"
+		],
+		"text": {
+			"description": "{Ring of Conjuring}\n\nWorn on a finger, this item increases the duration of all your spells by 2.",
+			"event": "You find a small tree that closely resembles the great Warlock, Brimstone, with a ring around one of its twigs.  Scraps of clothing and rotting leather lead you to suspect that it IS Brimstone, transformed.  Since you can't help him, you take the magic ring.",
+			"name": "Ring of Conjuring"
+		},
+		"value": 1000
+	},
+	"capeOfConjuring": {
+		"class": "TREASURE",
+		"slot": [
+			"SHOULDERS"
+		],
+		"text": {
+			"description": "{Cape of Conjuring}\n\nWorn about the shoulders, this item increases the duration of all your spells by 3.",
+			"event": "Before you appears a levitating glass case with a folded cloak perched upon a bed of crimson velvet.  At your touch, the lid opens and the cloak floats into your awaiting hands.",
+			"name": "Cape of Conjuring"
+		},
+		"value": 1500
+	},
+	"orbOfTheFirmament": {
+		"class": "MAJOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Orb of the Firmament}\n\nThis powerful orb causes your Air spells to inflict an additional 50% damage.",
+			"event": "You come across a conjurer who begs to accompany you and your army awhile for safety.  You agree, and he offers as payment a strange orb of the elements.",
+			"name": "Orb of the Firmament"
+		},
+		"value": 6000
+	},
+	"orbOfSilt": {
+		"class": "MAJOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Orb of Silt}\n\nThis powerful orb causes your Earth spells to inflict an additional 50% damage.",
+			"event": "You come across a conjurer who begs to accompany you and your army awhile for safety.  You agree, and he offers as payment a strange orb of the elements.",
+			"name": "Orb of Silt"
+		},
+		"value": 6000
+	},
+	"orbOfTempestuousFire": {
+		"class": "MAJOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Orb of Tempestuous Fire}\n\nThis powerful orb causes your Fire spells to inflict an additional 50% damage.",
+			"event": "You come across a conjurer who begs to accompany you and your army awhile for safety.  You agree, and he offers as payment a strange orb of the elements.",
+			"name": "Orb of Tempestuous Fire"
+		},
+		"value": 6000
+	},
+	"orbOfDrivingRain": {
+		"class": "MAJOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Orb of Driving Rain}\n\nThis powerful orb causes your Water spells to inflict an additional 50% damage.",
+			"event": "You come across a conjurer who begs to accompany you and your army awhile for safety.  You agree, and he offers as payment a strange orb of the elements.",
+			"name": "Orb of Driving Rain"
+		},
+		"value": 6000
+	},
+	"recantersCloak": {
+		"class": "MAJOR",
+		"slot": [
+			"SHOULDERS"
+		],
+		"text": {
+			"description": "{Recanter's Cloak}\n\nWhile wearing this cloak, neither you nor your opponent will be able to cast level 3 or higher spells during combat.",
+			"event": "Responding to the panicked cries of a damsel in distress, you discover a young woman fleeing from a hungry bear.  You slay the beast in the nick of time, and the grateful Sorceress weaves a magic cloak from the bear's hide.",
+			"name": "Recanter's Cloak"
+		},
+		"value": 8000
+	},
+	"spiritOfOppression": {
+		"class": "TREASURE",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Spirit of Oppression}\n\nThis item negates all Morale bonuses during combat for both you and your opponent.",
+			"event": "Walking through the ruins of an ancient walled city, you find the instrument of the city's destruction, the Spirit of Oppression.",
+			"name": "Spirit of Oppression"
+		},
+		"value": 2000
+	},
+	"hourglassOfTheEvilHour": {
+		"class": "TREASURE",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Hourglass of the Evil Hour}\n\nThis item negates all Luck bonuses during combat for both you and your opponent.",
+			"event": "A surprise turn in the landscape finds you in the midst of a grisly scene - vultures picking at the aftermath of a terrible battle.  Your cursory search of the remains turns up an enchanted hourglass.",
+			"name": "Hourglass of the Evil Hour"
+		},
+		"value": 2000
+	},
+	"tomeOfFireMagic": {
+		"class": "RELIC",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Tome of Fire Magic}\n\nThis heavy book contains all spells in the school of Fire Magic.  It must be equipped for the spells to be available.",
+			"event": "You come across a conjurer who begs to accompany you and your army awhile for safety.  You agree, and he offers as payment a copy of a book of the elements.",
+			"name": "Tome of Fire Magic"
+		},
+		"value": 20000
+	},
+	"tomeOfAirMagic": {
+		"class": "RELIC",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Tome of Air Magic}\n\nThis heavy book contains all spells in the school of Air Magic.  It must be equipped for the spells to be available.",
+			"event": "You come across a conjurer who begs to accompany you and your army awhile for safety.  You agree, and he offers as payment a copy of a book of the elements.",
+			"name": "Tome of Air Magic"
+		},
+		"value": 20000
+	},
+	"tomeOfWaterMagic": {
+		"class": "RELIC",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Tome of Water Magic}\n\nThis heavy book contains all spells in the school of Water Magic.  It must be equipped for the spells to be available.",
+			"event": "You come across a conjurer who begs to accompany you and your army awhile for safety.  You agree, and he offers as payment a copy of a book of the elements.",
+			"name": "Tome of Water Magic"
+		},
+		"value": 20000
+	},
+	"tomeOfEarthMagic": {
+		"class": "RELIC",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Tome of Earth Magic}\n\nThis heavy book contains all spells in the school of Earth Magic.  It must be equipped for the spells to be available.",
+			"event": "You come across a conjurer who begs to accompany you and your army awhile for safety.  You agree, and he offers as payment a copy of a book of the elements.",
+			"name": "Tome of Earth Magic"
+		},
+		"value": 20000
+	},
+	"bootsOfLevitation": {
+		"class": "RELIC",
+		"slot": [
+			"FEET"
+		],
+		"text": {
+			"description": "{Boots of Levitation}\n\nWhen worn, these boots allow you to walk across water.",
+			"event": "Visiting a local wise man, you explain the intent of your journey.  He reaches into a chest and withdraws a strange pair of boots which he hands to you.",
+			"name": "Boots of Levitation"
+		},
+		"value": 10000
+	},
+	"goldenBow": {
+		"class": "MAJOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Golden Bow}\n\nWhen wielded, the Golden Bow allows your troops to shoot through any obstacle or at any range without penalty.",
+			"event": "A chance meeting with a famous Archer finds you in a game of knucklebones pitting his bow against your horse.  You win.",
+			"name": "Golden Bow"
+		},
+		"value": 8000
+	},
+	"sphereOfPermanence": {
+		"class": "MAJOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Sphere of Permanence}\n\nWielding this sphere renders your units immune to the Dispel Magic spell.",
+			"event": "You meet an old Wizard friend of yours traveling in the opposite direction.  He presents  you with a gift:  An orb that prevents the use of the dispel magic spell on your allies.",
+			"name": "Sphere of Permanence"
+		},
+		"value": 7500
+	},
+	"orbOfVulnerability": {
+		"class": "RELIC",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Orb of Vulnerability}\n\nDuring combat, this orb negates the natural magic resistance of all creatures on the battlefield.",
+			"event": "You meet an old Wizard friend of yours traveling in the opposite direction.  He presents  you with a gift:  An orb that allows nearby magic resistant creatures to be harmed by magic.",
+			"name": "Orb of Vulnerability"
+		},
+		"value": 25000
+	},
+	"ringOfVitality": {
+		"class": "TREASURE",
+		"slot": [
+			"LEFT_RING",
+			"RIGHT_RING"
+		],
+		"text": {
+			"description": "{Ring of Vitality}\n\nThis item increases the health of all your units by +1.",
+			"event": "While pausing to rest, you notice a bobcat climbing a short tree to get at a crow's nest.  On impulse, you climb the tree yourself and scare off the cat.  When you look in the nest, you find a collection of shiny stones and a ring.",
+			"name": "Ring of Vitality"
+		},
+		"value": 5000
+	},
+	"ringOfLife": {
+		"class": "MINOR",
+		"slot": [
+			"LEFT_RING",
+			"RIGHT_RING"
+		],
+		"text": {
+			"description": "{Ring of Life}\n\nThis item increases the health of all your units by +1.",
+			"event": "While pausing to rest, you notice a bobcat climbing a short tree to get at a crow's nest.  On impulse, you climb the tree yourself and scare off the cat.  When you look in the nest, you find a collection of shiny stones and a ring.",
+			"name": "Ring of Life"
+		},
+		"value": 5000
+	},
+	"vialOfLifeblood": {
+		"class": "MAJOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Vial of Lifeblood}\n\nThis item increases the health of all your units by +2.",
+			"event": "You find a mystical shrine hidden among the trees.  Floating above the altar is a Vial said to contain the blood of life.  You very carefully remove it, taking care not to disturb anything else.",
+			"name": "Vial of Lifeblood"
+		},
+		"value": 10000
+	},
+	"necklaceOfSwiftness": {
+		"class": "TREASURE",
+		"slot": [
+			"NECK"
+		],
+		"text": {
+			"description": "{Necklace of Swiftness}\n\nWorn about the neck, this necklace increases the combat speed of all your units by +1.",
+			"event": "Visiting a local wise man, you explain the intent of your journey.  He reaches into a sack and withdraws a strange necklace which he hands to you.",
+			"name": "Necklace of Swiftness"
+		},
+		"value": 5000
+	},
+	"bootsOfSpeed": {
+		"class": "MINOR",
+		"slot": [
+			"FEET"
+		],
+		"text": {
+			"description": "{Boots of Speed}\n\nWorn on the feet, these boots increase your hero's movement rate over land.",
+			"event": "Visiting a local wise man, you explain the intent of your journey.  He reaches into a chest and withdraws a strange pair of boots which he hands to you.",
+			"name": "Boots of Speed"
+		},
+		"value": 6000
+	},
+	"capeOfVelocity": {
+		"class": "MAJOR",
+		"slot": [
+			"SHOULDERS"
+		],
+		"text": {
+			"description": "{Cape of Velocity}\n\nWorn about the shoulders, this cape increases the combat speed of all your units by +2.",
+			"event": "A brief stop at an improbable rural inn yields an exchange of money, tales, and accidentally, luggage.  You find a magical cloak in your new backpack.",
+			"name": "Cape of Velocity"
+		},
+		"value": 10000
+	},
+	"pendantOfDispassion": {
+		"class": "TREASURE",
+		"slot": [
+			"NECK"
+		],
+		"text": {
+			"description": "{Pendant of Dispassion}\n\nWearing this item renders your units immune to the Berserk spell.",
+			"event": "The sound of combat draws you to the scene of a fight between an old Barbarian and an eight-headed Hydra.  Your timely intervention swings the battle in favor of the man, and he rewards you with a pendant he used to use to calm his mind for battle.",
+			"name": "Pendant of Dispassion"
+		},
+		"value": 1000
+	},
+	"pendantOfSecondSight": {
+		"class": "MAJOR",
+		"slot": [
+			"NECK"
+		],
+		"text": {
+			"description": "{Pendant of Second Sight}\n\nWearing this item renders your units immune to the Blind spell.",
+			"event": "You come upon a very old woman, long blind from cataracts and dying alone.  You tend to her final needs and promise a proper burial.  Grateful, she gives you a magic pendant emblazoned with a stylized eye.  It lets you see with your eyes closed.",
+			"name": "Pendant of Second Sight"
+		},
+		"value": 5000
+	},
+	"pendantOfHoliness": {
+		"class": "TREASURE",
+		"slot": [
+			"NECK"
+		],
+		"text": {
+			"description": "{Pendant of Holiness}\n\nWearing this item renders your units immune to the Curse spell.",
+			"event": "In your wanderings you come across a hermit living in a small, tidy hut.  Impressed with your mission, he takes time out from his meditations to bless and give you a charm against curses.",
+			"name": "Pendant of Holiness"
+		},
+		"value": 1000
+	},
+	"pendantOfLife": {
+		"class": "TREASURE",
+		"slot": [
+			"NECK"
+		],
+		"text": {
+			"description": "{Pendant of Life}\n\nWearing this item renders your units immune to the Death Ripple spell.",
+			"event": "A fierce windstorm reveals the entrance to a buried tomb.  Your investigation reveals that the tomb has already been looted, but the thieves overlooked an ankh on a gold chain in the dark.",
+			"name": "Pendant of Life"
+		},
+		"value": 2500
+	},
+	"pendantOfDeath": {
+		"class": "TREASURE",
+		"slot": [
+			"NECK"
+		],
+		"text": {
+			"description": "{Pendant of Death}\n\nWearing this item renders your units immune to the Destroy Undead spell.",
+			"event": "A quick and deadly battle with a Necromancer wins you his magical pendant.  Later, a Wizard tells you that the pendant protects undead under your control from spells meant to destroy them.",
+			"name": "Pendant of Death"
+		},
+		"value": 2500
+	},
+	"pendantOfFreeWill": {
+		"class": "TREASURE",
+		"slot": [
+			"NECK"
+		],
+		"text": {
+			"description": "{Pendant of Free Will}\n\nWearing this item renders your units immune to the Hypnotize spell.",
+			"event": "A brief roadside encounter with a small caravan and a game of knucklebones wins a magic pendant.  Its former owner says that it protects against hypnosis.",
+			"name": "Pendant of Free Will"
+		},
+		"value": 1000
+	},
+	"pendantOfNegativity": {
+		"class": "MAJOR",
+		"slot": [
+			"NECK"
+		],
+		"text": {
+			"description": "{Pendant of Negativity}\n\nWearing this item renders your units immune to the Lightning Bolt and Chain Lightning spells.",
+			"event": "You come upon the remains of a small hut which was clearly destroyed by a very large bolt of lightning.  Sifting through the debris, you find an undamaged pendant that seems to tingle in your hand.",
+			"name": "Pendant of Negativity"
+		},
+		"value": 5000
+	},
+	"pendantOfTotalRecall": {
+		"class": "TREASURE",
+		"slot": [
+			"NECK"
+		],
+		"text": {
+			"description": "{Pendant of Total Recall}\n\nWearing this item renders your units immune to the Forgetfulness spell.",
+			"event": "Alongside the remains of a burnt witch lies a beautiful pendant, intricately designed.  Approaching the corpse with caution, you add the item to your inventory.",
+			"name": "Pendant of Total Recall"
+		},
+		"value": 3000
+	},
+	"pendantOfCourage": {
+		"class": "MAJOR",
+		"slot": [
+			"NECK"
+		],
+		"text": {
+			"description": "{Pendant of Courage}\n\nWhen worn, this item bestows +3 Luck and Morale to your hero's troops.",
+			"event": "Responding to cries for help, you find river Sprites making a sport of dunking an old man.  Feeling vengeful, you rescue the man and drag a Sprite onto dry land for awhile.  The Sprite, uncomfortable in the air, gives you a magic pendant to let him go.",
+			"name": "Pendant of Courage"
+		},
+		"value": 7000
+	},
+	"everflowingCrystalCloak": {
+		"class": "MAJOR",
+		"slot": [
+			"SHOULDERS"
+		],
+		"text": {
+			"description": "{Everflowing Crystal Cloak}\n\nWhen worn, this cloak increases your Crystal production by +1 per day.",
+			"event": "Taking shelter from a storm in a small cave,  you notice a small patch of crystal in one corner.  Curious, you discover that the patch is really a cloak, and when you break a piece off it mysteriously grows back.  You decide to take the cloak with you.",
+			"name": "Everflowing Crystal Cloak"
+		},
+		"value": 5000
+	},
+	"ringOfInfiniteGems": {
+		"class": "MAJOR",
+		"slot": [
+			"LEFT_RING",
+			"RIGHT_RING"
+		],
+		"text": {
+			"description": "{Ring of Infinite Gems}\n\nWhen worn, this ring increases your Gem production by +1 per day.",
+			"event": "A cry of pain leads you to a Centaur, caught in a trap.  Upon setting the creature free, he hands you a small pouch.  Emptying the contents, you find a dazzling jeweled ring.",
+			"name": "Ring of Infinite Gems"
+		},
+		"value": 5000
+	},
+	"everpouringVialOfMercury": {
+		"class": "MAJOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Everpouring Vial of Mercury}\n\nWhen equipped, this vial increases your Mercury production by +1 per day.",
+			"event": "A brief stop at a hastily abandoned Wizard's tower turns up a magical vial of mercury that always has a little left on the bottom.  Recognizing a treasure when you see one, you cap it and slip it in your pocket.",
+			"name": "Everpouring Vial of Mercury"
+		},
+		"value": 5000
+	},
+	"inexhaustibleCartOfOre": {
+		"class": "MINOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Inexhaustible Cart of Ore}\n\nWhen equipped, this cart provides you with an additional +1 Ore per day.",
+			"event": "You've found a Goblin weapon smithy making weapons for use against humans.  With a tremendous yell you and your army descend upon their camp and drive them away.  A search finds a magic cart that never runs out of ore.",
+			"name": "Inexhaustible Cart of Ore"
+		},
+		"value": 5000
+	},
+	"eversmokingRingOfSulfur": {
+		"class": "MAJOR",
+		"slot": [
+			"LEFT_RING",
+			"RIGHT_RING"
+		],
+		"text": {
+			"description": "{Eversmoking Ring of Sulfur}\n\nWhen worn, this ring increases your Sulfur production by +1 per day.",
+			"event": "You visit an alchemist who, upon seeing your army, is swayed by the righteousness of your cause.  The newly loyal subject gives you his eversmoking ring of sulfur to help with the war effort.",
+			"name": "Eversmoking Ring of Sulfur"
+		},
+		"value": 5000
+	},
+	"inexhaustibleCartOfLumber": {
+		"class": "MINOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Inexhaustible Cart of Lumber}\n\nWhen equipped, this cart provides you with an additional +1 Wood per day.",
+			"event": "Pausing to rest and light a cook fire, you pull wood out of a nearby lumber cart.  As you keep pulling wood from the cart, you notice that its cargo doesn't shrink.  You realize to your delight that the cart is enchanted, so you take it along.",
+			"name": "Inexhaustible Cart of Lumber"
+		},
+		"value": 5000
+	},
+	"endlessSackOfGold": {
+		"class": "RELIC",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Endless Sack of Gold}\n\nWhen equipped, the Endless Sack of Gold increases your income by 1000 gold per day.",
+			"event": "A little leprechaun dances gleefully around a magic sack.  Seeing you approach, he stops in mid-stride.  The little man screams and stamps his foot ferociously, vanishing into thin air.  Remembering the old leprechaun saying 'Finders Keepers', you grab the sack and leave.",
+			"name": "Endless Sack of Gold"
+		},
+		"value": 10000
+	},
+	"endlessBagOfGold": {
+		"class": "MAJOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Endless Bag of Gold}\n\nWhen equipped, the Endless Bag of Gold increases your income by 750 gold per day.",
+			"event": "A noblewoman, separated from her traveling companions, asks for your help.  After escorting her home, she rewards you with a bag filled with gold.",
+			"name": "Endless Bag of Gold"
+		},
+		"value": 7500
+	},
+	"endlessPurseOfGold": {
+		"class": "MAJOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Endless Purse of Gold}\n\nWhen equipped, the Endless Purse of Gold increases your income by 500 gold per day.",
+			"event": "In your travels, you find a leather purse filled with gold that once belonged to a great warrior king who had the ability to transform any inanimate object into gold.",
+			"name": "Endless Purse of Gold"
+		},
+		"value": 5000
+	},
+	"legsOfLegion": {
+		"class": "TREASURE",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Legs of Legion}\n\nThis item, when equipped by a hero in a town, increases the growth of your 2nd level units (in that town) by 5 per week.",
+			"event": "Searching a ruin, you are amazed to find a piece of the Statue of Legion.  You carefully dust it off before placing it in your pack.",
+			"name": "Legs of Legion"
+		},
+		"value": 5000
+	},
+	"loinsOfLegion": {
+		"class": "MINOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Loins of Legion}\n\nThis item, when equipped by a hero in a town, increases the growth of your 3rd level units (in that town) by 4 per week.",
+			"event": "Searching a ruin, you are amazed to find a piece of the Statue of Legion.  You carefully dust it off before placing it in your pack.",
+			"name": "Loins of Legion"
+		},
+		"value": 5000
+	},
+	"torsoOfLegion": {
+		"class": "MINOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Torso of Legion}\n\nThis item, when equipped by a hero in a town, increases the growth of your 4th level units (in that town) by 3 per week.",
+			"event": "Searching a ruin, you are amazed to find a piece of the Statue of Legion.  You carefully dust it off before placing it in your pack.",
+			"name": "Torso of Legion"
+		},
+		"value": 5000
+	},
+	"armsOfLegion": {
+		"class": "MAJOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Arms of Legion}\n\nThis item, when equipped by a hero in a town, increases the growth of your 5th level units (in that town) by 2 per week.",
+			"event": "Searching a ruin, you are amazed to find a piece of the Statue of Legion.  You carefully dust it off before placing it in your pack.",
+			"name": "Arms of Legion"
+		},
+		"value": 5000
+	},
+	"headOfLegion": {
+		"class": "MAJOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Head of Legion}\n\nThis item, when equipped by a hero in a town, increases the growth of your 6th level units (in that town) by 1 per week.",
+			"event": "Searching a ruin, you are amazed to find a piece of the Statue of Legion.  You carefully dust it off before placing it in your pack.",
+			"name": "Head of Legion"
+		},
+		"value": 5000
+	},
+	"seaCaptainsHat": {
+		"class": "RELIC",
+		"slot": [
+			"HEAD"
+		],
+		"text": {
+			"description": "{Sea Captain's Hat}\n\nWhen worn, this hat increases your movement at sea, allows you to summon and destroy boats, and protects you from whirlpools.",
+			"event": "An old seaman tells you a tale of an enchanted hat that he used in his youth to rally his crew into fits of efficiency.  He then hands you a faded map that shows where he hid it.  After much exploring, you find it stashed underneath a nearby rock.",
+			"name": "Sea Captain's Hat"
+		},
+		"value": 15000
+	},
+	"spellbindersHat": {
+		"class": "RELIC",
+		"slot": [
+			"HEAD"
+		],
+		"text": {
+			"description": "{Spellbinder's Hat}\n\nWhen worn, this hat allows you to cast all 5th level spells.",
+			"event": "You see a Wizard fleeing from a Dragon and riding like the wind.  The Wizard opens a portal and rides through, getting his hat knocked off by the edge of the gate.  The Dragon follows, and the gate closes.  You pick the hat up, dust it off, and put it on.",
+			"name": "Spellbinder's Hat"
+		},
+		"value": 30000
+	},
+	"shacklesOfWar": {
+		"class": "MAJOR",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Shackles of War}\n\nWhen these shackles are wielded in combat, neither you nor your opponent may retreat or surrender.",
+			"event": "Walking through the ruins of an ancient walled city, you find the instrument of the city's destruction, the elaborately crafted Shackles of War.",
+			"name": "Shackles of War"
+		},
+		"value": 5000
+	},
+	"orbOfInhibition": {
+		"class": "RELIC",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Orb of Inhibition}\n\nThis powerful orb prevents all spell casting in combat.",
+			"event": "You stop to help a Peasant catch a runaway mare.  To show his gratitude, he hands you a tiny sphere.  As soon as you grasp it, you feel the magical energy drain from your limbs...",
+			"name": "Orb of Inhibition"
+		},
+		"value": 20000
+	},
+	"vialOfDragonBlood": {
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Vial of Dragon Blood}\n\nAll dragons under your command receive +5 to their attack and +5 to defense.",
+			"event": "You find a cave guarded by an ancient dragon.  After a fierce battle, you slay him.  Dragon blood supposedly has magical properties, so you carefully gather some in a vial.",
+			"name": "Vial of Dragon Blood"
+		},
+		"value": 20000
+	},
+	"armageddonsBlade": {
+		"slot": [
+			"RIGHT_HAND"
+		],
+		"text": {
+			"description": "{Armageddon's Blade}\n\n+ 3 Attack. + 3 Defense. + 6 Knowledge. + 3 Power. Places Expert Armageddon Spell in your hero's spell book. All allied creatures become immune to Armageddon.",
+			"event": "Deep beneath the earth, you find a vault of the Ancients from before the Silence.  Inside, you find a sealed casket, deeply etched with dire warnings.  Ignoring them, you break the seal.  Inside, you find Armageddon's Blade.",
+			"name": "Armageddon's Blade"
+		},
+		"value": 50000
+	},
+	"angelicAlliance": {
+		"class": "RELIC",
+		"slot": [
+			"RIGHT_HAND"
+		],
+		"text": {
+			"description": "{Angelic Alliance}\n\nAllows Rampart, Tower, Fortress, Stronghold and Castle creatures to be mixed without a morale penalty, for the player.  Casts Expert Prayer at the start of combat.",
+			"event": "You trip over the Angelic Alliance, dust it off, and stick it in your pack.",
+			"name": "Angelic Alliance"
+		},
+		"value": 0
+	},
+	"cloakOfTheUndeadKing": {
+		"class": "RELIC",
+		"slot": [
+			"SHOULDERS"
+		],
+		"text": {
+			"description": "{Cloak of the Undead King}\n\n30% of battlefield dead are resurrected as Skeletons.  If hero already has the Necromancy skill then the percentages are added to the skill and the level of skill determines what type is resurrected.  Basic: Zombies\nAdvanced: Wights\nExpert:  Liches",
+			"event": "You trip over the Cloak of the Undead King, dust it off, and stick it in your pack.",
+			"name": "Cloak of the Undead King"
+		},
+		"value": 0
+	},
+	"elixirOfLife": {
+		"class": "RELIC",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Elixir of Life}\n\nAll creatures get a 25% health bonus and gain the regeneration ability.  Does not work on Undead or unliving creatures",
+			"event": "You trip over the Elixir of Life, dust it off, and stick it in your pack.",
+			"name": "Elixir of Life"
+		},
+		"value": 0
+	},
+	"armorOfTheDamned": {
+		"class": "RELIC",
+		"slot": [
+			"TORSO"
+		],
+		"text": {
+			"description": "{Armor of the Damned}\n\nAll opponents have these spells effective on them for fifty turns: Slow, Curse, Weakness, and Misfortune.",
+			"event": "You trip over the Armor of the Damned, dust it off, and stick it in your pack.",
+			"name": "Armor of the Damned"
+		},
+		"value": 0
+	},
+	"statueOfLegion": {
+		"class": "RELIC",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Statue of Legion}\n\nAll creature production increases by 50%, in all towns based off of the castle creature generation level, does not include flagged structures or other like bonuses.",
+			"event": "You trip over the Statue of Legion, dust it off, and stick it in your pack.",
+			"name": "Statue of Legion"
+		},
+		"value": 0
+	},
+	"powerOfTheDragonFather": {
+		"class": "RELIC",
+		"slot": [
+			"TORSO"
+		],
+		"text": {
+			"description": "{Power of the Dragon Father}\n\n+6 to all primary skills, all troops are immune to 1-4th level spells.",
+			"event": "You trip over the Power of the Dragon Father, dust it off, and stick it in your pack.",
+			"name": "Power of the Dragon Father"
+		},
+		"value": 0
+	},
+	"titansThunder": {
+		"class": "RELIC",
+		"slot": [
+			"RIGHT_HAND"
+		],
+		"text": {
+			"description": "{Titan's Thunder}\n\nHero gains the ability to cast Lightning Bolt for 600 points of damage, does not cost any spell points, adds a spell book into their inventory (permanently).",
+			"event": "You trip over the Titan's Thunder, dust it off, and stick it in your pack.",
+			"name": "Titan's Thunder"
+		},
+		"value": 0
+	},
+	"admiralsHat": {
+		"class": "RELIC",
+		"slot": [
+			"HEAD"
+		],
+		"text": {
+			"description": "{Admiral's Hat}\n\nNo boarding or unboarding ship penalty.  Converts movement points between the Hero's Land and Water movement.",
+			"event": "You trip over the Admiral's Hat, dust it off, and stick it in your pack.",
+			"name": "Admiral's Hat"
+		},
+		"value": 0
+	},
+	"bowOfTheSharpshooter": {
+		"class": "RELIC",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Bow of the Sharpshooter}\n\nRanged shooters may fire projectiles while adjacent to an enemy creature.  No archery penalty for range or obstacle",
+			"event": "You trip over the Bow of the Sharpshooter, dust it off, and stick it in your pack.",
+			"name": "Bow of the Sharpshooter"
+		},
+		"value": 0
+	},
+	"wizardsWell": {
+		"class": "RELIC",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Wizard's Well}\n\nRegenerates all spell points each day",
+			"event": "You trip over the Wizard's Well, dust it off, and stick it in your pack.",
+			"name": "Wizard's Well"
+		},
+		"value": 0
+	},
+	"ringOfTheMagi": {
+		"class": "RELIC",
+		"slot": [
+			"LEFT_RING",
+			"RIGHT_RING"
+		],
+		"text": {
+			"description": "{Ring of the Magi}\n\nAdd 50 rounds to spell duration.",
+			"event": "You trip over the Ring of the Magi, dust it off, and stick it in your pack.",
+			"name": "Ring of the Magi"
+		},
+		"value": 0
+	},
+	"cornucopia": {
+		"class": "RELIC",
+		"slot": [
+			"MISC5",
+			"MISC4",
+			"MISC3",
+			"MISC2",
+			"MISC1"
+		],
+		"text": {
+			"description": "{Cornucopia}\n\nGenerates 4 of each precious resource, each day.",
+			"event": "You trip over the Town of Plenty, dust it off, and stick it in your pack.",
+			"name": "Cornucopia"
+		},
+		"value": 0
+	},
+	"unusedArtifact1": {
+		"slot": [
+			"SHOULDERS"
+		],
+		"text": {
+			"description": "{Diplomat's Suit}\n\nThis is a kick-ass artifact.",
+			"event": "You trip over the Diplomat's Suit, dust it off, and stick it in your pack.",
+			"name": "Diplomat's Suit"
+		},
+		"value": 0
+	},
+	"unusedArtifact2": {
+		"slot": [
+			"TORSO"
+		],
+		"text": {
+			"description": "{Mired in Neutrality}\n\nThis is a kick-ass artifact.",
+			"event": "You trip over the Mired in Neutrality, dust it off, and stick it in your pack.",
+			"name": "Mired in Neutrality"
+		},
+		"value": 0
+	},
+	"unusedArtifact3": {
+		"slot": [
+			"RIGHT_HAND"
+		],
+		"text": {
+			"description": "{Ironfist of the Ogre}\n\nThis is a kick-ass artifact.",
+			"event": "You trip over the Ironfist of the Ogre, dust it off, and stick it in your pack.",
+			"name": "Ironfist of the Ogre"
+		},
+		"value": 0
+	}
+}

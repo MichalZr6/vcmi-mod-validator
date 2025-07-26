@@ -1,0 +1,1040 @@
+{
+	"pathfinding": {
+		"advanced": {
+			"description": "{Advanced Pathfinding}\n\nAdvanced Pathfinding reduces the movement penalty for rough terrain by 50%.",
+			"effects": {
+				"main": {
+					"type": "ROUGH_TERRAIN_DISCOUNT",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Pathfinding}\n\nBasic Pathfinding reduces the movement penalty for rough terrain by 25%.",
+			"effects": {
+				"main": {
+					"type": "ROUGH_TERRAIN_DISCOUNT",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Pathfinding}\n\nExpert Pathfinding reduces the movement penalty for rough terrain by 75%.",
+			"effects": {
+				"main": {
+					"type": "ROUGH_TERRAIN_DISCOUNT",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Pathfinding"
+	},
+	"archery": {
+		"advanced": {
+			"description": "{Advanced Archery}\n\nAdvanced Archery increases the damage done by range attacking creatures by 25%.",
+			"effects": {
+				"main": {
+					"subtype": "damageTypeRanged",
+					"type": "PERCENTAGE_DAMAGE_BOOST",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Archery}\n\nBasic Archery increases the damage done by range attacking creatures by 10%.",
+			"effects": {
+				"main": {
+					"subtype": "damageTypeRanged",
+					"type": "PERCENTAGE_DAMAGE_BOOST",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Archery}\n\nExpert Archery increases the damage done by range attacking creatures by 50%.",
+			"effects": {
+				"main": {
+					"subtype": "damageTypeRanged",
+					"type": "PERCENTAGE_DAMAGE_BOOST",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Archery"
+	},
+	"logistics": {
+		"advanced": {
+			"description": "{Advanced Logistics}\n\nAdvanced Logistics increases your hero's movement points over land by 20%.",
+			"effects": {
+				"main": {
+					"subtype": "heroMovementLand",
+					"type": "MOVEMENT",
+					"valueType": "PERCENT_TO_BASE"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Logistics}\n\nBasic Logistics increases your hero's movement points over land by 10%.",
+			"effects": {
+				"main": {
+					"subtype": "heroMovementLand",
+					"type": "MOVEMENT",
+					"valueType": "PERCENT_TO_BASE"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Logistics}\n\nExpert Logistics increases your hero's movement points over land by 30%.",
+			"effects": {
+				"main": {
+					"subtype": "heroMovementLand",
+					"type": "MOVEMENT",
+					"valueType": "PERCENT_TO_BASE"
+				}
+			}
+		},
+		"name": "Logistics"
+	},
+	"scouting": {
+		"advanced": {
+			"description": "{Advanced Scouting}\n\nAdvanced Scouting allows your hero to see 2 squares further into the shroud.",
+			"effects": {
+				"main": {
+					"type": "SIGHT_RADIUS",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Scouting}\n\nBasic Scouting allows your hero to see 1 square further into the shroud.",
+			"effects": {
+				"main": {
+					"type": "SIGHT_RADIUS",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Scouting}\n\nExpert Scouting allows your hero to see 3 squares further into the shroud.",
+			"effects": {
+				"main": {
+					"type": "SIGHT_RADIUS",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Scouting"
+	},
+	"diplomacy": {
+		"advanced": {
+			"description": "{Advanced Diplomacy}\n\nAdvanced Diplomacy allows you to negotiate with monsters who are weaker than your group, and reduces the cost of surrendering by 40%.",
+			"effects": {
+				"main": {
+					"type": "WANDERING_CREATURES_JOIN_BONUS",
+					"valueType": "BASE_NUMBER"
+				},
+				"surr": {
+					"type": "SURRENDER_DISCOUNT",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Diplomacy}\n\nBasic Diplomacy allows you to negotiate with monsters who are weaker than your group, and reduces the cost of surrendering by 20%.",
+			"effects": {
+				"main": {
+					"type": "WANDERING_CREATURES_JOIN_BONUS",
+					"valueType": "BASE_NUMBER"
+				},
+				"surr": {
+					"type": "SURRENDER_DISCOUNT",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Diplomacy}\n\nExpert Diplomacy allows you to negotiate with monsters who are weaker than your group, and reduces the cost of surrendering by 60%.",
+			"effects": {
+				"main": {
+					"type": "WANDERING_CREATURES_JOIN_BONUS",
+					"valueType": "BASE_NUMBER"
+				},
+				"surr": {
+					"type": "SURRENDER_DISCOUNT",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Diplomacy"
+	},
+	"navigation": {
+		"advanced": {
+			"description": "{Advanced Navigation}\n\nAdvanced Navigation doubles your hero's movement points at sea.",
+			"effects": {
+				"main": {
+					"subtype": "heroMovementSea",
+					"type": "MOVEMENT",
+					"valueType": "PERCENT_TO_BASE"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Navigation}\n\nBasic Navigation increases your hero's movement points at sea by 50%.",
+			"effects": {
+				"main": {
+					"subtype": "heroMovementSea",
+					"type": "MOVEMENT",
+					"valueType": "PERCENT_TO_BASE"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Navigation}\n\nExpert Navigation increases your hero's movement points at sea by 150%.",
+			"effects": {
+				"main": {
+					"subtype": "heroMovementSea",
+					"type": "MOVEMENT",
+					"valueType": "PERCENT_TO_BASE"
+				}
+			}
+		},
+		"name": "Navigation"
+	},
+	"leadership": {
+		"advanced": {
+			"description": "{Advanced Leadership}\n\nAdvanced Leadership increases your hero's troops' morale by 2.",
+			"effects": {
+				"main": {
+					"type": "MORALE",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Leadership}\n\nBasic Leadership increases your hero's troops' morale by 1.",
+			"effects": {
+				"main": {
+					"type": "MORALE",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Leadership}\n\nExpert Leadership increases your hero's troops' morale by 3.",
+			"effects": {
+				"main": {
+					"type": "MORALE",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Leadership"
+	},
+	"wisdom": {
+		"advanced": {
+			"description": "{Advanced Wisdom}\n\nAdvanced Wisdom allows your hero to learn fourth level spells.",
+			"effects": {
+				"main": {
+					"type": "MAX_LEARNABLE_SPELL_LEVEL",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Wisdom}\n\nBasic Wisdom allows your hero to learn third level spells.",
+			"effects": {
+				"main": {
+					"type": "MAX_LEARNABLE_SPELL_LEVEL",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Wisdom}\n\nExpert Wisdom allows your hero to learn fifth level spells.",
+			"effects": {
+				"main": {
+					"type": "MAX_LEARNABLE_SPELL_LEVEL",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Wisdom"
+	},
+	"mysticism": {
+		"advanced": {
+			"description": "{Advanced Mysticism}\n\nAdvanced Mysticism allows your hero to regenerate 3 spell points per day.",
+			"effects": {
+				"main": {
+					"type": "MANA_REGENERATION",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Mysticism}\n\nBasic Mysticism allows your hero to regenerate 2 spell points per day.",
+			"effects": {
+				"main": {
+					"type": "MANA_REGENERATION",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Mysticism}\n\nExpert Mysticism allows your hero to regenerate 4 spell points per day.",
+			"effects": {
+				"main": {
+					"type": "MANA_REGENERATION",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Mysticism"
+	},
+	"luck": {
+		"advanced": {
+			"description": "{Advanced Luck}\n\nAdvanced Luck increases your hero's luck by 2.",
+			"effects": {
+				"main": {
+					"type": "LUCK",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Luck}\n\nBasic Luck increases your hero's luck by 1.",
+			"effects": {
+				"main": {
+					"type": "LUCK",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Luck}\n\nExpert Luck increases your hero's luck by 3.",
+			"effects": {
+				"main": {
+					"type": "LUCK",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Luck"
+	},
+	"ballistics": {
+		"advanced": {
+			"description": "{Advanced Ballistics}\n\nAdvanced Ballistics gives control of the catapult to the hero, allowing two aimed shots with increased damage.",
+			"effects": {
+				"ctrl": {
+					"subtype": "creature.catapult",
+					"type": "MANUAL_CONTROL",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"main": {
+					"subtype": "spell.catapultShot",
+					"type": "CATAPULT_EXTRA_SHOTS",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Ballistics}\n\nBasic Ballistics gives control of the catapult to the hero, allowing aimed shots with increased damage.",
+			"effects": {
+				"ctrl": {
+					"subtype": "creature.catapult",
+					"type": "MANUAL_CONTROL",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"main": {
+					"subtype": "spell.catapultShot",
+					"type": "CATAPULT_EXTRA_SHOTS",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Ballistics}\n\nExpert Ballistics gives control of the catapult to the hero, allowing two aimed shots at maximum damage.",
+			"effects": {
+				"ctrl": {
+					"subtype": "creature.catapult",
+					"type": "MANUAL_CONTROL",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"main": {
+					"subtype": "spell.catapultShot",
+					"type": "CATAPULT_EXTRA_SHOTS",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Ballistics"
+	},
+	"eagleEye": {
+		"advanced": {
+			"description": "{Advanced Eagle Eye}\n\nAdvanced Eagle Eye gives your hero a 50% chance to learn any spell up to 3rd level used in combat.",
+			"effects": {
+				"main": {
+					"type": "LEARN_BATTLE_SPELL_CHANCE",
+					"valueType": "BASE_NUMBER"
+				},
+				"val2": {
+					"type": "LEARN_BATTLE_SPELL_LEVEL_LIMIT",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Eagle Eye}\n\nBasic Eagle Eye gives your hero a 40% chance to learn any 1st or 2nd level spell used in combat.",
+			"effects": {
+				"main": {
+					"type": "LEARN_BATTLE_SPELL_CHANCE",
+					"valueType": "BASE_NUMBER"
+				},
+				"val2": {
+					"type": "LEARN_BATTLE_SPELL_LEVEL_LIMIT",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Eagle Eye}\n\nExpert Eagle Eye gives your hero a 60% chance to learn any spell up to 4th level used in combat.",
+			"effects": {
+				"main": {
+					"type": "LEARN_BATTLE_SPELL_CHANCE",
+					"valueType": "BASE_NUMBER"
+				},
+				"val2": {
+					"type": "LEARN_BATTLE_SPELL_LEVEL_LIMIT",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Eagle Eye"
+	},
+	"necromancy": {
+		"advanced": {
+			"description": "{Advanced Necromancy}\n\nAdvanced Necromancy allows 20% of the creatures killed in combat to be brought back from the dead as Skeletons.",
+			"effects": {
+				"main": {
+					"type": "UNDEAD_RAISE_PERCENTAGE",
+					"valueType": "BASE_NUMBER"
+				},
+				"power": {
+					"addInfo": 0,
+					"subtype": "creature.skeleton",
+					"type": "IMPROVED_NECROMANCY"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Necromancy}\n\nBasic Necromancy allows 10% of the creatures killed in combat to be brought back from the dead as Skeletons.",
+			"effects": {
+				"main": {
+					"type": "UNDEAD_RAISE_PERCENTAGE",
+					"valueType": "BASE_NUMBER"
+				},
+				"power": {
+					"addInfo": 0,
+					"subtype": "creature.skeleton",
+					"type": "IMPROVED_NECROMANCY"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Necromancy}\n\nExpert Necromancy allows 30% of the creatures killed in combat to be brought back from the dead as Skeletons.",
+			"effects": {
+				"main": {
+					"type": "UNDEAD_RAISE_PERCENTAGE",
+					"valueType": "BASE_NUMBER"
+				},
+				"power": {
+					"addInfo": 0,
+					"subtype": "creature.skeleton",
+					"type": "IMPROVED_NECROMANCY"
+				}
+			}
+		},
+		"name": "Necromancy"
+	},
+	"estates": {
+		"advanced": {
+			"description": "{Advanced Estates}\n\nWith Estates, a hero contributes 250 gold per day to your cause.",
+			"effects": {
+				"main": {
+					"subtype": "resource.gold",
+					"type": "GENERATE_RESOURCE",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Estates}\n\nWith Eestates, a hero contributes 125 gold per day to your cause.",
+			"effects": {
+				"main": {
+					"subtype": "resource.gold",
+					"type": "GENERATE_RESOURCE",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Estates}\n\nWith Estates, a hero contributes 500 gold per day to your cause.",
+			"effects": {
+				"main": {
+					"subtype": "resource.gold",
+					"type": "GENERATE_RESOURCE",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Estates"
+	},
+	"fireMagic": {
+		"advanced": {
+			"description": "{Advanced Fire Magic}\n\nAdvanced Fire Magic allows your hero to cast Fire spells at reduced cost and increased effectiveness.",
+			"effects": {
+				"main": {
+					"subtype": "spellSchool.fire",
+					"type": "MAGIC_SCHOOL_SKILL",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Fire Magic}\n\nBasic Fire Magic allows your hero to cast Fire spells at reduced cost.",
+			"effects": {
+				"main": {
+					"subtype": "spellSchool.fire",
+					"type": "MAGIC_SCHOOL_SKILL",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Fire Magic}\n\nExpert Fire Magic allows your hero to cast Fire spells at reduced cost and maximum effectiveness.",
+			"effects": {
+				"main": {
+					"subtype": "spellSchool.fire",
+					"type": "MAGIC_SCHOOL_SKILL",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Fire Magic"
+	},
+	"airMagic": {
+		"advanced": {
+			"description": "{Advanced Air Magic}\n\nAdvanced Air Magic allows your hero to cast Air spells at reduced cost and increased effectiveness.",
+			"effects": {
+				"main": {
+					"subtype": "spellSchool.air",
+					"type": "MAGIC_SCHOOL_SKILL",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Air Magic}\n\nBasic Air Magic allows your hero to cast Air spells at reduced cost.",
+			"effects": {
+				"main": {
+					"subtype": "spellSchool.air",
+					"type": "MAGIC_SCHOOL_SKILL",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Air Magic}\n\nExpert Air Magic allows your hero to cast Air spells at reduced cost and maximum effectiveness.",
+			"effects": {
+				"main": {
+					"subtype": "spellSchool.air",
+					"type": "MAGIC_SCHOOL_SKILL",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Air Magic"
+	},
+	"waterMagic": {
+		"advanced": {
+			"description": "{Advanced Water Magic}\n\nAdvanced Water Magic allows your hero to cast Water spells at reduced cost and increased effectiveness.",
+			"effects": {
+				"main": {
+					"subtype": "spellSchool.water",
+					"type": "MAGIC_SCHOOL_SKILL",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Water Magic}\n\nBasic Water Magic allows your hero to cast Water spells at reduced cost.",
+			"effects": {
+				"main": {
+					"subtype": "spellSchool.water",
+					"type": "MAGIC_SCHOOL_SKILL",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Water Magic}\n\nExpert Water Magic allows your hero to cast Water spells at reduced cost and maximum effectiveness.",
+			"effects": {
+				"main": {
+					"subtype": "spellSchool.water",
+					"type": "MAGIC_SCHOOL_SKILL",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Water Magic"
+	},
+	"earthMagic": {
+		"advanced": {
+			"description": "{Advanced Earth Magic}\n\nAdvanced Earth Magic allows your hero to cast Earth spells at reduced cost and increased effectiveness.",
+			"effects": {
+				"main": {
+					"subtype": "spellSchool.earth",
+					"type": "MAGIC_SCHOOL_SKILL",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Earth Magic}\n\nBasic Earth Magic allows your hero to cast Earth spells at reduced cost.",
+			"effects": {
+				"main": {
+					"subtype": "spellSchool.earth",
+					"type": "MAGIC_SCHOOL_SKILL",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Earth Magic}\n\nExpert Earth Magic allows your hero to cast Earth spells at reduced cost and maximum effectiveness.",
+			"effects": {
+				"main": {
+					"subtype": "spellSchool.earth",
+					"type": "MAGIC_SCHOOL_SKILL",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Earth Magic"
+	},
+	"scholar": {
+		"advanced": {
+			"description": "{Advanced Scholar}\n\nAdvanced Scholar allows heroes to teach each other any spell up to 3rd level, effectively trading spells between spell books.",
+			"effects": {
+				"main": {
+					"type": "LEARN_MEETING_SPELL_LIMIT",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Scholar}\n\nBasic Scholar allows heroes to teach each other 1st and 2nd level spells, effectively trading spells between spell books.",
+			"effects": {
+				"main": {
+					"type": "LEARN_MEETING_SPELL_LIMIT",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Scholar}\n\nExpert Scholar allows heroes to teach each other any spell up to 4th level, effectively trading spells between spell books.",
+			"effects": {
+				"main": {
+					"type": "LEARN_MEETING_SPELL_LIMIT",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Scholar"
+	},
+	"tactics": {
+		"advanced": {
+			"description": "{Advanced Tactics}\n\nAdvanced Tactics allows you to rearrange your troops just before combat, within five hex rows of the commanding hero.",
+			"effects": {
+				"block": {
+					"type": "BEFORE_BATTLE_REPOSITION_BLOCK",
+					"valueType": "BASE_NUMBER"
+				},
+				"main": {
+					"type": "BEFORE_BATTLE_REPOSITION",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Tactics}\n\nBasic Tactics allows you to rearrange your troops just before combat, within three hex rows of the commanding hero.",
+			"effects": {
+				"block": {
+					"type": "BEFORE_BATTLE_REPOSITION_BLOCK",
+					"valueType": "BASE_NUMBER"
+				},
+				"main": {
+					"type": "BEFORE_BATTLE_REPOSITION",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Tactics}\n\nExpert Tactics allows you to rearrange your troops just before combat, within seven hex rows of the commanding hero.",
+			"effects": {
+				"block": {
+					"type": "BEFORE_BATTLE_REPOSITION_BLOCK",
+					"valueType": "BASE_NUMBER"
+				},
+				"main": {
+					"type": "BEFORE_BATTLE_REPOSITION",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Tactics"
+	},
+	"artillery": {
+		"advanced": {
+			"description": "{Advanced Artillery}\n\nAdvanced Artillery gives control of the ballista to the hero, allowing two shots with a 75% chance to inflict double damage.",
+			"effects": {
+				"ctrl": {
+					"subtype": "creature.ballista",
+					"type": "MANUAL_CONTROL",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"ctrl2": {
+					"subtype": "creature.arrowTower",
+					"type": "MANUAL_CONTROL",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"damagePower": {
+					"subtype": "creature.ballista",
+					"type": "BONUS_DAMAGE_PERCENTAGE",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"main": {
+					"subtype": "creature.ballista",
+					"type": "BONUS_DAMAGE_CHANCE",
+					"valueType": "BASE_NUMBER"
+				},
+				"val2": {
+					"subtype": "creature.ballista",
+					"type": "HERO_GRANTS_ATTACKS",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Artillery}\n\nBasic Artillery gives control of the ballista to the hero, allowing two shots with a 50% chance to inflict double damage.",
+			"effects": {
+				"ctrl": {
+					"subtype": "creature.ballista",
+					"type": "MANUAL_CONTROL",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"ctrl2": {
+					"subtype": "creature.arrowTower",
+					"type": "MANUAL_CONTROL",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"damagePower": {
+					"subtype": "creature.ballista",
+					"type": "BONUS_DAMAGE_PERCENTAGE",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"main": {
+					"subtype": "creature.ballista",
+					"type": "BONUS_DAMAGE_CHANCE",
+					"valueType": "BASE_NUMBER"
+				},
+				"val2": {
+					"subtype": "creature.ballista",
+					"type": "HERO_GRANTS_ATTACKS",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Artillery}\n\nExpert Artillery gives control of the ballista to the hero, allowing two shots which inflict double damage.",
+			"effects": {
+				"ctrl": {
+					"subtype": "creature.ballista",
+					"type": "MANUAL_CONTROL",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"ctrl2": {
+					"subtype": "creature.arrowTower",
+					"type": "MANUAL_CONTROL",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"damagePower": {
+					"subtype": "creature.ballista",
+					"type": "BONUS_DAMAGE_PERCENTAGE",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"main": {
+					"subtype": "creature.ballista",
+					"type": "BONUS_DAMAGE_CHANCE",
+					"valueType": "BASE_NUMBER"
+				},
+				"val2": {
+					"subtype": "creature.ballista",
+					"type": "HERO_GRANTS_ATTACKS",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Artillery"
+	},
+	"learning": {
+		"advanced": {
+			"description": "{Advanced Learning}\n\nAdvanced Learning increases a hero's earned experience by 10%.",
+			"effects": {
+				"main": {
+					"type": "HERO_EXPERIENCE_GAIN_PERCENT",
+					"valueType": "PERCENT_TO_BASE"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Learning}\n\nBasic Learning increases a hero's earned experience by 5%.",
+			"effects": {
+				"main": {
+					"type": "HERO_EXPERIENCE_GAIN_PERCENT",
+					"valueType": "PERCENT_TO_BASE"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Learning}\n\nExpert Learning increases a hero's earned experience by 15%.",
+			"effects": {
+				"main": {
+					"type": "HERO_EXPERIENCE_GAIN_PERCENT",
+					"valueType": "PERCENT_TO_BASE"
+				}
+			}
+		},
+		"name": "Learning"
+	},
+	"offence": {
+		"advanced": {
+			"description": "{Advanced Offense}\n\nAdvanced Offense increases all hand-to-hand damage inflicted by the hero's troops by 20%.",
+			"effects": {
+				"main": {
+					"subtype": "damageTypeMelee",
+					"type": "PERCENTAGE_DAMAGE_BOOST",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Offense}\n\nBasic Offense increases all hand-to-hand damage inflicted by the hero's troops by 10%.",
+			"effects": {
+				"main": {
+					"subtype": "damageTypeMelee",
+					"type": "PERCENTAGE_DAMAGE_BOOST",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Offense}\n\nExpert Offense increases all hand-to-hand damage inflicted by the hero's troops by 30%.",
+			"effects": {
+				"main": {
+					"subtype": "damageTypeMelee",
+					"type": "PERCENTAGE_DAMAGE_BOOST",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Offense"
+	},
+	"armorer": {
+		"advanced": {
+			"description": "{Advanced Armorer}\n\nAdvanced Armorer reduces all damage inflicted against the hero's troops by 10%.",
+			"effects": {
+				"main": {
+					"subtype": "damageTypeAll",
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Armorer}\n\nBasic Armorer reduces all damage inflicted against the hero's troops by 5%.",
+			"effects": {
+				"main": {
+					"subtype": "damageTypeAll",
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Armorer}\n\nExpert Armorer reduces all damage inflicted against the hero's troops by 15%.",
+			"effects": {
+				"main": {
+					"subtype": "damageTypeAll",
+					"type": "GENERAL_DAMAGE_REDUCTION",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Armorer"
+	},
+	"intelligence": {
+		"advanced": {
+			"description": "{Advanced Intelligence}\n\nAdvanced Intelligence increases a hero's normal maximum spell points by 50%.",
+			"effects": {
+				"main": {
+					"type": "MANA_PER_KNOWLEDGE_PERCENTAGE",
+					"valueType": "PERCENT_TO_BASE"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Intelligence}\n\nBasic Intelligence increases a hero's normal maximum spell points by 25%.",
+			"effects": {
+				"main": {
+					"type": "MANA_PER_KNOWLEDGE_PERCENTAGE",
+					"valueType": "PERCENT_TO_BASE"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Intelligence}\n\nExpert Intelligence doubles a hero's normal maximum spell points.",
+			"effects": {
+				"main": {
+					"type": "MANA_PER_KNOWLEDGE_PERCENTAGE",
+					"valueType": "PERCENT_TO_BASE"
+				}
+			}
+		},
+		"name": "Intelligence"
+	},
+	"sorcery": {
+		"advanced": {
+			"description": "{Advanced Sorcery}\n\nAdvanced Sorcery causes a hero's spells to inflict an additional 10% damage in combat.",
+			"effects": {
+				"main": {
+					"subtype": "spellSchool.any",
+					"type": "SPELL_DAMAGE",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Sorcery}\n\nBasic Sorcery causes a hero's spells to inflict an additional 5% damage in combat.",
+			"effects": {
+				"main": {
+					"subtype": "spellSchool.any",
+					"type": "SPELL_DAMAGE",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Sorcery}\n\nExpert Sorcery causes a hero's spells to inflict an additional 15% damage in combat.",
+			"effects": {
+				"main": {
+					"subtype": "spellSchool.any",
+					"type": "SPELL_DAMAGE",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Sorcery"
+	},
+	"resistance": {
+		"advanced": {
+			"description": "{Advanced Resistance}\n\nAdvanced Resistance endows a hero's troops with 10% magic resistance.",
+			"effects": {
+				"main": {
+					"type": "MAGIC_RESISTANCE",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic Resistance}\n\nBasic Resistance endows a hero's troops with 5% magic resistance.",
+			"effects": {
+				"main": {
+					"type": "MAGIC_RESISTANCE",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert Resistance}\n\nExpert Resistance endows a hero's troops with 20% magic resistance.",
+			"effects": {
+				"main": {
+					"type": "MAGIC_RESISTANCE",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "Resistance"
+	},
+	"firstAid": {
+		"advanced": {
+			"description": "{Advanced First Aid}\n\nAdvanced First Aid gives control of the first aid tent to the hero, healing 75 points of damage to the first unit of the selected stack.",
+			"effects": {
+				"ctrl": {
+					"subtype": "creature.firstAidTent",
+					"type": "MANUAL_CONTROL",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"main": {
+					"subtype": "spell.firstAid",
+					"type": "SPECIFIC_SPELL_POWER",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"basic": {
+			"description": "{Basic First Aid}\n\nBasic First Aid gives control of the first aid tent to the hero, healing 50 points of damage to the first unit of the selected stack.",
+			"effects": {
+				"ctrl": {
+					"subtype": "creature.firstAidTent",
+					"type": "MANUAL_CONTROL",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"main": {
+					"subtype": "spell.firstAid",
+					"type": "SPECIFIC_SPELL_POWER",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"expert": {
+			"description": "{Expert First Aid}\n\nExpert First Aid gives control of the first aid tent to the hero, healing 100 points of damage to the first unit of the selected stack.",
+			"effects": {
+				"ctrl": {
+					"subtype": "creature.firstAidTent",
+					"type": "MANUAL_CONTROL",
+					"val": 100,
+					"valueType": "BASE_NUMBER"
+				},
+				"main": {
+					"subtype": "spell.firstAid",
+					"type": "SPECIFIC_SPELL_POWER",
+					"valueType": "BASE_NUMBER"
+				}
+			}
+		},
+		"name": "First Aid"
+	}
+}

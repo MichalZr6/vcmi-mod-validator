@@ -1,0 +1,5180 @@
+{
+	"pasis": {
+		"army": [
+			{
+				"creature": "pixies",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "airElementals",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "airElementals",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"attack": {
+					"limiters": [
+						{
+							"parameters": [
+								"psychicElemental",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					],
+					"type": "PRIMARY_SKILL",
+					"val": 3
+				},
+				"defence": {
+					"limiters": [
+						{
+							"parameters": [
+								"psychicElemental",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					],
+					"type": "PRIMARY_SKILL",
+					"val": 3
+				}
+			}
+		},
+		"texts": {
+			"biography": "Pasis has always been extremely fascinated by those of Corporeal form.  Extensive research and interaction with these creatures made her an ideal candidate for the Conflux.",
+			"name": "Pasis",
+			"specialty": {
+				"description": "Psychic/Magic elementals receive +3 Att and +3 Def.",
+				"name": "Psychic Ele.",
+				"tooltip": "Creature Bonus: Psychic Elementals"
+			}
+		}
+	},
+	"thunar": {
+		"army": [
+			{
+				"creature": "pixies",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "airElementals",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "waterElementals",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"attack": {
+					"limiters": [
+						{
+							"parameters": [
+								"earthElemental",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				},
+				"damage": {
+					"limiters": [
+						{
+							"parameters": [
+								"earthElemental",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				},
+				"defence": {
+					"limiters": [
+						{
+							"parameters": [
+								"earthElemental",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				}
+			}
+		},
+		"texts": {
+			"biography": "Living around the Erathian Capitol for many years Thunar learned extensive Battle Tactics and Estates.  Her curiosity and respect of mortals gained her a place in the Conflux.",
+			"name": "Thunar",
+			"specialty": {
+				"description": "Earth/Magma elementals receive +2 Att, +1 Def, and +5 Dmg.",
+				"name": "Earth Ele.",
+				"tooltip": "Creature Bonus: Earth Elementals"
+			}
+		}
+	},
+	"ignissa": {
+		"army": [
+			{
+				"creature": "pixies",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "airElementals",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "waterElementals",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"attack": {
+					"limiters": [
+						{
+							"parameters": [
+								"fireElemental",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				},
+				"damage": {
+					"limiters": [
+						{
+							"parameters": [
+								"fireElemental",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				},
+				"defence": {
+					"limiters": [
+						{
+							"parameters": [
+								"fireElemental",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				}
+			}
+		},
+		"texts": {
+			"biography": "Four years ago a powerful Wizard summoned Ignissa to this plane.  Unable to return she wandered Antagarich until she felt called to the Conflux.",
+			"name": "Ignissa",
+			"specialty": {
+				"description": "Fire/Energy elementals receive +1 Att, +2 Def, and +2 Dmg.",
+				"name": "Fire Elementals",
+				"tooltip": "Creature Bonus: Fire Elementals"
+			}
+		}
+	},
+	"lacus": {
+		"army": [
+			{
+				"creature": "pixies",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "waterElementals",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "waterElementals",
+				"max": 2,
+				"min": 1
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Fierce competition of all Water Elementals took place to determine who would have the honor to serve the Conflux. Lacus earned her position through her advanced knowledge of Tactics.",
+			"name": "Lacus",
+			"specialty": {
+				"description": "Water/Ice elementals receive +2 Att.",
+				"name": "Water Ele.",
+				"tooltip": "Creature Bonus: Water Elementals"
+			}
+		}
+	},
+	"monere": {
+		"army": [
+			{
+				"creature": "pixies",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "airElementals",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "airElementals",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"attack": {
+					"limiters": [
+						{
+							"parameters": [
+								"psychicElemental",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					],
+					"type": "PRIMARY_SKILL",
+					"val": 3
+				},
+				"defence": {
+					"limiters": [
+						{
+							"parameters": [
+								"psychicElemental",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					],
+					"type": "PRIMARY_SKILL",
+					"val": 3
+				}
+			}
+		},
+		"texts": {
+			"biography": "As a being of pure energy, Monere enjoyed the freedoms of his natural state.  However, his curiosity for beings of corporeal form drove him to the Conflux.",
+			"name": "Monere",
+			"specialty": {
+				"description": "Psychic/Magic elementals receive +3 Att and +3 Def.",
+				"name": "Psychic Ele.",
+				"tooltip": "Creature Bonus: Psychic Elementals"
+			}
+		}
+	},
+	"erdamon": {
+		"army": [
+			{
+				"creature": "pixies",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "airElementals",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "waterElementals",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"attack": {
+					"limiters": [
+						{
+							"parameters": [
+								"earthElemental",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				},
+				"damage": {
+					"limiters": [
+						{
+							"parameters": [
+								"earthElemental",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				},
+				"defence": {
+					"limiters": [
+						{
+							"parameters": [
+								"earthElemental",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				}
+			}
+		},
+		"texts": {
+			"biography": "An ancient lord of magma, Erdamon has slept for centuries within the mountains bordering Eeofol.  Pulled from his slumber to aid the Conflux, Erdamon welcomes the battle to rid the world of the Kreegans.",
+			"name": "Erdamon",
+			"specialty": {
+				"description": "Earth/Magma elementals receive +2 Att, +1 Def, and +5 Dmg.",
+				"name": "Earth Ele.",
+				"tooltip": "Creature Bonus: Earth Elementals"
+			}
+		}
+	},
+	"fiur": {
+		"army": [
+			{
+				"creature": "pixies",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "airElementals",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "waterElementals",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"attack": {
+					"limiters": [
+						{
+							"parameters": [
+								"fireElemental",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				},
+				"damage": {
+					"limiters": [
+						{
+							"parameters": [
+								"fireElemental",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				},
+				"defence": {
+					"limiters": [
+						{
+							"parameters": [
+								"fireElemental",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				}
+			}
+		},
+		"texts": {
+			"biography": "Fiur is young, and his battle prowess untried, but he has a ferociousness like no other.  It is believed he will become one of the most powerful heroes of the Conflux.",
+			"name": "Fiur",
+			"specialty": {
+				"description": "Fire/Energy elementals receive +1 Att, +2 Def, and +2 Dmg.",
+				"name": "Fire Ele.",
+				"tooltip": "Creature Bonus: Fire Elementals"
+			}
+		}
+	},
+	"kalt": {
+		"army": [
+			{
+				"creature": "pixies",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "waterElementals",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "waterElementals",
+				"max": 2,
+				"min": 1
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Always the quick study, Kalt felt called to the Conflux where he could feed his voracious appitite for learning new and different things.",
+			"name": "Kalt",
+			"specialty": {
+				"description": "Water/Ice elementals receive +2 Att.",
+				"name": "Water Ele.",
+				"tooltip": "Creature Bonus:"
+			}
+		}
+	},
+	"luna": {
+		"army": [
+			{
+				"creature": "pixies",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "airElementals",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "waterElementals",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Originally a sorceress in Enroth, Luna felt the call of the elemental Conflux and made her way to Erathia.  Once in Erathia, Luna was compelled to disregard her aquatic talents and turn her efforts to developing her skills in fire magic.",
+			"name": "Luna",
+			"specialty": {
+				"description": "Damage from Fire Walls is doubled.",
+				"name": "Fire Wall",
+				"tooltip": "Spell Bonus: Fire Wall"
+			}
+		}
+	},
+	"brissa": {
+		"army": [
+			{
+				"creature": "pixies",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "airElementals",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "waterElementals",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "A young genie, even by their standards, Brissa joined the Restoration War before she completed her training.  What she lacks in training, she makes up in experience.",
+			"name": "Brissa",
+			"specialty": {
+				"description": "Casts Haste with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Haste",
+				"tooltip": "Spell Bonus: Haste"
+			}
+		}
+	},
+	"ciele": {
+		"army": [
+			{
+				"creature": "pixies",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "airElementals",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "waterElementals",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Growing up next to the ocean bordering Avlee, Ciele always felt a bond with the ancient waters.  She has wandered the lands seeking her calling.  Now she finds herself serving the Conflux.",
+			"name": "Ciele",
+			"specialty": {
+				"description": "When cast, Magic Arrow damage is increased 50%.",
+				"name": "Magic Arrow",
+				"tooltip": "Spell Bonus: Magic Arrow"
+			}
+		}
+	},
+	"labetha": {
+		"army": [
+			{
+				"creature": "pixies",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "airElementals",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "waterElementals",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Born poor, Labetha's parents were slaughtered peasantry during the Restoration wars.  Taken by dendroids and brought into their service in AvLee, her power over the earth developed quickly.  When she felt the Conflux calling, she answered quickly.",
+			"name": "Labetha",
+			"specialty": {
+				"name": "Stone Skin",
+				"tooltip": "Spell Bonus: Stone Skin"
+			}
+		}
+	},
+	"inteus": {
+		"army": [
+			{
+				"creature": "pixies",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "airElementals",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "waterElementals",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "At an early age, Inteus' mastery of fire earned him a spot with a troupe of entertainers.  Some believed he wad the son of a Fire Elemental.  One night, he felt a calling and left his profession.  Now he serves the Conflux.",
+			"name": "Inteus",
+			"specialty": {
+				"description": "Casts Bloodlust with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Bloodlust",
+				"tooltip": "Spell Bonus: Bloodlust"
+			}
+		}
+	},
+	"aenain": {
+		"army": [
+			{
+				"creature": "pixies",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "airElementals",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "waterElementals",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Created by great power from mystical forces, Genies are creatures of magic.  Aenain was made imperfect.  For centuries he has worked hard to overcome the perception of his imperfection.  For his dilligence and dedication to Air Magic, Aenain was called to the Conflux.",
+			"name": "Aenain",
+			"specialty": {
+				"description": "When cast, Disrupting Ray is increased +2.",
+				"name": "Disrupting Ray",
+				"tooltip": "Spell Bonus: Disrupting Ray"
+			}
+		}
+	},
+	"gelare": {
+		"army": [
+			{
+				"creature": "pixies",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "airElementals",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "waterElementals",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Gelare was born with a wisdom beyond his years, even for an elf.  Always calm, reflective and serene on the outside, Gelare did not question his calling to the Conflux.",
+			"name": "Gelare",
+			"specialty": {
+				"description": "Increases kingdom's income by 350 gold per day.",
+				"name": "+350 Gold",
+				"tooltip": "+350 Gold each day"
+			}
+		}
+	},
+	"grindan": {
+		"army": [
+			{
+				"creature": "pixies",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "airElementals",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "waterElementals",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Dwarves love gold.  Some more than others.  None have the power of earth to find it with such regularity as Grindan.",
+			"name": "Grindan",
+			"specialty": {
+				"description": "Increases kingdom's income by 350 gold per day.",
+				"name": "+350 Gold",
+				"tooltip": "+350 Gold each day"
+			}
+		}
+	},
+	"portraitGeneralKendal": {
+		"specialty": {
+			"base": null
+		}
+	},
+	"portraitYoungCristian": {
+		"specialty": {
+			"base": null
+		}
+	},
+	"portraitOrdwald": {
+		"specialty": {
+			"base": null
+		}
+	},
+	"portraitFinneas": {
+		"specialty": {
+			"base": null
+		}
+	},
+	"portraitYoungGem": {
+		"specialty": {
+			"base": null
+		}
+	},
+	"portraitYoungSandro": {
+		"specialty": {
+			"base": null
+		}
+	},
+	"portraitYoungYog": {
+		"specialty": {
+			"base": null
+		}
+	},
+	"sirMullich": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "archer",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Generally stoic, Sir Mullich is prone to spasmodic fits of uncoordinated excitement believed to intimidate his troops into working faster. ",
+			"name": "Sir Mullich",
+			"specialty": {
+				"description": "All creatures receive +2 speed.",
+				"name": "Speed",
+				"tooltip": "Creature Bonus: Speed"
+			}
+		}
+	},
+	"adrienne": {
+		"army": [
+			{
+				"creature": "gnoll",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "lizardman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "serpentFly",
+				"max": 4,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "With a burning desire to gain in power and to protect her homeland, Adrienne risked being a social outcast and hated by her own people to follow her passion.",
+			"name": "Adrienne",
+			"specialty": {
+				"description": "Starts with Expert Fire Magic.",
+				"name": "Fire Magic",
+				"tooltip": "Secondary Skill Bonus: Exp. Fire Magic"
+			}
+		}
+	},
+	"catherine": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "archer",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "As the reigning queen of Erathia, Catherine continues to wage war to secure her homeland's borders and restablished the peace built by her father.  However, support for her position is faltering as the country grows weary of war.",
+			"name": "Catherine",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Swordsmen or Crusaders for each level attained after 4th level.",
+				"name": "Swordsmen",
+				"tooltip": "Creature Bonus: Swordsmen"
+			}
+		}
+	},
+	"dracon": {
+		"army": [
+			{
+				"creature": "enchanters",
+				"max": 6,
+				"min": 6
+			},
+			{
+				"creature": "enchanters",
+				"max": 3,
+				"min": 3
+			},
+			{
+				"creature": "enchanters",
+				"max": 1,
+				"min": 1
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"archMage2enchanter": {
+					"addInfo": "creature.enchanter",
+					"type": "SPECIAL_UPGRADE"
+				},
+				"mage2enchanter": {
+					"addInfo": "creature.enchanter",
+					"type": "SPECIAL_UPGRADE"
+				},
+				"monk2enchanter": {
+					"addInfo": "creature.enchanter",
+					"type": "SPECIAL_UPGRADE"
+				},
+				"zealot2enchanter": {
+					"addInfo": "creature.enchanter",
+					"type": "SPECIAL_UPGRADE"
+				}
+			}
+		},
+		"texts": {
+			"biography": "Considered by many to be a magical genius, Dracon seeks to become history's greatest Dragon Slayer.  Unlike his fellow wizards, Dracon echews decorative attire for more practical battle gear.",
+			"name": "Dracon",
+			"specialty": {
+				"description": "Can upgrade Monks or Zealots and Magi or Arch Magi to Enchanters.",
+				"name": "Enchanters",
+				"tooltip": "Creature Bonus: Enchanters"
+			}
+		}
+	},
+	"gelu": {
+		"army": [
+			{
+				"creature": "sharpshooters",
+				"max": 6,
+				"min": 6
+			},
+			{
+				"creature": "sharpshooters",
+				"max": 3,
+				"min": 3
+			},
+			{
+				"creature": "sharpshooters",
+				"max": 1,
+				"min": 1
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"archer2sharpshooter": {
+					"addInfo": "creature.sharpshooter",
+					"type": "SPECIAL_UPGRADE"
+				},
+				"grandElf2sharpshooter": {
+					"addInfo": "creature.sharpshooter",
+					"type": "SPECIAL_UPGRADE"
+				},
+				"marksman2sharpshooter": {
+					"addInfo": "creature.sharpshooter",
+					"type": "SPECIAL_UPGRADE"
+				},
+				"woodElf2sharpshooter": {
+					"addInfo": "creature.sharpshooter",
+					"type": "SPECIAL_UPGRADE"
+				}
+			}
+		},
+		"texts": {
+			"biography": "Little is known about Gelu.  Gelu was found and raised by General Morgan Kendal when he was serving under Catherine Ironfist.  Gelu now command's Erathia's guerilla forces known as the Forest Guard.  He is believed to be half human, half Vori elf.",
+			"name": "Gelu",
+			"specialty": {
+				"description": "Can upgrade Archers or Marksmen and Wood Elves or Grand Elves to Sharpshooters.",
+				"name": "Sharpshooters",
+				"tooltip": "Creature Bonus: Sharpshooters"
+			}
+		}
+	},
+	"kilgor": {
+		"army": [
+			{
+				"creature": "goblins",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "goblinWolfRider",
+				"max": 7,
+				"min": 5
+			},
+			{
+				"creature": "orc",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"attack": {
+					"limiters": [
+						{
+							"parameters": [
+								"behemoth",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				},
+				"damage": {
+					"limiters": [
+						{
+							"parameters": [
+								"behemoth",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				},
+				"defence": {
+					"limiters": [
+						{
+							"parameters": [
+								"behemoth",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				}
+			}
+		},
+		"texts": {
+			"biography": "Since defeating his father for rulership of his clan, Kilgor has earned much fame throughout Krewlod.  Many consider him the only man capable of winning the generational Festival of Life.",
+			"name": "Kilgor",
+			"specialty": {
+				"description": "Behemoths or Ancient Behemoths receive +5 Att, +5 Def, +10 Dmg.",
+				"name": "Behemoths",
+				"tooltip": "Creature Bonus: Behemoths"
+			}
+		}
+	},
+	"undeadHaart": {
+		"army": [
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			},
+			{
+				"creature": "zombie",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "wight",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"attack": {
+					"limiters": [
+						{
+							"parameters": [
+								"blackKnight",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				},
+				"damage": {
+					"limiters": [
+						{
+							"parameters": [
+								"blackKnight",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				},
+				"defence": {
+					"limiters": [
+						{
+							"parameters": [
+								"blackKnight",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				}
+			}
+		},
+		"texts": {
+			"biography": "Resurrected by his cult of necromantic followers, Lord Haart has emerged a more powerful foe than before.",
+			"name": "Lord Haart",
+			"specialty": {
+				"description": "Black Knights or Dread Knights receive +5 Att, +5 Def, and +10 Dmg.",
+				"name": "Black Knights",
+				"tooltip": "Creature Bonus: Black Knights"
+			}
+		}
+	},
+	"mutare": {
+		"army": [
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "harpy",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "beholder",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"bonuses": {
+				"attack": {
+					"limiters": [
+						{
+							"parameters": [
+								"DRAGON_NATURE"
+							],
+							"type": "HAS_ANOTHER_BONUS_LIMITER"
+						}
+					],
+					"type": "PRIMARY_SKILL",
+					"val": 5
+				},
+				"defence": {
+					"limiters": [
+						{
+							"parameters": [
+								"DRAGON_NATURE"
+							],
+							"type": "HAS_ANOTHER_BONUS_LIMITER"
+						}
+					],
+					"type": "PRIMARY_SKILL",
+					"val": 5
+				}
+			}
+		},
+		"texts": {
+			"biography": "With her uncanny talent for commanding dragons on the field of combat, many have noticed Mutare's quick rise among the current overlords of Nighon.",
+			"name": "Mutare",
+			"specialty": {
+				"description": "All dragons receive +5 Att, +5 Def.",
+				"name": "Dragons",
+				"tooltip": "Creature Bonus: Dragons"
+			}
+		}
+	},
+	"roland": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "archer",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Recently freed from the Kreegans, Roland respectfully serves as a general in Erathia's military under his wife Catherine.  Someday soon these conflicts will end, and he and Catherine will return to Enroth.  However, both must decide what will happen to the Erathian throne.",
+			"name": "Roland",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Swordsmen or Crusaders for each level attained after 4th level.",
+				"name": "Swordsmen",
+				"tooltip": "Creature Bonus: Swordsmen"
+			}
+		}
+	},
+	"mutareDrake": {
+		"specialty": {
+			"bonuses": {
+				"attack": {
+					"limiters": [
+						{
+							"parameters": [
+								"DRAGON_NATURE"
+							],
+							"type": "HAS_ANOTHER_BONUS_LIMITER"
+						}
+					],
+					"type": "PRIMARY_SKILL",
+					"val": 5
+				},
+				"defence": {
+					"limiters": [
+						{
+							"parameters": [
+								"DRAGON_NATURE"
+							],
+							"type": "HAS_ANOTHER_BONUS_LIMITER"
+						}
+					],
+					"type": "PRIMARY_SKILL",
+					"val": 5
+				}
+			}
+		},
+		"texts": {
+			"biography": "Drinking the Vial of Dragon's Blood, Mutare became a sentient dragon.  Some wonder if her transformation foretells the coming of the Dragon Father.",
+			"name": "Mutare Drake",
+			"specialty": {
+				"description": "All dragons receive +5 Att, +5 Def.",
+				"name": "Dragons",
+				"tooltip": "Creature Bonus: Dragons"
+			}
+		}
+	},
+	"boragus": {
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Winston Boragus' special kinship with the Ogres he commands in battle has taken him far in his quest for power.",
+			"name": "Boragus",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Ogre or Ogre Mage for each level attained after 4th level.",
+				"name": "Ogres",
+				"tooltip": "Creature Bonus: Ogres"
+			}
+		}
+	},
+	"xeron": {
+		"specialty": {
+			"bonuses": {
+				"attack": {
+					"limiters": [
+						{
+							"parameters": [
+								"devil",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				},
+				"defence": {
+					"limiters": [
+						{
+							"parameters": [
+								"devil",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				},
+				"speed": {
+					"limiters": [
+						{
+							"parameters": [
+								"devil",
+								true
+							],
+							"type": "CREATURE_TYPE_LIMITER"
+						}
+					]
+				}
+			}
+		},
+		"texts": {
+			"biography": "When Xenofex was slain and Lucifer Kreegan seized the seat of power, Xeron was the first to declare fealty to this usurper.  Highly decorated and respected, when Xeron chose to support this new king, other heroes quickly followed suit.",
+			"name": "Xeron",
+			"specialty": {
+				"description": "Devils and Arch Devils receive +4 Attack, +2 Defense, and +1 Speed.",
+				"name": "Devils",
+				"tooltip": "Creature Bonus: Devils"
+			}
+		}
+	},
+	"orrin": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "lightCrossbowman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Orrin trained with one of Erathia's best siege tacticians during his early military service.  Any archers under his command learn quickly to shoot at targets behind obstacles.",
+			"name": "Orrin",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Archery skill percentage.",
+				"name": "Archery",
+				"tooltip": "Secondary Skill Bonus: Archery"
+			}
+		}
+	},
+	"valeska": {
+		"army": [
+			{
+				"creature": "lightCrossbowman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "lightCrossbowman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "lightCrossbowman",
+				"max": 7,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Valeska became known as a master marksman when she first served in the Erathian military.  Now she not only commands her own forces, but spends time personally training her Crossbow troops as well.",
+			"name": "Valeska",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Archers or Marksmen for each level attained after 2nd level.",
+				"name": "Archers",
+				"tooltip": "Creature Bonus: Archers"
+			}
+		}
+	},
+	"edric": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Edric's great grandfather was the first man in Erathia to domesticate and train a wild Griffin.  Now, Edric's family maintains Erathia's largest Griffin breeding grounds for use in the King's armies.",
+			"name": "Edric",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Griffins or Royal Griffins or each level attained after 3rd level.",
+				"name": "Griffins",
+				"tooltip": "Creature Bonus: Griffins"
+			}
+		}
+	},
+	"sylvia": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "lightCrossbowman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Sylvia spent several years as a Regnan Pirate before realizing that a pirate's life was not for her.  She sought a new life in the Erathian Military, and now serves in the Coastal Patrol, fighting off raids from the same Pirates she once sailed with.",
+			"name": "Sylvia",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Navigation skill percentage.",
+				"name": "Navigation",
+				"tooltip": "Secondary Skill Bonus: Navigation"
+			}
+		}
+	},
+	"lordHaart": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "lightCrossbowman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Some have said that Lord Haart's departure from Enroth was due to ties with a Necromantic cult, but his service to the crown of Erathia has been as spotless as it was to Roland Ironfist before the Succession Wars.",
+			"name": "Lord Haart",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Estates skill.",
+				"name": "Estates",
+				"tooltip": "Secondary Skill Bonus: Estates"
+			}
+		}
+	},
+	"sorsha": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "lightCrossbowman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Following Queen Catherine's example, Sorsha joined the ranks of the Erathian Military, quickly proving herself as a master of swordplay.  She was granted her first command shortly after the Kreegans arrived in Erathia.",
+			"name": "Sorsha",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Swordsmen or Crusaders for each level attained after 4th level.",
+				"name": "Swordsmen",
+				"tooltip": "Creature Bonus: Swordsmen"
+			}
+		}
+	},
+	"christian": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "ballista",
+				"max": 1,
+				"min": 1
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Christian was always more of a frontiersman than a Knight, having set foot in nearly every part of Enroth before finally settling into military service in Erathia.  Though a wanderer and a bit of a dreamer, his battlefield tactics are feared throughout the world.",
+			"name": "Christian",
+			"specialty": {
+				"description": "Increases the Attack and Defense skill of any Ballista for each level attained after 4th level.",
+				"name": "Ballista",
+				"tooltip": "Artillery Bonus: Ballista"
+			}
+		}
+	},
+	"tyris": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "lightCrossbowman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Tyris rose quickly through the ranks of the Erathian Cavalry, not only for her ability to handle a horse, but for her 'sixth sense' regarding mounted strategy and tactics.  She has also never lost a joust.",
+			"name": "Tyris",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Cavaliers or Champions for each level attained after 6th level.",
+				"name": "Cavaliers",
+				"tooltip": "Creature Bonus: Cavaliers"
+			}
+		}
+	},
+	"rion": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "firstAidTent",
+				"max": 1,
+				"min": 1
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Rion worked as a battlefield medic in the Erathian Military, but proved his ability to command when his captain was slain fighting the Kreegan hordes.  Rion was able to outmaneuver the enemy long enough for reinforcements to arrive.",
+			"name": "Rion",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to First Aid skill.",
+				"name": "First Aid",
+				"tooltip": "Secondary Skill Bonus: First Aid"
+			}
+		}
+	},
+	"adela": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "lightCrossbowman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Originally Adela only contributed her skills prior to battles.  If she could not convince her commander to avoid a fight, she would at least prepare a blessing for the troops as they entered combat.  She was given command of the Whitestone garrison.",
+			"name": "Adela",
+			"specialty": {
+				"description": "Casts Bless with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Bless",
+				"tooltip": "Spell Bonus: Bless"
+			}
+		}
+	},
+	"cuthbert": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "lightCrossbowman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "As a young man, Cuthbert toyed with the darker magics, but when his wife died because a spell that he cast had gone awry, he turned to good and has never looked back.  His insights to the workings of dark magic give him an edge possessed by no other.",
+			"name": "Cuthbert",
+			"specialty": {
+				"description": "Casts Weakness with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Weakness",
+				"tooltip": "Spell Bonus: Weakness"
+			}
+		}
+	},
+	"adelaide": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "lightCrossbowman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Caught at sea during a storm, Adelaide was shipwrecked on the shores of Vori, home of the Snow Elves.  She trained with them for some twenty years, and upon her return to Erathia discovered that no time had passed in her absence.",
+			"name": "Adelaide",
+			"specialty": {
+				"description": "Casts Frost Ring with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Frost Ring",
+				"tooltip": "Spell Bonus: Frost Ring"
+			}
+		}
+	},
+	"ingham": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "lightCrossbowman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Ingham maintained a modest monastery in the years before the Kreegan attack.  He and his monks were quickly pressed into the service of the Erathian crown.",
+			"name": "Ingham",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Monks or Zealots for each level attained after 5th level.",
+				"name": "Monks",
+				"tooltip": "Creature Bonus: Monks"
+			}
+		}
+	},
+	"sanya": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "lightCrossbowman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Sanya has always been a fast learner, quickly outperforming first other students, then other acolytes once she had joined the church.  She seems to have a natural ability to learn spells, sometimes merely by watching someone else cast them.",
+			"name": "Sanya",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Eagle Eye skill percentage.",
+				"name": "Eagle Eye",
+				"tooltip": "Secondary Skill Bonus: Eagle Eye"
+			}
+		}
+	},
+	"loynis": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "lightCrossbowman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Loynis has always believed that physical violence was never necessary as long as proper magic and prayer could be invoked.  Amazingly enough, he made it work, and now is regarded as a successful, though unconventional, leader.",
+			"name": "Loynis",
+			"specialty": {
+				"description": "Casts Prayer with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Prayer",
+				"tooltip": "Spell Bonus: Prayer"
+			}
+		}
+	},
+	"caitlin": {
+		"army": [
+			{
+				"creature": "pikeman",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "lightCrossbowman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "griffin",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Before she was granted command, Caitlin was considered by some to be possessed by evil spirits.  Despite these claims, donations to her church were unsurpassed when she was still in the church's ranks.",
+			"name": "Caitlin",
+			"specialty": {
+				"description": "Increases kingdom's income by 350 gold per day.",
+				"name": "+350 Gold",
+				"tooltip": "+350 Gold each day"
+			}
+		}
+	},
+	"lorelei": {
+		"army": [
+			{
+				"creature": "harpy",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "harpy",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "harpy",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "When Lorelei was a child she wandered away from her home, disappearing into a network of caves.  She was found and raised by a harpy hag, and eventually volunteered to serve the Dungeon Overlords shortly before the invasion of Erathia.  She has no memories of her real parents.",
+			"name": "Lorelei",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Harpies or Harpy Hags for each level attained after 2nd level.",
+				"name": "Harpies",
+				"tooltip": "Creature Bonus: Harpies"
+			}
+		}
+	},
+	"arlach": {
+		"army": [
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "ballista",
+				"max": 1,
+				"min": 1
+			},
+			{
+				"creature": "beholder",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Arlach is one of the few troglodytes who are actually trusted to lead the armies of Nighon.  Arlach shows remarkable skill with the ballista, and is often called upon to wreak havoc upon enemy fortifications.",
+			"name": "Arlach",
+			"specialty": {
+				"description": "Increases the Attack and Defense skill of any Ballista for each level attained after 4th level.",
+				"name": "Ballista",
+				"tooltip": "Artillery Bonus: Ballista"
+			}
+		}
+	},
+	"dace": {
+		"army": [
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "harpy",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "beholder",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Dace was born into a warrior clan, learning to fight from masters who seemed older than time.  He provides Nighon with exceptional leadership, especially when commanding other minotaurs.",
+			"name": "Dace",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Minotaurs or Minotaur Kings for each level attained after 5th level.",
+				"name": "Minotaurs",
+				"tooltip": "Creature Bonus: Minotaurs"
+			}
+		}
+	},
+	"ajit": {
+		"army": [
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "beholder",
+				"max": 4,
+				"min": 3
+			},
+			{
+				"creature": "beholder",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Ajit studied carefully the works of Agar, the foolish wizard/scientist of Enroth who accidentally created the beholders and evil eyes which he now commands, training a 'better breed' to be used in combat.",
+			"name": "Ajit",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Beholders or Evil Eyes for each level attained after 2nd level.",
+				"name": "Beholders",
+				"tooltip": "Creature Bonus: Beholders"
+			}
+		}
+	},
+	"damacon": {
+		"army": [
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "harpy",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "beholder",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "While Damacon has always been a bit of a pushover, even among other troglodytes, he can sniff out gold almost without trying.  He will donate gold to any cause willing to allow him to lead.",
+			"name": "Damacon",
+			"specialty": {
+				"description": "Increases kingdom's income by 350 gold per day.",
+				"name": "+350 Gold",
+				"tooltip": "+350 Gold each day"
+			}
+		}
+	},
+	"gunnar": {
+		"army": [
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "harpy",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "beholder",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Gunnar served first as a scout for the Dungeon Overlords, then as a guide and bodyguard to various high-ranking officials, before finally being granted command of a garrison force on the rugged Nighon borders.  What he lacks in brains he makes up for in instinct.",
+			"name": "Gunnar",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Logistics skill percentage.",
+				"name": "Logistics",
+				"tooltip": "Secondary Skill Bonus: Logistics"
+			}
+		}
+	},
+	"synca": {
+		"army": [
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "harpy",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "beholder",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Synca was originally an aboveworlder, and though she loyally serves the Dungeon Overlords she really prefers the great outdoors to the dank, cramped spaces of the caverns of Nighon.",
+			"name": "Synca",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Manticores or Scorpicores for each level attained after 6th level.",
+				"name": "Manticores",
+				"tooltip": "Creature Bonus: Manticores"
+			}
+		}
+	},
+	"shakti": {
+		"army": [
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Though eyeless, Shakti has amazing vision when it comes to battlefield tactics.  His Troglodyte hordes are feared the world over, especially in the dark tunnels of Nighon.",
+			"name": "Shakti",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Troglodytes or Infernal Troglodytes for each level attained after 1st level.",
+				"name": "Troglodytes",
+				"tooltip": "Creature Bonus: Troglodytes"
+			}
+		}
+	},
+	"alamar": {
+		"army": [
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "harpy",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "beholder",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Alamar served Archibald Ironfist during the succession wars, and was barely able to escape Enroth following Archibald's defeat.  He has since taken up residence in Nighon where he secretly serves the Dungeon Overlords.",
+			"name": "Alamar",
+			"specialty": {
+				"description": "Casts Resurrection with increased effect, based on his level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Resurrection",
+				"tooltip": "Spell Bonus: Resurrection"
+			}
+		}
+	},
+	"jaegar": {
+		"army": [
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "harpy",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "beholder",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "It is strange to see a troglodyte Overlord, and stranger still to see a troglodyte Warlock, yet Jaeger has proven to be a skilled magician.  He claims that daily meditation is the secret to his success.",
+			"name": "Jaegar",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Mysticism skill.",
+				"name": "Mysticism",
+				"tooltip": "Secondary Skill Bonus: Mysticism"
+			}
+		}
+	},
+	"malekith": {
+		"army": [
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "harpy",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "beholder",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "One would expect a minotaur to be a fierce warrior, but Malekith wields magic with a fury that rivals the strength of the land's best mages.",
+			"name": "Malekith",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Sorcery skill percentage.",
+				"name": "Sorcery",
+				"tooltip": "Secondary Skill Bonus: Sorcery"
+			}
+		}
+	},
+	"jeddite": {
+		"army": [
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "harpy",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "beholder",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Some say that Jeddite has seen the face of Zenofex, but many contend that since Jeddite is still alive, the rumor of a meeting could not possibly be true.  Jeddite has never confirmed nor denied the rumor.",
+			"name": "Jeddite",
+			"specialty": {
+				"description": "Casts Resurrection with increased effect, based on his level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Resurrection",
+				"tooltip": "Spell Bonus: Resurrection"
+			}
+		}
+	},
+	"geon": {
+		"army": [
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "harpy",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "beholder",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Much of Geon's magical skills come from his ability to see into the minds of other spellcasters, reading their thoughts as they invoke their powers, and in many cases learning to cast the spell himself.",
+			"name": "Geon",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Eagle Eye skill percentage.",
+				"name": "Eagle Eye",
+				"tooltip": "Secondary Skill Bonus: Eagle Eye"
+			}
+		}
+	},
+	"deemer": {
+		"army": [
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "harpy",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "beholder",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Deemer nearly had to be killed as a young adult, as his magical abilities were so out of control that he was a threat to himself and those around him.  He has since learned to control his powers, and is more than a formidable foe in combat.",
+			"name": "Deemer",
+			"specialty": {
+				"description": "Casts Meteor Shower with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Meteor Shower",
+				"tooltip": "Spell Bonus: Meteor Shower"
+			}
+		}
+	},
+	"sephinroth": {
+		"army": [
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "harpy",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "beholder",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Sephinroth claims to be the illegitimate child of King Gryphonheart.  His refusal to acknowledge her has served to fuel her hatred against the Throne of Erathia, which she one day hopes to claim for herself.  Having joined the ranks of the Warlocks, she is the only known female ever to bear that title.",
+			"name": "Sephinroth",
+			"specialty": {
+				"description": "Increases kingdom's crystal production by 1 per day.",
+				"name": "+1 Crystal",
+				"tooltip": "+1 Crystal each day."
+			}
+		}
+	},
+	"darkstorn": {
+		"army": [
+			{
+				"creature": "troglodyte",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "harpy",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "beholder",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Darkstorn challenged his way through the ranks of warriors of Nighon, secretly using magic to ensure he won each battle.  Once in a position of power, he finally revealed his true powers.  None have challenged him since.",
+			"name": "Darkstorn",
+			"specialty": {
+				"description": "Casts Stone Skin with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Stone Skin",
+				"tooltip": "Spell Bonus: Stone Skin"
+			}
+		}
+	},
+	"bron": {
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Bron, though human, possesses an uncanny resistance to the gaze of a Basilisk, which has allowed him to learn more about them than any other creature alive.",
+			"name": "Bron",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Basilisks or Greater Basilisks for each level attained after 4th level.",
+				"name": "Basilisks",
+				"tooltip": "Creature Bonus: Basilisks"
+			}
+		}
+	},
+	"drakon": {
+		"army": [
+			{
+				"creature": "gnoll",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "gnoll",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "gnoll",
+				"max": 20,
+				"min": 10
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Drakon was the greatest warrior in his village, and later the region, before choosing to serve King Tralossk.  His charismatic demeanor (at least with other Gnolls) has troops volunteering to join his armies in droves.",
+			"name": "Drakon",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Gnolls or Gnoll Marauders for each level attained after 1st level.",
+				"name": "Gnolls",
+				"tooltip": "Creature Bonus: Gnolls"
+			}
+		}
+	},
+	"wystan": {
+		"army": [
+			{
+				"creature": "primitiveLizardman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "primitiveLizardman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "primitiveLizardman",
+				"max": 7,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Wedded to the eldest daughter of King Tralossk, Wystan is the next heir to the throne of Tatalia.  Until then, he is content to serve and learn from the King until the time is right for him to kill his mentor and assume the throne.",
+			"name": "Wystan",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Lizardmen or Lizard Warriors for each level attained after 2nd level.",
+				"name": "Lizardmen",
+				"tooltip": "Creature Bonus: Lizardmen"
+			}
+		}
+	},
+	"tazar": {
+		"army": [
+			{
+				"creature": "gnoll",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "primitiveLizardman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "serpentFly",
+				"max": 4,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "During a six month border war with Krewlod, a small force led by Tazar was able to make a stand at a Tatalian outpost, holding off a Krewlod force nearly five times their size for more than eight days until reinforcements arrived.",
+			"name": "Tazar",
+			"specialty": {
+				"description": "Tazar receives a 5% per level bonus to his Armorer skill percentage.",
+				"name": "Armorer",
+				"tooltip": "Secondary Skill Bonus: Armorer"
+			}
+		}
+	},
+	"alkin": {
+		"army": [
+			{
+				"creature": "gnoll",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "primitiveLizardman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "serpentFly",
+				"max": 4,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "King Tralossk never really liked Alkin, but gave him his own command in the hopes that he would one day get himself killed.  That never happened, and Alkin has led a long and glorious career, much to the displeasure of the King.",
+			"name": "Alkin",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Gorgons or Mighty Gorgons for each level attained after 5th level.",
+				"name": "Gorgons",
+				"tooltip": "Creature Bonus: Gorgons"
+			}
+		}
+	},
+	"korbac": {
+		"army": [
+			{
+				"creature": "gnoll",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "serpentFly",
+				"max": 4,
+				"min": 2
+			},
+			{
+				"creature": "dragonFly",
+				"max": 4,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Korbac became known to the humans of Erathia as the 'hero who saved the scholar, Xanthor.'  However true this might be, Korbac has proven his bravery on more than one occasion in the service of Tatalia.",
+			"name": "Korbac",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Serpent or Dragon Flies for each level attained after 3rd level.",
+				"name": "Serpent Flies",
+				"tooltip": "Creature Bonus: Serpent Flies"
+			}
+		}
+	},
+	"gerwulf": {
+		"army": [
+			{
+				"creature": "gnoll",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "ballista",
+				"max": 1,
+				"min": 1
+			},
+			{
+				"creature": "serpentFly",
+				"max": 4,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Gerwulf brought the first Ballista to Tatalia, having captured it in a siege against a barbarian stronghold on the border of Krewlod.  He has become Tatalia's leading expert in its deployment across the northwest coast.",
+			"name": "Gerwulf",
+			"specialty": {
+				"description": "Increases the Attack and Defense skill of any Ballista for each level attained after 4th level.",
+				"name": "Ballista",
+				"tooltip": "Artillery Bonus: Ballista"
+			}
+		}
+	},
+	"broghild": {
+		"army": [
+			{
+				"creature": "gnoll",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "primitiveLizardman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "serpentFly",
+				"max": 4,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Broghild's grandfather first tamed wild Wyverns for use as flying scouts above the Tatalian Lowlands.  The secrets of handling these creatures was passed to Broghild's father, and eventually to him.",
+			"name": "Broghild",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Wyverns or Wyvern Monarchs for each level attained after 6th level.",
+				"name": "Wyverns",
+				"tooltip": "Creature Bonus: Wyverns"
+			}
+		}
+	},
+	"mirlanda": {
+		"army": [
+			{
+				"creature": "gnoll",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "primitiveLizardman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "serpentFly",
+				"max": 4,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Mirlanda spent much of her younger days toying with the dark arts, before realizing that such a path usually leads to self destruction.  She has learned to walk a fine line between good and evil, always making sure that one does not grow more powerful than the other.",
+			"name": "Mirlanda",
+			"specialty": {
+				"description": "Casts Weakness with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Weakness",
+				"tooltip": "Spell Bonus: Weakness"
+			}
+		}
+	},
+	"rosic": {
+		"army": [
+			{
+				"creature": "gnoll",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "primitiveLizardman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "serpentFly",
+				"max": 4,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "When Rosic was a child she contracted a fever that none of the elders in her village expected her to survive.  But survive she did, and today she claims that it was the fever that gave her her magical powers.",
+			"name": "Rosic",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Mysticism skill.",
+				"name": "Mysticism",
+				"tooltip": "Secondary Skill Bonus: Mysticism"
+			}
+		}
+	},
+	"voy": {
+		"army": [
+			{
+				"creature": "gnoll",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "primitiveLizardman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "serpentFly",
+				"max": 4,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Voy is a 'Wind Witch,' often employed by sea captains to help guide ships and ensure that they always receive favorable winds at sea.  She prefers the salty air of the oceans to that of the swamps where she was born.",
+			"name": "Voy",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Navigation skill percentage.",
+				"name": "Navigation",
+				"tooltip": "Secondary Skill Bonus: Navigation"
+			}
+		}
+	},
+	"verdish": {
+		"army": [
+			{
+				"creature": "gnoll",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "firstAidTent",
+				"max": 1,
+				"min": 1
+			},
+			{
+				"creature": "serpentFly",
+				"max": 4,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Verdish nearly perished in a raid into her homeland by the Dungeon Overlords.  Fortunately she is a master of the healing arts, and was able to heal the near-fatal wounds she received in that battle.",
+			"name": "Verdish",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to First Aid skill.",
+				"name": "First Aid",
+				"tooltip": "Secondary Skill Bonus: First Aid"
+			}
+		}
+	},
+	"merist": {
+		"army": [
+			{
+				"creature": "gnoll",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "primitiveLizardman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "serpentFly",
+				"max": 4,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Merist was supposed to have been the healer of her village, but when it was discovered that her magical powers were far greater than what would be required as a village healer, she was quickly pressed into the service of Tatalia.",
+			"name": "Merist",
+			"specialty": {
+				"description": "Casts Stone Skin with increased effect, based on her level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Stone Skin",
+				"tooltip": "Spell Bonus: Stone Skin"
+			}
+		}
+	},
+	"styg": {
+		"army": [
+			{
+				"creature": "gnoll",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "primitiveLizardman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "serpentFly",
+				"max": 4,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "The eleventh daughter of Tralossk, King of Tatalia, Styg turned to witchcraft when it became clear that she would never ascend the Tatalian throne with ten heirs in front of her.",
+			"name": "Styg",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Sorcery skill percentage.",
+				"name": "Sorcery",
+				"tooltip": "Secondary Skill Bonus: Sorcery"
+			}
+		}
+	},
+	"andra": {
+		"army": [
+			{
+				"creature": "gnoll",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "primitiveLizardman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "serpentFly",
+				"max": 4,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Before King Tralossk would allow Andra, a mere human, to lead one of his armies, he subjected her to a series of trials that would test her knowledge.  She never missed a single question, and the King had no choice but to accept her.",
+			"name": "Andra",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Intelligence skill percentage.",
+				"name": "Intelligence",
+				"tooltip": "Secondary Skill Bonus: Intelligence"
+			}
+		}
+	},
+	"tiva": {
+		"army": [
+			{
+				"creature": "gnoll",
+				"max": 20,
+				"min": 10
+			},
+			{
+				"creature": "primitiveLizardman",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "serpentFly",
+				"max": 4,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Tiva achieved her place as a hero by challenging those above her to tests of learning, proving herself as a faster study than any of her peers.  She has achieved much success.",
+			"name": "Tiva",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Eagle Eye skill percentage.",
+				"name": "Eagle Eye",
+				"tooltip": "Secondary Skill Bonus: Eagle Eye"
+			}
+		}
+	},
+	"fiona": {
+		"army": [
+			{
+				"creature": "imp",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "hellHound",
+				"max": 4,
+				"min": 3
+			},
+			{
+				"creature": "hellHound",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Fiona was a trainer of circus animals in eastern Erathia before the Devils invaded.  She quickly proved to them that her control over animals extended to the always temperamental hell hounds, and she was immediately accepted into the ranks of Eeofol's armies.",
+			"name": "Fiona",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Hell Hounds or Cerberi for each level attained after 3rd level.",
+				"name": "Hell Hounds",
+				"tooltip": "Creature Bonus: Hell Hounds"
+			}
+		}
+	},
+	"rashka": {
+		"army": [
+			{
+				"creature": "imp",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "gog",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "hellHound",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Rashka is one of the strongest and most feared of all Efreet.  His leadership methods focus on intimidation as a method of motivation.  So far, it has worked.",
+			"name": "Rashka",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Efreet or Efreet Sultans for each level attained after 6th level.",
+				"name": "Efreet",
+				"tooltip": "Creature Bonus: Efreet"
+			}
+		}
+	},
+	"marius": {
+		"army": [
+			{
+				"creature": "imp",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "gog",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "hellHound",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Marius was the mate of Calh for several years, finally splitting up when it became clear that Calh did not agree with her 'master plan' to rid the world of those disgusting, do-good woodland creatures.",
+			"name": "Marius",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Demons or Horned Demons for each level attained after 4th level.",
+				"name": "Demons",
+				"tooltip": "Creature Bonus: Demons"
+			}
+		}
+	},
+	"ignatius": {
+		"army": [
+			{
+				"creature": "imp",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "imp",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "imp",
+				"max": 25,
+				"min": 15
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "When the Devils arrived in Erathia, Ignatius realized that his only hope for survival was to join them.  He has managed to convince them that he always serves some purpose, but fears that one day they will decide that they no longer need the help of a human.",
+			"name": "Ignatius",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Imps or Familiars for each level attained after 1st level.",
+				"name": "Imps",
+				"tooltip": "Creature Bonus: Imps"
+			}
+		}
+	},
+	"octavia": {
+		"army": [
+			{
+				"creature": "imp",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "gog",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "hellHound",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "It is said that Octavia could sneak gold away from a sleeping dragon, but she would have to, as she is constantly spending her wealth on anything that tickles her fancy.",
+			"name": "Octavia",
+			"specialty": {
+				"description": "Increases kingdom's income by 350 gold per day.",
+				"name": "+350 Gold",
+				"tooltip": "+350 Gold each day"
+			}
+		}
+	},
+	"calh": {
+		"army": [
+			{
+				"creature": "gog",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "gog",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "gog",
+				"max": 7,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Calh was mated to Marius for several years, but it soon became clear that she was obsessed with the total destruction of, of all things, Dendroids.  They split up, and Calh went on to have a glorious military career.",
+			"name": "Calh",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Gogs or Magogs for each level attained after 2nd level.",
+				"name": "Gogs",
+				"tooltip": "Creature Bonus: Gogs"
+			}
+		}
+	},
+	"pyre": {
+		"army": [
+			{
+				"creature": "imp",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "ballista",
+				"max": 1,
+				"min": 1
+			},
+			{
+				"creature": "hellHound",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "No one knows Pyre's real name, but it is rumored that she was once a member of the Humanists, a foul cult bent on eradicating any non-human inhabitants of Erathia.  Only she knows what motivates her to serve the Devils of Eeofol.",
+			"name": "Pyre",
+			"specialty": {
+				"description": "Increases the Attack and Defense skill of any Ballista for each level attained after 4th level.",
+				"name": "Ballista",
+				"tooltip": "Artillery Bonus: Ballista"
+			}
+		}
+	},
+	"nymus": {
+		"army": [
+			{
+				"creature": "imp",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "gog",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "hellHound",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Nymus was responsible for training Pit Fiends and Pit Lords for the attack on Erathia.  Her combat skills nearly led Eeofol to complete victory, but the deal between the Kreegans and Dungeon Overlords brought the initial campaign to an early end.",
+			"name": "Nymus",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Pit Fiends or Lords for each level attained after 5th level.",
+				"name": "Pit Fiends",
+				"tooltip": "Creature Bonus: Pit Fiends"
+			}
+		}
+	},
+	"ayden": {
+		"army": [
+			{
+				"creature": "imp",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "gog",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "hellHound",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Originally a shaman, Ayden offered his services to the Kreegans, discovering a dark desire to one day rule his own kingdom.",
+			"name": "Ayden",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Intelligence skill percentage.",
+				"name": "Intelligence",
+				"tooltip": "Secondary Skill Bonus: Intelligence"
+			}
+		}
+	},
+	"xyron": {
+		"army": [
+			{
+				"creature": "imp",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "gog",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "hellHound",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Xyron seems to like fire even more than anyone would expect of an Efreeti, but Xyron delights in just about anything having to do with fire or lava.",
+			"name": "Xyron",
+			"specialty": {
+				"description": "Casts Inferno with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Inferno",
+				"tooltip": "Spell Bonus: Inferno"
+			}
+		}
+	},
+	"axsis": {
+		"army": [
+			{
+				"creature": "imp",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "gog",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "hellHound",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Axsis showed a natural aptitude for magic at a young age, which makes things even more strange than normal, as demons rarely show a natural aptitude for anything that requires thought.",
+			"name": "Axsis",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Mysticism skill.",
+				"name": "Mysticism",
+				"tooltip": "Secondary Skill Bonus: Mysticism"
+			}
+		}
+	},
+	"olema": {
+		"army": [
+			{
+				"creature": "imp",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "gog",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "hellHound",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Olema spent her entire life in Eeofol, but when the Kreegans arrived, she talked them into letting her serve as a guide to the land, and has since proven her ability to lead.",
+			"name": "Olema",
+			"specialty": {
+				"description": "Casts Weakness with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Weakness",
+				"tooltip": "Spell Bonus: Weakness"
+			}
+		}
+	},
+	"calid": {
+		"army": [
+			{
+				"creature": "imp",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "gog",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "hellHound",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Calid possesses an unusual (though useful) ability to sniff out hidden sulfur deposits.  The Dungeon Overlords have used her on several occasions when collecting sulfur for their fearsome dragons.",
+			"name": "Calid",
+			"specialty": {
+				"description": "Increases kingdom's sulfur production by 1 per day.",
+				"name": "+1 Sulfur",
+				"tooltip": "+1 Sulfur each day."
+			}
+		}
+	},
+	"ash": {
+		"army": [
+			{
+				"creature": "imp",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "gog",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "hellHound",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Ash got her name during the initial attack on Erathia.  Her forces managed to trap several dozen elves and dwarves inside a large wooden fort, which she blasted so completely with a spell that the entire structure 'powdered' in a cloud of ash, revealing several dozen very shocked occupants.",
+			"name": "Ash",
+			"specialty": {
+				"description": "Casts Bloodlust with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Bloodlust",
+				"tooltip": "Spell Bonus: Bloodlust"
+			}
+		}
+	},
+	"zydar": {
+		"army": [
+			{
+				"creature": "imp",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "gog",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "hellHound",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "When Zydar isn't in the field leading troops, he is studying new ways to increase the potency of his spells.  While not the greatest of mages, he certainly shows more promise than any of his demon-kin.",
+			"name": "Zydar",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Sorcery skill percentage.",
+				"name": "Sorcery",
+				"tooltip": "Secondary Skill Bonus: Sorcery"
+			}
+		}
+	},
+	"xarfax": {
+		"army": [
+			{
+				"creature": "imp",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "gog",
+				"max": 7,
+				"min": 4
+			},
+			{
+				"creature": "hellHound",
+				"max": 4,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Xarfax served in the Erathian Military until he was captured while fighting the Kreegans in 1162 A.S. (After the Silence).  The Kreegans, realizing the power within him, \"reconditioned\" Xarfax, turning him into a loyal and capable follower.",
+			"name": "Xarfax",
+			"specialty": {
+				"description": "Casts Fireball with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Fireball",
+				"tooltip": "Spell Bonus: Fireball"
+			}
+		}
+	},
+	"straker": {
+		"army": [
+			{
+				"creature": "zombie",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "zombie",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "zombie",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Straker chose the dark path of Necromancy, but it was soon discovered that his fighting skills by far outclassed his magical abilities.  He serves now in the undead armies of Deyja, hoping to one day join the ranks of true Necromancers.",
+			"name": "Straker",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Walking Dead or Zombies for each level attained after 2nd level.",
+				"name": "Walking Dead",
+				"tooltip": "Creature Bonus: Walking Dead"
+			}
+		}
+	},
+	"vokial": {
+		"army": [
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			},
+			{
+				"creature": "zombie",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "wight",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Nearly four centuries ago Vokial ruled his own kingdom, but as time passed he grew increasingly bored with day-to-day responsibilities.  He eventually gave up everything to return to the life of adventuring he much preferred.  He is an elder even among other vampires.",
+			"name": "Vokial",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Vampires or Vampire Lords for each level attained after 4th level.",
+				"name": "Vampires",
+				"tooltip": "Creature Bonus: Vampires"
+			}
+		}
+	},
+	"moandor": {
+		"army": [
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			},
+			{
+				"creature": "zombie",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "wight",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Moandor's charismatic style somehow stayed with him after he was transformed into a lich.  Strangely enough, this provides him with the ability to lead and recruit new liches more effectively than any other hero.",
+			"name": "Moandor",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Liches or Power Liches for each level attained after 5th level.",
+				"name": "Liches",
+				"tooltip": "Creature Bonus: Liches"
+			}
+		}
+	},
+	"charna": {
+		"army": [
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			},
+			{
+				"creature": "wight",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "wight",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Charna was seduced by the temptation of the powers of darkness.  Though her magical abilities will never allow her to be a true Necromancer, she is a more than effective warrior.",
+			"name": "Charna",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Wights or Wraiths for each level attained after 3rd level.",
+				"name": "Wights",
+				"tooltip": "Creature Bonus: Wights"
+			}
+		}
+	},
+	"tamika": {
+		"army": [
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			},
+			{
+				"creature": "zombie",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "wight",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Tamika's superior combat skills have put her in a position of power within the military forces of Deyja.  Besides merely leading troops, she is also responsible for training Black Knights and Dread Knights.",
+			"name": "Tamika",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Black Knights or Dread Knights for each level attained after 6th level.",
+				"name": "Black Knights",
+				"tooltip": "Creature Bonus: Black Knights"
+			}
+		}
+	},
+	"isra": {
+		"army": [
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			},
+			{
+				"creature": "zombie",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "wight",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Isra may not be the greatest spellcaster in Deyja, but the armies she leads always seem to have a disproportionate number of skeletons compared to others.",
+			"name": "Isra",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Necromancy skill percentage.",
+				"name": "Necromancy",
+				"tooltip": "Secondary Skill Bonus: Necromancy"
+			}
+		}
+	},
+	"clavius": {
+		"army": [
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			},
+			{
+				"creature": "zombie",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "wight",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Clavius's family was always prominent at the court of Deyja, holding a great deal of land and political power.  Being the eldest son, Clavius was sent to serve in the military, just as each of the eldest sons in his family had done for generations.  He serves willingly and well.",
+			"name": "Clavius",
+			"specialty": {
+				"description": "Increases kingdom's income by 350 gold per day.",
+				"name": "+350 Gold",
+				"tooltip": "+350 Gold each day"
+			}
+		}
+	},
+	"galthran": {
+		"army": [
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			},
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			},
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Over the years, Galthran has developed new methods of creating and commanding skeletons which provides him with a distinct advantage in combat.",
+			"name": "Galthran",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Skeletons or Skeleton Warriors for each level attained after 1st level.",
+				"name": "Skeletons",
+				"tooltip": "Creature Bonus: Skeletons"
+			}
+		}
+	},
+	"septienna": {
+		"army": [
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			},
+			{
+				"creature": "zombie",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "wight",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Septienna suffers from what many call 'wasted magic,' as she seems to draw more life energy from her victims than she transfers into her minions.  Some claim that she keeps the residual energy for herself, which may explain why she does not appear to age.",
+			"name": "Septienna",
+			"specialty": {
+				"description": "Casts Death Ripple with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Death Ripple",
+				"tooltip": "Spell Bonus: Death Ripple"
+			}
+		}
+	},
+	"aislinn": {
+		"army": [
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			},
+			{
+				"creature": "zombie",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "wight",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Aislinn has always preferred the feel of the earth over the sky, and many believe she can draw life from the ground merely by being in contact with it.  ",
+			"name": "Aislinn",
+			"specialty": {
+				"description": "Casts Meteor Shower with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Meteor Shower",
+				"tooltip": "Spell Bonus: Meteor Shower"
+			}
+		}
+	},
+	"sandro": {
+		"army": [
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			},
+			{
+				"creature": "zombie",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "wight",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Sandro first studied Necromancy under the tutelage of the wizard, and later the lich, Ethric.  Sandro has seen nearly all of Enroth and Erathia, and now serves Finneas Vilmar, leader of the Necromancers of Deyja.",
+			"name": "Sandro",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Sorcery skill percentage.",
+				"name": "Sorcery",
+				"tooltip": "Secondary Skill Bonus: Sorcery"
+			}
+		}
+	},
+	"nimbus": {
+		"army": [
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			},
+			{
+				"creature": "zombie",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "wight",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "When Nimbus was a child he had a small dog that eventually died of old age.  Nimbus discovered that by sacrificing a small bird or other creature, he could resurrect his pet, a feat which he repeated each time the dog died.  Little did he realize that he was already exploring the beginnings of Necromancy.",
+			"name": "Nimbus",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Eagle Eye skill percentage.",
+				"name": "Eagle Eye",
+				"tooltip": "Secondary Skill Bonus: Eagle Eye"
+			}
+		}
+	},
+	"thant": {
+		"army": [
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			},
+			{
+				"creature": "zombie",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "wight",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "No one is really sure how long Thant has been alive.  Some say he fought for Erathia during the Timber Wars, but fell prey to a Vampire during an all-night march through Phynaxia.",
+			"name": "Thant",
+			"specialty": {
+				"description": "Casts Animate Dead with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Animate Dead",
+				"tooltip": "Spell Bonus: Animate Dead"
+			}
+		}
+	},
+	"xsi": {
+		"army": [
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			},
+			{
+				"creature": "zombie",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "wight",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Xsi was one of but a handful of females deemed worthy to make the transformation into full lich.  Xsi was selected because she possessed a unique ability to resist physical damage - a trick that has saved her more than once.",
+			"name": "Xsi",
+			"specialty": {
+				"description": "Casts Stone Skin with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Stone Skin",
+				"tooltip": "Spell Bonus: Stone Skin"
+			}
+		}
+	},
+	"vidomina": {
+		"army": [
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			},
+			{
+				"creature": "zombie",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "wight",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "At a young age, Vidomina showed promise as a great Alchemist, but was driven from Bracada when it was discovered that she had been using her skills not to animate inanimate matter, but to attempt to bring life to previously living creatures.",
+			"name": "Vidomina",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Necromancy skill percentage.",
+				"name": "Necromancy",
+				"tooltip": "Secondary Skill Bonus: Necromancy"
+			}
+		}
+	},
+	"nagash": {
+		"army": [
+			{
+				"creature": "skeleton",
+				"max": 30,
+				"min": 20
+			},
+			{
+				"creature": "zombie",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "wight",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Nagash was a powerful wizard before sacrificing himself to an 'eternal life' as a lich.  He owns much land, though most of it now lies within the desolate borders of Deyja.",
+			"name": "Nagash",
+			"specialty": {
+				"description": "Increases kingdom's income by 350 gold per day.",
+				"name": "+350 Gold",
+				"tooltip": "+350 Gold each day"
+			}
+		}
+	},
+	"mephala": {
+		"army": [
+			{
+				"creature": "centaur",
+				"max": 24,
+				"min": 12
+			},
+			{
+				"creature": "dwarf",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "woodElf",
+				"max": 6,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Trained in the ranks of the Erathian Military, Mephala was a genius when it came to using terrain to her advantage in battle.  She resigned her commission several years ago, preferring the quiet serenity of AvLee to the bustle of the cities of Erathia.",
+			"name": "Mephala",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Armorer skill percentage.",
+				"name": "Armorer",
+				"tooltip": "Secondary Skill Bonus: Armorer"
+			}
+		}
+	},
+	"ufretin": {
+		"army": [
+			{
+				"creature": "dwarf",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "dwarf",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "dwarf",
+				"max": 5,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "It is unusual to see a Dwarven Ranger, but for Ufretin the skills came naturally.  He has become an icon to the surface-dwelling dwarven population, and a natural born leader among all dwarvenkind.",
+			"name": "Ufretin",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Dwarves of Battle Dwarves for each level attained after 2nd level.",
+				"name": "Dwarves",
+				"tooltip": "Creature Bonus: Dwarves"
+			}
+		}
+	},
+	"jenova": {
+		"army": [
+			{
+				"creature": "centaur",
+				"max": 24,
+				"min": 12
+			},
+			{
+				"creature": "dwarf",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "woodElf",
+				"max": 6,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Jenova's kindhearted nature has made her well liked throughout much of Erathia.  Her beguiling charms have allowed her to raise money for whatever cause she chooses to follow.",
+			"name": "Jenova",
+			"specialty": {
+				"description": "Increases kingdom's income by 350 gold per day.",
+				"name": "+350 Gold",
+				"tooltip": "+350 Gold each day"
+			}
+		}
+	},
+	"ryland": {
+		"army": [
+			{
+				"creature": "centaur",
+				"max": 24,
+				"min": 12
+			},
+			{
+				"creature": "dwarf",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "woodElf",
+				"max": 6,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Ryland was the first (and to date, the only) human ever fully accepted by the Circle of Elder Dendroids as a Ranger of AvLee.  Some joke that he was once an Elf, but that he was killed and accidentally reincarnated into a human's body.",
+			"name": "Ryland",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Dendroid Guards or Soldiers for each level attained after 5th level.",
+				"name": "Dendroids",
+				"tooltip": "Creature Bonus: Dendroids"
+			}
+		}
+	},
+	"thorgrim": {
+		"army": [
+			{
+				"creature": "centaur",
+				"max": 24,
+				"min": 12
+			},
+			{
+				"creature": "dwarf",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "woodElf",
+				"max": 6,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Orphaned as a child, Thorgrim was raised in the northernmost forests of AvLee.  He became known throughout the land for his exceptional ability to resist magics of all kinds.",
+			"name": "Thorgrim",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Resistance skill percentage.",
+				"name": "Resistance",
+				"tooltip": "Secondary Skill Bonus: Resistance"
+			}
+		}
+	},
+	"ivor": {
+		"army": [
+			{
+				"creature": "centaur",
+				"max": 24,
+				"min": 12
+			},
+			{
+				"creature": "woodElf",
+				"max": 6,
+				"min": 3
+			},
+			{
+				"creature": "woodElf",
+				"max": 6,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Ivor's lineage can be traced back nearly to the Silence.  Though bred as nobility, he has always been a hothead, preferring to lead an attack rather than wait to be attacked.  His brashness has so far kept him alive.",
+			"name": "Ivor",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Wood Elves or Grand Elves for each level attained after 3rd level.",
+				"name": "Elves",
+				"tooltip": "Creature Bonus: Elves"
+			}
+		}
+	},
+	"clancy": {
+		"army": [
+			{
+				"creature": "centaur",
+				"max": 24,
+				"min": 12
+			},
+			{
+				"creature": "dwarf",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "woodElf",
+				"max": 6,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "It was by pure accident that Clancy discovered he could communicate with Unicorns, but this unique ability has served him well as he worked his way through the ranks of AvLee's Military Elite.",
+			"name": "Clancy",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Unicorns or War Unicorns for each level attained after 6th level.",
+				"name": "Unicorns",
+				"tooltip": "Creature Bonus: Unicorns"
+			}
+		}
+	},
+	"kyrre": {
+		"army": [
+			{
+				"creature": "centaur",
+				"max": 24,
+				"min": 12
+			},
+			{
+				"creature": "dwarf",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "woodElf",
+				"max": 6,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Kyrre served as a scout during the initial defense of AvLee from the Kreegan attacks.  Her ability to navigate difficult terrain allowed her to excel in her duties.",
+			"name": "Kyrre",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Logistics skill percentage.",
+				"name": "Logistics",
+				"tooltip": "Secondary Skill Bonus: Logistics"
+			}
+		}
+	},
+	"coronius": {
+		"army": [
+			{
+				"creature": "centaur",
+				"max": 24,
+				"min": 12
+			},
+			{
+				"creature": "dwarf",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "woodElf",
+				"max": 6,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Coronius attended the University of Erathia for one semester before he realized that academics were overrated.  He left Erathia for AvLee, finding a Druid who could teach by example.",
+			"name": "Coronius",
+			"specialty": {
+				"description": "Casts Slayer with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Slayer",
+				"tooltip": "Spell Bonus: Slayer"
+			}
+		}
+	},
+	"uland": {
+		"army": [
+			{
+				"creature": "centaur",
+				"max": 24,
+				"min": 12
+			},
+			{
+				"creature": "dwarf",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "woodElf",
+				"max": 6,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Uland spent a great deal of his life as a battlefield healer before choosing to follow the path of a Druid, but the lessons he learned serving in the military have made him into an excellent leader today.",
+			"name": "Uland",
+			"specialty": {
+				"description": "Casts Cure with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Cure",
+				"tooltip": "Spell Bonus: Cure"
+			}
+		}
+	},
+	"elleshar": {
+		"army": [
+			{
+				"creature": "centaur",
+				"max": 24,
+				"min": 12
+			},
+			{
+				"creature": "dwarf",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "woodElf",
+				"max": 6,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Elleshar is perhaps the brightest student of magic ever seen in AvLee.  If he maintains his abilities over the next several decades, he will likely be the youngest Druid ever to be accepted into the Circle of Elders.",
+			"name": "Elleshar",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Intelligence skill percentage.",
+				"name": "Intelligence",
+				"tooltip": "Secondary Skill Bonus: Intelligence"
+			}
+		}
+	},
+	"gem": {
+		"army": [
+			{
+				"creature": "centaur",
+				"max": 24,
+				"min": 12
+			},
+			{
+				"creature": "firstAidTent",
+				"max": 1,
+				"min": 1
+			},
+			{
+				"creature": "woodElf",
+				"max": 6,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Gem was one of the greatest Sorceresses that Enroth had ever seen, serving King Roland Ironfist during the Succession Wars.  Shortly after Roland had secured the throne of Enroth, Gem left for Erathia, finding a new home in AvLee.",
+			"name": "Gem",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to First Aid skill.",
+				"name": "First Aid",
+				"tooltip": "Secondary Skill Bonus: First Aid"
+			}
+		}
+	},
+	"malcom": {
+		"army": [
+			{
+				"creature": "centaur",
+				"max": 24,
+				"min": 12
+			},
+			{
+				"creature": "dwarf",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "woodElf",
+				"max": 6,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Malcom is one of the few Dwarves to show a natural aptitude for magic.  Often he can learn new spells merely by watching someone else cast them just once.  He was quickly pressed into service defending AvLee from the Devils of Eeofol.",
+			"name": "Malcom",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Eagle Eye skill percentage.",
+				"name": "Eagle Eye",
+				"tooltip": "Secondary Skill Bonus: Eagle Eye"
+			}
+		}
+	},
+	"melodia": {
+		"army": [
+			{
+				"creature": "centaur",
+				"max": 24,
+				"min": 12
+			},
+			{
+				"creature": "dwarf",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "woodElf",
+				"max": 6,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Melodia may not be the most highly skilled Druid ever seen in AvLee, but she is certainly the luckiest.  Even in the face of insurmountable odds she has managed to achieve miraculous victories.  Troops gladly volunteer to serve in any army she leads.",
+			"name": "Melodia",
+			"specialty": {
+				"description": "Casts Fortune with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Fortune",
+				"tooltip": "Spell Bonus: Fortune"
+			}
+		}
+	},
+	"alagar": {
+		"army": [
+			{
+				"creature": "centaur",
+				"max": 24,
+				"min": 12
+			},
+			{
+				"creature": "dwarf",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "woodElf",
+				"max": 6,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Rumored to have once lived among the Vori Snow Elves, Alagar's command of the element of Water, especially ice, is unsurpassed.  He has served AvLee since before the Kreegan invasion.",
+			"name": "Alagar",
+			"specialty": {
+				"description": "Casts Ice Bolt with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Ice Bolt",
+				"tooltip": "Spell Bonus: Ice Bolt"
+			}
+		}
+	},
+	"aeris": {
+		"army": [
+			{
+				"creature": "centaur",
+				"max": 24,
+				"min": 12
+			},
+			{
+				"creature": "dwarf",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "woodElf",
+				"max": 6,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Aeris is one of the best animal handlers in all of AvLee.  He can sense ideal pairings between elves and pegasi which have made him one of the most sought out Druids in the land.",
+			"name": "Aeris",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Pegasi or Silver Pegasi for each level attained after 4th level.",
+				"name": "Pegasi",
+				"tooltip": "Creature Bonus: Pegasi"
+			}
+		}
+	},
+	"yog": {
+		"army": [
+			{
+				"creature": "goblin",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "goblinWolfRider",
+				"max": 7,
+				"min": 5
+			},
+			{
+				"creature": "orc",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Yog studied for many years with the Wizards of Bracada, but he was often found reading texts on war rather than those on magic.  The Duke of Krewlod offered him a military command, allowing Yog to happily use his knowledge of war.",
+			"name": "Yog",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Cyclopses or Cyclops Lords for each level attained after 6th level.",
+				"name": "Cyclopes",
+				"tooltip": "Creature Bonus: Cyclopses"
+			}
+		}
+	},
+	"gurnisson": {
+		"army": [
+			{
+				"creature": "goblin",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "ballista",
+				"max": 1,
+				"min": 1
+			},
+			{
+				"creature": "orc",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "It is unusual for a Goblin to rise to any sort of position of power, but Gurnisson demonstrated a natural aptitude in Ballistics that quite literally launched him into a successful career as a hero for hire.",
+			"name": "Gurnisson",
+			"specialty": {
+				"description": "Increases the Attack and Defense skill of any Ballista for each level attained after 4th level.",
+				"name": "Ballista",
+				"tooltip": "Artillery Bonus: Ballista"
+			}
+		}
+	},
+	"jabarkas": {
+		"army": [
+			{
+				"creature": "goblin",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "orc",
+				"max": 6,
+				"min": 4
+			},
+			{
+				"creature": "orc",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Being the eldest son of Duke Boragus, Jabarkas knows that he will one day rule the lands of Krewlod.  Like his father, he has learned that the best way to achieve his goals is through conquest.",
+			"name": "Jabarkas",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Orcs or Orc Chieftains for each level attained after 3rd level.",
+				"name": "Orcs",
+				"tooltip": "Creature Bonus: Orcs"
+			}
+		}
+	},
+	"shiva": {
+		"army": [
+			{
+				"creature": "goblin",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "goblinWolfRider",
+				"max": 7,
+				"min": 5
+			},
+			{
+				"creature": "orc",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Shiva is the youngest of six daughters in a family of circus animal trainers.  Unhappy with the prospect of spending her entire life in the family business, she left the circus to join the Krewlod military as a mercenary, a business that she has excelled at.",
+			"name": "Shiva",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Rocs or Thunderbirds for each level attained after 5th level.",
+				"name": "Rocs",
+				"tooltip": "Creature Bonus: Rocs"
+			}
+		}
+	},
+	"gretchin": {
+		"army": [
+			{
+				"creature": "goblin",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "goblin",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "goblin",
+				"max": 25,
+				"min": 15
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Not only is Gretchin an excellent leader, but all who follow her will tell you the same thing - she's like having another mom who can take care of you.",
+			"name": "Gretchin",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Goblins or Hobgoblins for each level attained after 1st level.",
+				"name": "Goblins",
+				"tooltip": "Creature Bonus: Goblins"
+			}
+		}
+	},
+	"krellion": {
+		"army": [
+			{
+				"creature": "goblin",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "goblinWolfRider",
+				"max": 7,
+				"min": 5
+			},
+			{
+				"creature": "orc",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Krellion originally joined the army as a prizefighter, and became so well known that his fans insisted he be made to lead them into battle.  While probably not the smartest decision, Krellion has proven to be an exceptional leader, especially among ogrekind.",
+			"name": "Krellion",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Ogres or Ogre Magi for each level attained after 4th level.",
+				"name": "Ogres",
+				"tooltip": "Creature Bonus: Ogres"
+			}
+		}
+	},
+	"cragHack": {
+		"army": [
+			{
+				"creature": "goblin",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "goblinWolfRider",
+				"max": 7,
+				"min": 5
+			},
+			{
+				"creature": "orc",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "A decorated hero in Enroth, Crag Hack became bored with his home, deciding to seek out a new life in Erathia.  He boldly set sail for this new frontier, and was delighted to find a land in turmoil where his skills could be best put to use.",
+			"name": "Crag Hack",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Offense skill percentage.",
+				"name": "Offense",
+				"tooltip": "Secondary Skill Bonus: Offense"
+			}
+		}
+	},
+	"tyraxor": {
+		"army": [
+			{
+				"creature": "goblinWolfRider",
+				"max": 7,
+				"min": 5
+			},
+			{
+				"creature": "goblinWolfRider",
+				"max": 7,
+				"min": 5
+			},
+			{
+				"creature": "goblinWolfRider",
+				"max": 7,
+				"min": 5
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Tyraxor himself was a wolf rider captain, having finally joined the ranks of Krewlod's heroes after sniffing out a Tatalian ambush during a long march along the border of the two nations.",
+			"name": "Tyraxor",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Wolf Riders or Raiders for each level attained after 2nd level.",
+				"name": "Wolf Riders",
+				"tooltip": "Creature Bonus: Wolf Riders"
+			}
+		}
+	},
+	"gird": {
+		"army": [
+			{
+				"creature": "goblin",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "goblinWolfRider",
+				"max": 7,
+				"min": 5
+			},
+			{
+				"creature": "orc",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Gird learned most of what she knows from the Shaman of her home town.  It is assumed she would have taken his place, but she was taken from her villiage when the Magi of Krewlod conducted a search for children who could wield magic.",
+			"name": "Gird",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Sorcery skill percentage.",
+				"name": "Sorcery",
+				"tooltip": "Secondary Skill Bonus: Sorcery"
+			}
+		}
+	},
+	"vey": {
+		"army": [
+			{
+				"creature": "goblin",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "goblinWolfRider",
+				"max": 7,
+				"min": 5
+			},
+			{
+				"creature": "orc",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "An Ogre Mage himself, Vey has proven himself time and again that his command skills are unparalleled.  Should the Duke's son ever falter, Vey would be considered the top candidate to succeed the throne of Krewlod.",
+			"name": "Vey",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Ogres or Ogre Magi for each level attained after 4th level.",
+				"name": "Ogres",
+				"tooltip": "Creature Bonus: Ogres"
+			}
+		}
+	},
+	"dessa": {
+		"army": [
+			{
+				"creature": "goblin",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "goblinWolfRider",
+				"max": 7,
+				"min": 5
+			},
+			{
+				"creature": "orc",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Nearly fifteen years ago, Dessa's entire village was wiped out in a massacre at the hands of human marauders.  Dessa was one of six children who survived.  Since then he has dreamed of one day paying back the humans for their crime.",
+			"name": "Dessa",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Logistics skill percentage.",
+				"name": "Logistics",
+				"tooltip": "Secondary Skill Bonus: Logistics"
+			}
+		}
+	},
+	"terek": {
+		"army": [
+			{
+				"creature": "goblin",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "goblinWolfRider",
+				"max": 7,
+				"min": 5
+			},
+			{
+				"creature": "orc",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Terek spent several years as a strong-man in the Circus of the Sun, challenging spectators to see who could throw large rocks the furthest.  One day he lost, and was run out of the Circus, but the man who had beaten him recruited him for the Krewlod Army.",
+			"name": "Terek",
+			"specialty": {
+				"description": "Casts Haste with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Haste",
+				"tooltip": "Spell Bonus: Haste"
+			}
+		}
+	},
+	"zubin": {
+		"army": [
+			{
+				"creature": "goblin",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "goblinWolfRider",
+				"max": 7,
+				"min": 5
+			},
+			{
+				"creature": "orc",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Zubin was once chief of a tribe which fought against Duke Boragus.  When peace was finally attained, he was offered his own command within the armies of Krewlod.",
+			"name": "Zubin",
+			"specialty": {
+				"description": "Casts Precision with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Precision",
+				"tooltip": "Spell Bonus: Precision"
+			}
+		}
+	},
+	"gundula": {
+		"army": [
+			{
+				"creature": "goblin",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "goblinWolfRider",
+				"max": 7,
+				"min": 5
+			},
+			{
+				"creature": "orc",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Orphaned at birth, Gundula was raised as a daughter to Duke Boragus.  Upon learning that he was not her true father, she joined the military, hoping to die an honorable death in battle.  It hasn't happened, and she has become a feared leader in the military.",
+			"name": "Gundula",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Offense skill percentage.",
+				"name": "Offense",
+				"tooltip": "Secondary Skill Bonus: Offense"
+			}
+		}
+	},
+	"oris": {
+		"army": [
+			{
+				"creature": "goblin",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "goblinWolfRider",
+				"max": 7,
+				"min": 5
+			},
+			{
+				"creature": "orc",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Oris did not show much promise as a mage early in her career, but her uncanny ability to learn nearly any spell she sees cast has made up for any apparent lack of magical skills.",
+			"name": "Oris",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Eagle Eye skill percentage.",
+				"name": "Eagle Eye",
+				"tooltip": "Secondary Skill Bonus: Eagle Eye"
+			}
+		}
+	},
+	"saurug": {
+		"army": [
+			{
+				"creature": "goblin",
+				"max": 25,
+				"min": 15
+			},
+			{
+				"creature": "goblinWolfRider",
+				"max": 7,
+				"min": 5
+			},
+			{
+				"creature": "orc",
+				"max": 6,
+				"min": 4
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "It is believed that Saurug once studied alchemy in an attempt to make himself wealthy.  Though unsuccessful, his magics have made him of great value to the armies of Krewlod.",
+			"name": "Saurug",
+			"specialty": {
+				"description": "Increases kingdom's gem production by 1 per day.",
+				"name": "+1 Gems",
+				"tooltip": "+1 Gems each day."
+			}
+		}
+	},
+	"piquedram": {
+		"army": [
+			{
+				"creature": "stoneGargoyle",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "stoneGargoyle",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "stoneGargoyle",
+				"max": 5,
+				"min": 3
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Piquedram spent much of his schooling in Alchemy dealing with various types of non-valuable rock.  It is no surprise, then, that in the service of Bracada he was able to improve upon the basic design of the Gargoyle.",
+			"name": "Piquedram",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Stone or Obsidian Gargoyles for each level attained after 2nd level.",
+				"name": "Gargoyles",
+				"tooltip": "Creature Bonus: Gargoyles"
+			}
+		}
+	},
+	"thane": {
+		"army": [
+			{
+				"creature": "apprenticeGremlin",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "stoneGargoyle",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "ironGolem",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "No one really knows Thane's background, but he has been teaching Alchemy in Bracada for so long that not even the elders remember a time without him.",
+			"name": "Thane",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Genies or Master Genies for each level attained after 5th level.",
+				"name": "Genies",
+				"tooltip": "Creature Bonus: Genies"
+			}
+		}
+	},
+	"josephine": {
+		"army": [
+			{
+				"creature": "apprenticeGremlin",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "ironGolem",
+				"max": 2,
+				"min": 2
+			},
+			{
+				"creature": "ironGolem",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Josephine was the first to successfully animate a stone golem, creating a process that was much more sophisticated than that used for the gargoyle, on which her research was based.",
+			"name": "Josephine",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Stone or Iron Golems for each level attained after 3rd level.",
+				"name": "Golems",
+				"tooltip": "Creature Bonus: Golems"
+			}
+		}
+	},
+	"neela": {
+		"army": [
+			{
+				"creature": "apprenticeGremlin",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "stoneGargoyle",
+				"max": 4,
+				"min": 4
+			},
+			{
+				"creature": "ironGolem",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Neela is one of the strongest of her kind, being able to resist an incredible amount of punishment.  She somehow is able to instill this resistance in the troops she commands.",
+			"name": "Neela",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Armorer skill percentage.",
+				"name": "Armorer",
+				"tooltip": "Secondary Skill Bonus: Armorer"
+			}
+		}
+	},
+	"torosar": {
+		"army": [
+			{
+				"creature": "apprenticeGremlin",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "ballista",
+				"max": 1,
+				"min": 1
+			},
+			{
+				"creature": "ironGolem",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Though formally trained as an Alchemist, Torosar has always had an interest in battlefield and siege tactics, often studying texts on the subject of war more frequently than on the subject of alchemy.",
+			"name": "Torosar ",
+			"specialty": {
+				"description": "Increases the Attack and Defense skill of any Ballista for each level attained after 4th level.",
+				"name": "Ballista",
+				"tooltip": "Artillery Bonus: Ballista"
+			}
+		}
+	},
+	"fafner": {
+		"army": [
+			{
+				"creature": "apprenticeGremlin",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "stoneGargoyle",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "ironGolem",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "It is said that Fafner became a genie over a millenium ago, when upon finding a genie bottle, wished that he become as powerful as the genie granting the wish.  The wish was granted, and Fafner has served the leaders of Bracada ever since.",
+			"name": "Fafner",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Nagas or Naga Queens for each level attained after 6th level.",
+				"name": "Nagas",
+				"tooltip": "Creature Bonus: Nagas"
+			}
+		}
+	},
+	"rissa": {
+		"army": [
+			{
+				"creature": "apprenticeGremlin",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "stoneGargoyle",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "ironGolem",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Rissa was the first Alchemist to perfect the art of converting useless soft metals into mercury.  Though now commanding her own army, she spends much of her idle time experimenting with other materials.",
+			"name": "Rissa",
+			"specialty": {
+				"description": "Increases kingdom's mercury production by 1 per day.",
+				"name": "+1 Mercury",
+				"tooltip": "+1 Mercury each day."
+			}
+		}
+	},
+	"iona": {
+		"army": [
+			{
+				"creature": "apprenticeGremlin",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "stoneGargoyle",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "ironGolem",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Iona proved long ago that she was more powerful than most of her kind, but her charming personality prevents those who serve her from being intimidated by her strength.",
+			"name": "Iona",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Genies or Master Genies for each level attained after 5th level.",
+				"name": "Genies",
+				"tooltip": "Creature Bonus: Genies"
+			}
+		}
+	},
+	"astral": {
+		"army": [
+			{
+				"creature": "apprenticeGremlin",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "stoneGargoyle",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "ironGolem",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Astral arrived in Erathia nearly ten years ago, and was quickly accepted into the Wizards' Guild in Bracada.  His rise to power within the Guild ranks made some people joke that only magic could have brought him so much success so soon.",
+			"name": "Astral",
+			"specialty": {
+				"description": "Casts Hypnotize with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Hypnotize",
+				"tooltip": "Spell Bonus: Hypnotize"
+			}
+		}
+	},
+	"halon": {
+		"army": [
+			{
+				"creature": "apprenticeGremlin",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "stoneGargoyle",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "ironGolem",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Halon was a well respected hero in Enroth, but became so bored after the Succession Wars that he left to explore the world.  He recently accepted a command rank in Bracada's military, hoping that it would give him something new to do.",
+			"name": "Halon",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Mysticism skill.",
+				"name": "Mysticism",
+				"tooltip": "Secondary Skill Bonus: Mysticism"
+			}
+		}
+	},
+	"serena": {
+		"army": [
+			{
+				"creature": "apprenticeGremlin",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "stoneGargoyle",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "ironGolem",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "The first time Serena cast a spell she nearly killed herself.  She channeled so much magical energy into the spell that a Wizard in a neighboring town felt it.  He quickly sought her out, bringing her to the Wizards' Guild so that she could learn to control her powers.",
+			"name": "Serena",
+			"specialty": {
+				"description": "Receives a 5% per level bonus to Eagle Eye skill percentage.",
+				"name": "Eagle Eye",
+				"tooltip": "Secondary Skill Bonus: Eagle Eye"
+			}
+		}
+	},
+	"daremyth": {
+		"army": [
+			{
+				"creature": "apprenticeGremlin",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "stoneGargoyle",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "ironGolem",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Daremyth should have been dead a long time ago.  Her go-anywhere-do-anything attitude has put her in situations that she should have never survived, but somehow she comes through unscathed.",
+			"name": "Daremyth",
+			"specialty": {
+				"description": "Casts Fortune with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Fortune",
+				"tooltip": "Spell Bonus: Fortune"
+			}
+		}
+	},
+	"theodorus": {
+		"army": [
+			{
+				"creature": "apprenticeGremlin",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "stoneGargoyle",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "ironGolem",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Theodorus is easily one of the best spellcasters ever seen in Bracada.  As a result, journeyman mages often seek to learn from him, embarking on a pilgrimage of sorts in the hopes that they can bask in his wisdom.",
+			"name": "Theodorus",
+			"specialty": {
+				"description": "Increases the Attack and Defense skills of any Magi or Arch Magi for each level attained after 4th level.",
+				"name": "Magi",
+				"tooltip": "Creature Bonus: Magi"
+			}
+		}
+	},
+	"solmyr": {
+		"army": [
+			{
+				"creature": "apprenticeGremlin",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "stoneGargoyle",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "ironGolem",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Solmyr was trapped in a genie bottle for over a millenium, and was so grateful to the human who finally released him that he accidentally swore to serve the man for eternity.  As fate would have it, that man is Gavin Magnus, the immortal ruler of the Bracada Highlands.",
+			"name": "Solmyr",
+			"specialty": {
+				"description": "Casts Chain Lightning with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Ch. Lightning",
+				"tooltip": "Spell Bonus: Chain Lightning"
+			}
+		}
+	},
+	"cyra": {
+		"army": [
+			{
+				"creature": "apprenticeGremlin",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "stoneGargoyle",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "ironGolem",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Cyra originally sought to learn magic so that she could cast spells on men to make them love her.  She gave up that dream, however, when she discovered that she had real mystical talents that could be put to better use.",
+			"name": "Cyra",
+			"specialty": {
+				"description": "Casts Haste with increased effect, based on hero level compared to the level of the target unit (the bonus is greater when used on weaker units).",
+				"name": "Haste",
+				"tooltip": "Spell Bonus: Haste"
+			}
+		}
+	},
+	"aine": {
+		"army": [
+			{
+				"creature": "apprenticeGremlin",
+				"max": 40,
+				"min": 30
+			},
+			{
+				"creature": "stoneGargoyle",
+				"max": 5,
+				"min": 3
+			},
+			{
+				"creature": "ironGolem",
+				"max": 3,
+				"min": 2
+			}
+		],
+		"specialty": {
+			"base": null
+		},
+		"texts": {
+			"biography": "Aine has lived in Bracada longer than most can remember, and is said to be one of the wealthiest heroes in the land.  She must have wealth hidden somewhere, for her kind hearted nature causes her to regularly contribute large sums of money to whatever cause she chooses to pursue.",
+			"name": "Aine",
+			"specialty": {
+				"description": "Increases kingdom's income by 350 gold per day.",
+				"name": "+350 Gold",
+				"tooltip": "+350 Gold each day"
+			}
+		}
+	}
+}

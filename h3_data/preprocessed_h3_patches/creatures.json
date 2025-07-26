@@ -1,0 +1,6610 @@
+{
+	"unused122": {
+		"advMapAmount": {
+			"max": 0,
+			"min": 0
+		},
+		"aiValue": 0,
+		"attack": 0,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 0,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 0,
+			"min": 0
+		},
+		"defense": 0,
+		"fightValue": 0,
+		"growth": 0,
+		"hitPoints": 0,
+		"horde": 0,
+		"name": {
+			"plural": "NOT USED (1)",
+			"singular": "NOT USED (1)"
+		},
+		"speed": 0
+	},
+	"unused124": {
+		"advMapAmount": {
+			"max": 0,
+			"min": 0
+		},
+		"aiValue": 0,
+		"attack": 0,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 0,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 0,
+			"min": 0
+		},
+		"defense": 0,
+		"fightValue": 0,
+		"growth": 0,
+		"hitPoints": 0,
+		"horde": 0,
+		"name": {
+			"plural": "NOT USED (2)",
+			"singular": "NOT USED (2) "
+		},
+		"speed": 0
+	},
+	"unused126": {
+		"advMapAmount": {
+			"max": 0,
+			"min": 0
+		},
+		"aiValue": 0,
+		"attack": 0,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 0,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 0,
+			"min": 0
+		},
+		"defense": 0,
+		"fightValue": 0,
+		"growth": 0,
+		"hitPoints": 0,
+		"horde": 0,
+		"name": {
+			"plural": "NOT USED (3)",
+			"singular": "NOT USED (3)"
+		},
+		"speed": 0
+	},
+	"unused128": {
+		"advMapAmount": {
+			"max": 0,
+			"min": 0
+		},
+		"aiValue": 0,
+		"attack": 0,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 0,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 0,
+			"min": 0
+		},
+		"defense": 0,
+		"fightValue": 0,
+		"growth": 0,
+		"hitPoints": 0,
+		"horde": 0,
+		"name": {
+			"plural": "NOT USED (4)",
+			"singular": "NOT USED (4)"
+		},
+		"speed": 0
+	},
+	"catapult": {
+		"advMapAmount": {
+			"max": 0,
+			"min": 0
+		},
+		"aiValue": 500,
+		"attack": 10,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 1,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 0,
+			"min": 0
+		},
+		"defense": 10,
+		"fightValue": 10,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 4,
+				"frameAngles": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 69,
+					"lowerY": -119,
+					"middleX": 69,
+					"middleY": -119,
+					"upperX": 69,
+					"upperY": -119
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 0,
+		"hitPoints": 1000,
+		"horde": 0,
+		"name": {
+			"plural": "Katapulty",
+			"singular": "Katapulta"
+		},
+		"speed": 0
+	},
+	"ballista": {
+		"advMapAmount": {
+			"max": 0,
+			"min": 0
+		},
+		"aiValue": 600,
+		"attack": 10,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 2500,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 2
+		},
+		"defense": 10,
+		"fightValue": 650,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 5,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 53,
+					"lowerY": -36,
+					"middleX": 101,
+					"middleY": -75,
+					"upperX": 57,
+					"upperY": -104
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 0,
+		"hitPoints": 250,
+		"horde": 0,
+		"name": {
+			"plural": "Balisty",
+			"singular": "Balista"
+		},
+		"speed": 0
+	},
+	"firstAidTent": {
+		"advMapAmount": {
+			"max": 0,
+			"min": 0
+		},
+		"aiValue": 300,
+		"attack": 0,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 750,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 0,
+			"min": 0
+		},
+		"defense": 0,
+		"fightValue": 10,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 0,
+		"hitPoints": 75,
+		"horde": 0,
+		"name": {
+			"plural": "Namioty medyk\u00f3w",
+			"singular": "Namiot medyka"
+		},
+		"speed": 0
+	},
+	"ammoCart": {
+		"advMapAmount": {
+			"max": 0,
+			"min": 0
+		},
+		"aiValue": 400,
+		"attack": 0,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 1000,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 0,
+			"min": 0
+		},
+		"defense": 5,
+		"fightValue": 5,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 0,
+		"hitPoints": 100,
+		"horde": 0,
+		"name": {
+			"plural": "Wozy z amunicj\u00b9",
+			"singular": "W\u00f3z z amunicj\u00b9"
+		},
+		"speed": 0
+	},
+	"arrowTower": {
+		"advMapAmount": {
+			"max": 0,
+			"min": 0
+		},
+		"aiValue": 400,
+		"attack": 10,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 1000,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 4,
+			"min": 2
+		},
+		"defense": 5,
+		"fightValue": 5,
+		"graphics": {
+			"animationTime": {
+				"attack": 0,
+				"idle": 10,
+				"walk": 0
+			},
+			"iconLarge": "vcmi/creatureIcons/towerLarge",
+			"iconSmall": "vcmi/creatureIcons/towerSmall",
+			"timeBetweenFidgets": 0
+		},
+		"growth": 0,
+		"hitPoints": 100,
+		"horde": 0,
+		"name": {
+			"plural": "Wie\u00bfe \u00b3ucznik\u00f3w",
+			"singular": "Wie\u00bfa \u00b3ucznik\u00f3w"
+		},
+		"speed": 0
+	},
+	"pikeman": {
+		"advMapAmount": {
+			"max": 50,
+			"min": 20
+		},
+		"aiValue": 80,
+		"attack": 4,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 60,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 1
+		},
+		"defense": 5,
+		"fightValue": 100,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.15
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 14,
+		"hitPoints": 10,
+		"horde": 0,
+		"name": {
+			"plural": "Pikinierzy",
+			"singular": "Pikinier"
+		},
+		"speed": 4
+	},
+	"halberdier": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 20
+		},
+		"aiValue": 115,
+		"attack": 6,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 75,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 2
+		},
+		"defense": 5,
+		"fightValue": 115,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.9
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 14,
+		"hitPoints": 10,
+		"horde": 0,
+		"name": {
+			"plural": "Halabardnicy",
+			"singular": "Halabardnik"
+		},
+		"speed": 5
+	},
+	"archer": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 16
+		},
+		"aiValue": 126,
+		"attack": 6,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 100,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 2
+		},
+		"defense": 3,
+		"fightValue": 115,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 7,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 21,
+					"lowerY": -50,
+					"middleX": 36,
+					"middleY": -59,
+					"upperX": 38,
+					"upperY": -65
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 9,
+		"hitPoints": 10,
+		"horde": 0,
+		"name": {
+			"plural": "\u00a3ucznicy",
+			"singular": "\u00a3ucznik"
+		},
+		"speed": 4
+	},
+	"marksman": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 16
+		},
+		"aiValue": 184,
+		"attack": 6,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 150,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 2
+		},
+		"defense": 3,
+		"fightValue": 115,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 7,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 17,
+					"lowerY": -53,
+					"middleX": 38,
+					"middleY": -61,
+					"upperX": 34,
+					"upperY": -71
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 9,
+		"hitPoints": 10,
+		"horde": 0,
+		"name": {
+			"plural": "Kusznicy",
+			"singular": "Kusznik"
+		},
+		"speed": 6
+	},
+	"griffin": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 12
+		},
+		"aiValue": 351,
+		"attack": 8,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 200,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 6,
+			"min": 3
+		},
+		"defense": 8,
+		"fightValue": 324,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 7,
+		"hitPoints": 25,
+		"horde": 3,
+		"name": {
+			"plural": "Gryfy",
+			"singular": "Gryf"
+		},
+		"speed": 6
+	},
+	"royalGriffin": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 12
+		},
+		"aiValue": 448,
+		"attack": 9,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 240,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 6,
+			"min": 3
+		},
+		"defense": 9,
+		"fightValue": 364,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.05
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 7,
+		"hitPoints": 25,
+		"horde": 3,
+		"name": {
+			"plural": "Gryfy kr\u00f3lewskie",
+			"singular": "Gryf kr\u00f3lewski"
+		},
+		"speed": 9
+	},
+	"swordsman": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 10
+		},
+		"aiValue": 445,
+		"attack": 10,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 300,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 9,
+			"min": 6
+		},
+		"defense": 12,
+		"fightValue": 445,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.87
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 4,
+		"hitPoints": 35,
+		"horde": 0,
+		"name": {
+			"plural": "Zbrojni",
+			"singular": "Zbrojny"
+		},
+		"speed": 5
+	},
+	"crusader": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 10
+		},
+		"aiValue": 588,
+		"attack": 12,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 400,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 10,
+			"min": 7
+		},
+		"defense": 12,
+		"fightValue": 588,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.95
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 4,
+		"hitPoints": 35,
+		"horde": 0,
+		"name": {
+			"plural": "Krzy\u00bfowcy",
+			"singular": "Krzy\u00bfowiec"
+		},
+		"speed": 6
+	},
+	"monk": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 8
+		},
+		"aiValue": 485,
+		"attack": 12,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 400,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 12,
+			"min": 10
+		},
+		"defense": 7,
+		"fightValue": 485,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 8,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 31,
+					"lowerY": 11,
+					"middleX": 61,
+					"middleY": -49,
+					"upperX": 38,
+					"upperY": -95
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 30,
+		"horde": 0,
+		"name": {
+			"plural": "Mnisi",
+			"singular": "Mnich"
+		},
+		"speed": 5
+	},
+	"zealot": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 8
+		},
+		"aiValue": 750,
+		"attack": 12,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 450,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 12,
+			"min": 10
+		},
+		"defense": 10,
+		"fightValue": 500,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 6,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 28,
+					"lowerY": 3,
+					"middleX": 62,
+					"middleY": -53,
+					"upperX": 37,
+					"upperY": -98
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 30,
+		"horde": 0,
+		"name": {
+			"plural": "Kap\u00b3ani",
+			"singular": "Kap\u00b3an"
+		},
+		"speed": 7
+	},
+	"cavalier": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 5
+		},
+		"aiValue": 1946,
+		"attack": 15,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 1000,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 25,
+			"min": 15
+		},
+		"defense": 15,
+		"fightValue": 1668,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 100,
+		"horde": 0,
+		"name": {
+			"plural": "Kawalerzy\u0153ci",
+			"singular": "Kawalerzysta"
+		},
+		"speed": 7
+	},
+	"champion": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 5
+		},
+		"aiValue": 2100,
+		"attack": 16,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 1200,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 25,
+			"min": 20
+		},
+		"defense": 16,
+		"fightValue": 1800,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.9
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 100,
+		"horde": 0,
+		"name": {
+			"plural": "Czempioni",
+			"singular": "Czempion"
+		},
+		"speed": 9
+	},
+	"angel": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 4
+		},
+		"aiValue": 5019,
+		"attack": 20,
+		"cost": {
+			"crystal": 0,
+			"gems": 1,
+			"gold": 3000,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 50,
+			"min": 50
+		},
+		"defense": 20,
+		"fightValue": 3585,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.82
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 200,
+		"horde": 0,
+		"name": {
+			"plural": "Anio\u00b3y",
+			"singular": "Anio\u00b3"
+		},
+		"speed": 12
+	},
+	"archangel": {
+		"advMapAmount": {
+			"max": 8,
+			"min": 3
+		},
+		"aiValue": 8776,
+		"attack": 30,
+		"cost": {
+			"crystal": 0,
+			"gems": 3,
+			"gold": 5000,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 50,
+			"min": 50
+		},
+		"defense": 30,
+		"fightValue": 6033,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.82
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 250,
+		"horde": 0,
+		"name": {
+			"plural": "Archanio\u00b3y",
+			"singular": "Archanio\u00b3"
+		},
+		"shots": 1,
+		"speed": 18,
+		"spellPoints": 1
+	},
+	"pixie": {
+		"advMapAmount": {
+			"max": 50,
+			"min": 20
+		},
+		"aiValue": 55,
+		"attack": 2,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 25,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 2,
+			"min": 1
+		},
+		"defense": 2,
+		"fightValue": 40,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 20,
+		"hitPoints": 3,
+		"horde": 10,
+		"name": {
+			"plural": "Nimfy",
+			"singular": "Nimfa"
+		},
+		"speed": 7
+	},
+	"sprite": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 20
+		},
+		"aiValue": 95,
+		"attack": 2,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 30,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 1
+		},
+		"defense": 2,
+		"fightValue": 70,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 20,
+		"hitPoints": 3,
+		"horde": 10,
+		"name": {
+			"plural": "Rusa\u00b3ki",
+			"singular": "Rusa\u00b3ka"
+		},
+		"speed": 9
+	},
+	"airElemental": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 12
+		},
+		"aiValue": 356,
+		"attack": 9,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 250,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 8,
+			"min": 2
+		},
+		"defense": 9,
+		"fightValue": 324,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.5
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 6,
+		"hitPoints": 25,
+		"horde": 0,
+		"name": {
+			"plural": "\u00afywio\u00b3aki powietrza",
+			"singular": "\u00afywio\u00b3ak powietrza"
+		},
+		"speed": 7
+	},
+	"stormElemental": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 6
+		},
+		"aiValue": 486,
+		"attack": 9,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 275,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 8,
+			"min": 2
+		},
+		"defense": 9,
+		"fightValue": 324,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.33
+			},
+			"missile": {
+				"attackClimaxFrame": 4,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 45,
+					"lowerY": -40,
+					"middleX": 80,
+					"middleY": -80,
+					"upperX": 50,
+					"upperY": -100
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 6,
+		"hitPoints": 25,
+		"horde": 0,
+		"name": {
+			"plural": "\u00afywio\u00b3aki burzy",
+			"singular": "\u00afywio\u00b3ak burzy"
+		},
+		"speed": 8,
+		"spellPoints": 3
+	},
+	"waterElemental": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 12
+		},
+		"aiValue": 315,
+		"attack": 8,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 300,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 7,
+			"min": 3
+		},
+		"defense": 10,
+		"fightValue": 315,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.87
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 6,
+		"hitPoints": 30,
+		"horde": 0,
+		"name": {
+			"plural": "\u00afywio\u00b3aki wody",
+			"singular": "\u00afywio\u00b3ak wody"
+		},
+		"speed": 5
+	},
+	"iceElemental": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 12
+		},
+		"aiValue": 380,
+		"attack": 8,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 375,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 7,
+			"min": 3
+		},
+		"defense": 10,
+		"fightValue": 315,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 4,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 18,
+					"lowerY": -92,
+					"middleX": 43,
+					"middleY": -99,
+					"upperX": 28,
+					"upperY": -107
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 6,
+		"hitPoints": 30,
+		"horde": 0,
+		"name": {
+			"plural": "\u00afywio\u00b3aki lodu ",
+			"singular": "\u00afywio\u00b3ak lodu"
+		},
+		"speed": 6,
+		"spellPoints": 3
+	},
+	"fireElemental": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 12
+		},
+		"aiValue": 345,
+		"attack": 10,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 350,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 6,
+			"min": 4
+		},
+		"defense": 8,
+		"fightValue": 345,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.5
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 5,
+		"hitPoints": 35,
+		"horde": 0,
+		"name": {
+			"plural": "\u00afywio\u00b3aki ognia",
+			"singular": "\u00afywio\u00b3ak ognia"
+		},
+		"speed": 6
+	},
+	"energyElemental": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 12
+		},
+		"aiValue": 470,
+		"attack": 12,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 400,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 6,
+			"min": 4
+		},
+		"defense": 8,
+		"fightValue": 360,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.67
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 5,
+		"hitPoints": 35,
+		"horde": 0,
+		"name": {
+			"plural": "\u00afywio\u00b3aki energii",
+			"singular": "\u00afywio\u00b3ak energii"
+		},
+		"speed": 8,
+		"spellPoints": 3
+	},
+	"earthElemental": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 10
+		},
+		"aiValue": 330,
+		"attack": 10,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 400,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 8,
+			"min": 4
+		},
+		"defense": 10,
+		"fightValue": 415,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 4,
+		"hitPoints": 40,
+		"horde": 0,
+		"name": {
+			"plural": "\u00afywio\u00b3aki ziemi",
+			"singular": "\u00afywio\u00b3ak ziemi"
+		},
+		"speed": 4
+	},
+	"magmaElemental": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 16
+		},
+		"aiValue": 490,
+		"attack": 11,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 500,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 10,
+			"min": 6
+		},
+		"defense": 11,
+		"fightValue": 490,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.77
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 4,
+		"hitPoints": 40,
+		"horde": 0,
+		"name": {
+			"plural": "\u00afywio\u00b3aki magmy ",
+			"singular": "\u00afywio\u00b3ak magmy"
+		},
+		"speed": 6,
+		"spellPoints": 3
+	},
+	"psychicElemental": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 8
+		},
+		"aiValue": 1669,
+		"attack": 15,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 750,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 20,
+			"min": 10
+		},
+		"defense": 13,
+		"fightValue": 1431,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 75,
+		"horde": 0,
+		"name": {
+			"plural": "\u00afywio\u00b3aki umys\u00b3u",
+			"singular": "\u00afywio\u00b3ak umys\u00b3u"
+		},
+		"speed": 7
+	},
+	"magicElemental": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 8
+		},
+		"aiValue": 2012,
+		"attack": 15,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 800,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 25,
+			"min": 15
+		},
+		"defense": 13,
+		"fightValue": 1724,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 80,
+		"horde": 0,
+		"name": {
+			"plural": "\u00afywio\u00b3aki magii",
+			"singular": "\u00afywio\u00b3ak magii"
+		},
+		"speed": 9
+	},
+	"firebird": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 4
+		},
+		"aiValue": 4547,
+		"attack": 18,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 1500,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 40,
+			"min": 30
+		},
+		"defense": 18,
+		"fightValue": 3248,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 150,
+		"horde": 0,
+		"name": {
+			"plural": "Ogniste ptaki",
+			"singular": "Ognisty ptak"
+		},
+		"speed": 15
+	},
+	"phoenix": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 4
+		},
+		"aiValue": 6721,
+		"attack": 21,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 2000,
+			"mercury": 1,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 40,
+			"min": 30
+		},
+		"defense": 18,
+		"fightValue": 4929,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 200,
+		"horde": 0,
+		"name": {
+			"plural": "Feniksy",
+			"singular": "Feniks"
+		},
+		"speed": 21,
+		"spellPoints": 1
+	},
+	"troglodyte": {
+		"advMapAmount": {
+			"max": 50,
+			"min": 20
+		},
+		"aiValue": 59,
+		"attack": 4,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 50,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 1
+		},
+		"defense": 3,
+		"fightValue": 73,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.8
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 14,
+		"hitPoints": 5,
+		"horde": 7,
+		"name": {
+			"plural": "Troglodyci",
+			"singular": "Troglodyta"
+		},
+		"speed": 4
+	},
+	"infernalTroglodyte": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 20
+		},
+		"aiValue": 84,
+		"attack": 5,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 65,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 1
+		},
+		"defense": 4,
+		"fightValue": 84,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.8
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 14,
+		"hitPoints": 6,
+		"horde": 7,
+		"name": {
+			"plural": "Piekielni troglodyci",
+			"singular": "Piekielny troglodyta"
+		},
+		"speed": 5
+	},
+	"harpy": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 16
+		},
+		"aiValue": 154,
+		"attack": 6,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 130,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 4,
+			"min": 1
+		},
+		"defense": 5,
+		"fightValue": 140,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.85
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 8,
+		"hitPoints": 14,
+		"horde": 0,
+		"name": {
+			"plural": "Harpie",
+			"singular": "Harpia"
+		},
+		"speed": 6
+	},
+	"harpyHag": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 16
+		},
+		"aiValue": 238,
+		"attack": 6,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 170,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 4,
+			"min": 1
+		},
+		"defense": 6,
+		"fightValue": 196,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.85
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 8,
+		"hitPoints": 14,
+		"horde": 0,
+		"name": {
+			"plural": "Harpie wied\u0178my",
+			"singular": "Harpia wied\u0178ma"
+		},
+		"speed": 9
+	},
+	"beholder": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 12
+		},
+		"aiValue": 336,
+		"attack": 9,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 250,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 5,
+			"min": 3
+		},
+		"defense": 7,
+		"fightValue": 240,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 5,
+				"frameAngles": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 9,
+					"lowerY": -60,
+					"middleX": 14,
+					"middleY": -70,
+					"upperX": 14,
+					"upperY": -73
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 7,
+		"hitPoints": 22,
+		"horde": 0,
+		"name": {
+			"plural": "Z\u00b3e oczy",
+			"singular": "Z\u00b3e oko"
+		},
+		"speed": 5
+	},
+	"evilEye": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 12
+		},
+		"aiValue": 367,
+		"attack": 10,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 280,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 5,
+			"min": 3
+		},
+		"defense": 8,
+		"fightValue": 245,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 5,
+				"frameAngles": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 7,
+					"lowerY": -60,
+					"middleX": 13,
+					"middleY": -69,
+					"upperX": 13,
+					"upperY": -72
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 7,
+		"hitPoints": 22,
+		"horde": 0,
+		"name": {
+			"plural": "Obserwatorzy",
+			"singular": "Obserwator"
+		},
+		"speed": 7
+	},
+	"medusa": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 10
+		},
+		"aiValue": 517,
+		"attack": 9,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 300,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 8,
+			"min": 6
+		},
+		"defense": 9,
+		"fightValue": 379,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 9,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 53,
+					"lowerY": -53,
+					"middleX": 72,
+					"middleY": -63,
+					"upperX": 76,
+					"upperY": -79
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 4,
+		"hitPoints": 25,
+		"horde": 0,
+		"name": {
+			"plural": "Meduzy",
+			"singular": "Meduza"
+		},
+		"speed": 5
+	},
+	"medusaQueen": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 10
+		},
+		"aiValue": 577,
+		"attack": 10,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 330,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 8,
+			"min": 6
+		},
+		"defense": 10,
+		"fightValue": 423,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 9,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 70,
+					"lowerY": -45,
+					"middleX": 75,
+					"middleY": -50,
+					"upperX": 75,
+					"upperY": -65
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 4,
+		"hitPoints": 30,
+		"horde": 0,
+		"name": {
+			"plural": "Meduzy kr\u00f3lewskie",
+			"singular": "Meduza kr\u00f3lewska"
+		},
+		"speed": 6
+	},
+	"minotaur": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 8
+		},
+		"aiValue": 835,
+		"attack": 14,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 500,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 20,
+			"min": 12
+		},
+		"defense": 12,
+		"fightValue": 835,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.05
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 50,
+		"horde": 0,
+		"name": {
+			"plural": "Minotaury",
+			"singular": "Minotaur"
+		},
+		"speed": 6
+	},
+	"minotaurKing": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 8
+		},
+		"aiValue": 1068,
+		"attack": 15,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 575,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 20,
+			"min": 12
+		},
+		"defense": 15,
+		"fightValue": 890,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.05
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 50,
+		"horde": 0,
+		"name": {
+			"plural": "Wielkie minotaury",
+			"singular": "Wielki minotaur"
+		},
+		"speed": 8
+	},
+	"manticore": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 5
+		},
+		"aiValue": 1547,
+		"attack": 15,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 850,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 20,
+			"min": 14
+		},
+		"defense": 13,
+		"fightValue": 1215,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.8
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 80,
+		"horde": 0,
+		"name": {
+			"plural": "Mantikory",
+			"singular": "Mantikora"
+		},
+		"speed": 7
+	},
+	"scorpicore": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 5
+		},
+		"aiValue": 1589,
+		"attack": 16,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 1050,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 20,
+			"min": 14
+		},
+		"defense": 14,
+		"fightValue": 1248,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.8
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 80,
+		"horde": 0,
+		"name": {
+			"plural": "Chimery",
+			"singular": "Chimera"
+		},
+		"speed": 11
+	},
+	"redDragon": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 4
+		},
+		"aiValue": 4702,
+		"attack": 19,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 2500,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 1,
+			"wood": 0
+		},
+		"damage": {
+			"max": 50,
+			"min": 40
+		},
+		"defense": 19,
+		"fightValue": 3762,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.6
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 180,
+		"horde": 0,
+		"name": {
+			"plural": "Czerwone smoki",
+			"singular": "Czerwony smok"
+		},
+		"speed": 11
+	},
+	"blackDragon": {
+		"advMapAmount": {
+			"max": 8,
+			"min": 3
+		},
+		"aiValue": 8721,
+		"attack": 25,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 4000,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 2,
+			"wood": 0
+		},
+		"damage": {
+			"max": 50,
+			"min": 40
+		},
+		"defense": 25,
+		"fightValue": 6783,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.6
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 300,
+		"horde": 0,
+		"name": {
+			"plural": "Czarne smoki",
+			"singular": "Czarny smok"
+		},
+		"speed": 15
+	},
+	"gnoll": {
+		"advMapAmount": {
+			"max": 50,
+			"min": 20
+		},
+		"aiValue": 56,
+		"attack": 3,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 50,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 2
+		},
+		"defense": 5,
+		"fightValue": 70,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 12,
+		"hitPoints": 6,
+		"horde": 6,
+		"name": {
+			"plural": "Gnolle",
+			"singular": "Gnoll"
+		},
+		"speed": 4
+	},
+	"gnollMarauder": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 20
+		},
+		"aiValue": 90,
+		"attack": 4,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 70,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 2
+		},
+		"defense": 6,
+		"fightValue": 90,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 12,
+		"hitPoints": 6,
+		"horde": 6,
+		"name": {
+			"plural": "Gnolle maruderzy",
+			"singular": "Gnoll maruder"
+		},
+		"speed": 5
+	},
+	"lizardman": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 16
+		},
+		"aiValue": 126,
+		"attack": 5,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 110,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 2
+		},
+		"defense": 6,
+		"fightValue": 115,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.9
+			},
+			"missile": {
+				"attackClimaxFrame": 9,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 26,
+					"lowerY": -55,
+					"middleX": 47,
+					"middleY": -65,
+					"upperX": 34,
+					"upperY": -76
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 9,
+		"hitPoints": 14,
+		"horde": 0,
+		"name": {
+			"plural": "Jaszczuroludzie",
+			"singular": "Jaszczurocz\u00b3ek"
+		},
+		"speed": 4
+	},
+	"lizardWarrior": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 16
+		},
+		"aiValue": 156,
+		"attack": 6,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 140,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 5,
+			"min": 2
+		},
+		"defense": 8,
+		"fightValue": 130,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.9
+			},
+			"missile": {
+				"attackClimaxFrame": 9,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 25,
+					"lowerY": -56,
+					"middleX": 49,
+					"middleY": -66,
+					"upperX": 39,
+					"upperY": -76
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 9,
+		"hitPoints": 15,
+		"horde": 0,
+		"name": {
+			"plural": "Reptilioni",
+			"singular": "Reptilion"
+		},
+		"speed": 5
+	},
+	"serpentFly": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 10
+		},
+		"aiValue": 256,
+		"attack": 7,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 220,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 5,
+			"min": 2
+		},
+		"defense": 9,
+		"fightValue": 205,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.77
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 8,
+		"hitPoints": 20,
+		"horde": 0,
+		"name": {
+			"plural": "Wa\u00bfki",
+			"singular": "Wa\u00bfka"
+		},
+		"speed": 9
+	},
+	"fireDragonFly": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 10
+		},
+		"aiValue": 256,
+		"attack": 8,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 240,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 5,
+			"min": 2
+		},
+		"defense": 10,
+		"fightValue": 205,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.77
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 8,
+		"hitPoints": 20,
+		"horde": 0,
+		"name": {
+			"plural": "Smocze wa\u00bfki",
+			"singular": "Smocza wa\u00bfka"
+		},
+		"speed": 13
+	},
+	"basilisk": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 8
+		},
+		"aiValue": 552,
+		"attack": 11,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 325,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 10,
+			"min": 6
+		},
+		"defense": 11,
+		"fightValue": 506,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 4,
+		"hitPoints": 35,
+		"horde": 0,
+		"name": {
+			"plural": "Bazyliszki",
+			"singular": "Bazyliszek"
+		},
+		"speed": 5
+	},
+	"greaterBasilisk": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 8
+		},
+		"aiValue": 714,
+		"attack": 12,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 400,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 10,
+			"min": 6
+		},
+		"defense": 12,
+		"fightValue": 561,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 4,
+		"hitPoints": 40,
+		"horde": 0,
+		"name": {
+			"plural": "Bazyliszki wi\u00eaksze",
+			"singular": "Bazyliszek wi\u00eakszy"
+		},
+		"speed": 7
+	},
+	"gorgon": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 12
+		},
+		"aiValue": 890,
+		"attack": 10,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 525,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 16,
+			"min": 12
+		},
+		"defense": 14,
+		"fightValue": 890,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 70,
+		"horde": 0,
+		"name": {
+			"plural": "Gorgony",
+			"singular": "Gorgona"
+		},
+		"speed": 5
+	},
+	"mightyGorgon": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 12
+		},
+		"aiValue": 1028,
+		"attack": 11,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 600,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 16,
+			"min": 12
+		},
+		"defense": 16,
+		"fightValue": 1028,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 70,
+		"horde": 0,
+		"name": {
+			"plural": "Wielkie gorgony",
+			"singular": "Wielka gorgona"
+		},
+		"speed": 6
+	},
+	"wyvern": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 5
+		},
+		"aiValue": 1350,
+		"attack": 14,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 800,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 18,
+			"min": 14
+		},
+		"defense": 14,
+		"fightValue": 1050,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.67
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 70,
+		"horde": 0,
+		"name": {
+			"plural": "Wiwerny",
+			"singular": "Wiwerna"
+		},
+		"speed": 7
+	},
+	"wyvernMonarch": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 5
+		},
+		"aiValue": 1518,
+		"attack": 14,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 1100,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 22,
+			"min": 18
+		},
+		"defense": 14,
+		"fightValue": 1181,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.67
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 70,
+		"horde": 0,
+		"name": {
+			"plural": "Wiwerny kr\u00f3lewskie",
+			"singular": "Wiwerna kr\u00f3lewska"
+		},
+		"speed": 11
+	},
+	"hydra": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 4
+		},
+		"aiValue": 4120,
+		"attack": 16,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 2200,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 45,
+			"min": 25
+		},
+		"defense": 18,
+		"fightValue": 4120,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 175,
+		"horde": 0,
+		"name": {
+			"plural": "Hydry",
+			"singular": "Hydra"
+		},
+		"speed": 5
+	},
+	"chaosHydra": {
+		"advMapAmount": {
+			"max": 8,
+			"min": 3
+		},
+		"aiValue": 5931,
+		"attack": 18,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 3500,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 1,
+			"wood": 0
+		},
+		"damage": {
+			"max": 45,
+			"min": 25
+		},
+		"defense": 20,
+		"fightValue": 5272,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 250,
+		"horde": 0,
+		"name": {
+			"plural": "Hydry chaosu",
+			"singular": "Hydra chaosu"
+		},
+		"speed": 7
+	},
+	"imp": {
+		"advMapAmount": {
+			"max": 50,
+			"min": 20
+		},
+		"aiValue": 50,
+		"attack": 2,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 50,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 2,
+			"min": 1
+		},
+		"defense": 3,
+		"fightValue": 50,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.25
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 15,
+		"hitPoints": 4,
+		"horde": 8,
+		"name": {
+			"plural": "Chochliki",
+			"singular": "Chochlik"
+		},
+		"speed": 5
+	},
+	"familiar": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 20
+		},
+		"aiValue": 60,
+		"attack": 4,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 60,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 2,
+			"min": 1
+		},
+		"defense": 4,
+		"fightValue": 60,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.3
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 15,
+		"hitPoints": 4,
+		"horde": 8,
+		"name": {
+			"plural": "Chowa\u00f1ce",
+			"singular": "Chowaniec"
+		},
+		"speed": 7
+	},
+	"gog": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 16
+		},
+		"aiValue": 159,
+		"attack": 6,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 125,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 4,
+			"min": 2
+		},
+		"defense": 4,
+		"fightValue": 145,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.27
+			},
+			"missile": {
+				"attackClimaxFrame": 6,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 14,
+					"lowerY": -6,
+					"middleX": 69,
+					"middleY": -50,
+					"upperX": 37,
+					"upperY": -88
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 8,
+		"hitPoints": 13,
+		"horde": 0,
+		"name": {
+			"plural": "Gogi",
+			"singular": "Gog"
+		},
+		"speed": 4
+	},
+	"magog": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 16
+		},
+		"aiValue": 240,
+		"attack": 7,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 175,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 4,
+			"min": 2
+		},
+		"defense": 4,
+		"fightValue": 210,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.33
+			},
+			"missile": {
+				"attackClimaxFrame": 6,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 15,
+					"lowerY": -9,
+					"middleX": 69,
+					"middleY": -51,
+					"upperX": 38,
+					"upperY": -89
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 8,
+		"hitPoints": 13,
+		"horde": 0,
+		"name": {
+			"plural": "Magogi",
+			"singular": "Magog"
+		},
+		"speed": 6
+	},
+	"hellHound": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 12
+		},
+		"aiValue": 357,
+		"attack": 10,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 200,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 7,
+			"min": 2
+		},
+		"defense": 6,
+		"fightValue": 275,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 5,
+		"hitPoints": 25,
+		"horde": 3,
+		"name": {
+			"plural": "Piekielne ogary",
+			"singular": "Piekielny ogar"
+		},
+		"speed": 7
+	},
+	"cerberus": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 12
+		},
+		"aiValue": 392,
+		"attack": 10,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 250,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 7,
+			"min": 2
+		},
+		"defense": 8,
+		"fightValue": 308,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 5,
+		"hitPoints": 25,
+		"horde": 3,
+		"name": {
+			"plural": "Cerbery",
+			"singular": "Cerber"
+		},
+		"speed": 8
+	},
+	"demon": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 10
+		},
+		"aiValue": 445,
+		"attack": 10,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 250,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 9,
+			"min": 7
+		},
+		"defense": 10,
+		"fightValue": 445,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.93
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 4,
+		"hitPoints": 35,
+		"horde": 0,
+		"name": {
+			"plural": "Demony",
+			"singular": "Demon"
+		},
+		"speed": 5
+	},
+	"hornedDemon": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 10
+		},
+		"aiValue": 480,
+		"attack": 10,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 270,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 9,
+			"min": 7
+		},
+		"defense": 10,
+		"fightValue": 480,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.93
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 4,
+		"hitPoints": 40,
+		"horde": 0,
+		"name": {
+			"plural": "Rogate demony",
+			"singular": "Rogaty demon"
+		},
+		"speed": 6
+	},
+	"pitFiend": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 8
+		},
+		"aiValue": 765,
+		"attack": 13,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 500,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 17,
+			"min": 13
+		},
+		"defense": 13,
+		"fightValue": 765,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 45,
+		"horde": 0,
+		"name": {
+			"plural": "Czarty",
+			"singular": "Czart"
+		},
+		"speed": 6
+	},
+	"pitLord": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 8
+		},
+		"aiValue": 1224,
+		"attack": 13,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 700,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 17,
+			"min": 13
+		},
+		"defense": 13,
+		"fightValue": 1071,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 45,
+		"horde": 0,
+		"name": {
+			"plural": "Czarci lordowie",
+			"singular": "Czarci lord"
+		},
+		"shots": 1,
+		"speed": 7,
+		"spellPoints": 1
+	},
+	"efreet": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 5
+		},
+		"aiValue": 1670,
+		"attack": 16,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 900,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 24,
+			"min": 16
+		},
+		"defense": 12,
+		"fightValue": 1413,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 90,
+		"horde": 0,
+		"name": {
+			"plural": "Ifryty",
+			"singular": "Ifryt"
+		},
+		"speed": 9
+	},
+	"efreetSultan": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 5
+		},
+		"aiValue": 1848,
+		"attack": 16,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 1100,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 24,
+			"min": 16
+		},
+		"defense": 14,
+		"fightValue": 1584,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 90,
+		"horde": 0,
+		"name": {
+			"plural": "Su\u00b3ta\u00f1skie ifryty",
+			"singular": "Su\u00b3ta\u00f1ski ifryt"
+		},
+		"speed": 13
+	},
+	"devil": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 4
+		},
+		"aiValue": 5101,
+		"attack": 19,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 2700,
+			"mercury": 1,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 40,
+			"min": 30
+		},
+		"defense": 21,
+		"fightValue": 3759,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 160,
+		"horde": 0,
+		"name": {
+			"plural": "Diab\u00b3y",
+			"singular": "Diabe\u00b3"
+		},
+		"speed": 11
+	},
+	"archDevil": {
+		"advMapAmount": {
+			"max": 8,
+			"min": 3
+		},
+		"aiValue": 7115,
+		"attack": 26,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 4500,
+			"mercury": 2,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 40,
+			"min": 30
+		},
+		"defense": 28,
+		"fightValue": 5243,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 200,
+		"horde": 0,
+		"name": {
+			"plural": "Arcydiab\u00b3y",
+			"singular": "Arcydiabe\u00b3"
+		},
+		"speed": 17
+	},
+	"skeleton": {
+		"advMapAmount": {
+			"max": 50,
+			"min": 20
+		},
+		"aiValue": 60,
+		"attack": 5,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 60,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 1
+		},
+		"defense": 4,
+		"fightValue": 75,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 12,
+		"hitPoints": 6,
+		"horde": 6,
+		"name": {
+			"plural": "Szkielety",
+			"singular": "Szkielet"
+		},
+		"speed": 4
+	},
+	"skeletonWarrior": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 20
+		},
+		"aiValue": 85,
+		"attack": 6,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 70,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 1
+		},
+		"defense": 6,
+		"fightValue": 85,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 12,
+		"hitPoints": 6,
+		"horde": 6,
+		"name": {
+			"plural": "Ko\u0153cieje",
+			"singular": "Ko\u0153ciej"
+		},
+		"speed": 5
+	},
+	"walkingDead": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 16
+		},
+		"aiValue": 98,
+		"attack": 5,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 100,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 2
+		},
+		"defense": 5,
+		"fightValue": 140,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.3
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 8,
+		"hitPoints": 15,
+		"horde": 0,
+		"name": {
+			"plural": "O\u00bfywie\u00f1cy",
+			"singular": "O\u00bfywieniec"
+		},
+		"speed": 3
+	},
+	"zombieLord": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 16
+		},
+		"aiValue": 128,
+		"attack": 5,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 125,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 2
+		},
+		"defense": 5,
+		"fightValue": 160,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.3
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 8,
+		"hitPoints": 20,
+		"horde": 0,
+		"name": {
+			"plural": "Zombie",
+			"singular": "Zombie"
+		},
+		"speed": 4
+	},
+	"wight": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 12
+		},
+		"aiValue": 252,
+		"attack": 7,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 200,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 5,
+			"min": 3
+		},
+		"defense": 7,
+		"fightValue": 231,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 7,
+		"hitPoints": 18,
+		"horde": 0,
+		"name": {
+			"plural": "Zjawy",
+			"singular": "Zjawa"
+		},
+		"speed": 5
+	},
+	"wraith": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 12
+		},
+		"aiValue": 315,
+		"attack": 7,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 230,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 5,
+			"min": 3
+		},
+		"defense": 7,
+		"fightValue": 252,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 7,
+		"hitPoints": 18,
+		"horde": 0,
+		"name": {
+			"plural": "Upiory",
+			"singular": "Upi\u00f3r"
+		},
+		"speed": 7
+	},
+	"vampire": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 10
+		},
+		"aiValue": 555,
+		"attack": 10,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 360,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 8,
+			"min": 5
+		},
+		"defense": 9,
+		"fightValue": 518,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 4,
+		"hitPoints": 30,
+		"horde": 0,
+		"name": {
+			"plural": "Wampiry",
+			"singular": "Wampir"
+		},
+		"speed": 6
+	},
+	"vampireLord": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 10
+		},
+		"aiValue": 783,
+		"attack": 10,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 500,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 8,
+			"min": 5
+		},
+		"defense": 10,
+		"fightValue": 652,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 4,
+		"hitPoints": 40,
+		"horde": 0,
+		"name": {
+			"plural": "Wampirzy lordowie",
+			"singular": "Wampirzy lord"
+		},
+		"speed": 9
+	},
+	"lich": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 8
+		},
+		"aiValue": 848,
+		"attack": 13,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 550,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 13,
+			"min": 11
+		},
+		"defense": 10,
+		"fightValue": 742,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 8,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 33,
+					"lowerY": -12,
+					"middleX": 65,
+					"middleY": -82,
+					"upperX": 49,
+					"upperY": -97
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 30,
+		"horde": 0,
+		"name": {
+			"plural": "Lisze",
+			"singular": "Lisz"
+		},
+		"speed": 6
+	},
+	"powerLich": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 8
+		},
+		"aiValue": 1079,
+		"attack": 13,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 600,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 15,
+			"min": 11
+		},
+		"defense": 10,
+		"fightValue": 889,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 8,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 29,
+					"lowerY": -14,
+					"middleX": 58,
+					"middleY": -79,
+					"upperX": 41,
+					"upperY": -92
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 40,
+		"horde": 0,
+		"name": {
+			"plural": "Arcylisze",
+			"singular": "Arcylisz"
+		},
+		"speed": 7
+	},
+	"blackKnight": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 5
+		},
+		"aiValue": 2087,
+		"attack": 16,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 1200,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 30,
+			"min": 15
+		},
+		"defense": 16,
+		"fightValue": 1753,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 120,
+		"horde": 0,
+		"name": {
+			"plural": "Czarni rycerze",
+			"singular": "Czarny rycerz"
+		},
+		"speed": 7
+	},
+	"dreadKnight": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 5
+		},
+		"aiValue": 2382,
+		"attack": 18,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 1500,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 30,
+			"min": 15
+		},
+		"defense": 18,
+		"fightValue": 2029,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 120,
+		"horde": 0,
+		"name": {
+			"plural": "Upiorni rycerze",
+			"singular": "Upiorny rycerz"
+		},
+		"speed": 9
+	},
+	"boneDragon": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 4
+		},
+		"aiValue": 3388,
+		"attack": 17,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 1800,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 50,
+			"min": 25
+		},
+		"defense": 15,
+		"fightValue": 2420,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.75
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 150,
+		"horde": 0,
+		"name": {
+			"plural": "Ko\u0153ciane smoki",
+			"singular": "Ko\u0153ciany smok"
+		},
+		"speed": 9
+	},
+	"ghostDragon": {
+		"advMapAmount": {
+			"max": 8,
+			"min": 3
+		},
+		"aiValue": 4696,
+		"attack": 19,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 3000,
+			"mercury": 1,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 50,
+			"min": 25
+		},
+		"defense": 17,
+		"fightValue": 3228,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.75
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 200,
+		"horde": 0,
+		"name": {
+			"plural": "Upiorne smoki",
+			"singular": "Upiorny smok"
+		},
+		"speed": 14
+	},
+	"goldGolem": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 10
+		},
+		"aiValue": 600,
+		"attack": 11,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 500,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 10,
+			"min": 8
+		},
+		"defense": 12,
+		"fightValue": 600,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.2
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 50,
+		"horde": 0,
+		"name": {
+			"plural": "Z\u00b3ote golemy",
+			"singular": "Z\u00b3oty golem"
+		},
+		"speed": 5
+	},
+	"diamondGolem": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 8
+		},
+		"aiValue": 775,
+		"attack": 13,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 750,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 14,
+			"min": 10
+		},
+		"defense": 12,
+		"fightValue": 775,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.27
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 60,
+		"horde": 0,
+		"name": {
+			"plural": "Diamentowe golemy",
+			"singular": "Diamentowy golem"
+		},
+		"speed": 5
+	},
+	"azureDragon": {
+		"advMapAmount": {
+			"max": 3,
+			"min": 1
+		},
+		"aiValue": 78845,
+		"attack": 50,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 30000,
+			"mercury": 20,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 80,
+			"min": 70
+		},
+		"defense": 50,
+		"fightValue": 56315,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.6
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 1000,
+		"horde": 0,
+		"name": {
+			"plural": "B\u00b3\u00eakitne smoki",
+			"singular": "B\u00b3\u00eakitny smok"
+		},
+		"speed": 19
+	},
+	"crystalDragon": {
+		"advMapAmount": {
+			"max": 3,
+			"min": 1
+		},
+		"aiValue": 39338,
+		"attack": 40,
+		"cost": {
+			"crystal": 10,
+			"gems": 0,
+			"gold": 20000,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 75,
+			"min": 60
+		},
+		"defense": 40,
+		"fightValue": 30260,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.6
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 800,
+		"horde": 0,
+		"name": {
+			"plural": "Kryszta\u00b3owe smoki",
+			"singular": "Kryszta\u00b3owy smok"
+		},
+		"speed": 16
+	},
+	"fairieDragon": {
+		"advMapAmount": {
+			"max": 3,
+			"min": 1
+		},
+		"aiValue": 19580,
+		"attack": 20,
+		"cost": {
+			"crystal": 0,
+			"gems": 8,
+			"gold": 10000,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 30,
+			"min": 20
+		},
+		"defense": 20,
+		"fightValue": 16317,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.6
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 500,
+		"horde": 0,
+		"name": {
+			"plural": "Czarodziejskie smoki",
+			"singular": "Czarodziejski smok"
+		},
+		"speed": 15,
+		"spellPoints": 5
+	},
+	"rustDragon": {
+		"advMapAmount": {
+			"max": 3,
+			"min": 1
+		},
+		"aiValue": 26433,
+		"attack": 30,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 15000,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 14,
+			"wood": 0
+		},
+		"damage": {
+			"max": 50,
+			"min": 50
+		},
+		"defense": 30,
+		"fightValue": 24030,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.6
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 750,
+		"horde": 0,
+		"name": {
+			"plural": "Rdzawe smoki",
+			"singular": "Rdzawy smok"
+		},
+		"speed": 17
+	},
+	"enchanter": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 5
+		},
+		"aiValue": 1210,
+		"attack": 17,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 750,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 14,
+			"min": 14
+		},
+		"defense": 12,
+		"fightValue": 805,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 6,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 28,
+					"lowerY": 3,
+					"middleX": 62,
+					"middleY": -53,
+					"upperX": 37,
+					"upperY": -98
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 30,
+		"horde": 0,
+		"name": {
+			"plural": "Czarodzieje",
+			"singular": "Czarodziej"
+		},
+		"speed": 9
+	},
+	"sharpshooter": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 5
+		},
+		"aiValue": 585,
+		"attack": 12,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 400,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 10,
+			"min": 8
+		},
+		"defense": 10,
+		"fightValue": 415,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.02
+			},
+			"missile": {
+				"attackClimaxFrame": 11,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 18,
+					"lowerY": -55,
+					"middleX": 40,
+					"middleY": -61,
+					"upperX": 32,
+					"upperY": -77
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 4,
+		"hitPoints": 15,
+		"horde": 0,
+		"name": {
+			"plural": "Strzelcy",
+			"singular": "Strzelec"
+		},
+		"speed": 9
+	},
+	"halfling": {
+		"advMapAmount": {
+			"max": 50,
+			"min": 20
+		},
+		"aiValue": 75,
+		"attack": 4,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 40,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 1
+		},
+		"defense": 2,
+		"fightValue": 60,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 10,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 18,
+					"lowerY": -55,
+					"middleX": 40,
+					"middleY": -61,
+					"upperX": 32,
+					"upperY": -77
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 15,
+		"hitPoints": 4,
+		"horde": 0,
+		"name": {
+			"plural": "Nizio\u00b3ki",
+			"singular": "Nizio\u00b3ek"
+		},
+		"speed": 5
+	},
+	"peasant": {
+		"advMapAmount": {
+			"max": 50,
+			"min": 20
+		},
+		"aiValue": 15,
+		"attack": 1,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 10,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 1,
+			"min": 1
+		},
+		"defense": 1,
+		"fightValue": 15,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 25,
+		"hitPoints": 1,
+		"horde": 0,
+		"name": {
+			"plural": "Ch\u00b3opi",
+			"singular": "Ch\u00b3op"
+		},
+		"speed": 3
+	},
+	"boar": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 16
+		},
+		"aiValue": 145,
+		"attack": 6,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 150,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 2
+		},
+		"defense": 5,
+		"fightValue": 145,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 8,
+		"hitPoints": 15,
+		"horde": 0,
+		"name": {
+			"plural": "Knurzy je\u0178d\u0178cy",
+			"singular": "Knurzy je\u0178dziec"
+		},
+		"speed": 6
+	},
+	"mummy": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 12
+		},
+		"aiValue": 270,
+		"attack": 7,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 300,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 5,
+			"min": 3
+		},
+		"defense": 7,
+		"fightValue": 270,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 7,
+		"hitPoints": 30,
+		"horde": 0,
+		"name": {
+			"plural": "Mumie",
+			"singular": "Mumia"
+		},
+		"speed": 5
+	},
+	"nomad": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 12
+		},
+		"aiValue": 345,
+		"attack": 9,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 200,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 6,
+			"min": 2
+		},
+		"defense": 8,
+		"fightValue": 285,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 7,
+		"hitPoints": 30,
+		"horde": 0,
+		"name": {
+			"plural": "Nomadowie",
+			"singular": "Nomad"
+		},
+		"speed": 7
+	},
+	"rogue": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 16
+		},
+		"aiValue": 135,
+		"attack": 8,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 100,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 4,
+			"min": 2
+		},
+		"defense": 3,
+		"fightValue": 135,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 8,
+		"hitPoints": 10,
+		"horde": 0,
+		"name": {
+			"plural": "Rozb\u00f3jnicy",
+			"singular": "Rozb\u00f3jnik"
+		},
+		"speed": 6
+	},
+	"troll": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 8
+		},
+		"aiValue": 1024,
+		"attack": 14,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 500,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 15,
+			"min": 10
+		},
+		"defense": 7,
+		"fightValue": 1024,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 40,
+		"horde": 0,
+		"name": {
+			"plural": "Trolle",
+			"singular": "Troll"
+		},
+		"speed": 7
+	},
+	"centaur": {
+		"advMapAmount": {
+			"max": 50,
+			"min": 20
+		},
+		"aiValue": 100,
+		"attack": 5,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 70,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 2
+		},
+		"defense": 3,
+		"fightValue": 100,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.5
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 14,
+		"hitPoints": 8,
+		"horde": 0,
+		"name": {
+			"plural": "Centaury",
+			"singular": "Centaur"
+		},
+		"speed": 6
+	},
+	"centaurCaptain": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 20
+		},
+		"aiValue": 138,
+		"attack": 6,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 90,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 2
+		},
+		"defense": 3,
+		"fightValue": 115,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.5
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 14,
+		"hitPoints": 10,
+		"horde": 0,
+		"name": {
+			"plural": "Centaury bojowe",
+			"singular": "Centaur bojowy"
+		},
+		"speed": 8
+	},
+	"dwarf": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 16
+		},
+		"aiValue": 138,
+		"attack": 6,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 120,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 4,
+			"min": 2
+		},
+		"defense": 7,
+		"fightValue": 194,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.98
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 8,
+		"hitPoints": 20,
+		"horde": 4,
+		"name": {
+			"plural": "Krasnoludy",
+			"singular": "Krasnolud"
+		},
+		"speed": 3
+	},
+	"battleDwarf": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 16
+		},
+		"aiValue": 209,
+		"attack": 7,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 150,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 4,
+			"min": 2
+		},
+		"defense": 7,
+		"fightValue": 209,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.97
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 8,
+		"hitPoints": 20,
+		"horde": 4,
+		"name": {
+			"plural": "Krasnoludzcy wojownicy",
+			"singular": "Krasnoludzki  wojownik"
+		},
+		"speed": 5
+	},
+	"woodElf": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 12
+		},
+		"aiValue": 234,
+		"attack": 9,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 200,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 5,
+			"min": 3
+		},
+		"defense": 5,
+		"fightValue": 195,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.02
+			},
+			"missile": {
+				"attackClimaxFrame": 11,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 21,
+					"lowerY": -50,
+					"middleX": 36,
+					"middleY": -59,
+					"upperX": 38,
+					"upperY": -65
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 7,
+		"hitPoints": 15,
+		"horde": 0,
+		"name": {
+			"plural": "Le\u0153ne elfy",
+			"singular": "Le\u0153ny elf"
+		},
+		"speed": 6
+	},
+	"grandElf": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 12
+		},
+		"aiValue": 331,
+		"attack": 9,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 225,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 5,
+			"min": 3
+		},
+		"defense": 5,
+		"fightValue": 195,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.02
+			},
+			"missile": {
+				"attackClimaxFrame": 11,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 18,
+					"lowerY": -55,
+					"middleX": 40,
+					"middleY": -61,
+					"upperX": 32,
+					"upperY": -77
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 7,
+		"hitPoints": 15,
+		"horde": 0,
+		"name": {
+			"plural": "Wysokie elfy",
+			"singular": "Wysoki elf"
+		},
+		"speed": 7
+	},
+	"pegasus": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 10
+		},
+		"aiValue": 518,
+		"attack": 9,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 250,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 9,
+			"min": 5
+		},
+		"defense": 8,
+		"fightValue": 407,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.72
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 5,
+		"hitPoints": 30,
+		"horde": 0,
+		"name": {
+			"plural": "Pegazy",
+			"singular": "Pegaz"
+		},
+		"speed": 8
+	},
+	"silverPegasus": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 10
+		},
+		"aiValue": 532,
+		"attack": 9,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 275,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 9,
+			"min": 5
+		},
+		"defense": 10,
+		"fightValue": 418,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.72
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 5,
+		"hitPoints": 30,
+		"horde": 0,
+		"name": {
+			"plural": "Srebrne pegazy",
+			"singular": "Srebrny pegaz"
+		},
+		"speed": 12
+	},
+	"dendroidGuard": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 8
+		},
+		"aiValue": 517,
+		"attack": 9,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 350,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 14,
+			"min": 10
+		},
+		"defense": 12,
+		"fightValue": 690,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.55
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 55,
+		"horde": 2,
+		"name": {
+			"plural": "Drzewce",
+			"singular": "Drzewiec"
+		},
+		"speed": 3
+	},
+	"dendroidSoldier": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 8
+		},
+		"aiValue": 803,
+		"attack": 9,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 425,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 14,
+			"min": 10
+		},
+		"defense": 12,
+		"fightValue": 765,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.55
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 65,
+		"horde": 2,
+		"name": {
+			"plural": "Enty",
+			"singular": "Ent"
+		},
+		"speed": 4
+	},
+	"unicorn": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 5
+		},
+		"aiValue": 1806,
+		"attack": 15,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 850,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 22,
+			"min": 18
+		},
+		"defense": 14,
+		"fightValue": 1548,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.2
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 90,
+		"horde": 0,
+		"name": {
+			"plural": "Jednoro\u00bfce",
+			"singular": "Jednoro\u00bfec"
+		},
+		"speed": 7
+	},
+	"warUnicorn": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 5
+		},
+		"aiValue": 2030,
+		"attack": 15,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 950,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 22,
+			"min": 18
+		},
+		"defense": 14,
+		"fightValue": 1740,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.2
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 110,
+		"horde": 0,
+		"name": {
+			"plural": "Jednoro\u00bfce bitewne",
+			"singular": "Jednoro\u00bfec bitewny"
+		},
+		"speed": 9
+	},
+	"greenDragon": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 4
+		},
+		"aiValue": 4872,
+		"attack": 18,
+		"cost": {
+			"crystal": 1,
+			"gems": 0,
+			"gold": 2400,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 50,
+			"min": 40
+		},
+		"defense": 18,
+		"fightValue": 3654,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.6
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 180,
+		"horde": 0,
+		"name": {
+			"plural": "Zielone smoki",
+			"singular": "Zielony smok"
+		},
+		"speed": 10
+	},
+	"goldDragon": {
+		"advMapAmount": {
+			"max": 8,
+			"min": 3
+		},
+		"aiValue": 8613,
+		"attack": 27,
+		"cost": {
+			"crystal": 2,
+			"gems": 0,
+			"gold": 4000,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 50,
+			"min": 40
+		},
+		"defense": 27,
+		"fightValue": 6220,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.6
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 250,
+		"horde": 0,
+		"name": {
+			"plural": "Z\u00b3ote smoki",
+			"singular": "Z\u00b3oty smok"
+		},
+		"speed": 16
+	},
+	"goblin": {
+		"advMapAmount": {
+			"max": 50,
+			"min": 20
+		},
+		"aiValue": 60,
+		"attack": 4,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 40,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 2,
+			"min": 1
+		},
+		"defense": 2,
+		"fightValue": 60,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.21
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 15,
+		"hitPoints": 5,
+		"horde": 8,
+		"name": {
+			"plural": "Gobliny",
+			"singular": "Goblin"
+		},
+		"speed": 5
+	},
+	"hobgoblin": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 20
+		},
+		"aiValue": 78,
+		"attack": 5,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 50,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 2,
+			"min": 1
+		},
+		"defense": 3,
+		"fightValue": 65,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.24
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 15,
+		"hitPoints": 5,
+		"horde": 8,
+		"name": {
+			"plural": "Hobgobliny",
+			"singular": "Hobgoblin"
+		},
+		"speed": 7
+	},
+	"goblinWolfRider": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 16
+		},
+		"aiValue": 130,
+		"attack": 7,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 100,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 4,
+			"min": 2
+		},
+		"defense": 5,
+		"fightValue": 130,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.93
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 9,
+		"hitPoints": 10,
+		"horde": 0,
+		"name": {
+			"plural": "Wilczy je\u0178d\u0178cy",
+			"singular": "Wilczy je\u0178dziec"
+		},
+		"speed": 6
+	},
+	"hobgoblinWolfRider": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 16
+		},
+		"aiValue": 203,
+		"attack": 8,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 140,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 4,
+			"min": 3
+		},
+		"defense": 5,
+		"fightValue": 174,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.93
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 9,
+		"hitPoints": 10,
+		"horde": 0,
+		"name": {
+			"plural": "Wilczy rycerze",
+			"singular": "Wilczy rycerz"
+		},
+		"speed": 8
+	},
+	"orc": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 12
+		},
+		"aiValue": 192,
+		"attack": 8,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 150,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 5,
+			"min": 2
+		},
+		"defense": 4,
+		"fightValue": 175,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 4,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 33,
+					"lowerY": -26,
+					"middleX": 43,
+					"middleY": -66,
+					"upperX": 42,
+					"upperY": -83
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 7,
+		"hitPoints": 15,
+		"horde": 0,
+		"name": {
+			"plural": "Orkowie",
+			"singular": "Ork"
+		},
+		"speed": 4
+	},
+	"orcChieftain": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 12
+		},
+		"aiValue": 240,
+		"attack": 8,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 165,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 5,
+			"min": 2
+		},
+		"defense": 4,
+		"fightValue": 200,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 4,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 32,
+					"lowerY": -28,
+					"middleX": 37,
+					"middleY": -66,
+					"upperX": 34,
+					"upperY": -88
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 7,
+		"hitPoints": 20,
+		"horde": 0,
+		"name": {
+			"plural": "Urukowie",
+			"singular": "Uruk"
+		},
+		"speed": 5
+	},
+	"ogre": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 10
+		},
+		"aiValue": 416,
+		"attack": 13,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 300,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 12,
+			"min": 6
+		},
+		"defense": 7,
+		"fightValue": 520,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.28
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 4,
+		"hitPoints": 40,
+		"horde": 0,
+		"name": {
+			"plural": "Ogry",
+			"singular": "Ogr"
+		},
+		"speed": 4
+	},
+	"ogreMage": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 10
+		},
+		"aiValue": 672,
+		"attack": 13,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 400,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 12,
+			"min": 6
+		},
+		"defense": 7,
+		"fightValue": 672,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.28
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 4,
+		"hitPoints": 60,
+		"horde": 0,
+		"name": {
+			"plural": "Ogry szamani",
+			"singular": "Ogr szaman"
+		},
+		"shots": 3,
+		"speed": 5,
+		"spellPoints": 3
+	},
+	"roc": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 8
+		},
+		"aiValue": 1027,
+		"attack": 13,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 600,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 15,
+			"min": 11
+		},
+		"defense": 11,
+		"fightValue": 790,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 60,
+		"horde": 0,
+		"name": {
+			"plural": "Roki",
+			"singular": "Rok"
+		},
+		"speed": 7
+	},
+	"thunderbird": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 8
+		},
+		"aiValue": 1106,
+		"attack": 13,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 700,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 15,
+			"min": 11
+		},
+		"defense": 11,
+		"fightValue": 869,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 60,
+		"horde": 0,
+		"name": {
+			"plural": "Ptaki gromu",
+			"singular": "Ptak gromu"
+		},
+		"speed": 11
+	},
+	"cyclop": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 5
+		},
+		"aiValue": 1266,
+		"attack": 15,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 750,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 20,
+			"min": 16
+		},
+		"defense": 12,
+		"fightValue": 1055,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 7,
+				"frameAngles": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 40,
+					"lowerY": -59,
+					"middleX": 53,
+					"middleY": -84,
+					"upperX": 55,
+					"upperY": -115
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 70,
+		"horde": 0,
+		"name": {
+			"plural": "Cyklopi",
+			"singular": "Cyklop"
+		},
+		"speed": 6
+	},
+	"cyclopKing": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 5
+		},
+		"aiValue": 1443,
+		"attack": 17,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 1100,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 20,
+			"min": 16
+		},
+		"defense": 13,
+		"fightValue": 1110,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 7,
+				"frameAngles": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 38,
+					"lowerY": -54,
+					"middleX": 53,
+					"middleY": -84,
+					"upperX": 55,
+					"upperY": -115
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 70,
+		"horde": 0,
+		"name": {
+			"plural": "Cyklopy kr\u00f3lewskie",
+			"singular": "Cyklop kr\u00f3lewski"
+		},
+		"speed": 8
+	},
+	"behemoth": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 4
+		},
+		"aiValue": 3162,
+		"attack": 17,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 1500,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 50,
+			"min": 30
+		},
+		"defense": 17,
+		"fightValue": 3162,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.17
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 160,
+		"horde": 0,
+		"name": {
+			"plural": "Behemoty",
+			"singular": "Behemot"
+		},
+		"speed": 6
+	},
+	"ancientBehemoth": {
+		"advMapAmount": {
+			"max": 8,
+			"min": 3
+		},
+		"aiValue": 6168,
+		"attack": 19,
+		"cost": {
+			"crystal": 1,
+			"gems": 0,
+			"gold": 3000,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 50,
+			"min": 30
+		},
+		"defense": 19,
+		"fightValue": 5397,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.17
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 300,
+		"horde": 0,
+		"name": {
+			"plural": "Staro\u00bfytne behemoty",
+			"singular": "Staro\u00bfytny behemot"
+		},
+		"speed": 9
+	},
+	"gremlin": {
+		"advMapAmount": {
+			"max": 50,
+			"min": 20
+		},
+		"aiValue": 44,
+		"attack": 3,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 30,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 2,
+			"min": 1
+		},
+		"defense": 3,
+		"fightValue": 55,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 16,
+		"hitPoints": 4,
+		"horde": 0,
+		"name": {
+			"plural": "Gremliny",
+			"singular": "Gremlin"
+		},
+		"speed": 4
+	},
+	"masterGremlin": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 20
+		},
+		"aiValue": 66,
+		"attack": 4,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 40,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 2,
+			"min": 1
+		},
+		"defense": 4,
+		"fightValue": 55,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.75
+			},
+			"missile": {
+				"attackClimaxFrame": 11,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 9,
+					"lowerY": 9,
+					"middleX": 46,
+					"middleY": -17,
+					"upperX": 55,
+					"upperY": -52
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 16,
+		"hitPoints": 4,
+		"horde": 0,
+		"name": {
+			"plural": "Wi\u00eaksze gremliny",
+			"singular": "Wi\u00eakszy gremlin"
+		},
+		"speed": 5
+	},
+	"stoneGargoyle": {
+		"advMapAmount": {
+			"max": 30,
+			"min": 16
+		},
+		"aiValue": 165,
+		"attack": 6,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 130,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 2
+		},
+		"defense": 6,
+		"fightValue": 150,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.7
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 9,
+		"hitPoints": 16,
+		"horde": 4,
+		"name": {
+			"plural": "Kamienne gargulce",
+			"singular": "Kamienny gargulec"
+		},
+		"speed": 6
+	},
+	"obsidianGargoyle": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 16
+		},
+		"aiValue": 201,
+		"attack": 7,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 160,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 3,
+			"min": 2
+		},
+		"defense": 7,
+		"fightValue": 155,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 0.7
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 9,
+		"hitPoints": 16,
+		"horde": 4,
+		"name": {
+			"plural": "Obsydianowe gargulce",
+			"singular": "Obsydianowy gargulec"
+		},
+		"speed": 9
+	},
+	"ironGolem": {
+		"advMapAmount": {
+			"max": 25,
+			"min": 12
+		},
+		"aiValue": 250,
+		"attack": 7,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 150,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 5,
+			"min": 4
+		},
+		"defense": 10,
+		"fightValue": 339,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.2
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 6,
+		"hitPoints": 30,
+		"horde": 0,
+		"name": {
+			"plural": "Kamienne golemy",
+			"singular": "Kamienny golem"
+		},
+		"speed": 3
+	},
+	"stoneGolem": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 12
+		},
+		"aiValue": 412,
+		"attack": 9,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 200,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 5,
+			"min": 4
+		},
+		"defense": 10,
+		"fightValue": 412,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.45
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 6,
+		"hitPoints": 35,
+		"horde": 0,
+		"name": {
+			"plural": "\u00afelazne golemy",
+			"singular": "\u00afelazny golem"
+		},
+		"speed": 5
+	},
+	"mage": {
+		"advMapAmount": {
+			"max": 20,
+			"min": 10
+		},
+		"aiValue": 570,
+		"attack": 11,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 350,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 9,
+			"min": 7
+		},
+		"defense": 8,
+		"fightValue": 418,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"attackClimaxFrame": 9,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 16,
+					"lowerY": -92,
+					"middleX": 38,
+					"middleY": -98,
+					"upperX": 25,
+					"upperY": -105
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 4,
+		"hitPoints": 25,
+		"horde": 0,
+		"name": {
+			"plural": "Magowie",
+			"singular": "Mag"
+		},
+		"speed": 5
+	},
+	"archMage": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 10
+		},
+		"aiValue": 680,
+		"attack": 12,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 450,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 9,
+			"min": 7
+		},
+		"defense": 9,
+		"fightValue": 467,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"missile": {
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 18,
+					"lowerY": -92,
+					"middleX": 43,
+					"middleY": -99,
+					"upperX": 28,
+					"upperY": -107
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 4,
+		"hitPoints": 30,
+		"horde": 0,
+		"name": {
+			"plural": "Arcymagowie",
+			"singular": "Arcymag"
+		},
+		"speed": 7
+	},
+	"genie": {
+		"advMapAmount": {
+			"max": 16,
+			"min": 8
+		},
+		"aiValue": 884,
+		"attack": 12,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 550,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 16,
+			"min": 13
+		},
+		"defense": 12,
+		"fightValue": 680,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 40,
+		"horde": 0,
+		"name": {
+			"plural": "D\u00bfinny",
+			"singular": "D\u00bfinn"
+		},
+		"speed": 7
+	},
+	"masterGenie": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 8
+		},
+		"aiValue": 942,
+		"attack": 12,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 600,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 16,
+			"min": 13
+		},
+		"defense": 12,
+		"fightValue": 748,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 3,
+		"hitPoints": 40,
+		"horde": 0,
+		"name": {
+			"plural": "Wielkie d\u00bfinny",
+			"singular": "Wielki d\u00bfinn"
+		},
+		"shots": 3,
+		"speed": 11,
+		"spellPoints": 3
+	},
+	"naga": {
+		"advMapAmount": {
+			"max": 12,
+			"min": 5
+		},
+		"aiValue": 2016,
+		"attack": 16,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 1100,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 20,
+			"min": 20
+		},
+		"defense": 13,
+		"fightValue": 2016,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 110,
+		"horde": 0,
+		"name": {
+			"plural": "Nagi",
+			"singular": "Naga"
+		},
+		"speed": 5
+	},
+	"nagaQueen": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 5
+		},
+		"aiValue": 2840,
+		"attack": 16,
+		"cost": {
+			"crystal": 0,
+			"gems": 0,
+			"gold": 1600,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 30,
+			"min": 30
+		},
+		"defense": 13,
+		"fightValue": 2485,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 2,
+		"hitPoints": 110,
+		"horde": 0,
+		"name": {
+			"plural": "Kr\u00f3lewskie nagi",
+			"singular": "Kr\u00f3lewska naga"
+		},
+		"speed": 7
+	},
+	"giant": {
+		"advMapAmount": {
+			"max": 10,
+			"min": 4
+		},
+		"aiValue": 3718,
+		"attack": 19,
+		"cost": {
+			"crystal": 0,
+			"gems": 1,
+			"gold": 2000,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 60,
+			"min": 40
+		},
+		"defense": 16,
+		"fightValue": 3146,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.38
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 150,
+		"horde": 0,
+		"name": {
+			"plural": "Giganci",
+			"singular": "Gigant"
+		},
+		"speed": 7
+	},
+	"titan": {
+		"advMapAmount": {
+			"max": 8,
+			"min": 3
+		},
+		"aiValue": 7500,
+		"attack": 24,
+		"cost": {
+			"crystal": 0,
+			"gems": 2,
+			"gold": 5000,
+			"mercury": 0,
+			"ore": 0,
+			"sulfur": 0,
+			"wood": 0
+		},
+		"damage": {
+			"max": 60,
+			"min": 40
+		},
+		"defense": 24,
+		"fightValue": 5000,
+		"graphics": {
+			"animationTime": {
+				"attack": 1,
+				"idle": 10,
+				"walk": 1.38
+			},
+			"missile": {
+				"attackClimaxFrame": 6,
+				"frameAngles": [
+					90,
+					72,
+					45,
+					27,
+					0,
+					-27,
+					-45,
+					-72,
+					-90,
+					0,
+					0,
+					0
+				],
+				"offset": {
+					"lowerX": 19,
+					"lowerY": -1,
+					"middleX": 76,
+					"middleY": -87,
+					"upperX": 11,
+					"upperY": -131
+				}
+			},
+			"timeBetweenFidgets": 1
+		},
+		"growth": 1,
+		"hitPoints": 300,
+		"horde": 0,
+		"name": {
+			"plural": "Tytani",
+			"singular": "Tytan"
+		},
+		"speed": 11
+	}
+}

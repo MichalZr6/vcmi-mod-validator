@@ -1,0 +1,4790 @@
+{
+	"coverOfDarkness": {
+		"name": "Cover of Darkness",
+		"types": {
+			"coverOfDarkness": {
+				"sounds": {
+					"visit": [
+						"LIGHTHOUSE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"creatureBank": {
+		"name": "Creature Bank",
+		"types": {
+			"cyclopsStockpile": {
+				"sounds": {
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"templates": {}
+			},
+			"dragonFlyHive": {
+				"sounds": {
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"templates": {}
+			},
+			"dwarvenTreasury": {
+				"sounds": {
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"templates": {}
+			},
+			"griffinConservatory": {
+				"sounds": {
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"templates": {}
+			},
+			"impCache": {
+				"sounds": {
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"templates": {}
+			},
+			"medusaStore": {
+				"sounds": {
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"templates": {}
+			},
+			"nagaBank": {
+				"sounds": {
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"shipwreck": {
+		"name": "Shipwreck",
+		"types": {
+			"shipwreck": {
+				"sounds": {
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"derelictShip": {
+		"name": "Derelict Ship",
+		"types": {
+			"derelictShip": {
+				"sounds": {
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"crypt": {
+		"name": "Crypt",
+		"types": {
+			"crypt": {
+				"sounds": {
+					"ambient": [
+						"LOOPDEAD"
+					],
+					"visit": [
+						"GRAVEYARD"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"dragonUtopia": {
+		"name": "Dragon Utopia",
+		"types": {
+			"dragonUtopia": {
+				"sounds": {
+					"ambient": [
+						"LOOPDRAG"
+					],
+					"visit": [
+						"DRAGON"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"prison": {
+		"name": "Prison",
+		"types": {
+			"prison": {
+				"sounds": {
+					"visit": [
+						"ROGUE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"pandoraBox": {
+		"name": "Pandora's Box",
+		"types": {
+			"object": {
+				"base": null,
+				"sounds": {
+					"removal": [
+						"PICKUP01",
+						"PICKUP02",
+						"PICKUP03",
+						"PICKUP04",
+						"PICKUP05",
+						"PICKUP06",
+						"PICKUP07"
+					],
+					"visit": [
+						"MYSTERY"
+					]
+				}
+			}
+		}
+	},
+	"event": {
+		"base": null,
+		"name": "Event",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"whirlpool": {
+		"name": "Whirlpool",
+		"types": {
+			"object": {
+				"sounds": {
+					"ambient": [
+						"LOOPWHIR"
+					],
+					"visit": [
+						"DANGER"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"subterraneanGate": {
+		"name": "Subterranean Gate",
+		"types": {
+			"object": {
+				"sounds": {
+					"ambient": [
+						"LOOPGATE"
+					],
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"refugeeCamp": {
+		"name": "Refugee Camp",
+		"types": {
+			"object": {
+				"name": "Refugee Camp",
+				"sounds": {
+					"ambient": [
+						"LOOPMERC"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"subObjects": [],
+				"templates": {}
+			}
+		}
+	},
+	"warMachineFactory": {
+		"name": "War Machine Factory",
+		"types": {
+			"object": {
+				"creatures": [
+					[
+						"ballista"
+					],
+					[
+						"firstAidTent"
+					],
+					[
+						"ammoCart"
+					]
+				],
+				"name": "War Machine Factory",
+				"sounds": {
+					"ambient": [
+						"LOOPFACT"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"subObjects": [],
+				"templates": {}
+			}
+		}
+	},
+	"eyeOfTheMagi": {
+		"name": "Eye of the Magi",
+		"types": {
+			"object": {
+				"sounds": {
+					"visit": [
+						"LIGHTHOUSE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"hutOfTheMagi": {
+		"name": "Hut of the Magi",
+		"types": {
+			"object": {
+				"sounds": {
+					"visit": [
+						"LIGHTHOUSE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"obelisk": {
+		"name": "Obelisk",
+		"types": {
+			"object": {
+				"sounds": {
+					"visit": [
+						"MYSTERY"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"oceanBottle": {
+		"name": "Ocean Bottle",
+		"types": {
+			"object": {
+				"sounds": {
+					"visit": [
+						"STORE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"shipyard": {
+		"name": "Shipyard",
+		"types": {
+			"object": {
+				"sounds": {
+					"ambient": [
+						"LOOPLUMB"
+					],
+					"visit": [
+						"STORE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"sign": {
+		"name": "Sign",
+		"types": {
+			"object": {
+				"sounds": {
+					"visit": [
+						"STORE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"sirens": {
+		"name": "Sirens",
+		"types": {
+			"object": {
+				"sounds": {
+					"ambient": [
+						"LOOPSIRE"
+					],
+					"visit": [
+						"DANGER"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"denOfThieves": {
+		"name": "Den of Thieves",
+		"types": {
+			"object": {
+				"base": null,
+				"sounds": {
+					"ambient": [
+						"LOOPDEN"
+					],
+					"visit": [
+						"MYSTERY"
+					]
+				}
+			}
+		}
+	},
+	"questGuard": {
+		"name": "Quest Guard",
+		"types": {
+			"object": {
+				"sounds": {
+					"removal": [
+						"PICKUP01",
+						"PICKUP02",
+						"PICKUP03",
+						"PICKUP04",
+						"PICKUP05",
+						"PICKUP06",
+						"PICKUP07"
+					],
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"randomTown": {
+		"base": null,
+		"name": "Random Town",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"randomHero": {
+		"base": null,
+		"name": "Random Hero",
+		"types": {
+			"object": {
+				"base": null
+			}
+		}
+	},
+	"randomDwelling": {
+		"base": null,
+		"name": "Random Dwelling",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"randomArtifact": {
+		"base": null,
+		"name": "Random Artifact",
+		"types": {
+			"object": {
+				"base": null
+			}
+		}
+	},
+	"randomArtifactTreasure": {
+		"base": null,
+		"name": "Random Treasure Artifact",
+		"types": {
+			"object": {
+				"base": null
+			}
+		}
+	},
+	"randomArtifactMinor": {
+		"base": null,
+		"name": "Random Minor Artifact",
+		"types": {
+			"object": {
+				"base": null
+			}
+		}
+	},
+	"randomArtifactMajor": {
+		"base": null,
+		"name": "Random Major Artifact",
+		"types": {
+			"object": {
+				"base": null
+			}
+		}
+	},
+	"randomArtifactRelic": {
+		"base": null,
+		"name": "Random Relic",
+		"types": {
+			"object": {
+				"base": null
+			}
+		}
+	},
+	"randomMonster": {
+		"base": null,
+		"name": "Random Monster",
+		"types": {
+			"object": {
+				"base": null
+			}
+		}
+	},
+	"randomMonsterLevel1": {
+		"base": null,
+		"name": "Random Monster 1",
+		"types": {
+			"object": {
+				"base": null
+			}
+		}
+	},
+	"randomMonsterLevel2": {
+		"base": null,
+		"name": "Random Monster 2",
+		"types": {
+			"object": {
+				"base": null
+			}
+		}
+	},
+	"randomMonsterLevel3": {
+		"base": null,
+		"name": "Random Monster 3",
+		"types": {
+			"object": {
+				"base": null
+			}
+		}
+	},
+	"randomMonsterLevel4": {
+		"base": null,
+		"name": "Random Monster 4",
+		"types": {
+			"object": {
+				"base": null
+			}
+		}
+	},
+	"randomMonsterLevel5": {
+		"base": null,
+		"name": "Random Monster 5",
+		"types": {
+			"object": {
+				"base": null
+			}
+		}
+	},
+	"randomMonsterLevel6": {
+		"base": null,
+		"name": "Random Monster 6",
+		"types": {
+			"object": {
+				"base": null
+			}
+		}
+	},
+	"randomMonsterLevel7": {
+		"base": null,
+		"name": "Random Monster 7",
+		"types": {
+			"object": {
+				"base": null
+			}
+		}
+	},
+	"hillFort": {
+		"name": "Hill Fort",
+		"types": {
+			"object": {
+				"sounds": {
+					"ambient": [
+						"LOOPSWAR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"grail": {
+		"base": null,
+		"name": "Grail",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"marketOfTime": {
+		"base": null,
+		"name": "Market of Time",
+		"types": {
+			"object": {
+				"base": null
+			}
+		}
+	},
+	"tavern": {
+		"name": "Tavern",
+		"types": {
+			"object": {
+				"blockVisit": true,
+				"sounds": {
+					"ambient": [
+						"LOOPTAV"
+					],
+					"visit": [
+						"STORE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"sanctuary": {
+		"name": "Sanctuary",
+		"types": {
+			"object": {
+				"sounds": {
+					"ambient": [
+						"LOOPSANC"
+					],
+					"visit": [
+						"GETPROTECTION"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"cursedGround": {
+		"name": "Cursed Ground",
+		"types": {
+			"object": {
+				"sounds": {
+					"ambient": [
+						"LOOPCURS"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"magicPlains": {
+		"name": "Magic Plains",
+		"types": {
+			"object": {
+				"sounds": {
+					"ambient": [
+						"LOOPMAGI"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"cloverField": {
+		"base": null,
+		"name": "Clover Field",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"cursedGroundDUPLICATE": {
+		"name": "Cursed Ground",
+		"types": {
+			"object": {
+				"sounds": {
+					"ambient": [
+						"LOOPCURS"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"evilFog": {
+		"base": null,
+		"name": "Evil Fog",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"favorableWinds": {
+		"base": null,
+		"name": "Favorable Winds",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"fieryFields": {
+		"base": null,
+		"name": "Fiery Fields",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"holyGround": {
+		"base": null,
+		"name": "Holy Ground",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"lucidPools": {
+		"base": null,
+		"name": "Lucid Pools",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"magicClouds": {
+		"base": null,
+		"name": "Magic Clouds",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"magicPlainsDUPLICATE": {
+		"name": "Magic Plains",
+		"types": {
+			"object": {
+				"sounds": {
+					"ambient": [
+						"LOOPMAGI"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"rocklands": {
+		"base": null,
+		"name": "Rocklands",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"cactus": {
+		"base": null,
+		"name": "Cactus",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"canyon": {
+		"base": null,
+		"name": "Canyon",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"crater": {
+		"base": null,
+		"name": "Crater",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"deadVegetation": {
+		"base": null,
+		"name": "Dead Vegetation",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"flowers": {
+		"base": null,
+		"name": "Flowers",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"frozenLake": {
+		"base": null,
+		"name": "Frozen Lake",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"hole": {
+		"base": null,
+		"name": "Hole",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"kelp": {
+		"base": null,
+		"name": "Kelp",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"lake": {
+		"base": null,
+		"name": "Lake",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"lavaFlow": {
+		"base": null,
+		"name": "Lava Flow",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"lavaLake": {
+		"base": null,
+		"name": "Lava Lake",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"mushrooms": {
+		"base": null,
+		"name": "Mushrooms",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"log": {
+		"base": null,
+		"name": "Log",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"mandrake": {
+		"base": null,
+		"name": "Mandrake",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"moss": {
+		"base": null,
+		"name": "Moss",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"mound": {
+		"base": null,
+		"name": "Mound",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"mountain": {
+		"base": null,
+		"name": "Mountain",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"oakTrees": {
+		"base": null,
+		"name": "Oak Trees",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"outcropping": {
+		"base": null,
+		"name": "Outcropping",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"pineTrees": {
+		"base": null,
+		"name": "Pine Trees",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"riverDelta": {
+		"base": null,
+		"name": "River Delta",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"rock": {
+		"base": null,
+		"name": "Rock",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"sandDune": {
+		"base": null,
+		"name": "Sand Dune",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"sandPit": {
+		"base": null,
+		"name": "Sand Pit",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"shrub": {
+		"base": null,
+		"name": "Shrub",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"skull": {
+		"base": null,
+		"name": "Skull",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"stump": {
+		"base": null,
+		"name": "Stump",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"trees": {
+		"base": null,
+		"name": "Trees",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"volcano": {
+		"name": "Volcano",
+		"types": {
+			"object": {
+				"sounds": {
+					"ambient": [
+						"LOOPVOLC"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"reef": {
+		"base": null,
+		"name": "Reef",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"lakeDUPLICATE": {
+		"base": null,
+		"name": "Lake",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"treesDUPLICATE": {
+		"base": null,
+		"name": "Trees",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"desertHills": {
+		"base": null,
+		"name": "Desert Hills",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"dirtHills": {
+		"base": null,
+		"name": "Dirt Hills",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"grassHills": {
+		"base": null,
+		"name": "Grass Hills",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"roughHills": {
+		"base": null,
+		"name": "Rough Hills",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"subterraneanRocks": {
+		"base": null,
+		"name": "Subterranean Rocks",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"swampFoliage": {
+		"base": null,
+		"name": "Swamp Foliage",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"nothing": {
+		"base": null,
+		"name": "Nothing",
+		"types": {
+			"nothing": {
+				"templates": {}
+			}
+		}
+	},
+	"magicSpring": {
+		"name": "Magic Spring",
+		"types": {
+			"magicSpring": {
+				"sounds": {
+					"ambient": [
+						"LOOPFOUN"
+					],
+					"visit": [
+						"FAERIE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"magicWell": {
+		"name": "Magic Well",
+		"types": {
+			"magicWell": {
+				"sounds": {
+					"visit": [
+						"FAERIE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"altarOfSacrifice": {
+		"name": "Altar of Sacrifice",
+		"types": {
+			"object": {
+				"sounds": {
+					"visit": [
+						"MYSTERY"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"tradingPost": {
+		"name": "Trading Post",
+		"types": {
+			"object": {
+				"sounds": {
+					"ambient": [
+						"LOOPMARK"
+					],
+					"visit": [
+						"STORE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"tradingPostDUPLICATE": {
+		"name": "Trading Post",
+		"types": {
+			"object": {
+				"sounds": {
+					"ambient": [
+						"LOOPMARK"
+					],
+					"visit": [
+						"STORE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"freelancersGuild": {
+		"base": null,
+		"name": "Freelancer's Guild",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"blackMarket": {
+		"name": "Black Market",
+		"types": {
+			"object": {
+				"sounds": {
+					"ambient": [
+						"LOOPMARK"
+					],
+					"visit": [
+						"MYSTERY"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"university": {
+		"name": "University",
+		"types": {
+			"object": {
+				"sounds": {
+					"visit": [
+						"GAZEBO"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"redwoodObservatory": {
+		"name": "Redwood Observatory",
+		"types": {
+			"redwoodObservatory": {
+				"base": null,
+				"sounds": {
+					"visit": [
+						"LIGHTHOUSE"
+					]
+				}
+			}
+		}
+	},
+	"pillarOfFire": {
+		"name": "Pillar of Fire",
+		"types": {
+			"pillarOfFire": {
+				"sounds": {
+					"ambient": [
+						"LOOPFIRE"
+					],
+					"visit": [
+						"LIGHTHOUSE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"pyramid": {
+		"name": "Pyramid",
+		"types": {
+			"pyramid": {
+				"sounds": {
+					"visit": [
+						"MYSTERY"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"arena": {
+		"name": "Arena",
+		"types": {
+			"arena": {
+				"sounds": {
+					"ambient": [
+						"LOOPAREN"
+					],
+					"visit": [
+						"NOMAD"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"marlettoTower": {
+		"name": "Marletto Tower",
+		"types": {
+			"marlettoTower": {
+				"sounds": {
+					"ambient": [
+						"LOOPSWAR"
+					],
+					"visit": [
+						"NOMAD"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"gardenOfRevelation": {
+		"name": "Garden of Revelation",
+		"types": {
+			"gardenOfRevelation": {
+				"sounds": {
+					"ambient": [
+						"LOOPGARD"
+					],
+					"visit": [
+						"GETPROTECTION"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"libraryOfEnlightenment": {
+		"name": "Library of Enlightenment",
+		"types": {
+			"libraryOfEnlightenment": {
+				"sounds": {
+					"visit": [
+						"GAZEBO"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"mercenaryCamp": {
+		"name": "Mercenary Camp",
+		"types": {
+			"mercenaryCamp": {
+				"sounds": {
+					"ambient": [
+						"LOOPMERC"
+					],
+					"visit": [
+						"NOMAD"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"starAxis": {
+		"name": "Star Axis",
+		"types": {
+			"starAxis": {
+				"sounds": {
+					"ambient": [
+						"LOOPSTAR"
+					],
+					"visit": [
+						"GAZEBO"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"treeOfKnowledge": {
+		"name": "Tree of Knowledge",
+		"types": {
+			"treeOfKnowledge": {
+				"sounds": {
+					"visit": [
+						"GAZEBO"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"schoolOfMagic": {
+		"name": "School of Magic",
+		"types": {
+			"schoolOfMagic": {
+				"sounds": {
+					"ambient": [
+						"LOOPMAGI"
+					],
+					"visit": [
+						"FAERIE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"schoolOfWar": {
+		"name": "School of War",
+		"types": {
+			"schoolOfWar": {
+				"sounds": {
+					"ambient": [
+						"LOOPSWAR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"learningStone": {
+		"name": "Learning Stone",
+		"types": {
+			"learningStone": {
+				"sounds": {
+					"ambient": [
+						"LOOPLEAR"
+					],
+					"visit": [
+						"GAZEBO"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"mysticalGarden": {
+		"name": "Mystical Garden",
+		"types": {
+			"mysticalGarden": {
+				"sounds": {
+					"ambient": [
+						"LOOPLEPR"
+					],
+					"visit": [
+						"EXPERNCE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"windmill": {
+		"name": "Windmill",
+		"types": {
+			"windmill": {
+				"sounds": {
+					"ambient": [
+						"LOOPWIND"
+					],
+					"visit": [
+						"GENIE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"waterWheel": {
+		"name": "Water Wheel",
+		"types": {
+			"waterWheel": {
+				"sounds": {
+					"ambient": [
+						"LOOPMILL"
+					],
+					"visit": [
+						"GENIE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"leanTo": {
+		"name": "Lean To",
+		"types": {
+			"leanTo": {
+				"sounds": {
+					"visit": [
+						"GENIE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"corpse": {
+		"name": "Corpse",
+		"types": {
+			"corpse": {
+				"blockedVisitable": true,
+				"sounds": {
+					"visit": [
+						"MYSTERY"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"wagon": {
+		"name": "Wagon",
+		"types": {
+			"wagon": {
+				"sounds": {
+					"visit": [
+						"GENIE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"warriorTomb": {
+		"name": "Warrior's Tomb",
+		"types": {
+			"warriorTomb": {
+				"sounds": {
+					"visit": [
+						"GRAVEYARD"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"scholar": {
+		"name": "Scholar",
+		"types": {
+			"scholar": {
+				"sounds": {
+					"removal": [
+						"PICKUP01",
+						"PICKUP02",
+						"PICKUP03",
+						"PICKUP04",
+						"PICKUP05",
+						"PICKUP06",
+						"PICKUP07"
+					],
+					"visit": [
+						"GAZEBO"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"shrineOfMagicLevel1": {
+		"name": "Shrine of Magic Incantation",
+		"types": {
+			"shrineOfMagicLevel1": {
+				"sounds": {
+					"ambient": [
+						"LOOPSHRIN"
+					],
+					"visit": [
+						"TEMPLE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"shrineOfMagicLevel2": {
+		"name": "Shrine of Magic Gesture",
+		"types": {
+			"shrineOfMagicLevel2": {
+				"sounds": {
+					"ambient": [
+						"LOOPSHRIN"
+					],
+					"visit": [
+						"TEMPLE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"shrineOfMagicLevel3": {
+		"name": "Shrine of Magic Thought",
+		"types": {
+			"shrineOfMagicLevel3": {
+				"sounds": {
+					"ambient": [
+						"LOOPSHRIN"
+					],
+					"visit": [
+						"TEMPLE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"witchHut": {
+		"name": "Witch Hut",
+		"types": {
+			"witchHut": {
+				"sounds": {
+					"visit": [
+						"GAZEBO"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"artifact": {
+		"name": "Artifact",
+		"types": {}
+	},
+	"hero": {
+		"name": "Hero",
+		"types": {}
+	},
+	"monster": {
+		"name": "Monster",
+		"types": {}
+	},
+	"randomResource": {
+		"name": "Random Resource",
+		"types": {
+			"randomResource": {
+				"base": {
+					"mask": [
+						"VA"
+					],
+					"visitableFrom": [
+						"+++",
+						"+-+",
+						"+++"
+					]
+				},
+				"removable": true
+			}
+		}
+	},
+	"resource": {
+		"name": "Resource",
+		"types": {
+			"crystal": {
+				"base": {
+					"mask": [
+						"VA"
+					],
+					"visitableFrom": [
+						"+++",
+						"+-+",
+						"+++"
+					]
+				},
+				"removable": true,
+				"templates": {
+					"res": {
+						"mask": [
+							"VA"
+						],
+						"visitableFrom": [
+							"+++",
+							"+-+",
+							"+++"
+						]
+					}
+				}
+			},
+			"gems": {
+				"base": {
+					"mask": [
+						"VA"
+					],
+					"visitableFrom": [
+						"+++",
+						"+-+",
+						"+++"
+					]
+				},
+				"removable": true,
+				"templates": {
+					"res": {
+						"mask": [
+							"VA"
+						],
+						"visitableFrom": [
+							"+++",
+							"+-+",
+							"+++"
+						]
+					}
+				}
+			},
+			"gold": {
+				"base": {
+					"mask": [
+						"VA"
+					],
+					"visitableFrom": [
+						"+++",
+						"+-+",
+						"+++"
+					]
+				},
+				"removable": true,
+				"templates": {
+					"res": {
+						"mask": [
+							"VA"
+						],
+						"visitableFrom": [
+							"+++",
+							"+-+",
+							"+++"
+						]
+					}
+				}
+			},
+			"mercury": {
+				"base": {
+					"mask": [
+						"VA"
+					],
+					"visitableFrom": [
+						"+++",
+						"+-+",
+						"+++"
+					]
+				},
+				"removable": true,
+				"templates": {
+					"res": {
+						"mask": [
+							"VA"
+						],
+						"visitableFrom": [
+							"+++",
+							"+-+",
+							"+++"
+						]
+					}
+				}
+			},
+			"ore": {
+				"base": {
+					"mask": [
+						"VA"
+					],
+					"visitableFrom": [
+						"+++",
+						"+-+",
+						"+++"
+					]
+				},
+				"removable": true,
+				"templates": {
+					"res": {
+						"mask": [
+							"VA"
+						],
+						"visitableFrom": [
+							"+++",
+							"+-+",
+							"+++"
+						]
+					}
+				}
+			},
+			"sulfur": {
+				"base": {
+					"mask": [
+						"VA"
+					],
+					"visitableFrom": [
+						"+++",
+						"+-+",
+						"+++"
+					]
+				},
+				"removable": true,
+				"templates": {
+					"res": {
+						"mask": [
+							"VA"
+						],
+						"visitableFrom": [
+							"+++",
+							"+-+",
+							"+++"
+						]
+					}
+				}
+			},
+			"wood": {
+				"base": {
+					"mask": [
+						"VA"
+					],
+					"visitableFrom": [
+						"+++",
+						"+-+",
+						"+++"
+					]
+				},
+				"removable": true,
+				"templates": {
+					"res": {
+						"mask": [
+							"VA"
+						],
+						"visitableFrom": [
+							"+++",
+							"+-+",
+							"+++"
+						]
+					}
+				}
+			}
+		}
+	},
+	"town": {
+		"name": "Town",
+		"types": {}
+	},
+	"boat": {
+		"name": "Boat",
+		"types": {
+			"boatCastle": {
+				"aiValue": 0,
+				"base": {
+					"mask": [
+						"VVV",
+						"VAV"
+					],
+					"visitableFrom": [
+						"+++",
+						"+-+",
+						"+++"
+					]
+				},
+				"layer": "sail",
+				"onboardAssaultAllowed": true,
+				"onboardVisitAllowed": true,
+				"removable": true,
+				"templates": {}
+			},
+			"boatFortress": {
+				"aiValue": 0,
+				"base": {
+					"mask": [
+						"VVV",
+						"VAV"
+					],
+					"visitableFrom": [
+						"+++",
+						"+-+",
+						"+++"
+					]
+				},
+				"layer": "sail",
+				"onboardAssaultAllowed": true,
+				"onboardVisitAllowed": true,
+				"removable": true,
+				"templates": {}
+			},
+			"boatNecropolis": {
+				"aiValue": 0,
+				"base": {
+					"mask": [
+						"VVV",
+						"VAV"
+					],
+					"visitableFrom": [
+						"+++",
+						"+-+",
+						"+++"
+					]
+				},
+				"layer": "sail",
+				"onboardAssaultAllowed": true,
+				"onboardVisitAllowed": true,
+				"removable": true,
+				"templates": {}
+			}
+		}
+	},
+	"borderGuard": {
+		"name": "Border Guard",
+		"types": {
+			"black": {
+				"aiValue": 0,
+				"removable": true,
+				"sounds": {
+					"removal": [
+						"PICKUP01",
+						"PICKUP02",
+						"PICKUP03",
+						"PICKUP04",
+						"PICKUP05",
+						"PICKUP06",
+						"PICKUP07"
+					],
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"brown": {
+				"aiValue": 0,
+				"removable": true,
+				"sounds": {
+					"removal": [
+						"PICKUP01",
+						"PICKUP02",
+						"PICKUP03",
+						"PICKUP04",
+						"PICKUP05",
+						"PICKUP06",
+						"PICKUP07"
+					],
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"dblue": {
+				"aiValue": 0,
+				"removable": true,
+				"sounds": {
+					"removal": [
+						"PICKUP01",
+						"PICKUP02",
+						"PICKUP03",
+						"PICKUP04",
+						"PICKUP05",
+						"PICKUP06",
+						"PICKUP07"
+					],
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"green": {
+				"aiValue": 0,
+				"removable": true,
+				"sounds": {
+					"removal": [
+						"PICKUP01",
+						"PICKUP02",
+						"PICKUP03",
+						"PICKUP04",
+						"PICKUP05",
+						"PICKUP06",
+						"PICKUP07"
+					],
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"lblue": {
+				"aiValue": 0,
+				"removable": true,
+				"sounds": {
+					"removal": [
+						"PICKUP01",
+						"PICKUP02",
+						"PICKUP03",
+						"PICKUP04",
+						"PICKUP05",
+						"PICKUP06",
+						"PICKUP07"
+					],
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"purple": {
+				"aiValue": 0,
+				"removable": true,
+				"sounds": {
+					"removal": [
+						"PICKUP01",
+						"PICKUP02",
+						"PICKUP03",
+						"PICKUP04",
+						"PICKUP05",
+						"PICKUP06",
+						"PICKUP07"
+					],
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"red": {
+				"aiValue": 0,
+				"removable": true,
+				"sounds": {
+					"removal": [
+						"PICKUP01",
+						"PICKUP02",
+						"PICKUP03",
+						"PICKUP04",
+						"PICKUP05",
+						"PICKUP06",
+						"PICKUP07"
+					],
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"white": {
+				"aiValue": 0,
+				"removable": true,
+				"sounds": {
+					"removal": [
+						"PICKUP01",
+						"PICKUP02",
+						"PICKUP03",
+						"PICKUP04",
+						"PICKUP05",
+						"PICKUP06",
+						"PICKUP07"
+					],
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"borderGate": {
+		"name": "Border Gate",
+		"types": {
+			"black": {
+				"aiValue": 0,
+				"sounds": {
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"brown": {
+				"aiValue": 0,
+				"sounds": {
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"dblue": {
+				"aiValue": 0,
+				"sounds": {
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"green": {
+				"aiValue": 0,
+				"sounds": {
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"lblue": {
+				"aiValue": 0,
+				"sounds": {
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"purple": {
+				"aiValue": 0,
+				"sounds": {
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"red": {
+				"aiValue": 0,
+				"sounds": {
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"white": {
+				"aiValue": 0,
+				"sounds": {
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"keymasterTent": {
+		"name": "Keymaster's Tent",
+		"types": {
+			"black": {
+				"aiValue": 10000,
+				"sounds": {
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"brown": {
+				"aiValue": 10000,
+				"sounds": {
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"dblue": {
+				"aiValue": 10000,
+				"sounds": {
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"green": {
+				"aiValue": 10000,
+				"sounds": {
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"lblue": {
+				"aiValue": 10000,
+				"sounds": {
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"purple": {
+				"aiValue": 10000,
+				"sounds": {
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"red": {
+				"aiValue": 10000,
+				"sounds": {
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			},
+			"white": {
+				"aiValue": 10000,
+				"sounds": {
+					"visit": [
+						"CAVEHEAD"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"seerHut": {
+		"name": "Seer's Hut",
+		"types": {
+			"0": {
+				"aiValue": 10000,
+				"base": {
+					"mask": [
+						"VVV",
+						"VVV",
+						"VAV"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"sounds": {
+					"visit": [
+						"QUEST"
+					]
+				},
+				"templates": {}
+			},
+			"1": {
+				"aiValue": 10000,
+				"base": {
+					"mask": [
+						"VVV",
+						"VVV",
+						"VAV"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"sounds": {
+					"visit": [
+						"QUEST"
+					]
+				},
+				"templates": {}
+			},
+			"2": {
+				"aiValue": 10000,
+				"base": {
+					"mask": [
+						"VVV",
+						"VVV",
+						"VAV"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"sounds": {
+					"visit": [
+						"QUEST"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"mine": {
+		"name": "Mine",
+		"types": {
+			"abandoned": {
+				"templates": {}
+			},
+			"alchemistLab": {
+				"sounds": {
+					"visit": [
+						"FLAGMINE"
+					]
+				},
+				"templates": {}
+			},
+			"crystalCavern": {
+				"sounds": {
+					"visit": [
+						"FLAGMINE"
+					]
+				},
+				"templates": {}
+			},
+			"gemPond": {
+				"sounds": {
+					"visit": [
+						"FLAGMINE"
+					]
+				},
+				"templates": {}
+			},
+			"goldMine": {
+				"sounds": {
+					"visit": [
+						"FLAGMINE"
+					]
+				},
+				"templates": {}
+			},
+			"orePit": {
+				"sounds": {
+					"visit": [
+						"FLAGMINE"
+					]
+				},
+				"templates": {}
+			},
+			"sawmill": {
+				"sounds": {
+					"visit": [
+						"FLAGMINE"
+					]
+				},
+				"templates": {}
+			},
+			"sulfurDune": {
+				"sounds": {
+					"visit": [
+						"FLAGMINE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"abandonedMine": {
+		"name": "Mine",
+		"types": {
+			"mine": {
+				"aiValue": 3500,
+				"sounds": {
+					"ambient": [
+						"LOOPCAVE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"garrisonHorizontal": {
+		"name": "Garrison",
+		"types": {
+			"antiMagic": {
+				"aiValue": 0,
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"normal": {
+				"aiValue": 0,
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"garrisonVertical": {
+		"name": "Garrison",
+		"types": {
+			"antiMagic": {
+				"aiValue": 0,
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"normal": {
+				"aiValue": 0,
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"monolithOneWayEntrance": {
+		"name": "Monolith One Way Entrance",
+		"types": {
+			"monolith1": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON1"
+					],
+					"visit": [
+						"TELPTOUT"
+					]
+				},
+				"templates": {}
+			},
+			"monolith2": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON1"
+					],
+					"visit": [
+						"TELPTOUT"
+					]
+				},
+				"templates": {}
+			},
+			"monolith3": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON1"
+					],
+					"visit": [
+						"TELPTOUT"
+					]
+				},
+				"templates": {}
+			},
+			"monolith4": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON1"
+					],
+					"visit": [
+						"TELPTOUT"
+					]
+				},
+				"templates": {}
+			},
+			"monolith5": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON1"
+					],
+					"visit": [
+						"TELPTOUT"
+					]
+				},
+				"templates": {}
+			},
+			"monolith6": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON1"
+					],
+					"visit": [
+						"TELPTOUT"
+					]
+				},
+				"templates": {}
+			},
+			"monolith7": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON1"
+					],
+					"visit": [
+						"TELPTOUT"
+					]
+				},
+				"templates": {}
+			},
+			"monolith8": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON1"
+					],
+					"visit": [
+						"TELPTOUT"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"monolithOneWayExit": {
+		"name": "Monolith One Way Exit",
+		"types": {
+			"monolith1": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON1"
+					]
+				},
+				"templates": {}
+			},
+			"monolith2": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON1"
+					]
+				},
+				"templates": {}
+			},
+			"monolith3": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON1"
+					]
+				},
+				"templates": {}
+			},
+			"monolith4": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON1"
+					]
+				},
+				"templates": {}
+			},
+			"monolith5": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON1"
+					]
+				},
+				"templates": {}
+			},
+			"monolith6": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON1"
+					]
+				},
+				"templates": {}
+			},
+			"monolith7": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON1"
+					]
+				},
+				"templates": {}
+			},
+			"monolith8": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON1"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"monolithTwoWay": {
+		"name": "Monolith Two Way",
+		"types": {
+			"monolith1": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON2"
+					],
+					"visit": [
+						"TELPTOUT"
+					]
+				},
+				"templates": {}
+			},
+			"monolith2": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON2"
+					],
+					"visit": [
+						"TELPTOUT"
+					]
+				},
+				"templates": {}
+			},
+			"monolith3": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON2"
+					],
+					"visit": [
+						"TELPTOUT"
+					]
+				},
+				"templates": {}
+			},
+			"monolith4": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON2"
+					],
+					"visit": [
+						"TELPTOUT"
+					]
+				},
+				"templates": {}
+			},
+			"monolith5": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON2"
+					],
+					"visit": [
+						"TELPTOUT"
+					]
+				},
+				"templates": {}
+			},
+			"monolith6": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON2"
+					],
+					"visit": [
+						"TELPTOUT"
+					]
+				},
+				"templates": {}
+			},
+			"monolith7": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON2"
+					],
+					"visit": [
+						"TELPTOUT"
+					]
+				},
+				"templates": {}
+			},
+			"monolith8": {
+				"sounds": {
+					"ambient": [
+						"LOOPMON2"
+					],
+					"visit": [
+						"TELPTOUT"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"randomDwellingLvl": {
+		"base": null,
+		"name": "",
+		"types": {
+			"objectLvl1": {
+				"templates": {}
+			},
+			"objectLvl2": {
+				"templates": {}
+			},
+			"objectLvl3": {
+				"templates": {}
+			},
+			"objectLvl4": {
+				"templates": {}
+			},
+			"objectLvl5": {
+				"templates": {}
+			},
+			"objectLvl6": {
+				"templates": {}
+			},
+			"objectLvl7": {
+				"templates": {}
+			}
+		}
+	},
+	"randomDwellingFaction": {
+		"base": null,
+		"name": "",
+		"types": {
+			"objectCastle": {
+				"templates": {}
+			},
+			"objectConflux": {
+				"templates": {}
+			},
+			"objectDungeon": {
+				"templates": {}
+			},
+			"objectFortress": {
+				"templates": {}
+			},
+			"objectInferno": {
+				"templates": {}
+			},
+			"objectNecropolis": {
+				"templates": {}
+			},
+			"objectRampart": {
+				"templates": {}
+			},
+			"objectStronghold": {
+				"templates": {}
+			},
+			"objectTower": {
+				"templates": {}
+			}
+		}
+	},
+	"spellScroll": {
+		"base": null,
+		"name": "Spell Scroll",
+		"types": {
+			"object": {
+				"base": null
+			}
+		}
+	},
+	"heroPlaceholder": {
+		"base": null,
+		"name": "Hero Placeholder",
+		"types": {
+			"object": {
+				"templates": {}
+			}
+		}
+	},
+	"buoy": {
+		"name": "Buoy",
+		"types": {
+			"buoy": {
+				"sounds": {
+					"ambient": [
+						"LOOPBUOY"
+					],
+					"visit": [
+						"MORALE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"swanPond": {
+		"name": "Swan Pond",
+		"types": {
+			"swanPond": {
+				"sounds": {
+					"visit": [
+						"LUCK"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"faerieRing": {
+		"name": "Faerie Ring",
+		"types": {
+			"faerieRing": {
+				"sounds": {
+					"ambient": [
+						"LOOPFAER"
+					],
+					"visit": [
+						"LUCK"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"fountainOfFortune": {
+		"name": "Fountain of Fortune",
+		"types": {
+			"fountainOfFortune": {
+				"sounds": {
+					"ambient": [
+						"LOOPFOUN"
+					],
+					"visit": [
+						"LUCK"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"fountainOfYouth": {
+		"name": "Fountain of Youth",
+		"types": {
+			"fountainOfYouth": {
+				"sounds": {
+					"ambient": [
+						"LOOPFALL"
+					],
+					"visit": [
+						"MORALE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"idolOfFortune": {
+		"name": "Idol of Fortune",
+		"types": {
+			"idolOfFortune": {
+				"sounds": {
+					"visit": [
+						"LUCK"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"mermaids": {
+		"name": "Mermaids",
+		"types": {
+			"mermaids": {
+				"sounds": {
+					"visit": [
+						"LUCK"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"oasis": {
+		"name": "Oasis",
+		"types": {
+			"oasis": {
+				"sounds": {
+					"visit": [
+						"MORALE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"stables": {
+		"name": "Stables",
+		"types": {
+			"stables": {
+				"sounds": {
+					"ambient": [
+						"LOOPHORS"
+					],
+					"visit": [
+						"STORE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"temple": {
+		"name": "Temple",
+		"types": {
+			"temple": {
+				"sounds": {
+					"ambient": [
+						"LOOPSANC"
+					],
+					"visit": [
+						"TEMPLE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"rallyFlag": {
+		"name": "Rally Flag",
+		"types": {
+			"rallyFlag": {
+				"sounds": {
+					"ambient": [
+						"LOOPFLAG"
+					],
+					"visit": [
+						"MORALE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"wateringHole": {
+		"name": "Watering Hole",
+		"types": {
+			"wateringHole": {
+				"sounds": {
+					"visit": [
+						"MORALE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"campfire": {
+		"name": "Campfire",
+		"types": {
+			"campfire": {
+				"blockedVisitable": true,
+				"removable": true,
+				"sounds": {
+					"ambient": [
+						"LOOPCAMP"
+					],
+					"removal": [
+						"PICKUP01",
+						"PICKUP02",
+						"PICKUP03",
+						"PICKUP04",
+						"PICKUP05",
+						"PICKUP06",
+						"PICKUP07"
+					],
+					"visit": [
+						"EXPERNCE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"flotsam": {
+		"name": "Flotsam",
+		"types": {
+			"flotsam": {
+				"blockedVisitable": true,
+				"removable": true,
+				"sounds": {
+					"removal": [
+						"PICKUP01",
+						"PICKUP02",
+						"PICKUP03",
+						"PICKUP04",
+						"PICKUP05",
+						"PICKUP06",
+						"PICKUP07"
+					],
+					"visit": [
+						"GENIE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"seaChest": {
+		"name": "Sea Chest",
+		"types": {
+			"seaChest": {
+				"blockedVisitable": true,
+				"removable": true,
+				"sounds": {
+					"removal": [
+						"PICKUP01",
+						"PICKUP02",
+						"PICKUP03",
+						"PICKUP04",
+						"PICKUP05",
+						"PICKUP06",
+						"PICKUP07"
+					],
+					"visit": [
+						"CHEST"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"shipwreckSurvivor": {
+		"name": "Shipwreck Survivor",
+		"types": {
+			"shipwreckSurvivor": {
+				"blockedVisitable": true,
+				"removable": true,
+				"sounds": {
+					"removal": [
+						"PICKUP01",
+						"PICKUP02",
+						"PICKUP03",
+						"PICKUP04",
+						"PICKUP05",
+						"PICKUP06",
+						"PICKUP07"
+					],
+					"visit": [
+						"TREASURE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"treasureChest": {
+		"name": "Treasure Chest",
+		"types": {
+			"treasureChest": {
+				"removable": true,
+				"sounds": {
+					"removal": [
+						"PICKUP01",
+						"PICKUP02",
+						"PICKUP03",
+						"PICKUP04",
+						"PICKUP05",
+						"PICKUP06",
+						"PICKUP07"
+					],
+					"visit": [
+						"CHEST"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"cartographer": {
+		"name": "Cartographer",
+		"types": {
+			"cartographerLand": {
+				"sounds": {
+					"visit": [
+						"LIGHTHOUSE"
+					]
+				},
+				"templates": {}
+			},
+			"cartographerSubterranean": {
+				"sounds": {
+					"visit": [
+						"LIGHTHOUSE"
+					]
+				},
+				"templates": {}
+			},
+			"cartographerWater": {
+				"sounds": {
+					"visit": [
+						"LIGHTHOUSE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"creatureGeneratorCommon": {
+		"name": "Creature Generator 1",
+		"types": {
+			"airConflux": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Air Elemental Conflux",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"altarOfAir": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Altar of Air",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"altarOfEarth": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Altar of Earth",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"altarOfFire": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Altar of Fire",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"altarOfThought": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Altar of Thought",
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"altarOfWater": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Altar of Water",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"altarOfWishes": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Altar of Wishes",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"archersTower": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Archers' Tower",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"barracks": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Barracks",
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"basiliskPit": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Basilisk Pit",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"behemothCrag": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Behemoth Crag",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"boarGlen": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Boar Glen",
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"centaurStables": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Centaur Stables",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"cliffNest": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Cliff Nest",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"cloudTemple": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Cloud Temple",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"crystalCavern": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Crystal Cavern",
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"cursedTemple": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Cursed Temple",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"cyclopsCave": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Cyclops Cave",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"demonGate": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Demon Gate",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"dendroidArches": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Dendroid Arches",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"dragonCave": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Dragon Cave",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"dragonCliffs": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Dragon Cliffs",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"dragonVault": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Dragon Vault",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"dwarfCottage": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Dwarf Cottage",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"earthConflux": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Earth Elemental Conflux",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"enchantedSpring": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Enchanted Spring",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"enchantersHollow": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Enchanter's Hollow",
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"estate": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Estate",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"fireConflux": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Fire Elemental Conflux",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"fireLake": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Fire Lake",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"forsakenPalace": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Forsaken Palace",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"frozenCliffs": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Frozen Cliffs",
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"gnollHut": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Gnoll Hut",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"goblinBarracks": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Goblin Barracks",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"goldenPavilion": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Golden Pavilion",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"gorgonLair": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Gorgon Lair",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"graveyard": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Graveyard",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"griffinTower": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Griffin Tower",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"guardhouse": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Guardhouse",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"hallOfDarkness": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Hall of Darkness",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"hallOfSins": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Hall of Sins",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"harpyLoft": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Harpy Loft",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"hellHole": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Hell Hole",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"homestead": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Homestead",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"hovel": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Hovel",
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"hydraPond": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Hydra Pond",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"impCrucible": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Imp Crucible",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"kennels": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Kennels",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"labyrinth": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Labyrinth",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"lizardDen": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Lizard Den",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"mageTower": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Mage Tower",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"magicForest": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Magic Forest",
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"magicLantern": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Magic Lantern",
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"manticoreLair": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Manticore Lair",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"mausoleum": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Mausoleum",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"medusaChapel": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Chapel of Stilled Voices",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"monastery": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Monastery",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"nomadTent": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Nomad Tent",
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"ogreFort": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Ogre Fort",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"orcTower": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Orc Tower",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"parapet": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Parapet",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"pillarOfEyes": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Pillar of Eyes",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"portalOfGlory": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Portal of Glory",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"pyre": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Pyre",
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"rogueCavern": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Rogue Cavern",
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"serpentFlyHive": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Serpent Fly Hive",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"sulfurousLair": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Sulfurous Lair",
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"thatchedHut": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Thatched Hut",
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"tombOfCurses": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Tomb of Curses",
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"tombOfSouls": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Tomb of Souls",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"trainingGrounds": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Training Grounds",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"treetopTower": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Treetop Tower",
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"trollBridge": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Troll Bridge",
+				"sounds": {
+					"ambient": [
+						"LOOPSWOR"
+					],
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"unicornGlade": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Unicorn Glade",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"unicornGladeBig": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Unicorn Glade",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"warren": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Warren",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"waterConflux": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Water Elemental Conflux",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"wolfPen": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Wolf Pen",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"workshop": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Workshop",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			},
+			"wyvernNest": {
+				"base": {
+					"mask": [
+						"VVV",
+						"VBB",
+						"VAA"
+					],
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Wyvern Nest",
+				"sounds": {
+					"visit": [
+						"MILITARY"
+					]
+				},
+				"templates": {}
+			}
+		}
+	},
+	"creatureGeneratorSpecial": {
+		"name": "Creature Generator 4",
+		"types": {
+			"elementalConflux": {
+				"base": {
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Elemental Conflux",
+				"templates": {}
+			},
+			"golemFactory": {
+				"base": {
+					"visitableFrom": [
+						"---",
+						"+++",
+						"+++"
+					]
+				},
+				"name": "Golem Factory",
+				"templates": {}
+			}
+		}
+	},
+	"lighthouse": {
+		"name": "Lighthouse",
+		"types": {
+			"lighthouse": {
+				"sounds": {
+					"visit": [
+						"LIGHTHOUSE"
+					]
+				},
+				"templates": {}
+			}
+		}
+	}
+}
