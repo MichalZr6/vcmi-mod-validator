@@ -313,7 +313,7 @@ def get_schema(key: str) -> dict:
 		raise KeyError(f"No schema mapped for key: {key}")
 
 	schema_filename = ENTRY_SCHEMA_MAP[key]
-	if LOCAL_MODE:
+	if LOCAL_MODE and os.path.isdir(SCHEMAS_PATH):
 		schema_path = (SCHEMAS_PATH / schema_filename).resolve().as_uri()
 	else:
 		schema_path = f"{SCHEMA_BASE_URL}{schema_filename}"
@@ -406,6 +406,9 @@ def collect_and_parse_H3_config_files() -> tuple[dict, list]:
 	json_files_data = {}
 	failed_paths = []
 
+	if not PATCHES_DIR or not os.path.isdir(PATCHES_DIR):
+		return {}, [("PATCHES_DIR is not a valid directory.", f"PATCHES_DIR: {PATCHES_DIR}")]
+
 	for root, _, files in os.walk(PATCHES_DIR):
 		for fname in files:
 			if fname.endswith(".json"):
@@ -423,6 +426,10 @@ def collect_and_parse_H3_config_files() -> tuple[dict, list]:
 def collect_and_parse_local_base_config_files() -> tuple[dict[str, dict], list[tuple[str, str]]]:
 	json_files_data = {key: {} for key in ENTRY_SCHEMA_MAP}
 	failed_paths = []
+
+	if not BASE_CONFIG_PATH or not os.path.isdir(BASE_CONFIG_PATH):
+		print_and_log("⚠️ BASE_CONFIG_PATH is not a valid directory. Will use remote logic to collect base data.")
+		return collect_and_parse_base_config_files()
 
 	for root, _, files in os.walk(BASE_CONFIG_PATH):
 		for fname in files:
@@ -778,12 +785,11 @@ def load_and_validate_schemas_local() -> list[str]:
 	errors = []
 	global SCHEMA_CACHE
 
-	schemas_path = SCHEMAS_PATH
+	if not SCHEMAS_PATH or not os.path.isdir(SCHEMAS_PATH):
+		print_and_log("⚠️ SCHEMAS_PATH is not a valid directory. Will use remote logic to collect schema files.")
+		return load_and_validate_schemas()
 
-	if not schemas_path.exists():
-		return [f"❌ Local schema directory does not exist: {schemas_path}"]
-
-	for file_path in schemas_path.glob("*.json"):
+	for file_path in SCHEMAS_PATH.glob("*.json"):
 		schema_id = str(file_path.resolve().as_uri())
 
 		if schema_id in SCHEMA_CACHE:
@@ -838,150 +844,150 @@ def load_and_validate_schemas() -> list[str]:
 
 
 def apply_inheritance(data: dict, context: str) -> dict:
-    inheritance_funcs = {
-        "objects": inherit_object_types,
-        "skills": inherit_skill_levels,
-        "spells": inherit_spell_levels,
-        "heroes": inherit_hero_specialty,
-        "towns": inherit_town_buildings,
-    }
+	inheritance_funcs = {
+		"objects": inherit_object_types,
+		"skills": inherit_skill_levels,
+		"spells": inherit_spell_levels,
+		"heroes": inherit_hero_specialty,
+		"towns": inherit_town_buildings,
+	}
 
-    func = inheritance_funcs.get(context)
-    return func(data) if func else data
+	func = inheritance_funcs.get(context)
+	return func(data) if func else data
 
 
 def inherit_spell_levels(data: dict) -> dict:
-    levels = data.get("levels")
-    if not isinstance(levels, dict):
-        return data
+	levels = data.get("levels")
+	if not isinstance(levels, dict):
+		return data
 
-    base = levels.get("base")
-    if not isinstance(base, dict):
-        return data
+	base = levels.get("base")
+	if not isinstance(base, dict):
+		return data
 
-    for level_name in ("none", "basic", "advanced", "expert"):
-        level_data = levels.get(level_name)
-        if isinstance(level_data, dict):
-            levels[level_name] = deep_merge(base, level_data)
+	for level_name in ("none", "basic", "advanced", "expert"):
+		level_data = levels.get(level_name)
+		if isinstance(level_data, dict):
+			levels[level_name] = deep_merge(base, level_data)
 
-    data["levels"] = levels
-    return data
+	data["levels"] = levels
+	return data
 
 
 def inherit_skill_levels(data: dict) -> dict:
-    base = data.get("base")
-    if not isinstance(base, dict):
-        return data
+	base = data.get("base")
+	if not isinstance(base, dict):
+		return data
 
-    for level_name in ("basic", "advanced", "expert"):
-        level_data = data.get(level_name)
-        if isinstance(level_data, dict):
-            data[level_name] = deep_merge(base, level_data)
+	for level_name in ("basic", "advanced", "expert"):
+		level_data = data.get(level_name)
+		if isinstance(level_data, dict):
+			data[level_name] = deep_merge(base, level_data)
 
-    return data
+	return data
 
 
 def inherit_object_types(data: dict) -> dict:
-    if not isinstance(data, dict):
-        return data
+	if not isinstance(data, dict):
+		return data
 
-    types = data.get("types")
-    base = data.get("base")
-    sub_objects = data.get("subObjects")
+	types = data.get("types")
+	base = data.get("base")
+	sub_objects = data.get("subObjects")
 
-    if not isinstance(types, dict):
-        return data
+	if not isinstance(types, dict):
+		return data
 
-    for type_name, type_data in types.items():
-        if not isinstance(type_data, dict):
-            continue
+	for type_name, type_data in types.items():
+		if not isinstance(type_data, dict):
+			continue
 
-        # First: merge from subObjects[index] if available
-        if isinstance(sub_objects, list) and isinstance(type_data.get("index"), int):
-            idx = type_data["index"]
-            if 0 <= idx < len(sub_objects):
-                type_data = deep_merge(sub_objects[idx], type_data)
+		# First: merge from subObjects[index] if available
+		if isinstance(sub_objects, list) and isinstance(type_data.get("index"), int):
+			idx = type_data["index"]
+			if 0 <= idx < len(sub_objects):
+				type_data = deep_merge(sub_objects[idx], type_data)
 
-        # Second: merge from base
-        if isinstance(base, dict):
-            type_data = deep_merge(base, type_data)
+		# Second: merge from base
+		if isinstance(base, dict):
+			type_data = deep_merge(base, type_data)
 
-        # Third: merge into templates[...], if templates and base exist
-        templates = type_data.get("templates")
-        type_base = type_data.get("base")
-        if isinstance(templates, dict) and isinstance(type_base, dict):
-            for tmpl_key, tmpl_val in templates.items():
-                if isinstance(tmpl_val, dict):
-                    templates[tmpl_key] = deep_merge(type_base, tmpl_val)
-            type_data["templates"] = templates
+		# Third: merge into templates[...], if templates and base exist
+		templates = type_data.get("templates")
+		type_base = type_data.get("base")
+		if isinstance(templates, dict) and isinstance(type_base, dict):
+			for tmpl_key, tmpl_val in templates.items():
+				if isinstance(tmpl_val, dict):
+					templates[tmpl_key] = deep_merge(type_base, tmpl_val)
+			type_data["templates"] = templates
 
-        # Assign back
-        types[type_name] = type_data
+		# Assign back
+		types[type_name] = type_data
 
-    # Remove subObjects after merging
-    data.pop("subObjects", None)
+	# Remove subObjects after merging
+	data.pop("subObjects", None)
 
-    return data
+	return data
 
 
 def inherit_hero_specialty(data: dict) -> dict:
-    specialty = data.get("specialty")
-    if not isinstance(specialty, dict):
-        return data
+	specialty = data.get("specialty")
+	if not isinstance(specialty, dict):
+		return data
 
-    base = specialty.get("base")
-    bonuses = specialty.get("bonuses")
+	base = specialty.get("base")
+	bonuses = specialty.get("bonuses")
 
-    if not isinstance(base, dict) or not isinstance(bonuses, dict):
-        return data
+	if not isinstance(base, dict) or not isinstance(bonuses, dict):
+		return data
 
-    for key, val in bonuses.items():
-        if isinstance(val, dict):
-            bonuses[key] = deep_merge(base, val)
+	for key, val in bonuses.items():
+		if isinstance(val, dict):
+			bonuses[key] = deep_merge(base, val)
 
-    specialty["bonuses"] = bonuses
-    data["specialty"] = specialty
-    return data
+	specialty["bonuses"] = bonuses
+	data["specialty"] = specialty
+	return data
 
 
 def inherit_town_buildings(data: dict, buildings_library: dict) -> dict:
-    town = data.get("town")
-    if not isinstance(town, dict):
-        return data
+	town = data.get("town")
+	if not isinstance(town, dict):
+		return data
 
-    buildings = town.get("buildings")
-    if not isinstance(buildings, dict):
-        return data
+	buildings = town.get("buildings")
+	if not isinstance(buildings, dict):
+		return data
 
-    for name, building in buildings.items():
-        if not isinstance(building, dict):
-            continue
+	for name, building in buildings.items():
+		if not isinstance(building, dict):
+			continue
 
-        # Inherit from global building definition
-        base_def = buildings_library.get(name)
-        if isinstance(base_def, dict):
-            building = deep_merge(base_def, building)
+		# Inherit from global building definition
+		base_def = buildings_library.get(name)
+		if isinstance(base_def, dict):
+			building = deep_merge(base_def, building)
 
-        # Inherit from building["type"] if it matches a global def
-        building_type = building.get("type")
-        if isinstance(building_type, str):
-            type_def = buildings_library.get(building_type)
-            if isinstance(type_def, dict):
-                building = deep_merge(type_def, building)
+		# Inherit from building["type"] if it matches a global def
+		building_type = building.get("type")
+		if isinstance(building_type, str):
+			type_def = buildings_library.get(building_type)
+			if isinstance(type_def, dict):
+				building = deep_merge(type_def, building)
 
-        # MOD COMPAT: convert legacy format into modern config
-        if "onVisitBonuses" in building:
-            config = building.setdefault("configuration", {})
-            config.setdefault("visitMode", "bonus")
-            config.setdefault("rewards", [{}])
-            config["rewards"][0].setdefault("message", building.get("description"))
-            config["rewards"][0].setdefault("bonuses", building["onVisitBonuses"])
+		# MOD COMPAT: convert legacy format into modern config
+		if "onVisitBonuses" in building:
+			config = building.setdefault("configuration", {})
+			config.setdefault("visitMode", "bonus")
+			config.setdefault("rewards", [{}])
+			config["rewards"][0].setdefault("message", building.get("description"))
+			config["rewards"][0].setdefault("bonuses", building["onVisitBonuses"])
 
-        buildings[name] = building
+		buildings[name] = building
 
-    town["buildings"] = buildings
-    data["town"] = town
-    return data
+	town["buildings"] = buildings
+	data["town"] = town
+	return data
 
 
 
@@ -1006,9 +1012,10 @@ def process_json_files(mod_root: str):
 		if VERBOSE or "❌" in status:
 			print_status(status, label)
 
-	if not LOCAL_MODE:
+	if not LOCAL_MODE or not os.path.isdir(SCHEMAS_PATH) or not os.path.isdir(BASE_PATH):
 		print_and_log("Loading main repo tree...")
 		if not load_repo_tree():
+			print_and_log("❌ Failed to load repo tree.")
 			return
 
 	print_and_log("Loading schema files...")
@@ -1134,25 +1141,27 @@ INPUT_DIR = r"/home/manfred/Programowanie/VCMI/mods/wake-of-gods"
 EXTRACTED_CONFIG_DIR = r"/home/manfred/.cache/vcmi/extracted/configuration"
 PATCHES_DIR = Path("h3_data/preprocessed_h3_patches")
 
-LOCAL_MODE = True  	# Set to True for local usage. It will be faster, autofix feature can be enabled, 
+LOCAL_MODE = True  	# Set to True for local usage. It will load base config files and schemas faster, autofix feature can 
+					# be enabled, 
 					# but you must provide correct BASE_PATH for VCMI's source directory.
 					# Set it to False if you don't have local VCMI source.
 
-if LOCAL_MODE:
-	AUTOFIX = True	# Available only in LOCAL_MODE. Enable this to auto-format validated json files. 
-					# Converts CRLFs to LFs, ensures trailing line at the end of the file, 
-					# makes some basic json structure re-formatting
-	LOG_FILE_PATH = r"/home/manfred/Programowanie/VCMI/vcmi_validator_log.txt"
-	BASE_PATH = Path("/home/manfred/Programowanie/VCMI/source/")
-	BASE_CONFIG_PATH = BASE_PATH / "config"
-	SCHEMAS_PATH = BASE_CONFIG_PATH / "schemas"
-else:
-	VCMI_REPO = "MichalZr6/vcmi"
-	VCMI_BRANCH = "fix_schemas"
-	VCMI_TREE_URL = f"https://api.github.com/repos/{VCMI_REPO}/git/trees/{VCMI_BRANCH}?recursive=1"
-	VCMI_URL = f"https://raw.githubusercontent.com/{VCMI_REPO}/{VCMI_BRANCH}"
-	BASE_CONFIG_URL = f"{VCMI_URL}/config/"
-	SCHEMA_BASE_URL = f"{BASE_CONFIG_URL}schemas/"
+# LOCAL_MODE variables:
+AUTOFIX = True	# Available only in LOCAL_MODE. Enable this to auto-format validated json files. 
+				# Converts CRLFs to LFs, ensures trailing line at the end of the file, 
+				# makes some basic json structure re-formatting
+LOG_FILE_PATH = r"/home/manfred/Programowanie/VCMI/vcmi_validator_log.txt"
+BASE_PATH = Path("/home/manfred/Programowanie/VCMI/source/")
+BASE_CONFIG_PATH = BASE_PATH / "config"
+SCHEMAS_PATH = BASE_CONFIG_PATH / "schemas"
+
+# REMOTE_MODE variables:
+VCMI_REPO = "MichalZr6/vcmi"
+VCMI_BRANCH = "fix_schemas"
+VCMI_TREE_URL = f"https://api.github.com/repos/{VCMI_REPO}/git/trees/{VCMI_BRANCH}?recursive=1"
+VCMI_URL = f"https://raw.githubusercontent.com/{VCMI_REPO}/{VCMI_BRANCH}"
+BASE_CONFIG_URL = f"{VCMI_URL}/config/"
+SCHEMA_BASE_URL = f"{BASE_CONFIG_URL}schemas/"
 
 
 VERBOSE = True
