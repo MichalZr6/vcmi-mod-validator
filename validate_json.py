@@ -1137,7 +1137,7 @@ def process_json_files(mod_root: str):
 
 
 # Define input directory and output directory
-INPUT_DIR = r"/home/manfred/Programowanie/VCMI/mods/wake-of-gods"
+INPUT_DIR = r"/home/manfred/Programowanie/VCMI/mods/tavern-invite"
 EXTRACTED_CONFIG_DIR = r"/home/manfred/.cache/vcmi/extracted/configuration"
 PATCHES_DIR = Path("h3_data/preprocessed_h3_patches")
 
@@ -1212,7 +1212,7 @@ if __name__ == "__main__":
 	)
 	args = parser.parse_args()
 
-	if LOCAL_MODE and LOG_FILE_PATH and not os.path.exists(LOG_FILE_PATH):
+	if LOCAL_MODE and LOG_FILE_PATH:
 		with open(LOG_FILE_PATH, "w", encoding="utf-8") as f:
 			f.write(f"# Log file created at {LOG_FILE_PATH}\n")
 		
