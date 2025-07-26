@@ -98,7 +98,7 @@ def strip_comments(content: str) -> str:
 	return ''.join(result)
 
 
-def load_and_parse_json(file_path) -> tuple:
+def load_and_parse_json(file_path: str) -> tuple:
 	"""
 	Reads a JSON file (local or remote) and extracts its content into a list of lines and a dictionary of JSON entries.
 
@@ -144,7 +144,7 @@ def load_and_parse_json(file_path) -> tuple:
 	return [], {}, status
 
 
-def save_to_json_file(lines, file_path):
+def save_to_json_file(lines: list, file_path: str):
 	"""
 	Writes the provided lines back to the file, ensuring proper formatting and handling of newlines.
 
@@ -163,7 +163,15 @@ def save_to_json_file(lines, file_path):
 		print(f"\tERROR: {inspect.currentframe().f_code.co_name}: Failed to save file {file_path}: {shorten_message(e)}")
 
 
-def ensure_json_format(lines) -> tuple:
+def try_autofix_json_formatting(lines: list, file_path: str):
+		if LOCAL_MODE:
+			save_to_json_file(lines, file_path)
+		elif AUTOFIX:
+				print("AUTOFIX global variable is set to True but LOCAL_MODE is False \
+					- autofixing is not going to be applied.")
+
+
+def ensure_json_format(lines: list) -> tuple:
 	"""
 	Ensures proper formatting for a JSON file's lines.
 
@@ -172,6 +180,11 @@ def ensure_json_format(lines) -> tuple:
 	"""
 	if not lines:
 		return lines, "❌ Empty input lines"
+
+	if AUTOFIX and LOCAL_MODE:
+		icon = "🔧"
+	else:
+		icon = "⚠️"
 
 	formatted_lines = []
 	messages = []
@@ -194,15 +207,15 @@ def ensure_json_format(lines) -> tuple:
 		formatted_lines.append(line)
 
 	if modified_lines_LF:
-		messages.append(f"⚠️ Fix CRLF line ending to LF on lines: {modified_lines_LF}")
+		messages.append(f"{icon} Fix CRLF line ending to LF on lines: {modified_lines_LF}")
 
 	if modified_lines:
-		messages.append(f"⚠️ Remove trailing space before ',' on lines: {modified_lines}")
+		messages.append(f"{icon} Remove trailing space before ',' on lines: {modified_lines}")
 
 	# Add final newline if missing
 	if not formatted_lines[-1].endswith('\n'):
 		formatted_lines[-1] += '\n'
-		messages.append("⚠️ Append trailing newline at the end of file")
+		messages.append(f"{icon} Append trailing newline at the end of file")
 
 	# Align " : formatting
 	pattern = re.compile(r'"\s*:\s*(?={|\[|")')  # fix bad spacing before : or after :
@@ -214,7 +227,7 @@ def ensure_json_format(lines) -> tuple:
 			formatted_lines[i] = new_line
 
 	if modified_lines:
-		messages.append(f"⚠️ Fix key-value spacing on lines: {modified_lines}")
+		messages.append(f"{icon} Fix key-value spacing on lines: {modified_lines}")
 
 	i = 0
 	modified_lines.clear()
@@ -229,7 +242,7 @@ def ensure_json_format(lines) -> tuple:
 			i += 1
 
 	if modified_lines:
-		messages.append(f"⚠️ Join multi-line brace on lines: {modified_lines}")
+		messages.append(f"{icon} Join multi-line brace on lines: {modified_lines}")
 
 	# Recombine and split for consistency
 	content = "".join(formatted_lines)
@@ -503,8 +516,11 @@ def try_parse_relative_json(relative_path: str, base_dir: str, json_files_data: 
 
 	if candidate_path:
 		try:
-			_, json_data, status = load_and_parse_json(candidate_path)
+			lines, json_data, status = load_and_parse_json(candidate_path)
 			if status[0] != "❌":
+				if "🔧" in status:
+					try_autofix_json_formatting(lines, candidate_path)
+
 				if candidate_path not in json_files_data:
 					json_files_data[candidate_path] = {}
 
@@ -978,6 +994,8 @@ def process_json_files(mod_root: str):
 			total_errors += 1
 		if "⚠️" in status:
 			total_warnings += 1
+		if "🔧" in status:
+			total_fixes += 1
 		if VERBOSE or "❌" in status:
 			print_status(status, label)
 
@@ -1030,6 +1048,8 @@ def process_json_files(mod_root: str):
 	for mod_json_path in mod_json_paths:
 		total_files += 1
 		mod_lines, mod_json_data, status = load_and_parse_json(mod_json_path)
+		if "🔧" in status:
+			try_autofix_json_formatting(mod_lines, mod_json_path)
 		mod_name = mod_json_data.get("name", os.path.dirname(mod_json_path))
 		print(f"\n🔍 Validating mod: {mod_name}")
 
@@ -1037,6 +1057,8 @@ def process_json_files(mod_root: str):
 		track_status(status)
 
 		version_status = validate_and_fix_mod_version(mod_lines, mod_json_data, mod_json_path)
+		if "🔧" in version_status:
+			try_autofix_json_formatting(mod_lines, mod_json_path)
 		track_status(version_status)
 
 		mod_json_files_data, parse_errors = \
@@ -1089,6 +1111,8 @@ def process_json_files(mod_root: str):
 	print(f"🧾 Files checked:\t{total_files}")
 	print(f"❌ Errors:\t\t{total_errors}")
 	print(f"⚠️ Warnings:\t\t{total_warnings}")
+	if AUTOFIX and LOCAL_MODE:
+		print(f"🔧 Auto-fixes:\t\t{total_fixes}")
 	if validation_failed:
 		print("❗ VALIDATION FAILED")
 	else:
@@ -1107,7 +1131,7 @@ LOCAL_MODE = True  	# Set to True for local usage. It will be faster, autofix fe
 					# but you must provide correct BASE_PATH for VCMI's source directory.
 					# Set it to False if you don't have local VCMI source.
 
-AUTOFIX = False		# Available only in LOCAL_MODE. Enable this to auto-format validated json files. 
+AUTOFIX = True		# Available only in LOCAL_MODE. Enable this to auto-format validated json files. 
 					# Converts CRLFs to LFs, ensures trailing line at the end of the file, 
 					# makes some basic json structure re-formatting
 
@@ -1124,7 +1148,7 @@ else:
 	SCHEMA_BASE_URL = f"{BASE_CONFIG_URL}schemas/"
 
 
-VERBOSE = False
+VERBOSE = True
 
 SCHEMA_CACHE = {}
 REPO_TREE = []
