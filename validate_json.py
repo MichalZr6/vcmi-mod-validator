@@ -19,6 +19,13 @@ from pathlib import Path
 from copy import deepcopy
 
 
+def print_and_log(msg: str):
+	if LOCAL_MODE and LOG_FILE_PATH:
+		with open(LOG_FILE_PATH, "a", encoding="utf-8") as f:
+			f.write(msg + "\n")
+	print(msg)
+
+
 def find_line_number(pattern, lines):
 	"""
 	Finds the line number of the first line in `lines` that matches the given regex pattern.
@@ -160,14 +167,14 @@ def save_to_json_file(lines: list, file_path: str):
 			file.writelines(lines)
 
 	except Exception as e:
-		print(f"\tERROR: {inspect.currentframe().f_code.co_name}: Failed to save file {file_path}: {shorten_message(e)}")
+		print_and_log(f"\tERROR: {inspect.currentframe().f_code.co_name}: Failed to save file {file_path}: {shorten_message(e)}")
 
 
 def try_autofix_json_formatting(lines: list, file_path: str):
 		if LOCAL_MODE:
 			save_to_json_file(lines, file_path)
 		elif AUTOFIX:
-				print("AUTOFIX global variable is set to True but LOCAL_MODE is False \
+				print_and_log("AUTOFIX global variable is set to True but LOCAL_MODE is False \
 					- autofixing is not going to be applied.")
 
 
@@ -295,7 +302,7 @@ def load_repo_tree() -> bool:
 		REPO_TREE = json5.loads(response)["tree"]
 		return True
 	except Exception as e:
-		print(f"❌ Failed to load VCMI repo tree: {shorten_message(e)}")
+		print_and_log(f"❌ Failed to load VCMI repo tree: {shorten_message(e)}")
 		return False
 
 
@@ -425,7 +432,7 @@ def collect_and_parse_local_base_config_files() -> tuple[dict[str, dict], list[t
 					continue
 
 				if VERBOSE:
-					print(f"Reading base config data from: {fp}")
+					print_and_log(f"Reading base config data from: {fp}")
 				
 				try:
 					_, json_data, status = load_and_parse_json(fp)
@@ -463,7 +470,7 @@ def collect_and_parse_base_config_files() -> tuple[dict[str, dict], list[tuple[s
 
 	for path in json_file_paths:
 		if VERBOSE:
-			print(f"Reading base config data from: {path}")
+			print_and_log(f"Reading base config data from: {path}")
 		full_url = f"{VCMI_URL}/{path}"
 		try:
 			_, json_data, status = load_and_parse_json(full_url)
@@ -510,7 +517,7 @@ def try_parse_relative_json(relative_path: str, base_dir: str, json_files_data: 
 			if basename.lower() in lowered:
 				original = files[lowered.index(basename.lower())]
 				suggested_path = os.path.join(root, original)
-				print(f"⚠️ File at given path: {relative_path} was not found. Did you mean: {suggested_path}?")
+				print_and_log(f"⚠️ File at given path: {relative_path} was not found. Did you mean: {suggested_path}?")
 				candidate_path = suggested_path
 				break
 
@@ -549,7 +556,7 @@ def write_patch_file(name: str, data: dict):
 	out_path = PATCHES_DIR / f"{name}.json"
 	with open(out_path, "w", encoding="utf-8") as f:
 		json.dump(data, f, indent='\t')
-	print(f"✅ Wrote patch file: {out_path}")
+	print_and_log(f"✅ Wrote patch file: {out_path}")
 
 
 def extract_patch_data(h3_data: dict, base_data: dict) -> dict:
@@ -606,7 +613,7 @@ def collect_and_parse_extracted_config_files() -> tuple[dict, list]:
 	for key in ENTRY_SCHEMA_MAP:
 		json_files_data[key] = {}
 		if VERBOSE:
-			print(f"Loading extracted H3 config data for {key}")
+			print_and_log(f"Loading extracted H3 config data for {key}")
 
 		path = os.path.join(EXTRACTED_CONFIG_DIR, key)
 		if os.path.isdir(path):
@@ -626,13 +633,13 @@ def collect_and_parse_extracted_config_files() -> tuple[dict, list]:
 def extract_all_patches():
 	h3_base_data, errors = collect_and_parse_extracted_config_files()
 	for path, reason in errors:
-		print(f"❌ {path} - {reason}")
+		print_and_log(f"❌ {path} - {reason}")
 	if errors:
 		return
 
 	vcmi_base_data, errors = collect_and_parse_base_config_files()
 	for path, reason in errors:
-		print(f"❌ {path} - {reason}")
+		print_and_log(f"❌ {path} - {reason}")
 	if errors:
 		return
 
@@ -757,9 +764,9 @@ def normalize_scoped_id(id_str: str) -> str:
 
 def print_status(status: str | list[str], additional_info=""):
 	if isinstance(status, list):
-		for s in status: print(f"{s}{additional_info}")
+		for s in status: print_and_log(f"{s}{additional_info}")
 	else:
-		print(f"{status}{additional_info}")
+		print_and_log(f"{status}{additional_info}")
 
 
 def has_error(status: str | list[str]) -> bool:
@@ -1000,11 +1007,11 @@ def process_json_files(mod_root: str):
 			print_status(status, label)
 
 	if not LOCAL_MODE:
-		print("Loading main repo tree...")
+		print_and_log("Loading main repo tree...")
 		if not load_repo_tree():
 			return
 
-	print("Loading schema files...")
+	print_and_log("Loading schema files...")
 	if LOCAL_MODE:
 		schema_errors = load_and_validate_schemas_local()
 	else:
@@ -1012,11 +1019,11 @@ def process_json_files(mod_root: str):
 
 	if schema_errors:
 		for error in schema_errors:
-			print(error)
-		print("Failed to parse schemas. Aborting.")
+			print_and_log(error)
+		print_and_log("Failed to parse schemas. Aborting.")
 		return
 
-	print("Collecting .json paths...")
+	print_and_log("Collecting .json paths...")
 	mod_json_paths = []
 	other_json_paths = []
 	for root, _, files in os.walk(mod_root):
@@ -1026,7 +1033,7 @@ def process_json_files(mod_root: str):
 			elif file.endswith(".json"):
 				other_json_paths.append(os.path.join(root, file))
 
-	print("Loading base config files...")
+	print_and_log("Loading base config files...")
 	if LOCAL_MODE:
 		base_json_files_data, base_errors = collect_and_parse_local_base_config_files()
 	else:
@@ -1035,15 +1042,15 @@ def process_json_files(mod_root: str):
 	for path, reason in base_errors:
 		track_status(f"❌ {path} - {reason}")
 
-	print("Loading H3 base config patches...")
+	print_and_log("Loading H3 base config patches...")
 	h3_base_json_files_data, h3_errors = collect_and_parse_H3_config_files()
 	for path, reason in h3_errors:
 		track_status(f"❌ {path} - {reason}")
 	if h3_errors:
-		print("H3 patches loading failed. Aborting.")
+		print_and_log("H3 patches loading failed. Aborting.")
 		return
 
-	print("Validating mods...")
+	print_and_log("Validating mods...")
 	mod_json_files_data = {}
 	for mod_json_path in mod_json_paths:
 		total_files += 1
@@ -1051,7 +1058,7 @@ def process_json_files(mod_root: str):
 		if "🔧" in status:
 			try_autofix_json_formatting(mod_lines, mod_json_path)
 		mod_name = mod_json_data.get("name", os.path.dirname(mod_json_path))
-		print(f"\n🔍 Validating mod: {mod_name}")
+		print_and_log(f"\n🔍 Validating mod: {mod_name}")
 
 		status += validate_json_schema(mod_json_data, mod_json_path, get_schema('mod'))
 		track_status(status)
@@ -1067,7 +1074,7 @@ def process_json_files(mod_root: str):
 			track_status(f"❌ {path} - {reason}")
 
 	# Build merged full config by combining mod and base files
-	print("Validating all mod's files merged with base config files...")
+	print_and_log("Validating all mod's files merged with base config files...")
 	for key in ENTRY_SCHEMA_MAP:
 		mod_data = mod_json_files_data[key]
 		base_data = base_json_files_data[key]
@@ -1101,25 +1108,25 @@ def process_json_files(mod_root: str):
 				status = validate_json_schema(data, '', schema_dict)
 				track_status(status, f" for {merged_id}")
 
-	print("Validating other JSON files...")
+	print_and_log("Validating other JSON files...")
 	for json_file in other_json_paths:
 		total_files += 1
 		lines, json_data, status = load_and_parse_json(json_file)
 		track_status(status)
 
-	print("\n🔍 Validation summary:")
-	print(f"🧾 Files checked:\t{total_files}")
-	print(f"❌ Errors:\t\t{total_errors}")
-	print(f"⚠️ Warnings:\t\t{total_warnings}")
+	print_and_log("\n🔍 Validation summary:")
+	print_and_log(f"🧾 Files checked:\t{total_files}")
+	print_and_log(f"❌ Errors:\t\t{total_errors}")
+	print_and_log(f"⚠️ Warnings:\t\t{total_warnings}")
 	if AUTOFIX and LOCAL_MODE:
-		print(f"🔧 Auto-fixes:\t\t{total_fixes}")
+		print_and_log(f"🔧 Auto-fixes:\t\t{total_fixes}")
 	if validation_failed:
-		print("❗ VALIDATION FAILED")
+		print_and_log("❗ VALIDATION FAILED")
 	else:
 		if total_files == 0:
-			print("ℹ️  NO FILES FOUND TO VALIDATE")
+			print_and_log("ℹ️  NO FILES FOUND TO VALIDATE")
 		else:
-			print("✅ VALIDATION SUCCESSFUL")
+			print_and_log("✅ VALIDATION SUCCESSFUL")
 
 
 # Define input directory and output directory
@@ -1131,11 +1138,11 @@ LOCAL_MODE = True  	# Set to True for local usage. It will be faster, autofix fe
 					# but you must provide correct BASE_PATH for VCMI's source directory.
 					# Set it to False if you don't have local VCMI source.
 
-AUTOFIX = True		# Available only in LOCAL_MODE. Enable this to auto-format validated json files. 
+if LOCAL_MODE:
+	AUTOFIX = True	# Available only in LOCAL_MODE. Enable this to auto-format validated json files. 
 					# Converts CRLFs to LFs, ensures trailing line at the end of the file, 
 					# makes some basic json structure re-formatting
-
-if LOCAL_MODE:
+	LOG_FILE_PATH = r"/home/manfred/Programowanie/VCMI/vcmi_validator_log.txt"
 	BASE_PATH = Path("/home/manfred/Programowanie/VCMI/source/")
 	BASE_CONFIG_PATH = BASE_PATH / "config"
 	SCHEMAS_PATH = BASE_CONFIG_PATH / "schemas"
@@ -1196,10 +1203,15 @@ if __name__ == "__main__":
 	)
 	args = parser.parse_args()
 
+	if LOCAL_MODE and LOG_FILE_PATH and not os.path.exists(LOG_FILE_PATH):
+		with open(LOG_FILE_PATH, "w", encoding="utf-8") as f:
+			f.write(f"# Log file created at {LOG_FILE_PATH}\n")
+		
+
 	if args.extract_patches:
 		extract_all_patches()
-		print("\nPatch extraction completed.")
+		print_and_log("\nPatch extraction completed.")
 	else:
 		process_json_files(INPUT_DIR)
-		print("\nValidation completed.")
+		print_and_log("\nValidation completed.")
 
