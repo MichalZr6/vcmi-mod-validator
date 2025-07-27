@@ -676,12 +676,12 @@ def collect_and_parse_json_files(json_files_data: dict, mod_json_data: dict, bas
 	for key, entry in mod_json_data.items():
 		if key not in ENTRY_SCHEMA_MAP:
 			continue
-		if not isinstance(entry, list):
-			continue
-
-		for value in entry:
-			if looks_like_path(value):
-				try_parse_relative_json(value, base_dir, json_files_data[key], failed_paths)			
+		if isinstance(entry, list):
+			for value in entry:
+				if looks_like_path(value):
+					try_parse_relative_json(value, base_dir, json_files_data[key], failed_paths)
+		elif isinstance(entry, dict):
+			json_files_data[key] = entry	
 
 	return json_files_data, failed_paths
 
@@ -990,6 +990,16 @@ def inherit_town_buildings(data: dict, buildings_library: dict) -> dict:
 	return data
 
 
+def validate_settings_keys(mod_patch: dict, base_settings: dict, path: str = "settings"):
+	missing = []
+	for key, value in mod_patch.items():
+		full_path = f"{path}.{key}"
+		if key not in base_settings:
+			missing.append(full_path)
+		elif isinstance(value, dict) and isinstance(base_settings.get(key), dict):
+			missing += validate_settings_keys(value, base_settings[key], full_path)
+	return missing
+
 
 def process_json_files(mod_root: str):
 	validation_failed = False
@@ -1091,6 +1101,13 @@ def process_json_files(mod_root: str):
 
 			for base_key, base_entry_data in base_data.items():
 				merged_data[base_key] = deepcopy(base_entry_data)
+
+			if key == "settings":
+				missing_keys = validate_settings_keys(mod_data, base_data)
+				if missing_keys:
+					for k in missing_keys:
+						track_status(f"❌ Unknown settings key '{k}' used in mod", f" at {k}")
+				continue
 
 			if key in h3_base_json_files_data:
 				h3_base_data = h3_base_json_files_data[key]
