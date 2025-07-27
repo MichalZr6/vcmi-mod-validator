@@ -1116,10 +1116,7 @@ def process_json_files(mod_root: str):
 					merged = merged_data[h3_key]
 					# Inject gainChance when missing to satisfy required field in schema
 					if key == "skills" and "gainChance" not in merged:
-						if "base" in merged and "gainChance" in merged["base"]:
-							merged["gainChance"] = deepcopy(merged["base"]["gainChance"])
-						else:
-							merged["gainChance"] = {"might": 0, "magic": 0}
+						merged["gainChance"] = {"might": 0, "magic": 0}
 
 			for _, mod_entry_data in mod_data.items():
 				for entry_id, entry in mod_entry_data.items():
@@ -1154,7 +1151,7 @@ def process_json_files(mod_root: str):
 
 
 # Define input directory and output directory
-INPUT_DIR = r"/home/manfred/Programowanie/VCMI/mods/tavern-invite"
+INPUT_DIR = r"/home/manfred/Programowanie/VCMI/mods/wake-of-gods"
 EXTRACTED_CONFIG_DIR = r"/home/manfred/.cache/vcmi/extracted/configuration"
 PATCHES_DIR = Path("h3_data/preprocessed_h3_patches")
 
