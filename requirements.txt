@@ -1,2 +1,3 @@
 jsonschema
 jstyleson
+json5
