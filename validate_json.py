@@ -1133,6 +1133,8 @@ def process_json_files(mod_root: str):
 	for json_file in other_json_paths:
 		total_files += 1
 		lines, json_data, status = load_and_parse_json(json_file)
+		if "🔧" in status:
+			try_autofix_json_formatting(lines, json_file)
 		track_status(status)
 
 	print_and_log("\n🔍 Validation summary:")
