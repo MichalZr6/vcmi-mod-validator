@@ -393,7 +393,20 @@ def flatten_nested_lists(obj):
 	return obj
 
 
-def collect_and_parse_H3_config_files() -> tuple[dict, list]:
+def collect_and_parse_H3_config_files(lookup_key: str = "") -> tuple[dict[str, dict], list[tuple[str, str]]]:
+	"""
+	Loads and parses JSON patch files from H3 base patches directory (PATCHES_DIR).
+	Each file is expected to match a schema entry name (e.g. 'creatures.json' -> 'creatures').
+
+	Parameters:
+	- lookup_key (str): Optional. If provided, only loads the patch file matching this key (e.g. 'creatures').
+	  If empty, loads all matching patch files.
+
+	Returns:
+	- tuple:
+	  - json_files_data (dict[str, dict]): Dictionary of loaded patch data with keys derived from filenames (without .json).
+	  - failed_paths (list[tuple[str, str]]): List of (file_path, error message) for files that failed to load or parse.
+	"""
 	json_files_data = {}
 	failed_paths = []
 
@@ -402,91 +415,131 @@ def collect_and_parse_H3_config_files() -> tuple[dict, list]:
 
 	for root, _, files in os.walk(PATCHES_DIR):
 		for fname in files:
-			if fname.endswith(".json"):
-				fp = os.path.join(root, fname)
-				basename = fname[:-5]
+			if not fname.endswith(".json"):
+				continue
+
+			basename = fname[:-5]
+			if lookup_key and basename != lookup_key:
+				continue
+
+			fp = os.path.join(root, fname)
+			try:
+				if VERBOSE:
+					print_and_log(f"Reading: {fp}")
 				_, json_data, status = load_and_parse_json(fp)
 				if status[0] != "❌":
-					json_files_data[basename] = json_data
+					json_files_data = json_data
 				else:
 					failed_paths.append((fp, status))
+			except Exception as e:
+				failed_paths.append((fp, f"{e.__class__.__name__}: {shorten_message(str(e))}"))
 
 	return json_files_data, failed_paths
 
 
-def collect_and_parse_local_base_config_files() -> tuple[dict[str, dict], list[tuple[str, str]]]:
-	json_files_data = {key: {} for key in ENTRY_SCHEMA_MAP}
+
+def collect_and_parse_local_base_config_files(json_files_data: dict, lookup_key: str = "") -> tuple[dict[str, dict], list[tuple[str, str]]]:
+	"""
+	Loads and parses local base configuration JSON files from BASE_CONFIG_PATH.
+	If `lookup_key` is provided, only loads data for that specific key (e.g. 'creatures').
+	Otherwise, iterates over all keys in ENTRY_SCHEMA_MAP.
+
+	Returns:
+	- tuple:
+	  - json_files_data (dict[str, dict]): Updated input dictionary with parsed data merged in.
+	  - failed_paths (list[tuple[str, str]]): List of (file_path, error message) for failed loads.
+	"""
 	failed_paths = []
 
 	if not BASE_CONFIG_PATH or not os.path.isdir(BASE_CONFIG_PATH):
 		print_and_log("⚠️ BASE_CONFIG_PATH is not a valid directory. Will use remote logic to collect base data.")
-		return collect_and_parse_base_config_files()
+		return collect_and_parse_base_config_files(json_files_data, lookup_key)
+
+	target_keys = [lookup_key] if lookup_key else list(ENTRY_SCHEMA_MAP)
+
+	for key in target_keys:
+		json_files_data.setdefault(key, {})
 
 	for root, _, files in os.walk(BASE_CONFIG_PATH):
 		for fname in files:
-			if fname.endswith(".json"):
-				fp = os.path.join(root, fname)
-				if 'schemas' in fp:
-					continue
+			if not fname.endswith(".json"):
+				continue
+			fp = os.path.join(root, fname)
+			if 'schemas' in fp:
+				continue
 
-				if VERBOSE:
-					print_and_log(f"Reading base config data from: {fp}")
-				
-				try:
-					_, json_data, status = load_and_parse_json(fp)
-					if status[0] == "❌":
-						failed_paths.append((fp, status))
+			is_settings_file = "gameConfig" in fp
+			for key in target_keys:
+				if key in fp or is_settings_file:
+					try:
+						if VERBOSE:
+							print_and_log(f"Reading: {fp}")
+						_, json_data, status = load_and_parse_json(fp)
+						if status[0] == "❌":
+							failed_paths.append((fp, status))
+							continue
+					except Exception as e:
+						failed_paths.append((fp, f"{e.__class__.__name__}: {shorten_message(str(e))}"))
 						continue
-				except Exception as e:
-					failed_paths.append((fp, f"{e.__class__.__name__}: {shorten_message(str(e))}"))
-					continue
 
-				# special case
-				if "gameConfig.json" in fp:
-					json_files_data["settings"].update(json_data["settings"])
-					continue
-
-				for key in ENTRY_SCHEMA_MAP:
-					if key in fp:
-						json_files_data[key].update(json_data)
+					target_key = "settings" if is_settings_file else key
+					json_files_data.setdefault(target_key, {})
+					json_files_data[target_key].update(json_data)
 
 	return json_files_data, failed_paths
 
 
-def collect_and_parse_base_config_files() -> tuple[dict[str, dict], list[tuple[str, str]]]:
-	json_files_data = {key: {} for key in ENTRY_SCHEMA_MAP}
+def collect_and_parse_base_config_files(json_files_data: dict, lookup_key: str = "") -> tuple[dict[str, dict], list[tuple[str, str]]]:
+	"""
+	Fetches and parses base configuration JSON files from the VCMI repository.
+
+	Parameters:
+	- json_files_data (dict): A dictionary of parsed JSON data per key (e.g., "creatures", "objects", etc.)
+	  which will be updated with the fetched base configuration data.
+	- lookup_key (str): Optional. If provided, only base config files related to this key will be fetched and parsed.
+	  If empty, config files for all keys defined in ENTRY_SCHEMA_MAP will be processed.
+
+	Returns:
+	- tuple:
+	  - Updated json_files_data (dict[str, dict]): Dictionary containing merged base configuration data.
+	  - failed_paths (list[tuple[str, str]]): List of (url, error message) for paths that failed to load or parse.
+	"""
+
 	failed_paths = []
 	assert REPO_TREE is not None, "VCMI repo tree must be provided"
 
 	all_paths = {entry["path"]: entry["type"] for entry in REPO_TREE}
+
+	keys_to_check = [lookup_key] if lookup_key else list(ENTRY_SCHEMA_MAP)
+
 	json_file_paths = [
 		path for path, type_ in all_paths.items()
 		if path.startswith("config/")
 		and path.endswith(".json")
-		and any(f"config/{key}/" in path or path == f"config/{key}.json" for key in ENTRY_SCHEMA_MAP)
+		and not 'schemas' in path
+		and any(f"config/{key}/" in path or path == f"config/{key}.json" or (key == "settings" and "gameConfig" in path) for key in keys_to_check)
 	]
 
-	for path in json_file_paths:
-		if VERBOSE:
-			print_and_log(f"Reading base config data from: {path}")
-		full_url = f"{VCMI_URL}/{path}"
-		try:
-			_, json_data, status = load_and_parse_json(full_url)
-			if status[0] == "❌":
-				failed_paths.append((full_url, status))
-				continue
-		except Exception as e:
-			failed_paths.append((full_url, f"{e.__class__.__name__}: {shorten_message(str(e))}"))
-			continue
+	for fp in json_file_paths:
+		full_url = f"{VCMI_URL}/{fp}"
 
-		# special case
-		if "gameConfig.json" in path:
-			json_files_data["settings"].update(json_data["settings"])
-			continue
+		is_settings_file = "gameConfig" in fp
+		for key in keys_to_check:
+			if key in fp or is_settings_file:
+				try:
+					if VERBOSE:
+						print_and_log(f"Reading: {full_url}")
+					_, json_data, status = load_and_parse_json(full_url)
+					if status.startswith("❌"):
+						failed_paths.append((full_url, status))
+						continue
+				except Exception as e:
+					failed_paths.append((full_url, f"{e.__class__.__name__}: {shorten_message(str(e))}"))
+					continue
 
-		for key in ENTRY_SCHEMA_MAP:
-			if key in path:
-				json_files_data[key].update(json_data)
+				target_key = "settings" if is_settings_file else key
+				json_files_data.setdefault(target_key, {})
+				json_files_data[target_key].update(json_data)
 
 	return json_files_data, failed_paths
 
@@ -629,13 +682,15 @@ def collect_and_parse_extracted_config_files() -> tuple[dict, list]:
 
 
 def extract_all_patches():
-	h3_base_data, errors = collect_and_parse_extracted_config_files()
+	h3_base_data = {}
+	h3_base_data, errors = collect_and_parse_extracted_config_files(h3_base_data)
 	for path, reason in errors:
 		print_and_log(f"❌ {path} - {reason}")
 	if errors:
 		return
 
-	vcmi_base_data, errors = collect_and_parse_base_config_files()
+	vcmi_base_data = {}
+	vcmi_base_data, errors = collect_and_parse_base_config_files(vcmi_base_data)
 	for path, reason in errors:
 		print_and_log(f"❌ {path} - {reason}")
 	if errors:
@@ -1015,6 +1070,18 @@ def process_json_files(mod_root: str):
 		if VERBOSE or "❌" in status:
 			print_status(status, label)
 
+
+	print_and_log("Collecting mod's .json paths from input directory...")
+	mod_json_paths = []
+	other_json_paths = []
+	for root, _, files in os.walk(mod_root):
+		for file in files:
+			if file == "mod.json":
+				mod_json_paths.append(os.path.join(root, file))
+			elif file.endswith(".json"):
+				other_json_paths.append(os.path.join(root, file))
+
+
 	if not LOCAL_MODE or not os.path.isdir(SCHEMAS_PATH) or not os.path.isdir(BASE_PATH):
 		print_and_log("Loading main repo tree...")
 		if not load_repo_tree():
@@ -1033,34 +1100,7 @@ def process_json_files(mod_root: str):
 		print_and_log("Failed to parse schemas. Aborting.")
 		return
 
-	print_and_log("Collecting mod's .json paths from input directory...")
-	mod_json_paths = []
-	other_json_paths = []
-	for root, _, files in os.walk(mod_root):
-		for file in files:
-			if file == "mod.json":
-				mod_json_paths.append(os.path.join(root, file))
-			elif file.endswith(".json"):
-				other_json_paths.append(os.path.join(root, file))
-
-	print_and_log("Loading base VCMI config files...")
-	if LOCAL_MODE:
-		base_json_files_data, base_errors = collect_and_parse_local_base_config_files()
-	else:
-		base_json_files_data, base_errors = collect_and_parse_base_config_files()
-
-	for path, reason in base_errors:
-		track_status(f"❌ {path} - {reason}")
-
-	print_and_log("Loading H3 base config patches...")
-	h3_base_json_files_data, h3_errors = collect_and_parse_H3_config_files()
-	for path, reason in h3_errors:
-		track_status(f"❌ {path} - {reason}")
-	if h3_errors:
-		print_and_log("H3 patches loading failed. Aborting.")
-		return
-
-	print_and_log("Validating mods...")
+	print_and_log("Validating mod.json files...")
 	mod_json_files_data = {}
 	for mod_json_path in mod_json_paths:
 		total_files += 1
@@ -1085,31 +1125,47 @@ def process_json_files(mod_root: str):
 
 	# Build merged full config by combining mod and base files
 	print_and_log("Validating all mod's files merged with base config files...")
+	base_json_files_data = {}
 	for key in ENTRY_SCHEMA_MAP:
 		mod_data = mod_json_files_data[key]
-		base_data = base_json_files_data[key]
-		if base_data and mod_data:
+		if mod_data:
+			print_and_log(f"Loading needed base VCMI config files for '{key}'")
+			if LOCAL_MODE:
+				base_json_files_data, base_errors = collect_and_parse_local_base_config_files(base_json_files_data, key)
+			else:
+				base_json_files_data, base_errors = collect_and_parse_base_config_files(base_json_files_data, key)
+
+			for path, reason in base_errors:
+				track_status(f"❌ {path} - {reason}")
+
+			print_and_log(f"Loading needed H3 base config patches for '{key}'")
+			h3_base_data, h3_errors = collect_and_parse_H3_config_files(key)
+			for path, reason in h3_errors:
+				track_status(f"❌ {path} - {reason}")
+			if h3_errors:
+				print_and_log("H3 patches loading failed. Aborting.")
+				return
+
+			
+			print_and_log(f"Validating all mod's files merged with base config files for '{key}'")
 			merged_data = {}
 			schema_dict = get_schema(key)
 
-			for base_key, base_entry_data in base_data.items():
+			for base_key, base_entry_data in base_json_files_data[key].items():
 				merged_data[base_key] = deepcopy(base_entry_data)
 
 			if key == "settings":
-				missing_keys = validate_settings_keys(mod_data, base_data)
+				missing_keys = validate_settings_keys(mod_data, base_json_files_data[key])
 				if missing_keys:
 					for k in missing_keys:
 						track_status(f"❌ Unknown settings key '{k}' used in mod", f" at {k}")
 				continue
 
-			if key in h3_base_json_files_data:
-				h3_base_data = h3_base_json_files_data[key]
-				for h3_key, h3_base_entry_data in h3_base_data.items():
-					merged_data[h3_key] = deep_merge(merged_data.get(h3_key, {}), h3_base_entry_data)
-					merged = merged_data[h3_key]
-					# Inject gainChance when missing to satisfy required field in schema
-					if key == "skills" and "gainChance" not in merged:
-						merged["gainChance"] = {"might": 0, "magic": 0}
+			for h3_key, h3_base_entry_data in h3_base_data.items():
+				merged_data[h3_key] = deep_merge(merged_data.get(h3_key, {}), h3_base_entry_data)
+				# Inject gainChance when missing to satisfy required field in schema
+				if key == "skills" and "gainChance" not in merged_data:
+					merged_data["gainChance"] = {"might": 0, "magic": 0}
 
 			for _, mod_entry_data in mod_data.items():
 				for entry_id, entry in mod_entry_data.items():
@@ -1121,6 +1177,7 @@ def process_json_files(mod_root: str):
 				data = remove_null_base_entries(data)
 				status = validate_json_schema(data, '', schema_dict)
 				track_status(status, f" for {merged_id}")
+
 
 	print_and_log("Validating other JSON files...")
 	for json_file in other_json_paths:
