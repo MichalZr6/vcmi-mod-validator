@@ -113,7 +113,7 @@ def load_and_parse_json(file_path: str) -> tuple:
 		file_path (str): Path or URL to the JSON file.
 
 	Returns:
-		tuple: (json_entries, status)
+		tuple: (raw_lines, json_entries, status)
 	"""
 	try:
 		if file_path.startswith("http://") or file_path.startswith("https://"):
@@ -152,16 +152,6 @@ def load_and_parse_json(file_path: str) -> tuple:
 
 
 def save_to_json_file(lines: list, file_path: str):
-	"""
-	Writes the provided lines back to the file, ensuring proper formatting and handling of newlines.
-
-	Args:
-		lines (list): The list of lines to be written to the file.
-		file_path (str): The path to the file where the lines will be saved.
-
-	Returns:
-		None
-	"""
 	try:
 		with open(file_path, 'w', encoding='utf-8', newline='\n') as file:
 			file.writelines(lines)
@@ -294,6 +284,7 @@ def fix_version_in_lines(lines: list[str], new_version: str) -> bool:
 		)
 		return True
 	return False
+
 
 def load_repo_tree() -> bool:
 	global REPO_TREE
@@ -802,6 +793,8 @@ def load_and_validate_schemas_local() -> list[str]:
 			json_data = json5.loads(stripped)
 			json_data["$id"] = schema_id
 			SCHEMA_CACHE[schema_id] = json_data
+			if VERBOSE:
+				print(f"Schema: {schema_id} - loaded.")
 		except json.JSONDecodeError as e:
 			errors.append(f"{file_path}: JSONDecodeError: {e.msg} at line {e.lineno} column {e.colno}")
 		except Exception as e:
@@ -1040,7 +1033,7 @@ def process_json_files(mod_root: str):
 		print_and_log("Failed to parse schemas. Aborting.")
 		return
 
-	print_and_log("Collecting .json paths...")
+	print_and_log("Collecting mod's .json paths from input directory...")
 	mod_json_paths = []
 	other_json_paths = []
 	for root, _, files in os.walk(mod_root):
@@ -1050,7 +1043,7 @@ def process_json_files(mod_root: str):
 			elif file.endswith(".json"):
 				other_json_paths.append(os.path.join(root, file))
 
-	print_and_log("Loading base config files...")
+	print_and_log("Loading base VCMI config files...")
 	if LOCAL_MODE:
 		base_json_files_data, base_errors = collect_and_parse_local_base_config_files()
 	else:
