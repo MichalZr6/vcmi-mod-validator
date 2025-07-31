@@ -1,18 +1,14 @@
 import os
 import re
-import sys
 import json
 import difflib
 import inspect
 import argparse
-from urllib.request import urlopen
-from urllib.error import HTTPError
 import urllib.parse
-from urllib.parse import urlparse
 
 import json5
 import jsonschema
-from jsonschema import RefResolver, validators
+from jsonschema import RefResolver
 from jsonschema.validators import validator_for
 
 from pathlib import Path
@@ -28,14 +24,16 @@ def print_and_log(msg: str):
 
 def find_line_number(pattern, lines):
 	"""
-	Finds the line number of the first line in `lines` that matches the given regex pattern.
+	Finds the line number of the first line in `lines` that matches
+	the given regex pattern.
 
 	Args:
 		pattern (str): The regex pattern to search for.
 		lines (list): The list of lines to search within.
 
 	Returns:
-		int: The 1-based line number of the first matching line, or 0 if no match is found.
+		int: The 1-based line number of the first matching line, or 0 if no
+		match is found.
 	"""
 	for idx, line in enumerate(lines, start=1):
 		if re.search(pattern, line):
@@ -45,7 +43,8 @@ def find_line_number(pattern, lines):
 
 def strip_comments(content: str) -> str:
 	"""
-	Removes // and /* */ comments from JSON-like content without affecting string literals.
+	Removes // and /* */ comments from JSON-like content without affecting
+	string literals.
 	"""
 	result = []
 	in_string = False
@@ -107,7 +106,8 @@ def strip_comments(content: str) -> str:
 
 def load_and_parse_json(file_path: str) -> tuple:
 	"""
-	Reads a JSON file (local or remote) and extracts its content into a list of lines and a dictionary of JSON entries.
+	Reads a JSON file (local or remote) and extracts its content
+	into a list of lines and a dictionary of JSON entries.
 
 	Args:
 		file_path (str): Path or URL to the JSON file.
@@ -142,11 +142,14 @@ def load_and_parse_json(file_path: str) -> tuple:
 	except FileNotFoundError:
 		status = f"❌ load_and_parse_json: File not found: {file_path}"
 	except json.JSONDecodeError as e:
-		status = f"❌ JSONDecodeError: {e.msg} at line {e.lineno} column {e.colno} for file {file_path}"
+		status = f"❌ JSONDecodeError: {e.msg} at line {e.lineno} \
+		column {e.colno} for file {file_path}"
 	except ValueError as e:
-		status = f"❌ load_and_parse_json: Invalid JSON5 format in file {file_path}: {shorten_message(e)}"
+		status = f"❌ load_and_parse_json: Invalid JSON5 \
+			format in file {file_path}: {shorten_message(e)}"
 	except Exception as e:
-		status = f"❌ load_and_parse_json: Unexpected error while reading JSON file {file_path}: {shorten_message(e)}"
+		status = f"❌ load_and_parse_json: Unexpected error while \
+			reading JSON file {file_path}: {shorten_message(e)}"
 
 	return [], {}, status
 
@@ -157,22 +160,23 @@ def save_to_json_file(lines: list, file_path: str):
 			file.writelines(lines)
 
 	except Exception as e:
-		print_and_log(f"\tERROR: {inspect.currentframe().f_code.co_name}: Failed to save file {file_path}: {shorten_message(e)}")
+		print_and_log(f"\tERROR: {inspect.currentframe().f_code.co_name}: \
+			Failed to save file {file_path}: {shorten_message(e)}")
 
 
 def try_autofix_json_formatting(lines: list, file_path: str):
-		if LOCAL_MODE:
-			save_to_json_file(lines, file_path)
-		elif AUTOFIX:
-				print_and_log("AUTOFIX global variable is set to True but LOCAL_MODE is False \
-					- autofixing is not going to be applied.")
+	if LOCAL_MODE:
+		save_to_json_file(lines, file_path)
+	elif AUTOFIX:
+		print_and_log("AUTOFIX global variable is set to True but LOCAL_MODE is False \
+			- autofixing is not going to be applied.")
 
 
 def ensure_json_format(lines: list) -> tuple:
 	"""
 	Ensures proper formatting for a JSON file's lines.
 
-	Returns: 
+	Returns:
 		tuple: (modified_lines, status_message)
 	"""
 	if not lines:
@@ -186,7 +190,7 @@ def ensure_json_format(lines: list) -> tuple:
 	formatted_lines = []
 	messages = []
 
-	modified_lines = [] # indices of modified lines
+	modified_lines = []  # indices of modified lines
 	modified_lines_LF = []
 	for idx, line in enumerate(lines):
 		original_line = line
@@ -204,10 +208,12 @@ def ensure_json_format(lines: list) -> tuple:
 		formatted_lines.append(line)
 
 	if modified_lines_LF:
-		messages.append(f"{icon} Fix CRLF line ending to LF on lines: {modified_lines_LF}")
+		messages.append(f"{icon} Fix CRLF line ending to LF \
+			on lines: {modified_lines_LF}")
 
 	if modified_lines:
-		messages.append(f"{icon} Remove trailing space before ',' on lines: {modified_lines}")
+		messages.append(f"{icon} Remove trailing space before ',' \
+			on lines: {modified_lines}")
 
 	# Add final newline if missing
 	if not formatted_lines[-1].endswith('\n'):
@@ -215,7 +221,6 @@ def ensure_json_format(lines: list) -> tuple:
 		messages.append(f"{icon} Append trailing newline at the end of file")
 
 	# Align " : formatting
-	pattern = re.compile(r'"\s*:\s*(?={|\[|")')  # fix bad spacing before : or after :
 	modified_lines.clear()
 	for i, line in enumerate(formatted_lines):
 		new_line = re.sub(r'"\s*:\s*', '" : ', line)
@@ -266,7 +271,8 @@ def parse_version(ver: str) -> tuple:
 
 
 def get_latest_changelog_version(changelog: dict) -> str | None:
-	"""Return the latest valid version string from changelog dict, or None if no valid ones exist."""
+	"""Return the latest valid version string from changelog dict,
+		or None if no valid ones exist."""
 	valid_keys = [k for k in changelog.keys() if is_valid_version(k)]
 	if not valid_keys:
 		return None
@@ -274,7 +280,8 @@ def get_latest_changelog_version(changelog: dict) -> str | None:
 
 
 def fix_version_in_lines(lines: list[str], new_version: str) -> bool:
-	"""Find and replace the version line in the given lines. Returns True if successful."""
+	"""Find and replace the version line in the given lines.
+	Returns True if successful."""
 	version_line_num = find_line_number(r'"version"\s*:', lines)
 	if version_line_num:
 		lines[version_line_num - 1] = re.sub(
@@ -312,22 +319,26 @@ def get_schema(key: str) -> dict:
 	if schema_path in SCHEMA_CACHE:
 		return SCHEMA_CACHE[schema_path]
 
-	raise FileNotFoundError(f"Schema not loaded or missing from SCHEMA_CACHE: {schema_path}")
+	raise FileNotFoundError(f"Schema not loaded or missing from \
+		SCHEMA_CACHE: {schema_path}")
 
 
-def shorten_message(msg: str, limit: int = 260, head: int = 130, tail: int = 130) -> str:
+def shorten_message(msg: str, limit: int = 260, head: int = 130,
+					tail: int = 130) -> str:
 	if len(msg) > limit:
 		return msg[:head] + " (trimmed...) " + msg[-tail:]
 	return msg
 
 
-def validate_json_schema(json_entries: dict, json_path: str, schema_dict: dict) -> str:
+def validate_json_schema(json_entries: dict, json_path: str,
+						schema_dict: dict) -> str:
 	assert SCHEMA_CACHE is not None, "Schema store must be provided"
 
 	try:
 		base_uri = schema_dict.get("$id")
 
-		resolver = RefResolver(base_uri=base_uri, referrer=schema_dict, store=SCHEMA_CACHE)
+		resolver = RefResolver(base_uri=base_uri, referrer=schema_dict,
+								store=SCHEMA_CACHE)
 
 		validator_class = validator_for(schema_dict)
 		validator_class.check_schema(schema_dict)
@@ -335,7 +346,7 @@ def validate_json_schema(json_entries: dict, json_path: str, schema_dict: dict) 
 
 		validator.validate(instance=json_entries)
 
-		return f"✅ Schema validation passed"
+		return "✅ Schema validation passed"
 
 	except jsonschema.exceptions.ValidationError as e:
 		path_str = " → ".join(map(str, e.absolute_path)) or "<root>"
@@ -345,7 +356,8 @@ def validate_json_schema(json_entries: dict, json_path: str, schema_dict: dict) 
 		if e.validator == "additionalProperties":
 			unexpected = e.message.split("'")[1]
 			allowed_keys = list(e.schema.get("properties", {}).keys())
-			close_matches = difflib.get_close_matches(unexpected, allowed_keys, n=1, cutoff=0.75)
+			close_matches = difflib.get_close_matches(unexpected, allowed_keys,
+								n=1, cutoff=0.75)
 			if close_matches:
 				suggestion = close_matches[0]
 				error_msg += f" (Did you mean '{suggestion}'?)"
@@ -355,32 +367,38 @@ def validate_json_schema(json_entries: dict, json_path: str, schema_dict: dict) 
 
 	except Exception as e:
 		msg = shorten_message(str(e))
-		return f"❌ Unexpected error during schema validation for file {json_path}: {e.__class__.__name__}: {msg}"
+		return f"❌ Unexpected error during schema validation \
+			for file {json_path}: {e.__class__.__name__}: {msg}"
 
 
 def validate_and_fix_mod_version(lines, json_entries, file_path) -> str:
 	"""
-	Validates and optionally fixes 'version' in mod.json based on changelog (if present).
+	Validates and optionally fixes 'version' in mod.json based
+	on changelog (if present).
 	"""
 	try:
 		version = json_entries.get("version")
-		# We skip check if 'version' key exists. Will be caught by schema validator as it is required field.
+		# We skip check if 'version' key exists. Will be caught by 
+		# schema validator as it is required field.
 		if not version:
 			return "⚠️ Empty 'version' value. VCMI will treat it as 1.0"
 		if not is_valid_version(version):
-			return f"❌ Invalid 'version': {version} (expected number_A.number_B.number_C format)"
+			return f"❌ Invalid 'version': {version} \
+				(expected number_A.number_B.number_C format)"
 
 		changelog = json_entries.get("changelog")
 		if isinstance(changelog, dict) and changelog:
 			latest_version = get_latest_changelog_version(changelog)
 			if latest_version and parse_version(version) != parse_version(latest_version):
 				if fix_version_in_lines(lines, latest_version):
-					return f"⚠️ Version mismatch — auto-fixing version in {file_path}: {version} -> {latest_version}"
+					return f"⚠️ Version mismatch — auto-fixing version \
+						in {file_path}: {version} -> {latest_version}"
 
 		return "✅ Version check: OK"
 
 	except Exception as e:
-		return (f"❌ Unexpected error during version validation:\t{inspect.currentframe().f_code.co_name}:"
+		return (f"❌ Unexpected error during version validation:\
+			\t{inspect.currentframe().f_code.co_name}:"
 				f"Error processing {file_path}: {shorten_message(e.message)}")
 
 
@@ -393,25 +411,31 @@ def flatten_nested_lists(obj):
 	return obj
 
 
-def collect_and_parse_H3_config_files(lookup_key: str = "") -> tuple[dict[str, dict], list[tuple[str, str]]]:
+def collect_and_parse_H3_config_files(lookup_key: str = "") -> \
+	tuple[dict[str, dict], list[tuple[str, str]]]:
 	"""
 	Loads and parses JSON patch files from H3 base patches directory (PATCHES_DIR).
-	Each file is expected to match a schema entry name (e.g. 'creatures.json' -> 'creatures').
+	Each file is expected to match a schema entry name
+	(e.g. 'creatures.json' -> 'creatures').
 
 	Parameters:
-	- lookup_key (str): Optional. If provided, only loads the patch file matching this key (e.g. 'creatures').
+	- lookup_key (str): Optional. If provided, only loads
+	  the patch file matching this key (e.g. 'creatures').
 	  If empty, loads all matching patch files.
 
 	Returns:
 	- tuple:
-	  - json_files_data (dict[str, dict]): Dictionary of loaded patch data with keys derived from filenames (without .json).
-	  - failed_paths (list[tuple[str, str]]): List of (file_path, error message) for files that failed to load or parse.
+	  - json_files_data (dict[str, dict]): Dictionary of loaded patch data with
+	  keys derived from filenames (without .json).
+	  - failed_paths (list[tuple[str, str]]): List of (file_path, error message)
+	  for files that failed to load or parse.
 	"""
 	json_files_data = {}
 	failed_paths = []
 
 	if not PATCHES_DIR or not os.path.isdir(PATCHES_DIR):
-		return {}, [("PATCHES_DIR is not a valid directory.", f"PATCHES_DIR: {PATCHES_DIR}")]
+		return {}, [("PATCHES_DIR is not a valid directory.",
+			f"PATCHES_DIR: {PATCHES_DIR}")]
 
 	for root, _, files in os.walk(PATCHES_DIR):
 		for fname in files:
@@ -437,22 +461,26 @@ def collect_and_parse_H3_config_files(lookup_key: str = "") -> tuple[dict[str, d
 	return json_files_data, failed_paths
 
 
-
-def collect_and_parse_local_base_config_files(json_files_data: dict, lookup_key: str = "") -> tuple[dict[str, dict], list[tuple[str, str]]]:
+def collect_and_parse_local_base_config_files(json_files_data: dict,
+				lookup_key: str = "") -> tuple[dict[str, dict], list[tuple[str, str]]]:
 	"""
 	Loads and parses local base configuration JSON files from BASE_CONFIG_PATH.
-	If `lookup_key` is provided, only loads data for that specific key (e.g. 'creatures').
+	If `lookup_key` is provided, only loads data for that specific key
+	(e.g. 'creatures').
 	Otherwise, iterates over all keys in ENTRY_SCHEMA_MAP.
 
 	Returns:
 	- tuple:
-	  - json_files_data (dict[str, dict]): Updated input dictionary with parsed data merged in.
-	  - failed_paths (list[tuple[str, str]]): List of (file_path, error message) for failed loads.
+		- json_files_data (dict[str, dict]): Updated input dictionary
+		with parsed data merged in.
+		- failed_paths (list[tuple[str, str]]): List of (file_path, error message)
+		for failed loads.
 	"""
 	failed_paths = []
 
 	if not BASE_CONFIG_PATH or not os.path.isdir(BASE_CONFIG_PATH):
-		print_and_log("⚠️ BASE_CONFIG_PATH is not a valid directory. Will use remote logic to collect base data.")
+		print_and_log("⚠️ BASE_CONFIG_PATH is not a valid directory. \
+			Will use remote logic to collect base data.")
 		return collect_and_parse_base_config_files(json_files_data, lookup_key)
 
 	target_keys = [lookup_key] if lookup_key else list(ENTRY_SCHEMA_MAP)
@@ -479,7 +507,8 @@ def collect_and_parse_local_base_config_files(json_files_data: dict, lookup_key:
 							failed_paths.append((fp, status))
 							continue
 					except Exception as e:
-						failed_paths.append((fp, f"{e.__class__.__name__}: {shorten_message(str(e))}"))
+						failed_paths.append((fp, f"{e.__class__.__name__}: \
+							{shorten_message(str(e))}"))
 						continue
 
 					target_key = "settings" if is_settings_file else key
@@ -489,20 +518,25 @@ def collect_and_parse_local_base_config_files(json_files_data: dict, lookup_key:
 	return json_files_data, failed_paths
 
 
-def collect_and_parse_base_config_files(json_files_data: dict, lookup_key: str = "") -> tuple[dict[str, dict], list[tuple[str, str]]]:
+def collect_and_parse_base_config_files(json_files_data: dict,
+				lookup_key: str = "") -> tuple[dict[str, dict], list[tuple[str, str]]]:
 	"""
 	Fetches and parses base configuration JSON files from the VCMI repository.
 
 	Parameters:
-	- json_files_data (dict): A dictionary of parsed JSON data per key (e.g., "creatures", "objects", etc.)
-	  which will be updated with the fetched base configuration data.
-	- lookup_key (str): Optional. If provided, only base config files related to this key will be fetched and parsed.
-	  If empty, config files for all keys defined in ENTRY_SCHEMA_MAP will be processed.
+	- json_files_data (dict): A dictionary of parsed JSON data per key
+		(e.g., "creatures", "objects", etc.)
+		which will be updated with the fetched base configuration data.
+	- lookup_key (str): Optional. If provided, only base config files related
+		to this key will be fetched and parsed.
+		If empty, config files for all keys defined in ENTRY_SCHEMA_MAP will be processed.
 
 	Returns:
 	- tuple:
-	  - Updated json_files_data (dict[str, dict]): Dictionary containing merged base configuration data.
-	  - failed_paths (list[tuple[str, str]]): List of (url, error message) for paths that failed to load or parse.
+		- Updated json_files_data (dict[str, dict]): Dictionary containing merged
+		base configuration data.
+		- failed_paths (list[tuple[str, str]]): List of (url, error message) for
+		paths that failed to load or parse.
 	"""
 
 	failed_paths = []
@@ -516,8 +550,9 @@ def collect_and_parse_base_config_files(json_files_data: dict, lookup_key: str =
 		path for path, type_ in all_paths.items()
 		if path.startswith("config/")
 		and path.endswith(".json")
-		and not 'schemas' in path
-		and any(f"config/{key}/" in path or path == f"config/{key}.json" or (key == "settings" and "gameConfig" in path) for key in keys_to_check)
+		and 'schemas' not in path
+		and any(f"config/{key}/" in path or path == f"config/{key}.json" or
+			(key == "settings" and "gameConfig" in path) for key in keys_to_check)
 	]
 
 	for fp in json_file_paths:
@@ -534,7 +569,8 @@ def collect_and_parse_base_config_files(json_files_data: dict, lookup_key: str =
 						failed_paths.append((full_url, status))
 						continue
 				except Exception as e:
-					failed_paths.append((full_url, f"{e.__class__.__name__}: {shorten_message(str(e))}"))
+					failed_paths.append((full_url, f"{e.__class__.__name__}: \
+						{shorten_message(str(e))}"))
 					continue
 
 				target_key = "settings" if is_settings_file else key
@@ -544,7 +580,8 @@ def collect_and_parse_base_config_files(json_files_data: dict, lookup_key: str =
 	return json_files_data, failed_paths
 
 
-def try_parse_relative_json(relative_path: str, base_dir: str, json_files_data: dict, failed_paths: set) -> bool:
+def try_parse_relative_json(relative_path: str, base_dir: str, 
+							json_files_data: dict, failed_paths: set) -> bool:
 	if not os.path.splitext(relative_path)[1]:
 		relative_path += ".json"
 
@@ -568,7 +605,8 @@ def try_parse_relative_json(relative_path: str, base_dir: str, json_files_data: 
 			if basename.lower() in lowered:
 				original = files[lowered.index(basename.lower())]
 				suggested_path = os.path.join(root, original)
-				print_and_log(f"⚠️ File at given path: {relative_path} was not found. Did you mean: {suggested_path}?")
+				print_and_log(f"⚠️ File at given path: {relative_path} was not found. \
+					Did you mean: {suggested_path}?")
 				candidate_path = suggested_path
 				break
 
@@ -593,12 +631,14 @@ def try_parse_relative_json(relative_path: str, base_dir: str, json_files_data: 
 			else:
 				failed_paths.add((candidate_path, status))
 		except Exception as e:
-			failed_paths.add((candidate_path, f"{e.__class__.__name__}: {shorten_message(e.args[0])}"))
+			failed_paths.add((candidate_path, f"{e.__class__.__name__}: \
+				{shorten_message(e.args[0])}"))
 		return False
 
 	# If no file was resolved
 	failed_paths.add((relative_path, f"❌ File not found in {base_dir}"))
 	return False
+
 
 def write_patch_file(name: str, data: dict):
 	if not data:
@@ -630,7 +670,8 @@ def extract_patch_data(h3_data: dict, base_data: dict) -> dict:
 	for path, base_entry in base_data.items():
 		for sub_entry_key, sub_entry in base_entry.items():
 			for h3_path, h3_entry in h3_data.items():
-				h3_sub_entry_key = os.path.splitext(os.path.basename(h3_path))[0].split(".")[-1].lower()
+				h3_sub_entry_key = \
+					os.path.splitext(os.path.basename(h3_path))[0].split(".")[-1].lower()
 				if sub_entry_key.lower() == h3_sub_entry_key:
 					patch = diff_dict(h3_entry, sub_entry)
 					if patch:
@@ -658,8 +699,8 @@ def collect_and_parse_extracted_config_files() -> tuple[dict, list]:
 			else:
 				failed_paths.append((fp, status))
 		except Exception as e:
-			failed_paths.append((fp, f"{e.__class__.__name__}:{shorten_message(e.args[0])}"))
-
+			failed_paths.append((fp, f"{e.__class__.__name__}: \
+				{shorten_message(e.args[0])}"))
 
 	for key in ENTRY_SCHEMA_MAP:
 		json_files_data[key] = {}
@@ -678,7 +719,6 @@ def collect_and_parse_extracted_config_files() -> tuple[dict, list]:
 			get_data(key, path + '.json', False)
 
 	return json_files_data, failed_paths
-
 
 
 def extract_all_patches():
@@ -703,7 +743,8 @@ def extract_all_patches():
 		write_patch_file(key, patch)
 
 
-def collect_and_parse_json_files(json_files_data: dict, mod_json_data: dict, base_dir: str) -> tuple[dict, set]:
+def collect_and_parse_json_files(json_files_data: dict, 
+								mod_json_data: dict, base_dir: str) -> tuple[dict, set]:
 	if not json_files_data:
 		json_files_data = {key: {} for key in ENTRY_SCHEMA_MAP}
 	failed_paths = set()
@@ -811,9 +852,11 @@ def merge_mod_data(entry_id: str, entry: dict, merged_data: dict) -> dict:
 	merged_data[normalized_id] = deep_merge(merged_data.get(normalized_id, {}), entry)
 	return merged_data
 
+
 def normalize_scoped_id(id_str: str) -> str:
 	# Strip the part before the colon (VCMI style: modnamespace:id)
 	return id_str.split(":", 1)[-1]
+
 
 def print_status(status: str | list[str], additional_info=""):
 	if isinstance(status, list):
@@ -832,7 +875,8 @@ def load_and_validate_schemas_local() -> list[str]:
 	global SCHEMA_CACHE
 
 	if not SCHEMAS_PATH or not os.path.isdir(SCHEMAS_PATH):
-		print_and_log("⚠️ SCHEMAS_PATH is not a valid directory. Will use remote logic to collect schema files.")
+		print_and_log("⚠️ SCHEMAS_PATH is not a valid directory. \
+			Will use remote logic to collect schema files.")
 		return load_and_validate_schemas()
 
 	for file_path in SCHEMAS_PATH.glob("*.json"):
@@ -851,9 +895,11 @@ def load_and_validate_schemas_local() -> list[str]:
 			if VERBOSE:
 				print(f"Schema: {schema_id} - loaded.")
 		except json.JSONDecodeError as e:
-			errors.append(f"{file_path}: JSONDecodeError: {e.msg} at line {e.lineno} column {e.colno}")
+			errors.append(f"{file_path}: JSONDecodeError: {e.msg} \
+				at line {e.lineno} column {e.colno}")
 		except Exception as e:
-			errors.append(f"{file_path}: {e.__class__.__name__}: {shorten_message(str(e))}")
+			errors.append(f"{file_path}: {e.__class__.__name__}: \
+				{shorten_message(str(e))}")
 
 	return errors
 
@@ -884,7 +930,8 @@ def load_and_validate_schemas() -> list[str]:
 				errors.append(f"Schema {url} validation error: {status}")
 
 		except json.JSONDecodeError as e:
-			errors.append(f"{url}: JSONDecodeError: {e.msg} at line {e.lineno} column {e.colno}")
+			errors.append(f"{url}: JSONDecodeError: {e.msg} at line \
+				{e.lineno} column {e.colno}")
 		except Exception as e:
 			errors.append(f"{url}: {e.__class__.__name__}: {e}")
 
@@ -1038,7 +1085,8 @@ def inherit_town_buildings(data: dict, buildings_library: dict) -> dict:
 	return data
 
 
-def validate_settings_keys(mod_patch: dict, base_settings: dict, path: str = "settings"):
+def validate_settings_keys(mod_patch: dict, base_settings: dict,
+							path: str = "settings"):
 	missing = []
 	for key, value in mod_patch.items():
 		full_path = f"{path}.{key}"
@@ -1070,7 +1118,6 @@ def process_json_files(mod_root: str):
 		if VERBOSE or "❌" in status:
 			print_status(status, label)
 
-
 	print_and_log("Collecting mod's .json paths from input directory...")
 	mod_json_paths = []
 	other_json_paths = []
@@ -1081,8 +1128,8 @@ def process_json_files(mod_root: str):
 			elif file.endswith(".json"):
 				other_json_paths.append(os.path.join(root, file))
 
-
-	if not LOCAL_MODE or not os.path.isdir(SCHEMAS_PATH) or not os.path.isdir(BASE_PATH):
+	if not LOCAL_MODE or not os.path.isdir(SCHEMAS_PATH) \
+		or not os.path.isdir(BASE_PATH):
 		print_and_log("Loading main repo tree...")
 		if not load_repo_tree():
 			print_and_log("❌ Failed to load repo tree.")
@@ -1113,13 +1160,15 @@ def process_json_files(mod_root: str):
 		status += validate_json_schema(mod_json_data, mod_json_path, get_schema('mod'))
 		track_status(status)
 
-		version_status = validate_and_fix_mod_version(mod_lines, mod_json_data, mod_json_path)
+		version_status = validate_and_fix_mod_version(mod_lines, mod_json_data,
+														mod_json_path)
 		if "🔧" in version_status:
 			try_autofix_json_formatting(mod_lines, mod_json_path)
 		track_status(version_status)
 
 		mod_json_files_data, parse_errors = \
-			collect_and_parse_json_files(mod_json_files_data, mod_json_data, os.path.dirname(mod_json_path))
+			collect_and_parse_json_files(mod_json_files_data, mod_json_data,
+											os.path.dirname(mod_json_path))
 		for path, reason in parse_errors:
 			track_status(f"❌ {path} - {reason}")
 
@@ -1131,9 +1180,11 @@ def process_json_files(mod_root: str):
 		if mod_data:
 			print_and_log(f"Loading needed base VCMI config files for '{key}'")
 			if LOCAL_MODE:
-				base_json_files_data, base_errors = collect_and_parse_local_base_config_files(base_json_files_data, key)
+				base_json_files_data, base_errors = \
+					collect_and_parse_local_base_config_files(base_json_files_data, key)
 			else:
-				base_json_files_data, base_errors = collect_and_parse_base_config_files(base_json_files_data, key)
+				base_json_files_data, base_errors = \
+					collect_and_parse_base_config_files(base_json_files_data, key)
 
 			for path, reason in base_errors:
 				track_status(f"❌ {path} - {reason}")
@@ -1146,8 +1197,8 @@ def process_json_files(mod_root: str):
 				print_and_log("H3 patches loading failed. Aborting.")
 				return
 
-			
-			print_and_log(f"Validating all mod's files merged with base config files for '{key}'")
+			print_and_log(f"Validating all mod's files merged with base config files \
+							for '{key}'")
 			merged_data = {}
 			schema_dict = get_schema(key)
 
@@ -1178,7 +1229,6 @@ def process_json_files(mod_root: str):
 				status = validate_json_schema(data, '', schema_dict)
 				track_status(status, f" for {merged_id}")
 
-
 	print_and_log("Validating other JSON files...")
 	for json_file in other_json_paths:
 		total_files += 1
@@ -1207,14 +1257,15 @@ INPUT_DIR = r"/home/manfred/Programowanie/VCMI/mods/wake-of-gods"
 EXTRACTED_CONFIG_DIR = r"/home/manfred/.cache/vcmi/extracted/configuration"
 PATCHES_DIR = Path("h3_data/preprocessed_h3_patches")
 
-LOCAL_MODE = True  	# Set to True for local usage. It will load base config files and schemas faster, autofix feature can 
-					# be enabled, 
+LOCAL_MODE = True  	# Set to True for local usage. It will load base config files
+					# and schemas faster, autofix feature can be enabled
 					# but you must provide correct BASE_PATH for VCMI's source directory.
 					# Set it to False if you don't have local VCMI source.
 
 # LOCAL_MODE variables:
-AUTOFIX = True	# Available only in LOCAL_MODE. Enable this to auto-format validated json files. 
-				# Converts CRLFs to LFs, ensures trailing line at the end of the file, 
+AUTOFIX = True	# Available only in LOCAL_MODE. Enable this to auto-format
+				# validated json files.
+				# Converts CRLFs to LFs, ensures trailing line at the end of the file,
 				# makes some basic json structure re-formatting
 LOG_FILE_PATH = r"/home/manfred/Programowanie/VCMI/vcmi_validator_log.txt"
 BASE_PATH = Path("/home/manfred/Programowanie/VCMI/source/")
@@ -1264,12 +1315,12 @@ VERSION_PATTERN = r'^(0|[1-9]\d*)\.(0|[1-9]\d*)(\.(0|[1-9]\d*))?$'
 
 if __name__ == "__main__":
 
-	# sys.argv.append("--extract-patches")			# Extracts H3 base game config data. The result of this are
-													# config files stripped on vcmi base data. 
-													# They should be in PATCHES_DIR folder already.
-													# Those are needed to run the validation script.
-													# Do not uncomment this, until you know what you're doing ;)
-	
+	# sys.argv.append("--extract-patches")	# Extracts H3 base game config data. The result of this are
+											# config files stripped on vcmi base data.
+											# They should be in PATCHES_DIR folder already.
+											# Those are needed to run the validation script.
+											# Do not uncomment this, until you know what you're doing ;)
+
 	parser = argparse.ArgumentParser(description="Validate mods or extract H3 base config JSONs")
 	parser.add_argument(
 		"--extract-patches",
@@ -1281,7 +1332,6 @@ if __name__ == "__main__":
 	if LOCAL_MODE and LOG_FILE_PATH:
 		with open(LOG_FILE_PATH, "w", encoding="utf-8") as f:
 			f.write(f"# Log file created at {LOG_FILE_PATH}\n")
-		
 
 	if args.extract_patches:
 		extract_all_patches()
@@ -1289,4 +1339,3 @@ if __name__ == "__main__":
 	else:
 		process_json_files(INPUT_DIR)
 		print_and_log("\nValidation completed.")
-
