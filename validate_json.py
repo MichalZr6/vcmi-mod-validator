@@ -146,10 +146,10 @@ def load_and_parse_json(file_path: str) -> tuple:
 		column {e.colno} for file {file_path}"
 	except ValueError as e:
 		status = f"❌ load_and_parse_json: Invalid JSON5 \
-			format in file {file_path}: {shorten_message(e)}"
+			format in file {file_path}: {shorten_message(str(e))}"
 	except Exception as e:
 		status = f"❌ load_and_parse_json: Unexpected error while \
-			reading JSON file {file_path}: {shorten_message(e)}"
+			reading JSON file {file_path}: {shorten_message(str(e))}"
 
 	return [], {}, status
 
@@ -161,7 +161,7 @@ def save_to_json_file(lines: list, file_path: str):
 
 	except Exception as e:
 		print_and_log(f"\tERROR: {inspect.currentframe().f_code.co_name}: \
-			Failed to save file {file_path}: {shorten_message(e)}")
+			Failed to save file {file_path}: {shorten_message(str(e))}")
 
 
 def try_autofix_json_formatting(lines: list, file_path: str):
@@ -300,7 +300,7 @@ def load_repo_tree() -> bool:
 		REPO_TREE = json5.loads(response)["tree"]
 		return True
 	except Exception as e:
-		print_and_log(f"❌ Failed to load VCMI repo tree: {shorten_message(e)}")
+		print_and_log(f"❌ Failed to load VCMI repo tree: {shorten_message(str(e))}")
 		return False
 
 
@@ -1253,7 +1253,7 @@ def process_json_files(mod_root: str):
 
 
 # Define input directory and output directory
-INPUT_DIR = r"/home/manfred/Programowanie/VCMI/mods/wake-of-gods"
+INPUT_DIR = r"/home/manfred/Programowanie/VCMI/mods/horn-of-the-abyss"
 EXTRACTED_CONFIG_DIR = r"/home/manfred/.cache/vcmi/extracted/configuration"
 PATCHES_DIR = Path("h3_data/preprocessed_h3_patches")
 
