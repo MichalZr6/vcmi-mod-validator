@@ -884,7 +884,7 @@ def remove_null_base_entries(data):
 		return {
 			k: remove_null_base_entries(v)
 			for k, v in data.items()
-			if not (k == "base" and v is None)
+			if v is not None
 		}
 	elif isinstance(data, list):
 		return [remove_null_base_entries(item) for item in data]
