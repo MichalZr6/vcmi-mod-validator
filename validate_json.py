@@ -11,6 +11,7 @@ import jsonschema
 from jsonschema import RefResolver
 from jsonschema.validators import validator_for
 
+from typing import Any
 from pathlib import Path
 from copy import deepcopy
 
@@ -331,15 +332,10 @@ def shorten_message(msg: str, limit: int = 260, head: int = 130,
 
 
 def validate_json_schema(json_entries: dict, json_path: str,
-						schema_dict: dict) -> str:
+						schema_dict: dict, resolver: RefResolver) -> str:
 	assert SCHEMA_CACHE is not None, "Schema store must be provided"
 
 	try:
-		base_uri = schema_dict.get("$id")
-
-		resolver = RefResolver(base_uri=base_uri, referrer=schema_dict,
-								store=SCHEMA_CACHE)
-
 		validator_class = validator_for(schema_dict)
 		validator_class.check_schema(schema_dict)
 		validator = validator_class(schema_dict, resolver=resolver)
@@ -476,6 +472,9 @@ def collect_and_parse_local_base_config_files(json_files_data: dict,
 		- failed_paths (list[tuple[str, str]]): List of (file_path, error message)
 		for failed loads.
 	"""
+	if json_files_data.get(lookup_key):
+		return json_files_data, []
+
 	failed_paths = []
 
 	if not BASE_CONFIG_PATH or not os.path.isdir(BASE_CONFIG_PATH):
@@ -501,7 +500,7 @@ def collect_and_parse_local_base_config_files(json_files_data: dict,
 				if key in fp or is_settings_file:
 					try:
 						if VERBOSE:
-							print_and_log(f"Reading: {fp}")
+							print_and_log(f"Reading file: {fp}")
 						_, json_data, status = load_and_parse_json(fp)
 						if status[0] == "❌":
 							failed_paths.append((fp, status))
@@ -538,6 +537,9 @@ def collect_and_parse_base_config_files(json_files_data: dict,
 		- failed_paths (list[tuple[str, str]]): List of (url, error message) for
 		paths that failed to load or parse.
 	"""
+
+	if json_files_data.get(lookup_key):
+		return json_files_data, []
 
 	failed_paths = []
 	assert REPO_TREE is not None, "VCMI repo tree must be provided"
@@ -773,35 +775,106 @@ def collect_and_parse_json_files(json_files_data: dict,
 	return json_files_data, failed_paths
 
 
-def deep_merge(base, override):
+def merge_special_vector_ops(base_vec, override_dict):
+	result = deepcopy(base_vec)
+
+	for key, val in override_dict.items():
+		if key == "append":
+			result.append(val)
+		elif key == "appendItems" and isinstance(val, list):
+			result.extend(val)
+		elif key.startswith("insert@"):
+			try:
+				index = int(key.split("@")[1])
+				result.insert(index, val)
+			except (IndexError, ValueError):
+				pass  # ignore malformed insert
+		elif key.startswith("modify@"):
+			try:
+				index = int(key.split("@")[1])
+				if 0 <= index < len(result):
+					result[index] = deep_merge(result[index], val)
+			except (IndexError, ValueError):
+				pass  # ignore malformed modify
+
+	return result
+
+
+def infer_default(schema: dict, resolver: RefResolver):
+	while "$ref" in schema:
+		with resolver.resolving(schema["$ref"]) as resolved:
+			schema = resolved
+
+	if "default" in schema:
+		return deepcopy(schema["default"])
+
+	schema_type = schema.get("type")
+	if isinstance(schema_type, list):
+		schema_type = next((t for t in schema_type if t != "null"), None)
+
+	if schema_type == "object":
+		return {}
+	elif schema_type == "array":
+		return []
+	elif schema_type == "string":
+		return ""
+	elif schema_type == "integer":
+		return 0
+	elif schema_type == "boolean":
+		return False
+	elif schema_type == "number":
+		return 0.0
+	return None
+
+
+def maximize_node(data: Any, schema: dict, resolver: RefResolver):
+	while "$ref" in schema:
+		with resolver.resolving(schema["$ref"]) as resolved:
+			schema = resolved
+
+	if not isinstance(data, dict) or schema.get("type") != "object":
+		return
+
+	properties = schema.get("properties", {})
+	required = schema.get("required", [])
+
+	for key in required:
+		subschema = properties.get(key)
+		if not subschema:
+			continue
+
+		if key not in data or data[key] is None:
+			data[key] = infer_default(subschema, resolver)
+			if isinstance(data[key], dict):
+				maximize_node(data[key], subschema, resolver)
+		elif isinstance(data[key], (dict, list)):
+			maximize_node(data[key], subschema, resolver)
+
+
+def deep_merge(base, override, ignore_null=False):
 	if isinstance(base, dict) and isinstance(override, dict):
 		merged = deepcopy(base)
 		for key, override_val in override.items():
-			base_val = base.get(key)
+			# Skip null removal if ignore_null is True
+			if override_val is None and not ignore_null:
+				merged.pop(key, None)
+				continue
+
 			if key in base:
-				if isinstance(base_val, dict) and isinstance(override_val, dict):
-					merged[key] = deep_merge(base_val, override_val)
-				elif isinstance(base_val, list) and isinstance(override_val, list):
-					merged[key] = deep_merge(base_val, override_val)
-				elif type(base_val) == type(override_val):
-					merged[key] = override_val
+				if isinstance(base[key], dict) and isinstance(override_val, dict):
+					merged[key] = deep_merge(base[key], override_val, ignore_null)
+				elif isinstance(base[key], list) and isinstance(override_val, dict):
+					merged[key] = merge_special_vector_ops(base[key], override_val)
+				elif isinstance(override_val, list):
+					merged[key] = deepcopy(override_val)
 				else:
-					merged[key] = override_val  # prefer override on mismatch
+					merged[key] = deepcopy(override_val)
 			else:
-				merged[key] = override_val
+				merged[key] = deepcopy(override_val)
 		return merged
 
 	elif isinstance(base, list) and isinstance(override, list):
-		result = []
-		seen = []
-		for item in base + override:
-			try:
-				if item not in seen:
-					seen.append(item)
-					result.append(item)
-			except TypeError:
-				result.append(item)
-		return result
+		return deepcopy(override)
 
 	return deepcopy(override)
 
@@ -1085,6 +1158,19 @@ def inherit_town_buildings(data: dict, buildings_library: dict) -> dict:
 	return data
 
 
+def strip_override_keys(obj):
+	if isinstance(obj, dict):
+		result = {}
+		for k, v in obj.items():
+			new_key = k.split("#", 1)[0] if "#override" in k else k
+			result[new_key] = strip_override_keys(v)
+		return result
+	elif isinstance(obj, list):
+		return [strip_override_keys(i) for i in obj]
+	else:
+		return obj
+
+
 def validate_settings_keys(mod_patch: dict, base_settings: dict,
 							path: str = "settings"):
 	missing = []
@@ -1157,7 +1243,12 @@ def process_json_files(mod_root: str):
 		mod_name = mod_json_data.get("name", os.path.dirname(mod_json_path))
 		print_and_log(f"\n🔍 Validating mod: {mod_name}")
 
-		status += validate_json_schema(mod_json_data, mod_json_path, get_schema('mod'))
+		schema_dict = get_schema('mod')
+		base_uri = schema_dict.get("$id")
+		resolver = RefResolver(base_uri=base_uri, referrer=schema_dict,
+						store=SCHEMA_CACHE)
+
+		status += validate_json_schema(mod_json_data, mod_json_path, schema_dict, resolver)
 		track_status(status)
 
 		version_status = validate_and_fix_mod_version(mod_lines, mod_json_data,
@@ -1178,7 +1269,7 @@ def process_json_files(mod_root: str):
 	for key in ENTRY_SCHEMA_MAP:
 		mod_data = mod_json_files_data[key]
 		if mod_data:
-			print_and_log(f"Loading needed base VCMI config files for '{key}'")
+			print_and_log(f"Loading needed base VCMI data for '{key}'")
 			if LOCAL_MODE:
 				base_json_files_data, base_errors = \
 					collect_and_parse_local_base_config_files(base_json_files_data, key)
@@ -1197,8 +1288,7 @@ def process_json_files(mod_root: str):
 				print_and_log("H3 patches loading failed. Aborting.")
 				return
 
-			print_and_log(f"Validating all mod's files merged with base config files \
-							for '{key}'")
+			print_and_log(f"Validating all mod's files merged with base config files for '{key}'")
 			merged_data = {}
 			schema_dict = get_schema(key)
 
@@ -1213,10 +1303,14 @@ def process_json_files(mod_root: str):
 				continue
 
 			for h3_key, h3_base_entry_data in h3_base_data.items():
-				merged_data[h3_key] = deep_merge(merged_data.get(h3_key, {}), h3_base_entry_data)
-				# Inject gainChance when missing to satisfy required field in schema
-				if key == "skills" and "gainChance" not in merged_data:
-					merged_data["gainChance"] = {"might": 0, "magic": 0}
+				merged_data[h3_key] = deep_merge(merged_data.get(h3_key, {}), h3_base_entry_data, 
+												ignore_null=True)
+			base_uri = schema_dict.get("$id")
+			resolver = RefResolver(base_uri=base_uri, referrer=schema_dict,
+								store=SCHEMA_CACHE)
+			# Inject missing to satisfy required fields in schema
+			for _, entry_data in merged_data.items():
+				maximize_node(entry_data, schema_dict, resolver)
 
 			for _, mod_entry_data in mod_data.items():
 				for entry_id, entry in mod_entry_data.items():
@@ -1226,7 +1320,8 @@ def process_json_files(mod_root: str):
 				data = apply_inheritance(data, key)
 				data = resolve_recursive_base(data)
 				data = remove_null_base_entries(data)
-				status = validate_json_schema(data, '', schema_dict)
+				data = strip_override_keys(data)
+				status = validate_json_schema(data, '', schema_dict, resolver)
 				track_status(status, f" for {merged_id}")
 
 	print_and_log("Validating other JSON files...")
