@@ -855,6 +855,13 @@ def deep_merge(base, override, ignore_null=False):
 	if isinstance(base, dict) and isinstance(override, dict):
 		merged = deepcopy(base)
 		for key, override_val in override.items():
+			override_flag = "#override" in key
+			normalized_key = key.split("#", 1)[0] if override_flag else key
+
+			if override_flag:
+				merged[normalized_key] = deepcopy(override_val)
+				continue
+
 			# Skip null removal if ignore_null is True
 			if override_val is None and not ignore_null:
 				merged.pop(key, None)
@@ -1158,19 +1165,6 @@ def inherit_town_buildings(data: dict, buildings_library: dict) -> dict:
 	return data
 
 
-def strip_override_keys(obj):
-	if isinstance(obj, dict):
-		result = {}
-		for k, v in obj.items():
-			new_key = k.split("#", 1)[0] if "#override" in k else k
-			result[new_key] = strip_override_keys(v)
-		return result
-	elif isinstance(obj, list):
-		return [strip_override_keys(i) for i in obj]
-	else:
-		return obj
-
-
 def validate_settings_keys(mod_patch: dict, base_settings: dict,
 							path: str = "settings"):
 	missing = []
@@ -1320,7 +1314,6 @@ def process_json_files(mod_root: str):
 				data = apply_inheritance(data, key)
 				data = resolve_recursive_base(data)
 				data = remove_null_base_entries(data)
-				data = strip_override_keys(data)
 				status = validate_json_schema(data, '', schema_dict, resolver)
 				track_status(status, f" for {merged_id}")
 
@@ -1376,7 +1369,7 @@ BASE_CONFIG_URL = f"{VCMI_URL}/config/"
 SCHEMA_BASE_URL = f"{BASE_CONFIG_URL}schemas/"
 
 
-VERBOSE = True
+VERBOSE = False
 
 SCHEMA_CACHE = {}
 REPO_TREE = []
