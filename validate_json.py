@@ -196,6 +196,10 @@ def ensure_json_format(lines: list) -> tuple:
 	for idx, line in enumerate(lines):
 		original_line = line
 
+		unescaped_quotes = len(re.findall(r'(?<!\\)"', line))
+		if unescaped_quotes % 2 != 0:
+			messages.append(f'⚠️ Missing " at line {idx + 1}')
+
 		# Normalize line endings
 		line = line.replace('\r\n', '\n').replace('\r', '\n')
 		if line != original_line:
@@ -324,8 +328,8 @@ def get_schema(key: str) -> dict:
 		SCHEMA_CACHE: {schema_path}")
 
 
-def shorten_message(msg: str, limit: int = 260, head: int = 130,
-					tail: int = 130) -> str:
+def shorten_message(msg: str, limit: int = 360, head: int = 180,
+					tail: int = 180) -> str:
 	if len(msg) > limit:
 		return msg[:head] + " (trimmed...) " + msg[-tail:]
 	return msg
@@ -448,7 +452,10 @@ def collect_and_parse_H3_config_files(lookup_key: str = "") -> \
 					print_and_log(f"Reading: {fp}")
 				_, json_data, status = load_and_parse_json(fp)
 				if status[0] != "❌":
-					json_files_data = json_data
+					# accumulate across files
+					if isinstance(json_data, dict):
+						for k, v in json_data.items():
+							json_files_data[k] = v
 				else:
 					failed_paths.append((fp, status))
 			except Exception as e:
@@ -582,24 +589,25 @@ def collect_and_parse_base_config_files(json_files_data: dict,
 	return json_files_data, failed_paths
 
 
-def try_parse_relative_json(relative_path: str, base_dir: str, 
-							json_files_data: dict, failed_paths: set) -> bool:
+def try_parse_relative_json(
+	relative_path: str,
+	base_dir: str,
+	mod_key_data: dict[str, dict]
+) -> set[tuple[str, str]]:
 	if not os.path.splitext(relative_path)[1]:
 		relative_path += ".json"
 
-	# 1. Try exact relative path
+	# 1) exact relative path
 	candidate_paths = [os.path.normpath(os.path.join(base_dir, relative_path))]
 
-	# 2. Try common case variants of known folders (Content/config, etc.)
-	subfolders_to_try = ["content", "Content", "config", "Config"]
-	for subfolder in subfolders_to_try:
-		alt_path = os.path.normpath(os.path.join(base_dir, subfolder, relative_path))
-		candidate_paths.append(alt_path)
+	# 2) common folder variants
+	for subfolder in ("content", "Content", "config", "Config"):
+		candidate_paths.append(os.path.normpath(os.path.join(base_dir, subfolder, relative_path)))
 
-	# 3. Use first one that exists
+	# 3) first existing
 	candidate_path = next((p for p in candidate_paths if os.path.isfile(p)), None)
 
-	# 4. Fallback: case-insensitive filename match
+	# 4) case-insensitive fallback
 	if not candidate_path:
 		basename = os.path.basename(relative_path)
 		for root, _, files in os.walk(base_dir):
@@ -607,39 +615,46 @@ def try_parse_relative_json(relative_path: str, base_dir: str,
 			if basename.lower() in lowered:
 				original = files[lowered.index(basename.lower())]
 				suggested_path = os.path.join(root, original)
-				print_and_log(f"⚠️ File at given path: {relative_path} was not found. \
-					Did you mean: {suggested_path}?")
+				print_and_log(
+					f"⚠️ File at given path: {relative_path} was not found. "
+					f"Did you mean: {suggested_path}?"
+				)
 				candidate_path = suggested_path
 				break
+
+	failed_paths: set[tuple[str, str]] = set()
 
 	if candidate_path:
 		try:
 			lines, json_data, status = load_and_parse_json(candidate_path)
-			if status[0] != "❌":
-				if "🔧" in status:
-					try_autofix_json_formatting(lines, candidate_path)
-
-				if candidate_path not in json_files_data:
-					json_files_data[candidate_path] = {}
-
-				for key, value in json_data.items():
-					if key in json_files_data[candidate_path]:
-						json_files_data[candidate_path][key] = deep_merge(
-							json_files_data[candidate_path][key], value
-						)
-					else:
-						json_files_data[candidate_path][key] = value
-				return True
-			else:
+			if status[0] == "❌":
 				failed_paths.add((candidate_path, status))
-		except Exception as e:
-			failed_paths.add((candidate_path, f"{e.__class__.__name__}: \
-				{shorten_message(e.args[0])}"))
-		return False
+				return failed_paths
 
-	# If no file was resolved
+			if "🔧" in status:
+				try_autofix_json_formatting(lines, candidate_path)
+
+			# Must be a map of entries: { entryID: { ... }, ... }
+			if not (isinstance(json_data, dict) and all(isinstance(v, dict) for v in json_data.values())):
+				failed_paths.add((candidate_path, "expected a map of entries (dict of dicts)"))
+				return failed_paths
+
+			# Merge per entry ID so multiple files can modify the same object
+			for entry_id, entry_obj in json_data.items():
+				existing = mod_key_data.get(entry_id, {})
+				mod_key_data[entry_id] = (
+					deep_merge(existing, entry_obj)
+					if isinstance(existing, dict) and isinstance(entry_obj, dict)
+					else entry_obj
+				)
+
+			return failed_paths
+		except Exception as e:
+			failed_paths.add((candidate_path, f"{e.__class__.__name__}: {shorten_message(str(e))}"))
+			return failed_paths
+
 	failed_paths.add((relative_path, f"❌ File not found in {base_dir}"))
-	return False
+	return failed_paths
 
 
 def write_patch_file(name: str, data: dict):
@@ -725,7 +740,7 @@ def collect_and_parse_extracted_config_files() -> tuple[dict, list]:
 
 def extract_all_patches():
 	h3_base_data = {}
-	h3_base_data, errors = collect_and_parse_extracted_config_files(h3_base_data)
+	h3_base_data, errors = collect_and_parse_extracted_config_files()
 	for path, reason in errors:
 		print_and_log(f"❌ {path} - {reason}")
 	if errors:
@@ -745,34 +760,22 @@ def extract_all_patches():
 		write_patch_file(key, patch)
 
 
-def collect_and_parse_json_files(json_files_data: dict, 
-								mod_json_data: dict, base_dir: str) -> tuple[dict, set]:
-	if not json_files_data:
-		json_files_data = {key: {} for key in ENTRY_SCHEMA_MAP}
+def collect_mod_data(mod_data: dict,
+					mod_json_data: dict, base_dir: str) -> tuple[dict, set]:
+	if not mod_data:
+		mod_data = {key: {} for key in ENTRY_SCHEMA_MAP}
 	failed_paths = set()
-
-	def looks_like_path(s: str) -> bool:
-		if "http" in s.lower():
-			return False
-		if "<" in s or ">" in s:  # avoid HTML fragments
-			return False
-		if any(c.isspace() for c in s):  # avoid multi-word descriptions
-			return False
-		if len(s) > 100:  # arbitrary threshold
-			return False
-		return '/' in s
 
 	for key, entry in mod_json_data.items():
 		if key not in ENTRY_SCHEMA_MAP:
 			continue
 		if isinstance(entry, list):
 			for value in entry:
-				if looks_like_path(value):
-					try_parse_relative_json(value, base_dir, json_files_data[key], failed_paths)
+				failed_paths = try_parse_relative_json(value, base_dir, mod_data[key])
 		elif isinstance(entry, dict):
-			json_files_data[key] = entry	
+			mod_data[key] = deep_merge(mod_data[key], entry)
 
-	return json_files_data, failed_paths
+	return mod_data, failed_paths
 
 
 def merge_special_vector_ops(base_vec, override_dict):
@@ -785,15 +788,18 @@ def merge_special_vector_ops(base_vec, override_dict):
 			result.extend(val)
 		elif key.startswith("insert@"):
 			try:
-				index = int(key.split("@")[1])
-				result.insert(index, val)
+				raw = int(key.split("@", 1)[1])   # VCMI: 1-based
+				idx = raw - 1
+				if 0 <= idx <= len(result):
+					result.insert(idx, val)
 			except (IndexError, ValueError):
 				pass  # ignore malformed insert
 		elif key.startswith("modify@"):
 			try:
-				index = int(key.split("@")[1])
-				if 0 <= index < len(result):
-					result[index] = deep_merge(result[index], val)
+				raw = int(key.split("@", 1)[1])   # VCMI: 1-based
+				idx = raw - 1
+				if 0 <= idx < len(result):
+					result[idx] = deep_merge(result[idx], val)
 			except (IndexError, ValueError):
 				pass  # ignore malformed modify
 
@@ -864,24 +870,19 @@ def deep_merge(base, override, ignore_null=False):
 
 			# Skip null removal if ignore_null is True
 			if override_val is None and not ignore_null:
-				merged.pop(key, None)
+				merged.pop(normalized_key, None)
 				continue
 
-			if key in base:
-				if isinstance(base[key], dict) and isinstance(override_val, dict):
-					merged[key] = deep_merge(base[key], override_val, ignore_null)
-				elif isinstance(base[key], list) and isinstance(override_val, dict):
-					merged[key] = merge_special_vector_ops(base[key], override_val)
-				elif isinstance(override_val, list):
-					merged[key] = deepcopy(override_val)
+			if normalized_key in base:
+				if isinstance(base[normalized_key], dict) and isinstance(override_val, dict):
+					merged[normalized_key] = deep_merge(base[normalized_key], override_val, ignore_null)
+				elif isinstance(base[normalized_key], list) and isinstance(override_val, dict):
+					merged[normalized_key] = merge_special_vector_ops(base[normalized_key], override_val)
 				else:
-					merged[key] = deepcopy(override_val)
+					merged[normalized_key] = deepcopy(override_val)
 			else:
-				merged[key] = deepcopy(override_val)
+				merged[normalized_key] = deepcopy(override_val)
 		return merged
-
-	elif isinstance(base, list) and isinstance(override, list):
-		return deepcopy(override)
 
 	return deepcopy(override)
 
@@ -1229,6 +1230,7 @@ def process_json_files(mod_root: str):
 
 	print_and_log("Validating mod.json files...")
 	mod_json_files_data = {}
+	mod_data = {}
 	for mod_json_path in mod_json_paths:
 		total_files += 1
 		mod_lines, mod_json_data, status = load_and_parse_json(mod_json_path)
@@ -1251,9 +1253,8 @@ def process_json_files(mod_root: str):
 			try_autofix_json_formatting(mod_lines, mod_json_path)
 		track_status(version_status)
 
-		mod_json_files_data, parse_errors = \
-			collect_and_parse_json_files(mod_json_files_data, mod_json_data,
-											os.path.dirname(mod_json_path))
+		mod_data, parse_errors = \
+			collect_mod_data(mod_data, mod_json_data, os.path.dirname(mod_json_path))
 		for path, reason in parse_errors:
 			track_status(f"❌ {path} - {reason}")
 
@@ -1261,8 +1262,7 @@ def process_json_files(mod_root: str):
 	print_and_log("Validating all mod's files merged with base config files...")
 	base_json_files_data = {}
 	for key in ENTRY_SCHEMA_MAP:
-		mod_data = mod_json_files_data[key]
-		if mod_data:
+		if mod_data[key]:
 			print_and_log(f"Loading needed base VCMI data for '{key}'")
 			if LOCAL_MODE:
 				base_json_files_data, base_errors = \
@@ -1290,7 +1290,7 @@ def process_json_files(mod_root: str):
 				merged_data[base_key] = deepcopy(base_entry_data)
 
 			if key == "settings":
-				missing_keys = validate_settings_keys(mod_data, base_json_files_data[key])
+				missing_keys = validate_settings_keys(mod_data[key], base_json_files_data[key])
 				if missing_keys:
 					for k in missing_keys:
 						track_status(f"❌ Unknown settings key '{k}' used in mod", f" at {k}")
@@ -1299,6 +1299,7 @@ def process_json_files(mod_root: str):
 			for h3_key, h3_base_entry_data in h3_base_data.items():
 				merged_data[h3_key] = deep_merge(merged_data.get(h3_key, {}), h3_base_entry_data, 
 												ignore_null=True)
+
 			base_uri = schema_dict.get("$id")
 			resolver = RefResolver(base_uri=base_uri, referrer=schema_dict,
 								store=SCHEMA_CACHE)
@@ -1306,9 +1307,9 @@ def process_json_files(mod_root: str):
 			for _, entry_data in merged_data.items():
 				maximize_node(entry_data, schema_dict, resolver)
 
-			for _, mod_entry_data in mod_data.items():
-				for entry_id, entry in mod_entry_data.items():
-					merge_mod_data(entry_id, entry, merged_data)
+			# Merge mod data
+			for entry_id, entry_map in mod_data[key].items():
+				merge_mod_data(entry_id, entry_map, merged_data)
 
 			for merged_id, data in merged_data.items():
 				data = apply_inheritance(data, key)
