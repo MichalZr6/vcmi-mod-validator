@@ -14,7 +14,7 @@ from jsonschema.validators import validator_for
 from typing import Any
 from pathlib import Path
 from copy import deepcopy
-
+from collections import defaultdict
 
 def print_and_log(msg: str):
 	if LOCAL_MODE and LOG_FILE_PATH:
@@ -328,8 +328,8 @@ def get_schema(key: str) -> dict:
 		SCHEMA_CACHE: {schema_path}")
 
 
-def shorten_message(msg: str, limit: int = 360, head: int = 180,
-					tail: int = 180) -> str:
+def shorten_message(msg: str, limit: int = 460, head: int = 230,
+					tail: int = 230) -> str:
 	if len(msg) > limit:
 		return msg[:head] + " (trimmed...) " + msg[-tail:]
 	return msg
@@ -367,8 +367,7 @@ def validate_json_schema(json_entries: dict, json_path: str,
 
 	except Exception as e:
 		msg = shorten_message(str(e))
-		return f"❌ Unexpected error during schema validation \
-			for file {json_path}: {e.__class__.__name__}: {msg}"
+		return f"❌ Unexpected error during schema validation for file {json_path}: {e.__class__.__name__}: {msg}"
 
 
 def validate_and_fix_mod_version(lines, json_entries, file_path) -> str:
@@ -762,8 +761,6 @@ def extract_all_patches():
 
 def collect_mod_data(mod_data: dict,
 					mod_json_data: dict, base_dir: str) -> tuple[dict, set]:
-	if not mod_data:
-		mod_data = {key: {} for key in ENTRY_SCHEMA_MAP}
 	failed_paths = set()
 
 	for key, entry in mod_json_data.items():
@@ -928,15 +925,55 @@ def resolve_recursive_base(data):
 	return resolved
 
 
-def merge_mod_data(entry_id: str, entry: dict, merged_data: dict) -> dict:
-	normalized_id = normalize_scoped_id(entry_id)
-	merged_data[normalized_id] = deep_merge(merged_data.get(normalized_id, {}), entry)
-	return merged_data
+def split_scoped_id(id_str: str) -> tuple[str | None, str]:
+	"""Return (scope, raw_id). Example: 'core:corpse' -> ('core', 'corpse'); 'miniHillFort' -> (None, 'miniHillFort')"""
+	if ":" in id_str:
+		scope, raw = id_str.split(":", 1)
+		return scope, raw
+	return None, id_str
 
 
-def normalize_scoped_id(id_str: str) -> str:
-	# Strip the part before the colon (VCMI style: modnamespace:id)
-	return id_str.split(":", 1)[-1]
+def merge_mod_data(
+	entry_id: str,
+	entry: dict,
+	merged_bucket: dict,
+	*,
+	category: str,
+	source_mod: str,
+	base_core_ids: set[str],
+	defined_ids_for_key: dict[str, set[str]],  # maps mod_name -> set(raw_ids)
+) -> str:
+	"""
+	VCMI-like merge:
+	  - Unscoped or self-scoped 'source_mod:id' -> treat as definition/override for source_mod.
+	  - 'core:id' -> must exist in base_core_ids, else warn + skip.
+	  - 'otherMod:id' -> id must be defined by otherMod (pre-scan), else warn + skip.
+	"""
+	scope, raw = split_scoped_id(entry_id)
+
+	if scope is None or scope == source_mod:
+		# define/override in own scope
+		defined_ids_for_key[source_mod].add(raw)
+		merged_bucket[raw] = deep_merge(merged_bucket.get(raw, {}), entry)
+		return ""
+
+	if scope == "core":
+		if raw not in base_core_ids:
+			type_hint = entry.get("handler") or category or "<unknown>"
+			return f"⚠️ Mod '{source_mod}' attempts to edit object '{raw}' of type '{type_hint}' "
+					f"from mod 'core' but no such object exist!"
+		merged_bucket[raw] = deep_merge(merged_bucket.get(raw, {}), entry)
+		return ""
+
+	# Cross-mod edit
+	target_defs = defined_ids_for_key.get(scope, set())
+	if raw not in target_defs:
+		type_hint = entry.get("handler") or category or "<unknown>"
+		return f"⚠️ Mod '{source_mod}' attempts to edit object '{raw}' of type '{type_hint}' "
+				f"from mod '{scope}' but no such object exist!"
+
+	merged_bucket[raw] = deep_merge(merged_bucket.get(raw, {}), entry)
+	return ""
 
 
 def print_status(status: str | list[str], additional_info=""):
@@ -1171,11 +1208,88 @@ def validate_settings_keys(mod_patch: dict, base_settings: dict,
 	missing = []
 	for key, value in mod_patch.items():
 		full_path = f"{path}.{key}"
-		if key not in base_settings:
+		if key not in base_settings["settings"]:
 			missing.append(full_path)
 		elif isinstance(value, dict) and isinstance(base_settings.get(key), dict):
 			missing += validate_settings_keys(value, base_settings[key], full_path)
 	return missing
+
+
+def extract_mod_id(path: str) -> str:
+	"""
+	/.../hota/Mods/changedShootingVisuals/mod.json
+	  -> hota.changedShootingVisuals
+
+	/.../hota/Mods/cove/Mods/covecampaignHeroesInMaps/mod.json
+	  -> hota.cove.covecampaignHeroesInMaps
+	"""
+	parts = [p for p in re.split(r"[\\/]+", os.path.normpath(path)) if p]
+	lower = [p.lower() for p in parts]
+
+	# find last 'mod.json'
+	try:
+		j = len(parts) - 1 - lower[::-1].index("mod.json")
+	except ValueError:
+		raise ValueError("Path must end with mod.json")
+
+	if j == 0:
+		raise ValueError("No parent directory before mod.json")
+
+	# start with the dir right before mod.json
+	chain = [parts[j - 1]]
+	anchor = parts[j - 1]
+
+	# walk left: only accept a 'Mods' that is immediately before current anchor
+	i_end = j - 2
+	while i_end >= 0:
+		# rightmost 'Mods' <= i_end whose next segment equals current anchor
+		k = max((idx for idx in range(i_end + 1) if lower[idx] == "mods" and idx + 1 < len(parts) and parts[idx + 1] == anchor), default=-1)
+		if k == -1:
+			break
+		if k - 1 >= 0:
+			chain.append(parts[k - 1])   # owner before this Mods
+			anchor = parts[k - 1]
+			i_end = k - 2
+		else:
+			break
+
+	return ".".join(reversed(chain)).lower()
+
+
+def load_base_data(key: str, merged_data: dict, base_json_files_data: dict) -> str:
+	if not merged_data.get(key):
+		merged_data[key] = {}
+
+	print_and_log(f"Loading needed base VCMI data for '{key}'")
+	if LOCAL_MODE:
+		base_json_files_data, base_errors = \
+			collect_and_parse_local_base_config_files(base_json_files_data, key)
+	else:
+		base_json_files_data, base_errors = \
+			collect_and_parse_base_config_files(base_json_files_data, key)
+
+	status_lines = []
+	for path, reason in base_errors:
+		status_lines.append(f"❌ {path} - {reason}")
+
+	print_and_log(f"Loading needed H3 base config patches for '{key}'")
+	h3_base_data, h3_errors = collect_and_parse_H3_config_files(key)
+	for path, reason in h3_errors:
+		status_lines.append(f"❌ {path} - {reason}")
+	if h3_errors:
+		status_lines.append("❌ CRITICAL ERROR: H3 patches loading failed.")
+		return "\n".join(status_lines)
+
+	# Initialize merged_data with base config data
+	for base_key, base_entry_data in base_json_files_data[key].items():
+		merged_data[key][base_key] = deepcopy(base_entry_data)
+
+	# Merge extracted H3 patches
+	for h3_key, h3_base_entry_data in h3_base_data.items():
+		merged_data[key][h3_key] = deep_merge(merged_data[key].get(h3_key, {}), h3_base_entry_data, 
+										ignore_null=True)
+
+	return "\n".join(status_lines)
 
 
 def process_json_files(mod_root: str):
@@ -1228,21 +1342,19 @@ def process_json_files(mod_root: str):
 		print_and_log("Failed to parse schemas. Aborting.")
 		return
 
-	print_and_log("Validating mod.json files...")
-	mod_json_files_data = {}
-	mod_data = {}
+	print_and_log("Reading mod.json files...")
+	schema_dict = get_schema('mod')
+	base_uri = schema_dict.get("$id")
+	resolver = RefResolver(base_uri=base_uri, referrer=schema_dict,
+					store=SCHEMA_CACHE)
+	all_mods_data = {}
 	for mod_json_path in mod_json_paths:
 		total_files += 1
 		mod_lines, mod_json_data, status = load_and_parse_json(mod_json_path)
 		if "🔧" in status:
 			try_autofix_json_formatting(mod_lines, mod_json_path)
 		mod_name = mod_json_data.get("name", os.path.dirname(mod_json_path))
-		print_and_log(f"\n🔍 Validating mod: {mod_name}")
-
-		schema_dict = get_schema('mod')
-		base_uri = schema_dict.get("$id")
-		resolver = RefResolver(base_uri=base_uri, referrer=schema_dict,
-						store=SCHEMA_CACHE)
+		print_and_log(f"\n🔍 Validating mod.json from mod: {mod_name}")
 
 		status += validate_json_schema(mod_json_data, mod_json_path, schema_dict, resolver)
 		track_status(status)
@@ -1253,70 +1365,88 @@ def process_json_files(mod_root: str):
 			try_autofix_json_formatting(mod_lines, mod_json_path)
 		track_status(version_status)
 
-		mod_data, parse_errors = \
-			collect_mod_data(mod_data, mod_json_data, os.path.dirname(mod_json_path))
+		mod_scope = extract_mod_id(mod_json_path)
+		all_mods_data[mod_scope] = {key: {} for key in ENTRY_SCHEMA_MAP}
+		all_mods_data[mod_scope], parse_errors = \
+			collect_mod_data(all_mods_data[mod_scope], mod_json_data, 
+							os.path.dirname(mod_json_path))
 		for path, reason in parse_errors:
 			track_status(f"❌ {path} - {reason}")
 
-	# Build merged full config by combining mod and base files
-	print_and_log("Validating all mod's files merged with base config files...")
+	merged_base_data = {}
 	base_json_files_data = {}
-	for key in ENTRY_SCHEMA_MAP:
-		if mod_data[key]:
-			print_and_log(f"Loading needed base VCMI data for '{key}'")
-			if LOCAL_MODE:
-				base_json_files_data, base_errors = \
-					collect_and_parse_local_base_config_files(base_json_files_data, key)
-			else:
-				base_json_files_data, base_errors = \
-					collect_and_parse_base_config_files(base_json_files_data, key)
 
-			for path, reason in base_errors:
-				track_status(f"❌ {path} - {reason}")
+	# 1) Collect keys used by any mod
+	needed_keys = {
+		key
+		for mod_data in all_mods_data.values()
+		for key in ENTRY_SCHEMA_MAP
+		if key in mod_data and mod_data[key]
+	}
 
-			print_and_log(f"Loading needed H3 base config patches for '{key}'")
-			h3_base_data, h3_errors = collect_and_parse_H3_config_files(key)
-			for path, reason in h3_errors:
-				track_status(f"❌ {path} - {reason}")
-			if h3_errors:
-				print_and_log("H3 patches loading failed. Aborting.")
-				return
+	# 2) Load base per key and maximize base entries once
+	needed_schema_dicts = {}
+	needed_resolvers = {}
+	for key in needed_keys:
+		track_status(load_base_data(key, merged_base_data, base_json_files_data))
 
-			print_and_log(f"Validating all mod's files merged with base config files for '{key}'")
-			merged_data = {}
-			schema_dict = get_schema(key)
+		schema_dict = get_schema(key)
+		needed_schema_dicts[key] = schema_dict
+		resolver = RefResolver(base_uri=schema_dict.get("$id"), referrer=schema_dict, store=SCHEMA_CACHE)
+		needed_resolvers[key] = resolver
 
-			for base_key, base_entry_data in base_json_files_data[key].items():
-				merged_data[base_key] = deepcopy(base_entry_data)
+		for _, entry_data in merged_base_data.get(key, {}).items():
+			maximize_node(entry_data, schema_dict, resolver)
 
-			if key == "settings":
-				missing_keys = validate_settings_keys(mod_data[key], base_json_files_data[key])
-				if missing_keys:
-					for k in missing_keys:
-						track_status(f"❌ Unknown settings key '{k}' used in mod", f" at {k}")
-				continue
+	# 3) Pre-scan: what IDs does each mod actually DEFINE (unscoped or self-scoped)?
+	#    defined_ids_by_mod[key][mod] = {raw_ids}
+	defined_ids_by_mod: dict[str, dict[str, set[str]]] = {k: defaultdict(set) for k in needed_keys}
+	for mod, mod_data in all_mods_data.items():
+		for key in needed_keys:
+			for entry_id in mod_data.get(key, {}).keys():
+				scope, raw = split_scoped_id(entry_id)
+				if scope is None or scope == mod:
+					defined_ids_by_mod[key][mod].add(raw)
 
-			for h3_key, h3_base_entry_data in h3_base_data.items():
-				merged_data[h3_key] = deep_merge(merged_data.get(h3_key, {}), h3_base_entry_data, 
-												ignore_null=True)
+	# 4) Merge ALL mods (per key) into full_merged, with VCMI-like scope checks
+	full_merged: dict[str, dict] = {k: deepcopy(merged_base_data.get(k, {})) for k in needed_keys}
+	for key in needed_keys:
+		base_core_ids = set(merged_base_data.get(key, {}).keys())  # snapshot of CORE ids
 
-			base_uri = schema_dict.get("$id")
-			resolver = RefResolver(base_uri=base_uri, referrer=schema_dict,
-								store=SCHEMA_CACHE)
-			# Inject missing to satisfy required fields in schema
-			for _, entry_data in merged_data.items():
-				maximize_node(entry_data, schema_dict, resolver)
+		for mod, mod_data in all_mods_data.items():
+			for entry_id, entry in mod_data.get(key, {}).items():
+				track_status(merge_mod_data(
+					entry_id,
+					entry,
+					full_merged[key],
+					category=key,
+					source_mod=mod,
+					base_core_ids=base_core_ids,
+					defined_ids_for_key=defined_ids_by_mod[key],
+				))
 
-			# Merge mod data
-			for entry_id, entry_map in mod_data[key].items():
-				merge_mod_data(entry_id, entry_map, merged_data)
+	# 5) Validate AFTER full merge
+	print_and_log("Validating all mods (after full merge)...")
+	for key in needed_keys:
+		# settings: only compare keys vs base
+		if key == "settings":
+			for mod, mod_data in all_mods_data.items():
+				if mod_data.get(key):
+					missing_keys = validate_settings_keys(mod_data[key], base_json_files_data[key])
+					if missing_keys:
+						for k in missing_keys:
+							track_status(f"❌ Unknown settings key '{k}' used in mod", f" at {k}")
+			continue
 
-			for merged_id, data in merged_data.items():
-				data = apply_inheritance(data, key)
-				data = resolve_recursive_base(data)
-				data = remove_null_base_entries(data)
-				status = validate_json_schema(data, '', schema_dict, resolver)
-				track_status(status, f" for {merged_id}")
+		schema_dict = needed_schema_dicts[key]
+		resolver = needed_resolvers[key]
+
+		for merged_id, data in full_merged[key].items():
+			data = apply_inheritance(data, key)
+			data = resolve_recursive_base(data)
+			data = remove_null_base_entries(data)
+			status = validate_json_schema(data, '', schema_dict, resolver)
+			track_status(status, f" for {merged_id}")
 
 	print_and_log("Validating other JSON files...")
 	for json_file in other_json_paths:
